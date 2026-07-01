@@ -1,0 +1,61 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Premium Service Slider Styles */
+.premium-service-slider .slick-slide {
+  transition: all 0.3s ease;
+}
+
+.premium-service-slider .slick-slide > div {
+  transition: all 0.3s ease;
+}
+
+/* Premium Dots Styling */
+.premium-dots {
+  bottom: -50px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.premium-dots li {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.premium-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-purple);
+  opacity: 0.3;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0;
+  line-height: 0;
+}
+
+.premium-dots li button:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+
+.premium-dots li.slick-active button {
+  opacity: 1;
+  width: 32px;
+  border-radius: 6px;
+  background: var(--accent-purple);
+}
+
+.premium-dots li button:before {
+  display: none;
+}
