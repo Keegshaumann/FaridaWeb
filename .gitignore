@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+cajee/node_modules/
+
+# build output (built in CI, never committed)
+cajee/dist/
+dist/
+
+# local deploy artifacts (generated; not needed in the repo)
+cajee-site/
+cajee-hostinger.zip
+
+# large archive
+*.rar
+
+# FTP deploy state file (created by the deploy action)
+.ftp-deploy-sync-state.json
+
+# OS junk
+.DS_Store
