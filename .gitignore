@@ -7,7 +7,6 @@ cajee/dist/
 dist/
 
 # local deploy artifacts (generated; not needed in the repo)
-cajee-site/
 cajee-hostinger.zip
 
 # large archive
