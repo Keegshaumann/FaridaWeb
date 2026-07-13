@@ -3,6 +3,8 @@ import { Link } from "react-router";
 import { Button } from "./ui/button";
 import { Check } from "lucide-react";
 import { SEO } from "./SEO";
+import { ServiceProductsSection } from "./products/ServiceProductsSection";
+import type { ServiceSlug } from "../data/device-types";
 
 interface ServicePageTemplateProps {
   title: string;
@@ -11,8 +13,11 @@ interface ServicePageTemplateProps {
   benefits: string[];
   availableServices: string[];
   clinicalApproach: string;
+  /** When set, renders the filterable device catalogue for this service. */
+  serviceSlug?: ServiceSlug;
   additionalSections?: ReactNode;
   seoTitle?: string;
+  seoFullTitle?: string;
   seoDescription?: string;
   seoKeywords?: string;
 }
@@ -24,8 +29,10 @@ export function ServicePageTemplate({
   benefits,
   availableServices,
   clinicalApproach,
+  serviceSlug,
   additionalSections,
   seoTitle,
+  seoFullTitle,
   seoDescription,
   seoKeywords,
 }: ServicePageTemplateProps) {
@@ -80,22 +87,26 @@ export function ServicePageTemplate({
               </ul>
             </section>
 
-            {/* Available Services */}
-            <section>
-              <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6">
-                Available Services
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {availableServices.map((service, index) => (
-                  <div
-                    key={index}
-                    className="bg-[var(--purple-soft)] rounded-xl p-5 border border-[var(--purple-medium)]"
-                  >
-                    <p className="text-[var(--text-dark)]">{service}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+            {/* Devices catalogue (filterable) or fallback Available Services list */}
+            {serviceSlug ? (
+              <ServiceProductsSection service={serviceSlug} />
+            ) : (
+              <section>
+                <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6">
+                  Available Services
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {availableServices.map((service, index) => (
+                    <div
+                      key={index}
+                      className="bg-[var(--purple-soft)] rounded-xl p-5 border border-[var(--purple-medium)]"
+                    >
+                      <p className="text-[var(--text-dark)]">{service}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {/* Additional Sections */}
             {additionalSections}
@@ -139,6 +150,7 @@ export function ServicePageTemplate({
       {seoTitle && seoDescription && seoKeywords && (
         <SEO
           title={seoTitle}
+          fullTitle={seoFullTitle}
           description={seoDescription}
           keywords={seoKeywords}
         />

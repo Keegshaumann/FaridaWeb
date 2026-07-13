@@ -3,6 +3,7 @@ import { ServicePageTemplate } from "../../components/ServicePageTemplate";
 export function CompressionPage() {
   return (
     <ServicePageTemplate
+      serviceSlug="compression"
       title="Medical Compression Management"
       subtitle="Therapeutic compression for lymphatic and circulatory support"
       whatIsIt="Compression garments are therapeutic devices designed to apply graduated pressure to improve circulation, support the lymphatic system, and manage fluid build-up. They are medically prescribed and individually measured for optimal therapeutic effect."
@@ -27,7 +28,8 @@ export function CompressionPage() {
       ]}
       clinicalApproach="Compression therapy requires careful prescription. We conduct thorough assessment to determine the appropriate compression dosage (mmHg), stiffness, garment type, textile, and material. Garments are measured and fitted in practice, home, or hospital settings as needed."
       seoTitle="Medical Compression Garments | Lymphedema & Edema Treatment"
-      seoDescription="Medical-grade compression garments for lymphedema, edema, and circulatory support. Custom compression fitting, measurement services, and mobile home/hospital appointments available."
+      seoFullTitle="Medical Compression Garments & Lymphoedema | Cajee Botes"
+      seoDescription="Medical-grade compression garments for lymphoedema, oedema, scar and post-surgical care — individually measured and fitted in South Africa."
       seoKeywords="medical compression garments, lymphedema treatment, compression stockings, edema management, compression therapy, lymphedema specialist, compression garment fitting, medical compression South Africa"
       additionalSections={
         <>

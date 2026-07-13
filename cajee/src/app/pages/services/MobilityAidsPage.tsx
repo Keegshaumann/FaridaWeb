@@ -3,6 +3,7 @@ import { ServicePageTemplate } from "../../components/ServicePageTemplate";
 export function MobilityAidsPage() {
   return (
     <ServicePageTemplate
+      serviceSlug="mobility-aids"
       title="Mobility Aids & Independent Living Support"
       subtitle="Supporting safe movement and independence at home and in the community"
       whatIsIt="Mobility aids are assistive devices prescribed to support safe movement in the home and community. They are selected based on your physical condition, environment, and functional goals to promote independence and reduce fall risk."
@@ -24,7 +25,8 @@ export function MobilityAidsPage() {
       ]}
       clinicalApproach="Our approach focuses on functional assessment in your home or hospital setting. We evaluate your physical abilities, environment layout, and daily routines to ensure mobility aids are appropriate, safe, and support long-term independence."
       seoTitle="Mobility Aids | Wheelchairs, Crutches, Walking Frames | South Africa"
-      seoDescription="Professional mobility aids including wheelchairs, crutches, walking frames, and transfer equipment. Expert assessment and guidance for safe home mobility. Mobile assessments available."
+      seoFullTitle="Mobility Aids: Wheelchairs & Walkers | Cajee Botes"
+      seoDescription="Wheelchairs, walkers, rollators, crutches and walking aids fitted to support safe movement and independence, with expert guidance and home visits."
       seoKeywords="mobility aids South Africa, wheelchairs, crutches, walking frames, walking sticks, rollators, transfer aids, bathroom safety equipment, mobility equipment supplier"
     />
   );

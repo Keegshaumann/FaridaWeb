@@ -159,6 +159,30 @@ export function SEO({
               description: 'Compression garments for lymphedema and edema',
             },
           },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Off-the-Shelf Orthotics',
+              description: 'Prefabricated orthotic braces and supports',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Mobility Aids',
+              description: 'Wheelchairs, walkers, crutches and walking aids',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Breast & Silicone Prosthetics',
+              description: 'Breast prostheses and silicone restoration',
+            },
+          },
         ],
       },
     };

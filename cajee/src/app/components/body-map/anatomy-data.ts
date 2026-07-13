@@ -1,9 +1,11 @@
 // Data for the interactive "Conditions We Treat" body map.
 // Each pain point maps a body region to the specific orthotic/prosthetic device
 // an orthotist would provide, and links to the Cajee Botes service that covers it.
-// Clinical rationale + device names are drawn from manufacturer/clinical sources
-// (Ottobock, Össur, Bauerfeind, Aircast, NHS, physio-pedia, PubMed) and are kept
-// deliberately conservative — devices support/offload/stabilise; they are not cures.
+// Clinical rationale + device names are drawn from general clinical and
+// manufacturer guidance and are kept deliberately conservative — devices
+// support / offload / stabilise; they are not cures.
+
+import type { BodyPart } from "../../data/device-types";
 
 export type BodyView = "front" | "back";
 
@@ -24,8 +26,6 @@ export interface PainPoint {
   /** Mapped Cajee Botes service. */
   serviceName: string;
   serviceSlug: string;
-  /** Authoritative sources consulted during research. */
-  sources: string[];
 }
 
 export const PAIN_POINTS: PainPoint[] = [
@@ -41,10 +41,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A supportive cervical collar takes the load off a sore or strained neck while you heal.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.physio-pedia.com/Cervical_Collar",
-      "https://now.aapmr.org/cervical-thoracic-and-lumbosacral-orthoses/",
-    ],
   },
   {
     id: "shoulder",
@@ -58,10 +54,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A fitted support or sling steadies a sore or unstable shoulder so you can move more comfortably.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/shoulder-brace-omotrain/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10395168/",
-    ],
   },
   {
     id: "elbow-arm",
@@ -75,10 +67,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A simple elbow strap or support offloads sore tendons in tennis elbow, golfer's elbow or arm strain.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/tennis-elbow-brace-sports-elbow-support/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3989882/",
-    ],
   },
   {
     id: "wrist-hand",
@@ -92,10 +80,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A supportive wrist or thumb brace rests the joint in carpal tunnel, tendon strain or thumb arthritis.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9847107/",
-      "https://orthotape.com/products/ossur-formfit-thumb-spica-splint",
-    ],
   },
   {
     id: "lower-back",
@@ -109,10 +93,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A supportive lumbar brace stabilises and offloads the lower spine for everyday back pain.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6315306/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7046130/",
-    ],
   },
   {
     id: "groin",
@@ -126,10 +106,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A supportive compression brace steadies the area while a groin or adductor strain settles.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.braceability.com/products/hip-and-groin-brace",
-      "https://www.dme-direct.com/shop-by-injury/hip-injuries/hip-flexor-strain-brace",
-    ],
   },
   {
     id: "thigh",
@@ -143,10 +119,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A well-fitted thigh support steadies a strained quad or hamstring while it settles.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/thigh-brace-myotrain/",
-      "https://www.breg.com/products/knee-bracing/soft-supports/thigh-support/",
-    ],
   },
   {
     id: "limb-loss",
@@ -160,10 +132,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "After limb loss, a custom-fitted prosthesis helps you get moving again and regain independence.",
     serviceName: "Prosthetics",
     serviceSlug: "/services/prosthetics",
-    sources: [
-      "https://www.ottobockcare.us/en-us/services/lower-limb-prosthetics",
-      "https://www.bacpar.org/Data/Resource_Downloads/OedemaGuidelines.pdf",
-    ],
   },
   {
     id: "swelling",
@@ -177,10 +145,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A properly fitted compression garment controls swelling from lymphoedema or oedema and keeps you comfortable.",
     serviceName: "Medical Compression",
     serviceSlug: "/services/compression",
-    sources: [
-      "https://www.macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/lymphoedema/compression-to-treat-lymphoedema",
-      "https://www.cancerresearchuk.org/about-cancer/coping/physically/lymphoedema-and-cancer/treating/compression",
-    ],
   },
   {
     id: "upper-back",
@@ -194,10 +158,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A supportive posture brace helps you sit and stand taller, easing an achy upper back.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.medi.de/en/products/spinomed/",
-      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9811681/",
-    ],
   },
   {
     id: "hip",
@@ -211,10 +171,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A fitted hip support or trochanteric belt stabilises the joint and takes pressure off sore tissues.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/hip-brace-coxatrain/",
-      "https://www.physio-pedia.com/Greater_Trochanteric_Pain_Syndrome",
-    ],
   },
   {
     id: "sacroiliac",
@@ -228,10 +184,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A supportive pelvic belt gently compresses and stabilises the sacroiliac joint to ease deep buttock pain.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/si-joint-belt-sacroloc/",
-      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4364533/",
-    ],
   },
   {
     id: "knee",
@@ -239,16 +191,12 @@ export const PAIN_POINTS: PainPoint[] = [
     view: "back",
     x: 38,
     y: 72,
-    device: "Knee brace / support — hinged or patella-stabilising, or an unloader brace for compartment osteoarthritis",
+    device: "Knee brace / support — hinged or patella-stabilising, or an offloading brace for compartment osteoarthritis",
     howItHelps:
-      "A fitted knee brace stabilises the joint, guides patellar tracking and applies graded compression to control pain and swelling. An unloader brace uses a 3-point leverage system to shift load away from the worn compartment in osteoarthritis. It supports and offloads the knee but doesn't cure the cause.",
+      "A fitted knee brace stabilises the joint, guides patellar tracking and applies graded compression to control pain and swelling. An offloading brace uses a 3-point leverage system to shift load away from the worn compartment in osteoarthritis. It supports and offloads the knee but doesn't cure the cause.",
     blurb: "A properly fitted knee brace stabilises and offloads the joint in arthritis, instability or kneecap pain.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.ossur.com/en-us/bracing-and-supports/unloader/unloader-braces",
-      "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6151190/",
-    ],
   },
   {
     id: "ankle",
@@ -262,10 +210,6 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "A fitted ankle brace adds stability and support for sprains or an ankle that keeps giving way.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/stirrup-ankle-brace-malleoloc/",
-      "https://www.ncbi.nlm.nih.gov/books/NBK563450/",
-    ],
   },
   {
     id: "foot",
@@ -279,12 +223,28 @@ export const PAIN_POINTS: PainPoint[] = [
     blurb: "The right supportive insole and heel cushioning take the strain off nagging foot or heel pain like plantar fasciitis.",
     serviceName: "Custom Orthotics",
     serviceSlug: "/services/custom-orthotics",
-    sources: [
-      "https://www.bauerfeind.us/plantar-fasciitis-shoe-insoles-viscoped-s/",
-      "https://www.algeos.com/orthotic-therapy/condition-specific/plantar-fasciitis",
-    ],
   },
 ];
 
 export const FRONT_POINTS = PAIN_POINTS.filter((p) => p.view === "front");
 export const BACK_POINTS = PAIN_POINTS.filter((p) => p.view === "back");
+
+// Maps each body-map point to the device-catalogue body part, so the detail
+// panel can list related devices and deep-link to the filtered service page.
+export const POINT_TO_BODYPART: Record<string, BodyPart> = {
+  neck: "Neck",
+  shoulder: "Shoulder",
+  "elbow-arm": "Elbow",
+  "wrist-hand": "Wrist & Hand",
+  "lower-back": "Spine & Back",
+  groin: "Hip",
+  thigh: "Lower Limb",
+  "limb-loss": "Lower Limb",
+  swelling: "Lower Limb",
+  "upper-back": "Spine & Back",
+  hip: "Hip",
+  sacroiliac: "Spine & Back",
+  knee: "Knee",
+  ankle: "Ankle & Foot",
+  foot: "Ankle & Foot",
+};

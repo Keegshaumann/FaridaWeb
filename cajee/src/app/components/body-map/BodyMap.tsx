@@ -4,7 +4,22 @@ import { AnimatePresence, motion } from "motion/react";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 import { Button } from "../ui/button";
 import { AnatomyFigure } from "./AnatomyFigure";
-import { BACK_POINTS, FRONT_POINTS, PAIN_POINTS, type BodyView, type PainPoint } from "./anatomy-data";
+import {
+  BACK_POINTS,
+  FRONT_POINTS,
+  PAIN_POINTS,
+  POINT_TO_BODYPART,
+  type BodyView,
+  type PainPoint,
+} from "./anatomy-data";
+import { DEVICES } from "../../data/devices";
+
+/** Devices in the catalogue matching a body-map point's service + body region. */
+function relatedDevices(point: PainPoint) {
+  const bodyPart = POINT_TO_BODYPART[point.id];
+  const svc = point.serviceSlug.replace("/services/", "");
+  return DEVICES.filter((d) => d.service === svc && d.bodyPart === bodyPart);
+}
 
 function Hotspot({
   point,
@@ -109,12 +124,32 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
               </span>
             </div>
 
+            {relatedDevices(selected).length > 0 && (
+              <div className="mt-4">
+                <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+                  Devices we might consider
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  {relatedDevices(selected)
+                    .slice(0, 6)
+                    .map((d) => (
+                      <span
+                        key={d.id}
+                        className="rounded-full bg-[var(--purple-soft)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-dark)]"
+                      >
+                        {d.name}
+                      </span>
+                    ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-6 flex flex-col gap-3">
               <Button
                 asChild
                 className="w-full rounded-full bg-[var(--text-dark)] text-white hover:bg-[var(--text-dark)]/90"
               >
-                <Link to={selected.serviceSlug}>
+                <Link to={`${selected.serviceSlug}?part=${encodeURIComponent(POINT_TO_BODYPART[selected.id])}`}>
                   Explore {selected.serviceName}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
