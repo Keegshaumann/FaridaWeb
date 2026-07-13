@@ -5,21 +5,22 @@ import { Warp } from "@paper-design/shaders-react";
 type WarpProps = ComponentProps<typeof Warp>;
 
 /**
- * Returns true only when the browser can actually create a WebGL context.
- * Headless crawlers (and some browsers/devices) have no WebGL, in which case
- * @paper-design/shaders throws "WebGL is not supported in this browser".
+ * Returns true only when the browser can create a WebGL2 context.
+ * @paper-design/shaders specifically requires WebGL2 (getContext("webgl2")) and
+ * throws "WebGL is not supported in this browser" otherwise — so we must match
+ * that exact requirement (a WebGL1-only environment must fall back too).
  */
 function hasWebGL(): boolean {
   try {
     const canvas = document.createElement("canvas");
-    return !!(
-      window.WebGLRenderingContext &&
-      (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
-    );
+    return !!(window.WebGL2RenderingContext && canvas.getContext("webgl2"));
   } catch {
     return false;
   }
 }
+
+const isShaderWebGLError = (msg: unknown): boolean =>
+  typeof msg === "string" && /Paper Shaders|WebGL is not supported/i.test(msg);
 
 /** Build a CSS gradient from the shader's colour list so the fallback matches. */
 function gradientFromColors(colors?: readonly string[]): string {
@@ -42,7 +43,8 @@ class ShaderErrorBoundary extends Component<
   }
 
   componentDidCatch() {
-    // Swallow any shader/WebGL error; the CSS gradient fallback is shown instead.
+    // Catches synchronous render-phase shader errors; the async WebGL throw is
+    // handled by the window listener in SafeWarp below (boundaries miss those).
   }
 
   render() {
@@ -60,6 +62,25 @@ export function SafeWarp(props: WarpProps) {
 
   useEffect(() => {
     setWebglReady(hasWebGL());
+
+    // Defense in depth: @paper-design/shaders throws its "WebGL is not supported"
+    // error from a fire-and-forget async init, so it surfaces as an uncaught
+    // promise rejection that React error boundaries cannot catch. Suppress ONLY
+    // that specific shader error so audit crawlers never see a JS error.
+    const onRejection = (e: PromiseRejectionEvent) => {
+      const reason = e.reason as { message?: unknown } | string | undefined;
+      const msg = typeof reason === "string" ? reason : reason?.message;
+      if (isShaderWebGLError(msg)) e.preventDefault();
+    };
+    const onError = (e: ErrorEvent) => {
+      if (isShaderWebGLError(e.message)) e.preventDefault();
+    };
+    window.addEventListener("unhandledrejection", onRejection);
+    window.addEventListener("error", onError);
+    return () => {
+      window.removeEventListener("unhandledrejection", onRejection);
+      window.removeEventListener("error", onError);
+    };
   }, []);
 
   const fallback = (

@@ -427,6 +427,56 @@ export function HomePage() {
 
       {/* About Section */}
 
+      {/* Conditions / Body Map Teaser */}
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-[var(--purple-light)] to-[var(--purple-soft)]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2">
+            {/* Muscle figure */}
+            <div className="order-2 flex justify-center md:order-1">
+              <Link to="/conditions" aria-label="Explore the conditions we treat" className="group relative">
+                <img
+                  src="/anatomy/hero-muscle.png"
+                  alt="Muscular anatomy figure — explore the conditions we treat"
+                  className="h-auto w-64 max-w-full drop-shadow-xl transition-transform duration-300 group-hover:scale-[1.03] sm:w-72"
+                  loading="lazy"
+                />
+              </Link>
+            </div>
+            {/* Content */}
+            <div className="order-1 text-center md:order-2 md:text-left">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--purple-medium)]">
+                Interactive Body Map
+              </p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--text-dark)]">
+                Where does it hurt?
+              </h2>
+              <p className="mt-4 text-lg text-[var(--text-muted)] leading-relaxed">
+                From neck and back pain to knees, ankles and feet — pinpoint your pain on our interactive
+                body map and discover the orthotic or prosthetic solution that can help.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start">
+                {["Neck Pain", "Lower Back Pain", "Knee Pain", "Ankle Pain", "Foot & Heel Pain"].map((c) => (
+                  <span
+                    key={c}
+                    className="rounded-full bg-white/70 px-3 py-1.5 text-sm font-medium text-[var(--text-dark)] shadow-sm"
+                  >
+                    {c}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-8 flex justify-center md:justify-start">
+                <Link to="/conditions">
+                  <Button size="lg" className="rounded-full bg-[var(--text-dark)] px-8 text-white hover:bg-[var(--text-dark)]/90">
+                    Explore Conditions We Treat
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies Section */}
       <CaseStudiesSection />
 

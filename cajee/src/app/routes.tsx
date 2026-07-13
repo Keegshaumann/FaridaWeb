@@ -3,6 +3,7 @@ import { RootLayout } from "./components/layout/RootLayout";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ServicesPage } from "./pages/ServicesPage";
+import { ConditionsPage } from "./pages/ConditionsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { CaseStudiesPage } from "./pages/CaseStudiesPage";
 import { AdminPage } from "./pages/AdminPage";
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       { index: true, Component: HomePage },
       { path: "about", Component: AboutPage },
       { path: "services", Component: ServicesPage },
+      { path: "conditions", Component: ConditionsPage },
       { path: "contact", Component: ContactPage },
       { path: "case-studies", Component: CaseStudiesPage },
       { path: "services/prosthetics", Component: ProstheticsPage },

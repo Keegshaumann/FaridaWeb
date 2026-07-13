@@ -122,6 +122,7 @@ export function SEO({
       sameAs: [
         'https://www.instagram.com/cajeebotes/',
         'https://www.facebook.com/Cajeebotes/',
+        'https://g.page/r/CRVd5g59XrdmEAI',
       ],
       openingHours: 'Mo-Fr 08:00-17:00',
       priceRange: '$$',
