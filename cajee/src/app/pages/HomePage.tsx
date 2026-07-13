@@ -235,8 +235,9 @@ export function HomePage() {
   return (
     <>
       <SEO
-        title="Professional Orthotist & Prosthetist Services in South Africa"
-        description="Expert orthotics and prosthetics care with mobile home and hospital assessments. Custom orthotics, prosthetic limbs, compression garments, mobility aids, and breast prosthetics. Book your assessment today."
+        fullTitle="Orthotist & Prosthetist in South Africa | Cajee Botes"
+        title="Orthotist & Prosthetist in South Africa"
+        description="Custom orthotics, prosthetics, compression garments and mobility aids in South Africa. Mobile home and hospital assessments — book yours today."
         keywords="orthotist prosthetist South Africa, custom orthotics, prosthetic limbs, medical compression garments, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphedema treatment, orthotic devices"
       />
       

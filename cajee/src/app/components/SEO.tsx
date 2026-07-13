@@ -8,6 +8,8 @@ interface SEOProps {
   ogImage?: string;
   canonicalUrl?: string;
   schema?: object;
+  /** Overrides the auto-composed "<title> | Cajee Botes…" when set (used to keep titles within 50–60 chars). */
+  fullTitle?: string;
 }
 
 export function SEO({
@@ -17,11 +19,12 @@ export function SEO({
   ogImage = 'https://www.cajeebotes.com/logo.png',
   canonicalUrl,
   schema,
+  fullTitle: fullTitleProp,
 }: SEOProps) {
   const location = useLocation();
   const baseUrl = 'https://www.cajeebotes.com';
   const fullUrl = canonicalUrl || `${baseUrl}${location.pathname}`;
-  const fullTitle = `${title} | Cajee Botes Orthotist & Prosthetist`;
+  const fullTitle = fullTitleProp || `${title} | Cajee Botes Orthotist & Prosthetist`;
 
   useEffect(() => {
     // Set document title
@@ -81,10 +84,11 @@ export function SEO({
 
     // Add schema.org structured data
     if (schema) {
-      let schemaScript = document.querySelector('script[type="application/ld+json"]');
+      let schemaScript = document.querySelector('script#page-schema');
       if (!schemaScript) {
         schemaScript = document.createElement('script');
         schemaScript.setAttribute('type', 'application/ld+json');
+        schemaScript.setAttribute('id', 'page-schema');
         document.head.appendChild(schemaScript);
       }
       schemaScript.textContent = JSON.stringify(schema);
@@ -98,15 +102,27 @@ export function SEO({
       image: ogImage,
       description: 'Professional orthotics and prosthetics services in South Africa with mobile home and hospital assessments',
       telephone: '+27646520684',
+      email: 'care@cajeebotes.com',
       url: baseUrl,
       address: {
         '@type': 'PostalAddress',
+        addressLocality: 'Centurion',
+        addressRegion: 'Gauteng',
         addressCountry: 'ZA',
       },
       geo: {
         '@type': 'GeoCoordinates',
         addressCountry: 'South Africa',
       },
+      founder: {
+        '@type': 'Person',
+        name: 'Farida Cajee-Botes',
+        jobTitle: 'Orthotist & Prosthetist',
+      },
+      sameAs: [
+        'https://www.instagram.com/cajeebotes/',
+        'https://www.facebook.com/Cajeebotes/',
+      ],
       openingHours: 'Mo-Fr 08:00-17:00',
       priceRange: '$$',
       medicalSpecialty: ['Orthotics', 'Prosthetics'],
@@ -155,7 +171,7 @@ export function SEO({
     }
     orgSchemaScript.textContent = JSON.stringify(organizationSchema);
 
-  }, [title, description, keywords, ogImage, fullUrl, schema]);
+  }, [fullTitle, title, description, keywords, ogImage, fullUrl, schema]);
 
   return null;
 }

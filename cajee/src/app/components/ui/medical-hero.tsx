@@ -6,7 +6,7 @@ import { Button } from "./button";
 import { WordPullUp } from "./word-pull-up";
 import compressionHand from "@/assets/77d6f8e28b13c674cd884a45561314f8bc9c3747.webp";
 import prostheticHand from "@/assets/bc7cb1d93a78168a45badcfc409e4f0629d4e07d.webp";
-import { Warp } from "@paper-design/shaders-react";
+import { SafeWarp } from "./safe-warp";
 
 export function MedicalHero() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,7 @@ export function MedicalHero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Warp Shader Background */}
       <div className="absolute inset-0 z-0">
-        <Warp
+        <SafeWarp
           style={{ height: "100%", width: "100%" }}
           proportion={0.45}
           softness={1}

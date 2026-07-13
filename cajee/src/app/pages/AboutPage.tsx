@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../components/ui/accordion";
-import { Warp } from "@paper-design/shaders-react";
+import { SafeWarp } from "../components/ui/safe-warp";
 import { SEO } from "../components/SEO";
 
 export function AboutPage() {
@@ -40,8 +40,9 @@ export function AboutPage() {
   return (
     <>
       <SEO
-        title="About Farida Cajee-Botes | Qualified Orthotist & Prosthetist"
-        description="Meet Farida Cajee-Botes, qualified Orthotist and Prosthetist providing evidence-based orthotic and prosthetic care in South Africa. Mobile home and hospital assessments available."
+        fullTitle="About Farida Cajee-Botes | Orthotist & Prosthetist"
+        title="About Farida Cajee-Botes"
+        description="Meet Farida Cajee-Botes, a qualified Orthotist & Prosthetist offering orthotic and prosthetic care in South Africa, with mobile home and hospital visits."
         keywords="Farida Cajee-Botes, qualified orthotist, certified prosthetist, orthotic specialist South Africa, prosthetic specialist, mobile orthotist, home visit prosthetist"
       />
       
@@ -52,7 +53,7 @@ export function AboutPage() {
       <section className="relative py-16 md:py-24 bg-[#F5E8F3] overflow-hidden">
         {/* Background Warp Shader */}
         <div className="absolute inset-0 opacity-20 z-0">
-          <Warp
+          <SafeWarp
             style={{ height: "100%", width: "100%" }}
             proportion={0.45}
             softness={1}
