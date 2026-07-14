@@ -8,6 +8,7 @@ import { ContactPage } from "./pages/ContactPage";
 import { CaseStudiesPage } from "./pages/CaseStudiesPage";
 import { AdminPage } from "./pages/AdminPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
+import { TermsAndConditionsPage } from "./pages/TermsAndConditionsPage";
 import { ProstheticsPage } from "./pages/services/ProstheticsPage";
 import { CustomOrthoticsPage } from "./pages/services/CustomOrthoticsPage";
 import { OffTheShelfOrthoticsPage } from "./pages/services/OffTheShelfOrthoticsPage";
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
       { path: "services/mobility-aids", Component: MobilityAidsPage },
       { path: "services/breast-prosthetics", Component: BreastProstheticsPage },
       { path: "privacy-policy", Component: PrivacyPolicyPage },
+      { path: "terms-and-conditions", Component: TermsAndConditionsPage },
       { path: "*", Component: NotFoundPage },
     ],
   },

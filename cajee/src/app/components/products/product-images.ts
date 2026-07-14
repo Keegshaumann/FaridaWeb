@@ -12,40 +12,37 @@ function imageKeyFor(d: Pick<Device, "service" | "bodyPart" | "name">): string {
 
   switch (d.service) {
     case "prosthetics":
-      if (/blade|running|sprint/.test(n)) return "prosthetic-blade";
-      if (/foot|ankle/.test(n)) return /microprocessor|powered|bionic/.test(n) ? "prosthetic-foot-mpc" : "prosthetic-foot";
-      if (/knee/.test(n)) return /microprocessor|powered|bionic/.test(n) ? "prosthetic-knee-mpc" : "prosthetic-knee";
-      if (/hip/.test(n)) return "prosthetic-hip";
-      if (/liner|sleeve|suspension|shrinker/.test(n)) return "prosthetic-liner";
-      if (/socket/.test(n)) return "prosthetic-socket";
-      if (/hook|body-powered/.test(n)) return "prosthetic-hook";
-      if (/cosmetic|passive/.test(n)) return "prosthetic-hand-cosmetic";
-      if (/hand|myoelectric|gripper|terminal/.test(n)) return "prosthetic-hand-myo";
-      return "prosthetic-arm";
+      if (/paediatric/.test(n)) return "paediatric-prosthesis";
+      if (/upper limb|transhumeral|transradial/.test(n)) return "prosthetic-arm";
+      return "prosthetic-leg";
 
     case "off-the-shelf-orthotics":
     case "custom-orthotics":
       if (/cervical|collar/.test(n) || bp === "Neck") return "cervical-collar";
+      if (/bennett/.test(n)) return "bennett-brace";
       if (/scoliosis|tlso|thoracolumbosacral/.test(n)) return "tlso-scoliosis";
       if (/posture/.test(n)) return "posture-brace";
-      if (/sacroiliac|\bsi\b/.test(n)) return "si-belt";
-      if (/kafo|knee-ankle|hkafo|hip-knee/.test(n)) return "kafo";
+      if (/hernia/.test(n)) return "hernia-belt";
+      if (/maternity/.test(n)) return "maternity-belt";
+      if (/abdominal/.test(n)) return "abdominal-binder";
+      if (/hkafo|hip-knee/.test(n)) return "hkafo";
+      if (/kafo|knee-ankle/.test(n)) return "kafo";
       if (/lumbar|lumbosacral|\blso\b|back support/.test(n)) return "lumbar-brace";
       if (/thumb/.test(n)) return "thumb-spica";
       if (/finger/.test(n)) return "finger-splint";
       if (/resting/.test(n)) return "resting-hand-splint";
       if (/carpal|wrist/.test(n)) return "wrist-splint";
+      if (/\brom\b/.test(n)) return bp === "Elbow" ? "dynamic-arm-orthosis" : "rom-knee-brace";
       if (/epicondyl|elbow/.test(n)) return "elbow-brace";
       if (/shoulder|sling|subluxation/.test(n)) return "shoulder-sling";
       if (/hip/.test(n)) return "hip-brace";
-      if (/thigh/.test(n)) return "thigh-support";
       if (/night splint/.test(n)) return "night-splint";
       if (/boot|fracture/.test(n)) return "walker-boot";
       if (/afo|drop.?foot|ankle-foot/.test(n)) return "afo";
       if (/insole|foot orthosis|foot orthotic|shoe/.test(n)) return "insole";
       if (/ankle/.test(n)) return "ankle-brace";
       if (/cranial|helmet/.test(n)) return "cranial-helmet";
-      if (/dynamic.*(arm|upper)|upper.*orthosis/.test(n)) return "dynamic-arm-orthosis";
+      if (/osteoarthritis|offloading|unloader/.test(n)) return "unloader-knee";
       if (/knee/.test(n)) return /elastic|sleeve/.test(n) ? "knee-brace-elastic" : "knee-brace";
       // fallbacks by body part
       if (bp === "Knee") return "knee-brace";
@@ -58,6 +55,8 @@ function imageKeyFor(d: Pick<Device, "service" | "bodyPart" | "name">): string {
       return "knee-brace";
 
     case "compression":
+      if (/tights|pantyhose/.test(n)) return "compression-tights";
+      if (/thigh/.test(n)) return "compression-stocking-thigh";
       if (/glove|gauntlet/.test(n)) return "compression-glove";
       if (/bandag/.test(n)) return "compression-bandaging";
       if (/mastectomy|scar|burn/.test(n) || bp === "Chest" || bp === "Full Body") return "mastectomy-vest";

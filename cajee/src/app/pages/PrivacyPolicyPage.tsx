@@ -1,6 +1,13 @@
+import { SEO } from "../components/SEO";
+
 export function PrivacyPolicyPage() {
   return (
     <>
+      <SEO
+        fullTitle="Privacy Policy | Cajee Botes"
+        title="Privacy Policy"
+        description="How Cajee Botes Orthotist & Prosthetist collects, uses and protects your personal information in line with POPIA."
+      />
       {/* Hero Section */}
       <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

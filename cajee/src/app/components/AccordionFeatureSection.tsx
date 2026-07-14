@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -25,8 +24,6 @@ export function AccordionFeatureSection({
   features,
   image,
 }: AccordionFeatureSectionProps) {
-  const [activeTabId, setActiveTabId] = useState<number | null>(1);
-
   return (
     <section className="py-12 md:py-16 bg-[var(--pink-light)]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,27 +51,25 @@ export function AccordionFeatureSection({
             </div>
 
             {/* Accordion */}
-            <Accordion type="single" className="w-full" defaultValue="item-1">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full space-y-3 text-left"
+              defaultValue="item-1"
+            >
               {features.map((feature) => (
-                <AccordionItem key={feature.id} value={`item-${feature.id}`}>
-                  <AccordionTrigger
-                    onClick={() => {
-                      setActiveTabId(feature.id);
-                    }}
-                    className="cursor-pointer py-5 !no-underline transition hover:no-underline"
-                  >
-                    <h3
-                      className={`text-lg font-semibold text-left ${
-                        feature.id === activeTabId
-                          ? "text-[var(--text-dark)]"
-                          : "text-[var(--text-muted)]"
-                      }`}
-                    >
+                <AccordionItem
+                  key={feature.id}
+                  value={`item-${feature.id}`}
+                  className="group rounded-2xl border border-[#5E3362]/10 last:border-b bg-white/45 px-5 transition-[background-color,border-color,box-shadow] duration-200 ease-out data-[state=closed]:hover:bg-white/70 data-[state=open]:bg-white data-[state=open]:border-[#5E3362]/15 data-[state=open]:shadow-[0_12px_32px_-16px_rgba(94,51,98,0.28)]"
+                >
+                  <AccordionTrigger className="cursor-pointer items-center gap-4 py-4 text-left !no-underline hover:no-underline [&>svg]:size-8 [&>svg]:shrink-0 [&>svg]:translate-y-0 [&>svg]:rounded-full [&>svg]:p-2 [&>svg]:bg-[#5E3362]/[0.07] [&>svg]:text-[var(--text-dark)] [&>svg]:transition-[transform,background-color,color] [&>svg]:duration-200 [&>svg]:ease-out [&[data-state=open]>svg]:bg-[var(--text-dark)] [&[data-state=open]>svg]:text-[var(--pink-light)]">
+                    <h3 className="text-base md:text-[17px] font-medium leading-snug text-left text-[#5E3362]/70 transition-colors duration-200 group-data-[state=open]:text-[var(--text-dark)]">
                       {feature.title}
                     </h3>
                   </AccordionTrigger>
-                  <AccordionContent>
-                    <p className="text-[var(--text-muted)] leading-relaxed">
+                  <AccordionContent className="pb-5 text-left">
+                    <p className="text-[15px] leading-relaxed text-[#5E3362]/75">
                       {feature.description}
                     </p>
                   </AccordionContent>

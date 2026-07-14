@@ -21,7 +21,7 @@ export function ConditionsPage() {
         fullTitle="Conditions We Treat | Cajee Botes Orthotist & Prosthetist"
         title="Conditions We Treat"
         description="Find your pain on our interactive body map and see the orthotic or prosthetic solution — braces, insoles, compression or prosthetics — that can help."
-        keywords="orthotic solutions for pain, knee brace, ankle brace, back support, cervical collar, plantar fasciitis insole, SI joint belt, lymphoedema compression, prosthetic limb South Africa"
+        keywords="orthotic solutions for pain, knee brace, ankle brace, back support, cervical collar, plantar fasciitis insole, hernia support belt, lymphoedema compression, prosthetic limb South Africa"
       />
 
       {/* Hero */}

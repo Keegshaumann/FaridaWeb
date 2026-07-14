@@ -120,7 +120,7 @@ export function SEO({
         jobTitle: 'Orthotist & Prosthetist',
       },
       sameAs: [
-        'https://www.instagram.com/cajeebotes/',
+        'https://www.instagram.com/faridabotes/',
         'https://www.facebook.com/Cajeebotes/',
         'https://g.page/r/CRVd5g59XrdmEAI',
       ],
