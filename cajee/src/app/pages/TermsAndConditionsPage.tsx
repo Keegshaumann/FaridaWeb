@@ -4,9 +4,10 @@ export function TermsAndConditionsPage() {
   return (
     <>
       <SEO
-        fullTitle="Terms & Conditions | Cajee Botes"
+        fullTitle="Terms & Conditions | Cajee Botes Orthotist & Prosthetist"
         title="Terms & Conditions"
         description="The terms and conditions that apply when you use the Cajee Botes Orthotist & Prosthetist website and services in South Africa."
+        keywords="terms and conditions, website terms, orthotist prosthetist South Africa"
       />
       {/* Hero Section */}
       <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">

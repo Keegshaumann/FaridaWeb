@@ -30,6 +30,19 @@ export interface PainPoint {
 
 export const PAIN_POINTS: PainPoint[] = [
   {
+    id: "head",
+    label: "Infant Head Shape (Flat Head)",
+    view: "front",
+    x: 50,
+    y: 9,
+    device: "Cranial remoulding helmet",
+    howItHelps:
+      "A cranial remoulding helmet is a lightweight custom helmet, moulded from a 3D scan of the infant's head, that applies gentle, evenly distributed contact to help guide skull growth into a more symmetrical shape during a period of rapid growth. It is worn for most of the day over a defined treatment period and adjusted as the head grows.",
+    blurb: "A custom-moulded helmet gently guides an infant's head shape during rapid skull growth.",
+    serviceName: "Custom Orthotics",
+    serviceSlug: "/services/custom-orthotics",
+  },
+  {
     id: "neck",
     label: "Neck Pain",
     view: "front",
@@ -193,6 +206,7 @@ export const BACK_POINTS = PAIN_POINTS.filter((p) => p.view === "back");
 // Maps each body-map point to the device-catalogue body part, so the detail
 // panel can list related devices and deep-link to the filtered service page.
 export const POINT_TO_BODYPART: Record<string, BodyPart> = {
+  head: "Head",
   neck: "Neck",
   shoulder: "Shoulder",
   "elbow-arm": "Elbow",

@@ -222,10 +222,10 @@ export const DEVICES: Device[] = [
   {
     id: "custom-foot-orthosis",
     service: "custom-orthotics",
-    name: "Custom Foot Orthosis (Moulded Insole)",
+    name: "Custom-Moulded Foot Orthotics (Insoles)",
     bodyPart: "Ankle & Foot",
     useCase: "For foot pain, deformity or abnormal loading patterns needing an insole shaped precisely to the individual foot.",
-    description: "A custom foot orthosis is an insole individually moulded from a cast, foam impression or 3D scan of the patient's foot to help redistribute pressure and support the foot's natural alignment. It is built to the person's specific foot shape and prescribed correction, then fitted inside the patient's own or recommended footwear. Note that prefabricated insoles are not stocked — every insole is custom-made following an individual assessment.",
+    description: "Every insole we provide is custom-made following an individual assessment — prefabricated insoles are not stocked. Each custom foot orthosis is individually moulded from a cast, foam impression or 3D scan of the patient's foot to help redistribute pressure and support the foot's natural alignment, built to the person's specific foot shape and prescribed correction, then fitted inside their own or recommended footwear.",
     features: ["Individually moulded from a cast, impression or scan","Helps redistribute plantar pressure to reduce localised strain","Can incorporate posting or wedging for alignment support","Available in a range of density materials for different needs"],
   },
   {
@@ -250,7 +250,7 @@ export const DEVICES: Device[] = [
     id: "cranial-remoulding-helmet",
     service: "custom-orthotics",
     name: "Cranial Remoulding Helmet",
-    bodyPart: "Full Body",
+    bodyPart: "Head",
     useCase: "For infants with asymmetrical or flattened head shape who may benefit from gentle guided reshaping during a period of rapid skull growth.",
     description: "A cranial remoulding helmet is a lightweight custom helmet, moulded from a 3D scan of the infant's head, that applies gentle, evenly distributed contact to help guide skull growth into a more symmetrical shape over time. It is worn for most of the day during a defined treatment period and adjusted as the head grows.",
     features: ["Custom-moulded from a 3D head scan","Lightweight, ventilated shell with soft inner lining","Applies gentle, passive guidance rather than active pressure","Requires periodic review and adjustment as the head grows"],
@@ -463,15 +463,6 @@ export const DEVICES: Device[] = [
     features: ["Full and partial styles","Lightweight and swim-friendly options","Self-adhesive options available","Custom-made forms available"],
   },
   {
-    id: "nipple-prosthesis",
-    service: "breast-prosthetics",
-    name: "Nipple Prosthesis",
-    bodyPart: "Chest",
-    useCase: "For individuals who have undergone nipple removal or reconstruction surgery and wish to restore a natural areola-nipple appearance without further surgery.",
-    description: "A small, hand-painted silicone attachment shaped and coloured to match the natural or reconstructed nipple-areola area. It is applied with medical-grade adhesive to restore a natural appearance beneath clothing.",
-    features: ["Hand-painted colour matching","Medical-grade adhesive attachment","Soft, flexible silicone","Reusable and low-profile under clothing"],
-  },
-  {
     id: "post-mastectomy-bra-camisole",
     service: "breast-prosthetics",
     name: "Mastectomy Bras & Camisoles",
@@ -479,6 +470,15 @@ export const DEVICES: Device[] = [
     useCase: "For post-surgical wear immediately after mastectomy or reconstruction, and for ongoing daily support of a breast prosthesis.",
     description: "A soft, seam-minimised bra or camisole with built-in pockets to hold and position a breast form or post-surgical drains. It offers gentle support during healing and comfortable, secure everyday wear once recovered.",
     features: ["Internal prosthesis pockets","Soft, seam-free construction","Adjustable, wide comfort straps","Front-closure options for easier dressing after surgery"],
+  },
+  {
+    id: "nipple-prosthesis",
+    service: "breast-prosthetics",
+    name: "Nipple Prosthesis",
+    bodyPart: "Chest",
+    useCase: "For individuals who have undergone nipple removal or reconstruction surgery and wish to restore a natural areola-nipple appearance without further surgery.",
+    description: "A small, hand-painted silicone attachment shaped and coloured to match the natural or reconstructed nipple-areola area. It is applied with medical-grade adhesive to restore a natural appearance beneath clothing.",
+    features: ["Hand-painted colour matching","Medical-grade adhesive attachment","Soft, flexible silicone","Reusable and low-profile under clothing"],
   },
   {
     id: "silicone-cosmetic-restoration-face-digits",

@@ -1,10 +1,17 @@
 import { Link } from "react-router";
 import { Button } from "../components/ui/button";
 import { Home } from "lucide-react";
+import { SEO } from "../components/SEO";
 
 export function NotFoundPage() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-[var(--pink-light)] via-white to-[var(--purple-light)]">
+      <SEO
+        fullTitle="Page Not Found | Cajee Botes"
+        title="Page Not Found"
+        description="The page you're looking for doesn't exist or has been moved."
+        noindex
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
           <h1 className="text-6xl md:text-8xl font-semibold text-[var(--text-dark)] mb-4">

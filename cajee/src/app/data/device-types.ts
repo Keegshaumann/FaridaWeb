@@ -11,6 +11,7 @@ export type ServiceSlug =
   | "breast-prosthetics";
 
 export type BodyPart =
+  | "Head"
   | "Neck"
   | "Shoulder"
   | "Elbow"
@@ -38,6 +39,7 @@ export interface Device {
 
 // Head-to-toe ordering used to sort the body-part filter chips consistently.
 export const BODY_PART_ORDER: BodyPart[] = [
+  "Head",
   "Neck",
   "Shoulder",
   "Upper Limb",

@@ -9,10 +9,10 @@ export function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-br from-[var(--purple-soft)] via-[var(--purple-medium)] to-[var(--mauve)] overflow-hidden">
-      {/* Blur transition at top */}
-      
-      
-      <div className="relative z-0 container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-20 bg-[#bf00ff0f]">
+      {/* Full-width tint so the container doesn't render as a darker centre band */}
+      <div aria-hidden="true" className="absolute inset-0 bg-[#bf00ff0f] pointer-events-none" />
+
+      <div className="relative z-0 container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
@@ -78,6 +78,11 @@ export function Footer() {
               <li>
                 <Link to="/case-studies" className="text-white/80 hover:text-white text-sm transition-colors">
                   Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
@@ -147,7 +152,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/20">
           <p className="text-center text-white/70 text-sm">
-            Â© {new Date().getFullYear()} Cajee Botes Orthotist Prosthetist. All rights reserved.
+            © {new Date().getFullYear()} Cajee Botes Orthotist Prosthetist. All rights reserved.
           </p>
         </div>
       </div>

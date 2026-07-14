@@ -6,14 +6,14 @@ export function ProductCard({ device }: { device: Device }) {
   return (
     <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[var(--purple-soft)]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Product photo */}
-      <div className="relative flex aspect-[4/3] items-center justify-center bg-white p-3">
+      <div className="relative aspect-square overflow-hidden bg-white">
         <span className="absolute left-3 top-3 z-10 rounded-full bg-[var(--pink-light)]/90 px-2.5 py-1 text-[11px] font-semibold text-[var(--text-dark)] shadow-sm">
           {device.bodyPart}
         </span>
         <img
           src={deviceImage(device)}
           alt={device.name}
-          className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />
       </div>

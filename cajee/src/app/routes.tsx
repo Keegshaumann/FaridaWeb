@@ -9,6 +9,8 @@ import { CaseStudiesPage } from "./pages/CaseStudiesPage";
 import { AdminPage } from "./pages/AdminPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { TermsAndConditionsPage } from "./pages/TermsAndConditionsPage";
+import { BlogPage } from "./pages/BlogPage";
+import { BlogPostPage } from "./pages/BlogPostPage";
 import { ProstheticsPage } from "./pages/services/ProstheticsPage";
 import { CustomOrthoticsPage } from "./pages/services/CustomOrthoticsPage";
 import { OffTheShelfOrthoticsPage } from "./pages/services/OffTheShelfOrthoticsPage";
@@ -28,6 +30,8 @@ export const router = createBrowserRouter([
       { path: "conditions", Component: ConditionsPage },
       { path: "contact", Component: ContactPage },
       { path: "case-studies", Component: CaseStudiesPage },
+      { path: "blog", Component: BlogPage },
+      { path: "blog/:slug", Component: BlogPostPage },
       { path: "services/prosthetics", Component: ProstheticsPage },
       { path: "services/custom-orthotics", Component: CustomOrthoticsPage },
       { path: "services/off-the-shelf-orthotics", Component: OffTheShelfOrthoticsPage },

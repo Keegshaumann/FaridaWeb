@@ -49,6 +49,7 @@ export function Header() {
     { name: "About", path: "/about" },
     { name: "Conditions", path: "/conditions" },
     { name: "Case Studies", path: "/case-studies" },
+    { name: "Blog", path: "/blog" },
   ];
 
   const serviceLinks = [

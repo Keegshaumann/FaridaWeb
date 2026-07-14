@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Star, FileText } from "lucide-react";
+import { SEO } from "../components/SEO";
 import { TestimonialsColumn } from "../components/ui/testimonials-columns-1";
 import { SignupForm } from "../components/SignupForm";
 import { trackButtonClick } from "../components/GoogleAnalytics";
@@ -71,6 +72,12 @@ export function ContactPage() {
 
   return (
     <>
+      <SEO
+        fullTitle="Contact Us & Book an Assessment | Cajee Botes Centurion"
+        title="Contact Us & Book an Assessment"
+        description="Book a mobile home or hospital assessment with Cajee Botes Orthotist & Prosthetist in Centurion, Gauteng. Call, email or message us today."
+        keywords="contact orthotist prosthetist, book assessment South Africa, mobile home visit orthotist, hospital prosthetic assessment, Centurion orthotist"
+      />
       {/* Hero Section */}
       <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -178,7 +185,7 @@ export function ContactPage() {
                   {/* Social Media Icons */}
                   <div className="flex justify-center gap-4 mb-5">
                     <a
-                      href="https://www.instagram.com/cajeebotes/"
+                      href="https://www.instagram.com/faridabotes/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--accent-purple)] to-[var(--accent-pink)] hover:shadow-lg flex items-center justify-center transition-all hover:scale-110"

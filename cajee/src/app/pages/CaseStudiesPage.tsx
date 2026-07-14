@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
 import { PageHero } from "../components/PageHero";
+import { SEO } from "../components/SEO";
 import { Button } from "../components/ui/button";
 import { X, Calendar, User } from "lucide-react";
 import { projectId, publicAnonKey } from "/utils/supabase/info";
@@ -82,6 +83,12 @@ export function CaseStudiesPage() {
 
   return (
     <>
+      <SEO
+        fullTitle="Patient Case Studies | Cajee Botes Orthotist & Prosthetist"
+        title="Patient Case Studies"
+        description="Real patient outcomes from Cajee Botes Orthotist & Prosthetist — orthotic, prosthetic and mobility case studies from across South Africa."
+        keywords="orthotic case studies, prosthetic case studies South Africa, patient outcomes orthotist, rehabilitation case studies, prosthetic success stories"
+      />
       {/* Hero Section */}
       <PageHero
         title="Case Studies & Insights"
@@ -123,14 +130,14 @@ export function CaseStudiesPage() {
             <div className="text-center py-12">
               <div className="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-lg">
                 <p className="text-[var(--text-dark)] font-semibold mb-2">
-                  No case studies available yet.
+                  Patient stories are on their way.
                 </p>
                 <p className="text-sm text-[var(--text-muted)] mb-4">
-                  Case studies can be added through the admin panel.
+                  In the meantime, our blog answers the questions patients ask us most.
                 </p>
-                <Link to="/admin">
+                <Link to="/blog">
                   <Button className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full">
-                    Go to Admin Panel
+                    Read the Blog
                   </Button>
                 </Link>
               </div>

@@ -29,7 +29,6 @@ function imageKeyFor(d: Pick<Device, "service" | "bodyPart" | "name">): string {
       if (/kafo|knee-ankle/.test(n)) return "kafo";
       if (/lumbar|lumbosacral|\blso\b|back support/.test(n)) return "lumbar-brace";
       if (/thumb/.test(n)) return "thumb-spica";
-      if (/finger/.test(n)) return "finger-splint";
       if (/resting/.test(n)) return "resting-hand-splint";
       if (/carpal|wrist/.test(n)) return "wrist-splint";
       if (/\brom\b/.test(n)) return bp === "Elbow" ? "dynamic-arm-orthosis" : "rom-knee-brace";
@@ -39,7 +38,7 @@ function imageKeyFor(d: Pick<Device, "service" | "bodyPart" | "name">): string {
       if (/night splint/.test(n)) return "night-splint";
       if (/boot|fracture/.test(n)) return "walker-boot";
       if (/afo|drop.?foot|ankle-foot/.test(n)) return "afo";
-      if (/insole|foot orthosis|foot orthotic|shoe/.test(n)) return "insole";
+      if (/insole|foot orthosis|foot orthotic|shoe/.test(n)) return /custom/.test(n) ? "custom-foot-orthosis" : "insole";
       if (/ankle/.test(n)) return "ankle-brace";
       if (/cranial|helmet/.test(n)) return "cranial-helmet";
       if (/osteoarthritis|offloading|unloader/.test(n)) return "unloader-knee";

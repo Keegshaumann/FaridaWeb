@@ -10,16 +10,19 @@ interface SEOProps {
   schema?: object;
   /** Overrides the auto-composed "<title> | Cajee Botes…" when set (used to keep titles within 50–60 chars). */
   fullTitle?: string;
+  /** Ask crawlers not to index this page (404, thin utility pages). */
+  noindex?: boolean;
 }
 
 export function SEO({
   title,
   description,
   keywords = '',
-  ogImage = 'https://www.cajeebotes.com/logo.png',
+  ogImage = 'https://www.cajeebotes.com/og-image.jpg',
   canonicalUrl,
   schema,
   fullTitle: fullTitleProp,
+  noindex = false,
 }: SEOProps) {
   const location = useLocation();
   const baseUrl = 'https://www.cajeebotes.com';
@@ -48,8 +51,8 @@ export function SEO({
     setMetaTag('description', description);
     if (keywords) setMetaTag('keywords', keywords);
     setMetaTag('author', 'Cajee Botes Orthotist Prosthetist');
-    setMetaTag('robots', 'index, follow, max-image-preview:large');
-    setMetaTag('googlebot', 'index, follow');
+    setMetaTag('robots', noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large');
+    setMetaTag('googlebot', noindex ? 'noindex, follow' : 'index, follow');
     
     // Open Graph meta tags
     setMetaTag('og:title', fullTitle, true);
@@ -112,7 +115,8 @@ export function SEO({
       },
       geo: {
         '@type': 'GeoCoordinates',
-        addressCountry: 'South Africa',
+        latitude: -25.8603,
+        longitude: 28.1894,
       },
       founder: {
         '@type': 'Person',
@@ -196,7 +200,7 @@ export function SEO({
     }
     orgSchemaScript.textContent = JSON.stringify(organizationSchema);
 
-  }, [fullTitle, title, description, keywords, ogImage, fullUrl, schema]);
+  }, [fullTitle, title, description, keywords, ogImage, fullUrl, schema, noindex]);
 
   return null;
 }

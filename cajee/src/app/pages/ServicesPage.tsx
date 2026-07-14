@@ -1,4 +1,5 @@
 import { PageHero } from "../components/PageHero";
+import { SEO } from "../components/SEO";
 import { ServiceCard } from "../components/ServiceCard";
 import { ServiceCardPremium } from "../components/ServiceCardPremium";
 import { Link } from "react-router";
@@ -90,6 +91,12 @@ export function ServicesPage() {
 
   return (
     <>
+      <SEO
+        fullTitle="Orthotic & Prosthetic Services in South Africa | Cajee Botes"
+        title="Orthotic & Prosthetic Services"
+        description="Explore our custom orthotics, prosthetics, mobility aids and compression garments — individually assessed and fitted across South Africa."
+        keywords="orthotist prosthetist South Africa, orthotic services, prosthetic services, custom orthotics, off-the-shelf orthotics, mobility aids, medical compression, breast prosthetics"
+      />
       {/* Hero Section */}
       
 
