@@ -47,7 +47,7 @@ export const PAIN_POINTS: PainPoint[] = [
     label: "Neck Pain",
     view: "front",
     x: 50,
-    y: 19,
+    y: 21,
     device: "Cervical collar (soft or rigid cervical orthosis)",
     howItHelps:
       "A cervical collar cradles the head and gently limits neck movement, offloading the surrounding muscles to ease pain and spasm during recovery from muscle strains or arthritic flare-ups. It provides short-term support as part of a wider management plan.",
@@ -59,8 +59,8 @@ export const PAIN_POINTS: PainPoint[] = [
     id: "shoulder",
     label: "Shoulder Pain",
     view: "front",
-    x: 63,
-    y: 25,
+    x: 67,
+    y: 24,
     device: "Shoulder immobiliser sling or abduction sling",
     howItHelps:
       "A shoulder sling supports the weight of the arm and rests the joint after strain, instability or injury. An abduction sling holds the arm slightly away from the body in a protected position, commonly used after rotator cuff repair or shoulder surgery to protect healing tissue.",
@@ -72,8 +72,8 @@ export const PAIN_POINTS: PainPoint[] = [
     id: "elbow-arm",
     label: "Elbow & Arm Pain",
     view: "front",
-    x: 83,
-    y: 44,
+    x: 80,
+    y: 40,
     device: "Epicondylitis forearm strap (tennis / golfer's elbow brace) or elbow support sleeve",
     howItHelps:
       "A forearm strap applies targeted compression just below the elbow to offload the strained tendon attachment, while a support sleeve adds compression and warmth to steady the joint and manage swelling during activity. These manage symptoms but don't replace assessment of the cause.",
@@ -124,8 +124,8 @@ export const PAIN_POINTS: PainPoint[] = [
     id: "limb-loss",
     label: "Limb Loss / Amputation",
     view: "front",
-    x: 59,
-    y: 66,
+    x: 60,
+    y: 75,
     device: "Custom-fitted prosthetic limb (below-knee, above-knee or upper-limb prosthesis)",
     howItHelps:
       "A prosthetic limb replaces the missing segment to restore weight-bearing, balance and a more natural gait or hand function, with an individually cast socket and liner distributing load and protecting the residual limb. Early on, a residual-limb shrinker can help control swelling and shape the limb for socket fitting.",
@@ -164,7 +164,7 @@ export const PAIN_POINTS: PainPoint[] = [
     label: "Knee Pain",
     view: "back",
     x: 38,
-    y: 72,
+    y: 70,
     device: "Knee brace / support — hinged or patella-stabilising, or an offloading brace for compartment osteoarthritis",
     howItHelps:
       "A fitted knee brace stabilises the joint, guides patellar tracking and applies graded compression to control pain and swelling. An offloading brace uses a 3-point leverage system to shift load away from the worn compartment in osteoarthritis. It supports and offloads the knee but doesn't cure the cause.",
