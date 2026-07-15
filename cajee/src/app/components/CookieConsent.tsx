@@ -42,7 +42,7 @@ export function CookieConsent() {
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6 animate-in slide-in-from-bottom duration-500">
+    <div id="cookie-consent" className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6 animate-in slide-in-from-bottom duration-500">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4">

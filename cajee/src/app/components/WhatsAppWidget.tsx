@@ -12,6 +12,7 @@ export function WhatsAppWidget() {
 
   return (
     <a
+      id="whatsapp-widget"
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"

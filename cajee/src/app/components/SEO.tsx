@@ -130,10 +130,14 @@ export function SEO({
       ],
       priceRange: '$$',
       knowsAbout: ['Orthotics', 'Prosthetics', 'Medical Compression', 'Mobility Aids', 'Breast Prosthetics'],
-      areaServed: {
-        '@type': 'Country',
-        name: 'South Africa',
-      },
+      areaServed: [
+        { '@type': 'City', name: 'Centurion' },
+        { '@type': 'City', name: 'Pretoria' },
+        { '@type': 'City', name: 'Midrand' },
+        { '@type': 'City', name: 'Johannesburg' },
+        { '@type': 'AdministrativeArea', name: 'Gauteng' },
+        { '@type': 'Country', name: 'South Africa' },
+      ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Orthotic and Prosthetic Services',

@@ -3,6 +3,7 @@ import { Button } from "../components/ui/button";
 import { ServiceCard } from "../components/ServiceCard";
 import { ServiceCardPremium } from "../components/ServiceCardPremium";
 import { CaseStudiesSection } from "../components/CaseStudiesSection";
+import { LatestFromBlog } from "../components/LatestFromBlog";
 import { SignupForm } from "../components/SignupForm";
 import { Heart, Users, Home, Award, Phone, Mail, Check, ArrowRight } from "lucide-react";
 import { MedicalHero } from "../components/ui/medical-hero";
@@ -173,9 +174,9 @@ export function HomePage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotist & Prosthetist in South Africa | Cajee Botes"
-        title="Orthotist & Prosthetist in South Africa"
-        description="Custom orthotics, prosthetics, compression garments and mobility aids in South Africa. Mobile home and hospital assessments — book yours today."
+        fullTitle="Orthotic & Prosthetic Care South Africa | Cajee Botes"
+        title="Orthotic & Prosthetic Care in South Africa"
+        description="Professional orthotic and prosthetic care in South Africa: custom devices, compression and mobility support, plus home and hospital assessments."
         keywords="orthotist prosthetist South Africa, custom orthotics, prosthetic limbs, medical compression garments, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphedema treatment, orthotic devices"
       />
       
@@ -417,6 +418,23 @@ export function HomePage() {
 
       {/* Case Studies Section */}
       <CaseStudiesSection />
+
+      {/* Service area — local relevance for patients and search */}
+      <section className="relative py-12 bg-[#F5E8F3]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-4">
+              Care Where You Are
+            </h2>
+            <p className="text-[var(--text-muted)] leading-relaxed">
+              Cajee Botes Orthotist &amp; Prosthetist is an HPCSA-registered practice based in Centurion, providing orthotic and prosthetic care across Gauteng — including Pretoria, Midrand, Johannesburg and surrounding areas. Because every assessment can happen at home or at the hospital bedside, patients who struggle to travel after surgery, amputation or injury can begin rehabilitation without delay. From custom orthotics and prosthetic limbs to compression garments, mobility aids and breast prostheses, every device is prescribed after an individual clinical assessment and fitted with ongoing review — so your support keeps pace as your needs change.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest advice articles */}
+      <LatestFromBlog />
 
       {/* CTA Section - Purple gradient */}
       

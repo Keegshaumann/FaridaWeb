@@ -1,5 +1,7 @@
 # Cajee Botes Orthotist & Prosthetist — Hostinger (Apache/LiteSpeed)
 
+Options -Indexes
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -10,6 +12,17 @@
   RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
   RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
 
+  # Prerendered pages live as <route>/index.html. Serve them directly without
+  # mod_dir's trailing-slash 301 so canonical URLs resolve in one hop.
+  <IfModule mod_dir.c>
+    DirectorySlash Off
+  </IfModule>
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+[^/])$ $1/index.html [L]
+  # Normalise trailing-slash URLs to the canonical non-slash form
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
   # Single Page App fallback: serve index.html for any path that is not a real
   # file or directory, so client-side routes (e.g. /about) work on refresh.
   RewriteCond %{REQUEST_FILENAME} !-f
