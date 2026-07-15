@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
-import { PageHero } from "../components/PageHero";
 import { SEO } from "../components/SEO";
 import { Button } from "../components/ui/button";
 import { X, Calendar, User } from "lucide-react";
@@ -90,10 +89,19 @@ export function CaseStudiesPage() {
         keywords="orthotic case studies, prosthetic case studies South Africa, patient outcomes orthotist, rehabilitation case studies, prosthetic success stories"
       />
       {/* Hero Section */}
-      <PageHero
-        title="Case Studies & Insights"
-        description="Real patient stories and professional insights showcasing the impact of quality orthotic and prosthetic care"
-      />
+      {/* Hero Section */}
+      <section className="relative bg-[#F5E8F3] pt-[90px] pb-4">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
+              Case Studies & Insights
+            </h1>
+            <p className="text-lg md:text-xl text-[var(--text-muted)] leading-relaxed">
+              Patient stories and professional insights from our practice
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Case Studies Section */}
       <section className="relative py-16 md:py-24 bg-[#F5E8F3]">

@@ -112,10 +112,10 @@ export function CaseStudiesSection() {
             </h2>
             <div className="bg-[#FDF1FF] rounded-2xl p-8 max-w-md mx-auto mt-8">
               <p className="text-[var(--text-dark)] font-semibold mb-2">
-                No case studies available yet
+                Patient stories are on their way
               </p>
               <p className="text-sm text-[var(--text-muted)]">
-                Visit the admin panel to add case studies
+                In the meantime, our blog answers the questions patients ask us most.
               </p>
             </div>
           </div>

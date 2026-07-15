@@ -107,9 +107,9 @@ export function ServicesPage() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
               Our Services
-            </h2>
+            </h1>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
               We offer a full range of orthotic and prosthetic services, from custom-made devices to off-the-shelf solutions. Each service is delivered with the same commitment to individualised, assessment-led care.
             </p>

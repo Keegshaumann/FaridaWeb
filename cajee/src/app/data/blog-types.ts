@@ -16,6 +16,8 @@ export interface BlogReference {
 export interface BlogPost {
   slug: string;
   title: string;
+  /** Short SEO title (<=60 chars incl. " | Cajee Botes"); falls back to title. */
+  metaTitle?: string;
   category: "Orthotics" | "Prosthetics" | "General";
   /** ISO date the post is published under (spread across the year). */
   date: string;

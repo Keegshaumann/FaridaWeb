@@ -16,10 +16,11 @@ export function BlogPostPage() {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.date,
+    dateModified: post.date,
     inLanguage: "en-ZA",
     author: {
       "@type": "Person",
@@ -27,7 +28,12 @@ export function BlogPostPage() {
       jobTitle: "Orthotist & Prosthetist",
       worksFor: { "@type": "MedicalBusiness", name: "Cajee Botes Orthotist Prosthetist" },
     },
-    publisher: { "@type": "MedicalBusiness", name: "Cajee Botes Orthotist Prosthetist", url: "https://www.cajeebotes.com" },
+    publisher: {
+      "@type": "Organization",
+      name: "Cajee Botes Orthotist Prosthetist",
+      url: "https://www.cajeebotes.com",
+      logo: { "@type": "ImageObject", url: "https://www.cajeebotes.com/logo.png" },
+    },
     mainEntityOfPage: `https://www.cajeebotes.com/blog/${post.slug}`,
     image: `https://www.cajeebotes.com${post.image}`,
   };
@@ -35,7 +41,7 @@ export function BlogPostPage() {
   return (
     <>
       <SEO
-        fullTitle={`${post.title} | Cajee Botes`}
+        fullTitle={post.metaTitle ?? `${post.title} | Cajee Botes`}
         title={post.title}
         description={post.metaDescription}
         ogImage={`https://www.cajeebotes.com${post.image}`}

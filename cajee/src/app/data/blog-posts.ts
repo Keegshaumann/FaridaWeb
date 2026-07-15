@@ -7,6 +7,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "prosthetic-leg-cost-south-africa",
     "title": "How much does a prosthetic leg cost in South Africa?",
+    "metaTitle": "Prosthetic Leg Cost in South Africa | Cajee Botes",
     "category": "Prosthetics",
     "date": "2026-02-11",
     "author": "Farida Cajee-Botes",
@@ -119,6 +120,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "medical-aid-prosthetics-orthotics-cover",
     "title": "Does Medical Aid Cover Prosthetics and Orthotics in South Africa?",
+    "metaTitle": "Medical Aid Cover for Prosthetics | Cajee Botes",
     "category": "General",
     "date": "2026-03-03",
     "author": "Farida Cajee-Botes",
@@ -236,6 +238,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "how-long-after-amputation-prosthetic-leg",
     "title": "How long after an amputation can I get a prosthetic leg?",
+    "metaTitle": "Prosthetic Timeline After Amputation | Cajee Botes",
     "category": "Prosthetics",
     "date": "2026-03-25",
     "author": "Farida Cajee-Botes",
@@ -341,6 +344,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "how-long-does-a-prosthetic-leg-last",
     "title": "How long does a prosthetic leg last and how often should it be replaced?",
+    "metaTitle": "How Long a Prosthetic Leg Lasts | Cajee Botes",
     "category": "Prosthetics",
     "date": "2026-04-15",
     "author": "Farida Cajee-Botes",
@@ -446,6 +450,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "walking-with-a-prosthetic-leg",
     "title": "Can you walk normally with a prosthetic leg, and how long does it take to learn?",
+    "metaTitle": "Walking With a Prosthetic Leg | Cajee Botes",
     "category": "Prosthetics",
     "date": "2026-05-06",
     "author": "Farida Cajee-Botes",
@@ -547,6 +552,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "custom-orthotics-cost-south-africa",
     "title": "How Much Do Custom Orthotics Cost in South Africa?",
+    "metaTitle": "Custom Orthotics Cost in South Africa | Cajee Botes",
     "category": "Orthotics",
     "date": "2026-05-27",
     "author": "Farida Cajee-Botes",
@@ -642,6 +648,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "are-custom-orthotics-worth-it",
     "title": "Are Custom Orthotics Worth It?",
+    "metaTitle": "Are Custom Orthotics Worth It? | Cajee Botes",
     "category": "Orthotics",
     "date": "2026-06-10",
     "author": "Farida Cajee-Botes",
@@ -753,6 +760,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "can-orthotics-fix-flat-feet",
     "title": "Can Orthotics Fix Flat Feet Permanently?",
+    "metaTitle": "Can Orthotics Fix Flat Feet? | Cajee Botes",
     "category": "Orthotics",
     "date": "2026-06-24",
     "author": "Farida Cajee-Botes",
@@ -866,6 +874,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "does-my-child-need-orthotics",
     "title": "Does my child need orthotics for flat feet?",
+    "metaTitle": "Does My Child Need Orthotics? | Cajee Botes",
     "category": "Orthotics",
     "date": "2026-07-07",
     "author": "Farida Cajee-Botes",
@@ -965,6 +974,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     "slug": "referral-orthotist-prosthetist-first-visit",
     "title": "Do I Need a Referral to See an Orthotist or Prosthetist in South Africa?",
+    "metaTitle": "Seeing an Orthotist: Referral & First Visit | Cajee Botes",
     "category": "General",
     "date": "2026-07-14",
     "author": "Farida Cajee-Botes",

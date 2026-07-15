@@ -160,7 +160,7 @@ export function SignupForm({ onSuccess }: SignupFormProps = {}) {
           value={formData.phone}
           onChange={handleChange}
           className="w-full px-4 py-2.5 rounded-lg border border-[var(--text-dark)]/20 focus:border-[var(--accent-purple)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-purple)]/20 transition-colors bg-white"
-          placeholder="+27 123 456 789"
+          placeholder="064 123 4567"
         />
       </div>
 

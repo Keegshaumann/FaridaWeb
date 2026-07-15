@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Star, FileText } from "lucide-react";
 import { SEO } from "../components/SEO";
-import { TestimonialsColumn } from "../components/ui/testimonials-columns-1";
+import { GoogleReviews } from "../components/GoogleReviews";
 import { SignupForm } from "../components/SignupForm";
 import { trackButtonClick } from "../components/GoogleAnalytics";
 
@@ -13,62 +13,6 @@ export function ContactPage() {
     trackButtonClick('brochure_download', 'contact_page');
   };
 
-  // Testimonials data
-  const testimonials = [
-    {
-      text: "The home visit service made such a difference during my recovery. Cajee's professional yet compassionate approach helped me regain my independence.",
-      image: "/external/photo-1758686254563.jpg",
-      name: "Margaret Thompson",
-      role: "Prosthetic Patient",
-    },
-    {
-      text: "Professional, knowledgeable, and truly caring. The custom orthotic device has improved my mobility and quality of life significantly.",
-      image: "/external/photo-1764084051438.jpg",
-      name: "David Chen",
-      role: "Orthotic Patient",
-    },
-    {
-      text: "The assessment was thorough and respectful. I felt heard and understood throughout the entire process of getting my compression garments.",
-      image: "/external/photo-1676552055618.jpg",
-      name: "Linda Botha",
-      role: "Compression Patient",
-    },
-    {
-      text: "Excellent service from start to finish. The mobility aids recommended were perfect for my needs and delivered with expert guidance.",
-      image: "/external/photo-1758686253859.jpg",
-      name: "James Williams",
-      role: "Mobility Aid User",
-    },
-    {
-      text: "As a caregiver, I appreciated the clear communication and education provided. It made supporting my mother's recovery much easier.",
-      image: "/external/photo-1710452772856.jpg",
-      name: "Sarah Patel",
-      role: "Family Caregiver",
-    },
-    {
-      text: "The hospital bedside fitting was incredibly convenient and professional. Highly recommend for anyone needing orthotic or prosthetic care.",
-      image: "/external/photo-1577202214328.jpg",
-      name: "Peter van der Merwe",
-      role: "Hospital Patient",
-    },
-    {
-      text: "Compassionate, dignified care that made a difficult time much easier. The breast prosthetic fitting was handled with such sensitivity and professionalism.",
-      image: "/external/photo-1765896387387.jpg",
-      name: "Elizabeth Johnson",
-      role: "Breast Prosthetic Patient",
-    },
-    {
-      text: "The custom insoles have made such a difference to my daily comfort. Professional service with genuine care for patient outcomes.",
-      image: "/external/photo-1770058428154.jpg",
-      name: "Amanda Naidoo",
-      role: "Custom Orthotic Patient",
-    },
-  ];
-
-  // Split testimonials into columns
-  const firstColumn = testimonials.slice(0, 3);
-  const secondColumn = testimonials.slice(3, 6);
-  const thirdColumn = testimonials.slice(6, 8);
 
   return (
     <>
@@ -253,8 +197,8 @@ export function ContactPage() {
         
       </section>
 
-      {/* Testimonials Section */}
-      
+      {/* Real patient reviews from the practice's Google profile */}
+      <GoogleReviews />
     </>
   );
 }

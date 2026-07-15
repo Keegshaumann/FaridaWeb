@@ -60,32 +60,33 @@ export function ServicePageTemplate({
       <div className="relative py-16 md:py-24 bg-[#F5E8F3]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto space-y-16">
-            {/* What is it? */}
-            <section>
-              <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6">
-                What is it?
-              </h2>
-              <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-                {whatIsIt}
-              </p>
-            </section>
+            {/* What is it? + How can it help? side by side so the devices appear sooner */}
+            <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-12">
+              <section>
+                <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6">
+                  What is it?
+                </h2>
+                <p className="text-lg text-[var(--text-muted)] leading-relaxed">
+                  {whatIsIt}
+                </p>
+              </section>
 
-            {/* How can it help? */}
-            <section className="relative bg-[var(--pink-light)] rounded-2xl p-8 md:p-10">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6">
-                How can it help?
-              </h2>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-6 w-6 text-[var(--accent-purple)] flex-shrink-0 mt-0.5" />
-                    <span className="text-[var(--text-muted)] leading-relaxed">
-                      {benefit}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </section>
+              <section>
+                <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6">
+                  How can it help?
+                </h2>
+                <ul className="space-y-3">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <Check className="h-6 w-6 text-[var(--accent-purple)] flex-shrink-0 mt-0.5" />
+                      <span className="text-[var(--text-muted)] leading-relaxed">
+                        {benefit}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </div>
 
             {/* Devices catalogue (filterable) or fallback Available Services list */}
             {serviceSlug ? (
@@ -147,7 +148,7 @@ export function ServicePageTemplate({
       </div>
 
       {/* SEO */}
-      {seoTitle && seoDescription && seoKeywords && (
+      {seoTitle && seoDescription && (
         <SEO
           title={seoTitle}
           fullTitle={seoFullTitle}

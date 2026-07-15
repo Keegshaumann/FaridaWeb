@@ -82,9 +82,11 @@ interface PatientFormData {
   appointmentDate: string;
 }
 
-// Password for the /admin panel. Change this to your own before going live.
-// Note: this is a basic client-side gate (see README "Security notes").
-const ADMIN_PASSWORD = "CHANGE_THIS_PASSWORD";
+// Password for the /admin panel, provided at build time via VITE_ADMIN_PASSWORD
+// in an untracked .env file. If unset, admin login is disabled entirely.
+// Note: any client-side gate is recoverable from the bundle — move auth
+// server-side (e.g. Supabase Auth) before storing sensitive data.
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "";
 
 export function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -141,7 +143,7 @@ export function AdminPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
+    if (ADMIN_PASSWORD && password === ADMIN_PASSWORD) {
       setIsAuthenticated(true);
       sessionStorage.setItem("adminAuth", "true");
       fetchCaseStudies();
@@ -692,7 +694,7 @@ export function AdminPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, author: e.target.value })
                     }
-                    placeholder="e.g., Dr. Cajee Botes"
+                    placeholder="e.g., Farida Cajee-Botes"
                     className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--accent-purple)]"
                   />
                 </div>
