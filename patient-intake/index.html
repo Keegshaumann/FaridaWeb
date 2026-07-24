@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Intake Form | Cajee Botes Orthotist &amp; Prosthetist</title>
+
+  <!-- Hidden page: not for public discovery. Reachable by direct link only. -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="theme-color" content="#5e3362">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+
+  <!-- Same font the rest of the site uses -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Brand palette — mirrored from the live site's CSS variables */
+      --brand-purple:   #5e3362;
+      --brand-purple-2: #4c2a52;   /* darker shade of the brand purple (on-hue) */
+      --purple-medium:  #8b5a8e;
+      --pink-medium:    #a473a1;
+      --accent-purple:  #b891b5;
+      --mauve:          #d5bbd3;
+      --purple-soft:    #d9c4d7;
+      --pink-soft:      #e8d4e6;
+      --purple-light:   #ede4ef;
+      --pink-light:     #f5e8f3;
+      --pink-lighter:   #fdf1ff;
+      --text-dark:      #5e3362;
+      --text-body:      #3f2a44;
+      --text-muted:     #6e5573;   /* accessible muted purple (AA on white/lavender) */
+      --input-border:   #a97ea6;   /* >=3:1 against the card for UI-component contrast */
+      --gold:           #f5b301;
+      --white:          #ffffff;
+      --danger:         #c0392b;
+      --success:        #1e7d52;
+      --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius: 14px;
+      --shadow: 0 10px 40px -12px rgba(94, 51, 98, 0.28);
+      --shadow-sm: 0 2px 10px -4px rgba(94, 51, 98, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text-body);
+      line-height: 1.55;
+      background:
+        radial-gradient(1200px 500px at 50% -200px, var(--pink-light), transparent 60%),
+        linear-gradient(180deg, var(--pink-light) 0%, #fafafa 45%, var(--purple-light) 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--brand-purple); }
+
+    /* ---------- Top brand bar (matches site header) ---------- */
+    .site-header {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(160%) blur(10px);
+      border-bottom: 1px solid var(--pink-soft);
+      position: sticky; top: 0; z-index: 50;
+    }
+    .site-header .inner {
+      max-width: 980px; margin: 0 auto; padding: 12px 20px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .site-header img { height: 52px; width: 52px; object-fit: contain; border-radius: 50%; }
+    .brand-names { display: flex; flex-direction: column; line-height: 1.15; }
+    .brand-names .n1 { font-weight: 700; font-size: 1.15rem; color: var(--brand-purple); letter-spacing: -0.01em; }
+    .brand-names .n2 { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-medium); font-weight: 600; }
+    .reg-strip { margin-left: auto; display: flex; gap: 18px; font-size: 0.72rem; color: var(--text-muted); }
+    .reg-strip span b { color: var(--brand-purple); font-weight: 700; }
+    @media (max-width: 760px) { .reg-strip { display: none; } }
+
+    /* ---------- Page shell ---------- */
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 80px; }
+
+    .intro { text-align: center; margin: 14px 0 26px; }
+    .intro h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem); color: var(--brand-purple);
+      margin: 6px 0 8px; letter-spacing: -0.02em; font-weight: 700;
+    }
+    .intro p { color: var(--text-muted); max-width: 620px; margin: 0 auto; font-size: 1rem; }
+    .intro .eyebrow {
+      display: inline-block; background: var(--brand-purple); color: #fff;
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 999px; font-weight: 600;
+    }
+
+    /* ---------- Card / form ---------- */
+    .card {
+      background: var(--white); border-radius: 20px; box-shadow: var(--shadow);
+      overflow: hidden; border: 1px solid rgba(212, 187, 211, 0.5);
+    }
+
+    fieldset { border: 0; margin: 0; padding: 0; }
+    .section-bar {
+      background: linear-gradient(90deg, var(--brand-purple), var(--brand-purple-2));
+      color: #fff; text-align: center; font-weight: 700; letter-spacing: 0.02em;
+      padding: 13px 18px; font-size: 1.02rem;
+    }
+    .section-body { padding: 22px 22px 6px; }
+    .section-note { color: var(--text-muted); font-size: 0.85rem; margin: -4px 2px 16px; }
+
+    .grid { display: grid; gap: 14px 16px; }
+    .cols-2 { grid-template-columns: 1fr 1fr; }
+    .cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .span-2 { grid-column: span 2; }
+    .span-full { grid-column: 1 / -1; }
+    @media (max-width: 720px) {
+      .cols-2, .cols-3, .cols-4 { grid-template-columns: 1fr; }
+      .span-2, .span-full { grid-column: auto; }
+    }
+
+    .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .field label {
+      font-size: 0.8rem; font-weight: 600; color: var(--brand-purple); letter-spacing: 0.01em;
+    }
+    .field .req { color: var(--purple-medium); }
+    .field input,
+    .field textarea,
+    .field select {
+      font-family: var(--font); font-size: 0.95rem; color: var(--text-body);
+      background: var(--pink-lighter);
+      border: 1.5px solid var(--input-border); border-radius: 10px;
+      padding: 11px 13px; width: 100%; transition: border-color .15s, box-shadow .15s, background .15s;
+    }
+    .field textarea { resize: vertical; min-height: 78px; }
+    .field input::placeholder, .field textarea::placeholder { color: var(--text-muted); opacity: 1; }
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--brand-purple);
+      background: #fff; box-shadow: 0 0 0 4px rgba(94, 51, 98, 0.12);
+    }
+    .field input:focus-visible,
+    .field textarea:focus-visible,
+    .field select:focus-visible {
+      outline: 2px solid var(--brand-purple); outline-offset: 2px;
+    }
+    /* Error border appears only after the user has interacted, never on load */
+    .field input:user-invalid,
+    .field textarea:user-invalid { border-color: var(--danger); }
+
+    .inline-check {
+      display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem;
+      color: var(--text-muted); font-weight: 500; cursor: pointer; user-select: none;
+    }
+    .inline-check input { width: 17px; height: 17px; accent-color: var(--brand-purple); }
+    .section-bar-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      background: linear-gradient(90deg, var(--brand-purple), var(--brand-purple-2));
+      color: #fff; padding: 11px 18px;
+    }
+    .section-bar-row .title { font-weight: 700; font-size: 1.02rem; margin: 0 auto 0 0; }
+    .section-bar-row .inline-check { color: rgba(255,255,255,0.95); }
+    .section-bar-row .inline-check input { accent-color: var(--gold); }
+
+    /* ---------- Consent block ---------- */
+    .consent {
+      background: var(--pink-lighter); border: 1.5px solid var(--input-border);
+      border-radius: 12px; padding: 16px 18px; margin: 4px 0 18px;
+      max-height: 340px; overflow-y: auto; font-size: 0.85rem; color: var(--text-body);
+    }
+    .consent p { margin: 0 0 11px; }
+    .consent p:first-child { margin-top: 0; }
+    .consent strong { color: var(--brand-purple); }
+    .consent-scroll-hint { font-size: 0.75rem; color: var(--text-muted); text-align: center; margin: 0 0 14px; }
+
+    .agree {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: var(--pink-light); border: 1.5px solid var(--mauve);
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 12px;
+    }
+    .agree input {
+      width: 20px; height: 20px; margin-top: 2px; flex: 0 0 auto; accent-color: var(--brand-purple); cursor: pointer;
+    }
+    .agree label { font-size: 0.88rem; color: var(--text-body); }
+    .agree label b { color: var(--brand-purple); }
+
+    /* ---------- Signature pad ---------- */
+    .sigpad {
+      position: relative; border: 1.5px solid var(--input-border); border-radius: 12px;
+      background: var(--pink-lighter); overflow: hidden; transition: border-color .2s, background .2s;
+    }
+    .sigpad.confirmed { border-color: var(--success); background: #f1faf5; }
+    .sigpad canvas { display: block; width: 100%; height: 190px; touch-action: none; cursor: crosshair; }
+    .sigpad.confirmed canvas { cursor: default; }
+    .sig-baseline {
+      position: absolute; left: 18px; right: 18px; bottom: 46px;
+      border-bottom: 1.5px dashed var(--mauve); pointer-events: none;
+    }
+    .sig-placeholder {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      gap: 8px; color: var(--text-muted); pointer-events: none; font-style: italic; font-size: 0.95rem;
+    }
+    .sig-controls { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+    .sig-btn {
+      border: 1.5px solid var(--input-border); background: #fff; color: var(--brand-purple);
+      border-radius: 9px; padding: 9px 16px; font-family: var(--font); font-weight: 600; font-size: 0.88rem;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 7px; transition: background .15s, opacity .15s;
+    }
+    .sig-btn:hover { background: var(--pink-light); }
+    .sig-btn.primary { background: var(--brand-purple); color: #fff; border-color: var(--brand-purple); }
+    .sig-btn.primary:hover { background: var(--brand-purple-2); }
+    .sig-btn:focus-visible { outline: 2px solid var(--brand-purple); outline-offset: 2px; }
+    .sig-btn:disabled { opacity: .5; cursor: not-allowed; }
+    .sig-badge { color: var(--success); font-weight: 600; font-size: 0.85rem; display: none; align-items: center; gap: 6px; }
+    .sig-badge.show { display: inline-flex; }
+    .sig-hint { font-size: 0.8rem; margin: 8px 2px 0; min-height: 1.1em; }
+    .sig-hint.error { color: var(--danger); }
+
+    /* ---------- Submit / status ---------- */
+    .actions { padding: 8px 22px 26px; }
+    .privacy-line {
+      display: flex; gap: 9px; align-items: flex-start; color: var(--text-muted);
+      font-size: 0.8rem; margin: 4px 2px 18px;
+    }
+    .privacy-line svg { flex: 0 0 auto; margin-top: 1px; }
+    button.submit {
+      width: 100%; border: 0; cursor: pointer; font-family: var(--font);
+      background: linear-gradient(90deg, var(--brand-purple), var(--brand-purple-2));
+      color: #fff; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.01em;
+      padding: 16px 20px; border-radius: 12px; box-shadow: var(--shadow-sm);
+      transition: transform .12s, box-shadow .2s, opacity .2s;
+    }
+    button.submit:hover { transform: translateY(-1px); box-shadow: 0 14px 30px -10px rgba(94,51,98,0.5); }
+    button.submit:active { transform: translateY(0); }
+    button.submit:focus-visible { outline: 2px solid var(--brand-purple); outline-offset: 3px; }
+    button.submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    button.submit .spinner {
+      width: 17px; height: 17px; border: 2.5px solid rgba(255,255,255,0.5); border-top-color: #fff;
+      border-radius: 50%; display: inline-block; vertical-align: -3px; margin-right: 9px;
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .status { border-radius: 12px; padding: 15px 18px; margin: 0 22px 20px; font-size: 0.92rem; display: none; }
+    .status.show { display: block; }
+    .status.ok  { background: #e8f6ee; border: 1.5px solid #b7e2c8; color: var(--success); }
+    .status.err { background: #fdeceb; border: 1.5px solid #f3c6c1; color: var(--danger); }
+
+    /* Honeypot — hidden from humans, tempting to bots */
+    .hp { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
+
+    /* ---------- Success panel ---------- */
+    .thanks { text-align: center; padding: 44px 26px; display: none; }
+    .thanks.show { display: block; }
+    .thanks .check {
+      width: 66px; height: 66px; border-radius: 50%; margin: 0 auto 18px;
+      background: #e8f6ee; display: flex; align-items: center; justify-content: center;
+    }
+    .thanks h2 { color: var(--brand-purple); margin: 0 0 8px; font-size: 1.5rem; }
+    .thanks p { color: var(--text-muted); max-width: 460px; margin: 0 auto 6px; }
+
+    /* ---------- Footer (matches site) ---------- */
+    .site-footer {
+      background: linear-gradient(135deg, var(--purple-medium), var(--brand-purple) 60%, var(--brand-purple-2));
+      color: #fff; margin-top: 46px;
+    }
+    .site-footer .inner {
+      max-width: 980px; margin: 0 auto; padding: 30px 20px;
+      display: flex; flex-wrap: wrap; gap: 22px; justify-content: space-between; align-items: center;
+    }
+    .site-footer .who { display: flex; align-items: center; gap: 12px; }
+    .site-footer .who img { height: 50px; width: 50px; border-radius: 50%; object-fit: contain; background: rgba(255,255,255,0.12); }
+    .site-footer .who b { font-size: 1.02rem; display: block; }
+    .site-footer .who span { font-size: 0.78rem; opacity: 0.92; }
+    .site-footer .contact { font-size: 0.85rem; text-align: right; }
+    .site-footer .contact a { color: #fff; text-decoration: none; }
+    .site-footer .contact a:hover { text-decoration: underline; }
+    .site-footer .copy { width: 100%; text-align: center; font-size: 0.78rem; opacity: 0.95; border-top: 1px solid rgba(255,255,255,0.28); padding-top: 16px; }
+    @media (max-width: 620px) { .site-footer .contact { text-align: left; } .site-footer .inner { flex-direction: column; align-items: flex-start; } }
+
+    @media print {
+      .site-header, .site-footer, .actions, .privacy-line, .sig-controls { display: none !important; }
+      body { background: #fff; }
+      .card { box-shadow: none; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="inner">
+      <a href="/" aria-label="Cajee Botes home" style="display:flex;align-items:center;gap:14px;text-decoration:none;">
+        <img src="/assets/4c69079a0a086c245294fb463bb6e821e7f346c9-BNf84BaN.webp" alt="Cajee Botes Logo"
+             onerror="this.onerror=null;this.src='/logo.png';">
+        <span class="brand-names">
+          <span class="n1">Cajee Botes</span>
+          <span class="n2">Orthotist &amp; Prosthetist</span>
+        </span>
+      </a>
+      <div class="reg-strip" aria-hidden="true">
+        <span>OS&nbsp;<b>0015148</b></span>
+        <span>PR&nbsp;No&nbsp;<b>1321412</b></span>
+        <span>Reg&nbsp;<b>2026/136620/21</b></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <div class="intro">
+      <span class="eyebrow">Confidential</span>
+      <h1>Patient Intake Form</h1>
+      <p>Please complete this form before your appointment. Your information is kept confidential and used only for your assessment, treatment and medical-aid administration.</p>
+    </div>
+
+    <!-- ============ FORM ============ -->
+    <form id="intakeForm" class="card" action="/patient-intake/intake-send.php" method="POST" novalidate autocomplete="on">
+
+      <!-- Honeypot + anti-bot timing (leave untouched) -->
+      <div class="hp" aria-hidden="true">
+        <label>Do not fill this in
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
+      <input type="hidden" name="form_elapsed" id="form_elapsed" value="">
+      <input type="hidden" name="consent_version" id="consent_version" value="FCB-INTAKE-2026-07">
+
+      <!-- ---- Referring Doctor ---- -->
+      <fieldset aria-labelledby="secRef">
+        <div class="section-bar" id="secRef">Referring Doctor</div>
+        <div class="section-body">
+          <div class="grid">
+            <div class="field span-full">
+              <label for="referring_doctor">Who referred you? <span style="font-weight:500;color:var(--text-muted);">(if applicable)</span></label>
+              <input type="text" id="referring_doctor" name="referring_doctor" placeholder="Name of the doctor, clinic or person who referred you">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ---- Member Information ---- -->
+      <fieldset aria-labelledby="secMember">
+        <div class="section-bar" id="secMember">Member Information</div>
+        <div class="section-body">
+          <p class="section-note">The main member of the medical aid (the person the policy belongs to).</p>
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="member_surname">Surname <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="member_surname" name="member_surname" autocomplete="family-name" required>
+            </div>
+            <div class="field">
+              <label for="member_full_names">Full Names <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="member_full_names" name="member_full_names" autocomplete="given-name" required>
+            </div>
+            <div class="field span-2">
+              <label for="member_id">ID Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="member_id" name="member_id" inputmode="numeric" maxlength="13" required>
+            </div>
+            <div class="field">
+              <label for="member_age">Age</label>
+              <input type="number" id="member_age" name="member_age" min="0" max="130" inputmode="numeric">
+            </div>
+            <div class="field">
+              <label for="member_cell">Cell No. <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="member_cell" name="member_cell" autocomplete="tel" required>
+            </div>
+            <div class="field span-2">
+              <label for="member_email">Email</label>
+              <input type="email" id="member_email" name="member_email" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="member_workplace">Work Place Name</label>
+              <input type="text" id="member_workplace" name="member_workplace">
+            </div>
+            <div class="field">
+              <label for="member_contact_no">Work Contact No.</label>
+              <input type="tel" id="member_contact_no" name="member_contact_no">
+            </div>
+            <div class="field span-full">
+              <label for="member_address">Home Address</label>
+              <textarea id="member_address" name="member_address" rows="2" autocomplete="street-address"></textarea>
+            </div>
+            <div class="field">
+              <label for="medical_aid_name">Medical Aid Name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="medical_aid_name" name="medical_aid_name" required>
+            </div>
+            <div class="field">
+              <label for="medical_aid_option">Option / Plan Name</label>
+              <input type="text" id="medical_aid_option" name="medical_aid_option">
+            </div>
+            <div class="field span-full">
+              <label for="medical_aid_number">Medical Aid Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="medical_aid_number" name="medical_aid_number" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ---- Patient Information ---- -->
+      <fieldset aria-labelledby="secPatientTitle">
+        <div class="section-bar-row">
+          <span class="title" id="secPatientTitle">Patient Information</span>
+          <label class="inline-check">
+            <input type="checkbox" id="sameAsMember"> Patient is the same as the member
+          </label>
+        </div>
+        <div class="section-body">
+          <p class="section-note">The person receiving treatment. Tick the box above to copy the member's details.</p>
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="patient_surname">Surname <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="patient_surname" name="patient_surname" required>
+            </div>
+            <div class="field">
+              <label for="patient_full_names">Full Names <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="patient_full_names" name="patient_full_names" required>
+            </div>
+            <div class="field span-2">
+              <label for="patient_id">ID Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="patient_id" name="patient_id" inputmode="numeric" maxlength="13" required>
+            </div>
+            <div class="field">
+              <label for="patient_age">Age</label>
+              <input type="number" id="patient_age" name="patient_age" min="0" max="130" inputmode="numeric">
+            </div>
+            <div class="field">
+              <label for="patient_cell">Cell No. <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="patient_cell" name="patient_cell" required>
+            </div>
+            <div class="field span-2">
+              <label for="patient_email">Email</label>
+              <input type="email" id="patient_email" name="patient_email">
+            </div>
+            <div class="field">
+              <label for="patient_workplace">Work Place Name</label>
+              <input type="text" id="patient_workplace" name="patient_workplace">
+            </div>
+            <div class="field">
+              <label for="patient_contact_no">Work Contact No.</label>
+              <input type="tel" id="patient_contact_no" name="patient_contact_no">
+            </div>
+            <div class="field span-full">
+              <label for="patient_address">Home Address</label>
+              <textarea id="patient_address" name="patient_address" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ---- Medical History ---- -->
+      <fieldset aria-labelledby="secHistory">
+        <div class="section-bar" id="secHistory">Medical History</div>
+        <div class="section-body">
+          <div class="grid cols-2">
+            <div class="field">
+              <label for="diagnosis">Diagnosis</label>
+              <textarea id="diagnosis" name="diagnosis" rows="2"></textarea>
+            </div>
+            <div class="field">
+              <label for="date_of_injury">Date of Injury</label>
+              <input type="date" id="date_of_injury" name="date_of_injury">
+            </div>
+            <div class="field">
+              <label for="allergies">Allergies</label>
+              <textarea id="allergies" name="allergies" rows="2" placeholder="None known, or list allergies"></textarea>
+            </div>
+            <div class="field">
+              <label for="chronic_conditions">Chronic Conditions</label>
+              <textarea id="chronic_conditions" name="chronic_conditions" rows="2" placeholder="e.g. diabetes, hypertension"></textarea>
+            </div>
+            <div class="field">
+              <label for="emergency_contact">Emergency Contact Name</label>
+              <input type="text" id="emergency_contact" name="emergency_contact">
+            </div>
+            <div class="field">
+              <label for="emergency_number">Emergency Contact Number</label>
+              <input type="tel" id="emergency_number" name="emergency_number">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- ---- Consent & Indemnity ---- -->
+      <fieldset aria-labelledby="secConsent">
+        <div class="section-bar" id="secConsent">Disclosure, Consent &amp; Indemnity Agreement</div>
+        <div class="section-body">
+          <div class="consent" id="consentBox" tabindex="0" aria-label="Disclosure, consent and indemnity agreement — please read">
+            <p>I, the undersigned, voluntarily consent to assessment, evaluation, consultation, measurement, casting, scanning, fitting, adjustment, treatment, and/or the supply of orthotic, prosthetic, assistive, or related healthcare services and devices/products as recommended by the practitioner. I understand the nature and purpose of the treatment and acknowledge that not every consultation will result in a device being issued.</p>
+            <p><strong>Risks, Outcomes &amp; Patient Responsibility:</strong> I understand that treatment outcomes may vary and that optimal results may require multiple appointments or adjustments. I acknowledge that discomfort, pressure, skin irritation, skin breakdown, or mechanical wear/failure of a device may occur. I agree to monitor my skin where applicable, report any concerns promptly, and comply with all wearing schedules, care instructions, and follow-up recommendations.</p>
+            <p><strong>Use, Repairs &amp; Returns:</strong> I agree to use any device or product only for its intended purpose and understand that misuse, neglect, or unauthorised alterations may result in injury and void any applicable warranty or responsibility of the practice. I understand that devices are subject to normal wear and tear and that repairs or maintenance may be required and may be chargeable. Custom-made or specially ordered items cannot be returned or refunded once fabrication or ordering has commenced. Non-custom (prefabricated/off-the-shelf) items may be considered for return or exchange within 7 (seven) days of receipt, provided they are unused, in original condition and packaging, and subject to inspection and approval by the practice. The practice reserves the right, at its sole discretion and subject to applicable law, to approve, decline, or apply a handling/restocking fee to any return or exchange request.</p>
+            <p><strong>Financial Responsibility:</strong> I understand that quotations and medical aid benefits are estimates only, that approval does not guarantee payment, and that I remain personally responsible for any shortfalls, co-payments, non-covered items/services, and any outstanding balances. I understand that devices/products supplied by the practice may be billed separately and may not form part of a hospital account.</p>
+            <p><strong>Claims, POPIA &amp; Communication Consent:</strong> I authorise the practice to submit claims to my medical aid where applicable and consent to the collection, storage, and processing of my personal and medical information in accordance with the Protection of Personal Information Act (POPIA) for treatment and administrative purposes. I also consent to communication via phone, SMS, email, and/or WhatsApp regarding appointments, treatment, and accounts.</p>
+            <p><strong>Final Acknowledgement &amp; Indemnity:</strong> I confirm that I have read and understood this document, have had the opportunity to ask questions, and voluntarily agree to the terms and conditions of the practice. I indemnify and hold harmless the practitioner and practice against any injury, loss, or damage arising from misuse, non-compliance, or failure to follow professional advice or instructions.</p>
+          </div>
+          <p class="consent-scroll-hint">↑ Please scroll to read the full agreement before signing.</p>
+
+          <div class="agree">
+            <input type="checkbox" id="consent_terms" name="consent_terms" value="yes" required>
+            <label for="consent_terms">I confirm that I have <b>read and understood</b> the Disclosure, Consent &amp; Indemnity Agreement above and voluntarily <b>agree to its terms</b>. <span class="req" aria-hidden="true">*</span></label>
+          </div>
+          <div class="agree">
+            <input type="checkbox" id="consent_popia" name="consent_popia" value="yes" required>
+            <label for="consent_popia">I <b>authorise the practice to submit claims to my medical aid</b> and consent to the processing of my personal and medical information in accordance with <b>POPIA</b>. <span class="req" aria-hidden="true">*</span></label>
+          </div>
+
+          <div class="grid cols-4" style="margin-top:8px;">
+            <div class="field span-2">
+              <label for="sig_full_name">Full Name (Signatory) <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="sig_full_name" name="sig_full_name" required>
+            </div>
+            <div class="field span-2">
+              <label for="sig_id">ID Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="sig_id" name="sig_id" inputmode="numeric" maxlength="13" required>
+            </div>
+
+            <!-- Drawable signature -->
+            <div class="field span-full">
+              <label id="sigLabel">Signature <span class="req" aria-hidden="true">*</span></label>
+              <div class="sigpad" id="sigPad">
+                <div class="sig-baseline" aria-hidden="true"></div>
+                <div class="sig-placeholder" id="sigPlaceholder" aria-hidden="true">✍️&nbsp; Sign here with your finger or mouse</div>
+                <canvas id="sigCanvas" role="img" aria-labelledby="sigLabel"></canvas>
+              </div>
+              <div class="sig-controls">
+                <button type="button" class="sig-btn primary" id="sigConfirm">✓ Confirm signature</button>
+                <button type="button" class="sig-btn" id="sigClear">Clear</button>
+                <span class="sig-badge" id="sigBadge">✓ Signature confirmed</span>
+              </div>
+              <p class="sig-hint" id="sigHint" aria-live="polite"></p>
+              <input type="hidden" name="signature_image" id="signature_image">
+            </div>
+
+            <div class="field span-2">
+              <label for="sig_date">Date <span class="req" aria-hidden="true">*</span></label>
+              <input type="date" id="sig_date" name="sig_date" required>
+            </div>
+          </div>
+          <p class="section-note" style="margin-top:12px;">By signing in the box above and submitting this form, you are signing it electronically. This has the same effect as a handwritten signature.</p>
+        </div>
+      </fieldset>
+
+      <!-- ---- Status + submit ---- -->
+      <div class="status err" id="statusErr" role="alert" aria-live="assertive"></div>
+
+      <div class="actions">
+        <div class="privacy-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Your details are sent securely and directly to Cajee Botes and are never shared with third parties. Fields marked <span class="req">*</span> are required.</span>
+        </div>
+        <button type="submit" class="submit" id="submitBtn">Submit Intake Form</button>
+      </div>
+    </form>
+
+    <!-- Success panel (revealed after submit) -->
+    <div class="card thanks" id="thanksPanel" role="status" aria-live="polite">
+      <div class="check">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e7d52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2>Thank you — your form has been received</h2>
+      <p>We've sent your intake form to Cajee Botes. Our team will review it and be in touch to confirm your appointment.</p>
+      <p style="margin-top:8px;font-size:0.85rem;">If you need to reach us urgently, call <a href="tel:+27646520684">064&nbsp;652&nbsp;0684</a>.</p>
+    </div>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="who">
+        <img src="/assets/4c69079a0a086c245294fb463bb6e821e7f346c9-BNf84BaN.webp" alt="Cajee Botes Logo"
+             onerror="this.onerror=null;this.src='/logo.png';">
+        <div>
+          <b>Cajee Botes</b>
+          <span>Orthotist &amp; Prosthetist</span>
+        </div>
+      </div>
+      <div class="contact">
+        <a href="tel:+27646520684">064 652 0684</a><br>
+        <a href="mailto:care@cajeebotes.com">care@cajeebotes.com</a><br>
+        Centurion, Gauteng &middot; South Africa
+      </div>
+      <div class="copy">© 2026 Cajee Botes Orthotist &amp; Prosthetist. All rights reserved. &middot; Home Visits Available</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+      var loadedAt = Date.now();
+      var form = document.getElementById("intakeForm");
+      var submitBtn = document.getElementById("submitBtn");
+      var statusErr = document.getElementById("statusErr");
+      var thanks = document.getElementById("thanksPanel");
+
+      /* ---- Today's date: prefill signature date, cap injury + signature dates ---- */
+      var todayISO = "";
+      try {
+        var d = new Date();
+        todayISO = d.getFullYear() + "-" +
+          String(d.getMonth() + 1).padStart(2, "0") + "-" +
+          String(d.getDate()).padStart(2, "0");
+        var sd = document.getElementById("sig_date");
+        if (sd) { sd.value = sd.value || todayISO; sd.max = todayISO; }
+        var doi = document.getElementById("date_of_injury");
+        if (doi) doi.max = todayISO; // an injury cannot be in the future
+      } catch (e) {}
+
+      /* ---- "Patient is the same as member" — copy fields live ---- */
+      var sameChk = document.getElementById("sameAsMember");
+      var map = {
+        member_surname: "patient_surname", member_full_names: "patient_full_names",
+        member_id: "patient_id", member_age: "patient_age", member_cell: "patient_cell",
+        member_email: "patient_email", member_workplace: "patient_workplace",
+        member_contact_no: "patient_contact_no", member_address: "patient_address"
+      };
+      function copyMemberToPatient() {
+        Object.keys(map).forEach(function (mk) {
+          var src = document.getElementById(mk);
+          var dst = document.getElementById(map[mk]);
+          if (src && dst) { dst.value = src.value; dst.readOnly = sameChk.checked; }
+        });
+      }
+      if (sameChk) {
+        sameChk.addEventListener("change", copyMemberToPatient);
+        Object.keys(map).forEach(function (mk) {
+          var src = document.getElementById(mk);
+          if (src) src.addEventListener("input", function () { if (sameChk.checked) copyMemberToPatient(); });
+        });
+      }
+
+      /* ================= SIGNATURE PAD ================= */
+      var pad = document.getElementById("sigPad");
+      var canvas = document.getElementById("sigCanvas");
+      var ctx = canvas.getContext("2d");
+      var sigInput = document.getElementById("signature_image");
+      var placeholder = document.getElementById("sigPlaceholder");
+      var confirmBtn = document.getElementById("sigConfirm");
+      var clearBtn = document.getElementById("sigClear");
+      var badge = document.getElementById("sigBadge");
+      var hint = document.getElementById("sigHint");
+
+      var drawing = false, hasInk = false, confirmed = false, last = null;
+
+      function fitCanvas() {
+        // Don't resize once the user has drawn (would wipe the signature)
+        if (hasInk) return;
+        var ratio = Math.min(Math.max(window.devicePixelRatio || 1, 1), 2);
+        var rect = canvas.getBoundingClientRect();
+        canvas.width = Math.round(rect.width * ratio);
+        canvas.height = Math.round(rect.height * ratio);
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        ctx.lineWidth = 2.4;
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        ctx.strokeStyle = "#3f2a44";
+      }
+      fitCanvas();
+      window.addEventListener("resize", fitCanvas);
+
+      function pointFromEvent(e) {
+        var rect = canvas.getBoundingClientRect();
+        return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+      }
+      function startDraw(e) {
+        if (confirmed) return;
+        drawing = true;
+        if (!hasInk) { hasInk = true; placeholder.style.display = "none"; }
+        try { canvas.setPointerCapture(e.pointerId); } catch (_) {}
+        last = pointFromEvent(e);
+        // a dot for taps
+        ctx.beginPath(); ctx.arc(last.x, last.y, 1.1, 0, Math.PI * 2); ctx.fillStyle = "#3f2a44"; ctx.fill();
+        e.preventDefault();
+      }
+      function moveDraw(e) {
+        if (!drawing) return;
+        var p = pointFromEvent(e);
+        ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
+        last = p;
+        e.preventDefault();
+      }
+      function endDraw() { drawing = false; }
+
+      canvas.addEventListener("pointerdown", startDraw);
+      canvas.addEventListener("pointermove", moveDraw);
+      canvas.addEventListener("pointerup", endDraw);
+      canvas.addEventListener("pointercancel", endDraw);
+      canvas.addEventListener("pointerleave", endDraw);
+
+      function clearHint() { hint.textContent = ""; hint.classList.remove("error"); }
+
+      function captureSignature() {
+        sigInput.value = canvas.toDataURL("image/png");
+        confirmed = true;
+        pad.classList.add("confirmed");
+        badge.classList.add("show");
+        confirmBtn.disabled = true;
+        clearHint();
+      }
+
+      confirmBtn.addEventListener("click", function () {
+        if (!hasInk) {
+          hint.textContent = "Please draw your signature in the box first.";
+          hint.classList.add("error");
+          return;
+        }
+        captureSignature();
+      });
+
+      clearBtn.addEventListener("click", function () {
+        ctx.save();
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.restore();
+        hasInk = false; confirmed = false; drawing = false;
+        sigInput.value = "";
+        pad.classList.remove("confirmed");
+        badge.classList.remove("show");
+        confirmBtn.disabled = false;
+        placeholder.style.display = "";
+        clearHint();
+        fitCanvas();
+      });
+
+      // True only if a signature exists; auto-captures an un-confirmed-but-drawn signature.
+      function signatureReady() {
+        if (confirmed && sigInput.value) return true;
+        if (hasInk) { captureSignature(); return true; }
+        return false;
+      }
+
+      /* ================= SUBMIT ================= */
+      function showError(msg) {
+        statusErr.classList.add("show");
+        requestAnimationFrame(function () { statusErr.textContent = msg; });
+        statusErr.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      function clearError() { statusErr.classList.remove("show"); statusErr.textContent = ""; }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        clearError();
+
+        // 1) Native field validation — let the browser own focus/scroll + field-specific messages
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        // 2) Signature
+        if (!signatureReady()) {
+          hint.textContent = "Please add your signature in the box, then tap “Confirm signature”.";
+          hint.classList.add("error");
+          pad.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+        }
+
+        // 3) Anti-bot timing
+        document.getElementById("form_elapsed").value = Math.round((Date.now() - loadedAt) / 1000);
+
+        submitBtn.disabled = true;
+        var originalLabel = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span class="spinner"></span>Sending…';
+
+        var controller = new AbortController();
+        var timeout = setTimeout(function () { controller.abort(); }, 25000);
+
+        function restore() { submitBtn.disabled = false; submitBtn.innerHTML = originalLabel; }
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          signal: controller.signal,
+          headers: { "X-Requested-With": "XMLHttpRequest", "Accept": "application/json" }
+        })
+          .then(function (res) {
+            return res.json().then(
+              function (j) { return { res: res, j: j }; },
+              function () { return { res: res, j: null }; }
+            );
+          })
+          .then(function (o) {
+            clearTimeout(timeout);
+            // Success requires an EXPLICIT ok:true — never infer success from a 200 with a non-JSON body
+            if (o.res.ok && o.j && o.j.ok === true) {
+              form.style.display = "none";
+              thanks.classList.add("show");
+              thanks.scrollIntoView({ behavior: "smooth", block: "start" });
+            } else {
+              restore();
+              showError((o.j && o.j.error) ? o.j.error
+                : "We couldn't confirm your form was received. Please try again, or call us on 064 652 0684.");
+            }
+          })
+          .catch(function (err) {
+            clearTimeout(timeout);
+            restore();
+            showError(err && err.name === "AbortError"
+              ? "The request timed out. Please check your connection and try again, or call us on 064 652 0684."
+              : "We couldn't reach the server. Please check your connection and try again, or call us on 064 652 0684.");
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

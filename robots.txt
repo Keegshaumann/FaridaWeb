@@ -8,6 +8,9 @@ Allow: /
 # Disallow admin panel from search engines
 Disallow: /admin
 
+# Private, link-only patient intake form (not for public discovery)
+Disallow: /patient-intake
+
 # Sitemap location
 Sitemap: https://www.cajeebotes.com/sitemap.xml
 
@@ -18,11 +21,13 @@ Crawl-delay: 1
 User-agent: Googlebot
 Allow: /
 Disallow: /admin
+Disallow: /patient-intake
 
 # Specific instructions for Bing
 User-agent: Bingbot
 Allow: /
 Disallow: /admin
+Disallow: /patient-intake
 
 # Block common bad bots (optional)
 User-agent: AhrefsBot
