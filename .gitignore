@@ -17,3 +17,6 @@ cajee-hostinger.zip
 
 # OS junk
 .DS_Store
+
+# Intake form mail credentials — the real password lives only on the server
+patient-intake/mail-config.php

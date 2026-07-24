@@ -12,15 +12,18 @@
  *           or a friendly HTML page if submitted without JavaScript.
  */
 
-/* ============================ CONFIG ============================ */
-$TO_EMAIL   = 'care@cajeebotes.com';                 // where completed forms go
-$TO_NAME    = 'Cajee Botes Orthotist & Prosthetist';
+/* ============================ CONFIG ============================
+ * Recipient, sender and SMTP credentials live in mail-config.php (so the
+ * mailbox password stays out of git). Edit that file on the server to paste
+ * the password. The values below are safe fallbacks if the file is missing. */
+define('FCB_INTAKE', 1);
+$mailcfg = @include __DIR__ . '/mail-config.php';
+if (!is_array($mailcfg)) $mailcfg = array();
 
-// "From" MUST be a mailbox on your own domain (cajeebotes.com) or Hostinger may
-// reject it / it lands in spam. Reply-To is set to the patient so staff can
-// reply straight back to them.
-$FROM_EMAIL = 'care@cajeebotes.com';
-$FROM_NAME  = 'Cajee Botes Website';
+$TO_EMAIL   = isset($mailcfg['to_email'])   ? $mailcfg['to_email']   : 'care@cajeebotes.com';
+$TO_NAME    = isset($mailcfg['to_name'])    ? $mailcfg['to_name']    : 'Cajee Botes Orthotist & Prosthetist';
+$FROM_EMAIL = isset($mailcfg['from_email']) ? $mailcfg['from_email'] : 'care@cajeebotes.com';
+$FROM_NAME  = isset($mailcfg['from_name'])  ? $mailcfg['from_name']  : 'Cajee Botes Website';
 
 $SEND_PATIENT_ACK = true;   // short "we received your form" note to the patient (no medical detail)
 
@@ -29,6 +32,17 @@ $RATE_WINDOW   = 3600;      // ... per this many seconds (1 hour)
 $MIN_FILL_SECS = 2;         // reject submissions completed faster than this (bots)
 $MAX_SIG_BYTES = 1500000;   // reject signature images larger than ~1.5 MB
 /* =============================================================== */
+
+// SMTP send is used when a password is present in mail-config.php; otherwise mail().
+$SMTP = array(
+    'enabled' => isset($mailcfg['smtp_pass']) && trim($mailcfg['smtp_pass']) !== '',
+    'host'    => isset($mailcfg['smtp_host'])   ? $mailcfg['smtp_host']   : 'smtp.hostinger.com',
+    'port'    => isset($mailcfg['smtp_port'])   ? $mailcfg['smtp_port']   : 465,
+    'secure'  => isset($mailcfg['smtp_secure']) ? $mailcfg['smtp_secure'] : 'ssl',
+    'user'    => isset($mailcfg['smtp_user'])   ? $mailcfg['smtp_user']   : 'care@cajeebotes.com',
+    'pass'    => isset($mailcfg['smtp_pass'])   ? $mailcfg['smtp_pass']   : '',
+    'from'    => $FROM_EMAIL,
+);
 
 $wantsJson =
     (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')
@@ -122,6 +136,71 @@ function rateLimited($ip, $max, $window) {
     return false;
 }
 
+/** Minimal authenticated SMTP sender (implicit SSL on 465, or STARTTLS on 587).
+ *  Returns true on a 250 "message accepted", false otherwise (reason in $err). */
+function smtp_send($cfg, $to, $subject, $headersStr, $body, &$err) {
+    $err = '';
+    $transport = ($cfg['secure'] === 'ssl' ? 'ssl://' : '') . $cfg['host'] . ':' . (int) $cfg['port'];
+    $ctx = stream_context_create(array('ssl' => array('verify_peer' => true, 'verify_peer_name' => true, 'SNI_enabled' => true)));
+    $fp = @stream_socket_client($transport, $errno, $errstr, 20, STREAM_CLIENT_CONNECT, $ctx);
+    if (!$fp) { $err = 'connect: ' . $errstr; return false; }
+    stream_set_timeout($fp, 20);
+
+    $get = function () use ($fp) {
+        $data = '';
+        while (($line = fgets($fp, 600)) !== false) {
+            $data .= $line;
+            if (strlen($line) < 4 || $line[3] === ' ') break;   // last line of a multi-line reply
+        }
+        return $data;
+    };
+    $put  = function ($c) use ($fp) { fwrite($fp, $c . "\r\n"); };
+    $step = function ($expect, $label) use ($get, &$err, $fp) {
+        $r = $get();
+        if (strncmp($r, $expect, strlen($expect)) !== 0) { $err = $label . ': ' . trim($r); @fclose($fp); return false; }
+        return true;
+    };
+
+    if (!$step('220', 'greeting')) return false;
+    $put('EHLO cajeebotes.com'); if (!$step('250', 'EHLO')) return false;
+
+    if ($cfg['secure'] === 'tls') {
+        $put('STARTTLS'); if (!$step('220', 'STARTTLS')) return false;
+        $crypto = STREAM_CRYPTO_METHOD_TLS_CLIENT;
+        if (defined('STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT')) $crypto |= STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT;
+        if (!@stream_socket_enable_crypto($fp, true, $crypto)) { $err = 'TLS negotiation failed'; @fclose($fp); return false; }
+        $put('EHLO cajeebotes.com'); if (!$step('250', 'EHLO-2')) return false;
+    }
+
+    $put('AUTH LOGIN');               if (!$step('334', 'AUTH')) return false;
+    $put(base64_encode($cfg['user'])); if (!$step('334', 'username')) return false;
+    $put(base64_encode($cfg['pass'])); if (!$step('235', 'password/login')) return false;
+
+    $put('MAIL FROM:<' . $cfg['from'] . '>'); if (!$step('250', 'MAIL FROM')) return false;
+    $put('RCPT TO:<' . $to . '>');            if (!$step('25',  'RCPT TO')) return false;   // 250/251
+    $put('DATA');                             if (!$step('354', 'DATA')) return false;
+
+    // For SMTP we must include To: and Subject: inside the DATA block ourselves.
+    $message = 'To: ' . $to . "\r\n" . 'Subject: ' . $subject . "\r\n" . $headersStr . "\r\n" . $body;
+    $message = preg_replace('/^\./m', '..', $message);   // dot-stuffing (RFC 5321)
+    fwrite($fp, $message . "\r\n.\r\n");
+    if (!$step('250', 'message accepted')) return false;
+
+    $put('QUIT'); @fclose($fp);
+    return true;
+}
+
+/** Route an email through SMTP when configured, otherwise PHP mail(). */
+function deliver($cfg, $to, $subject, $body, $headersStr, &$err) {
+    $err = '';
+    if (!empty($cfg['enabled'])) {
+        return smtp_send($cfg, $to, $subject, $headersStr, $body, $err);
+    }
+    $ok = @mail($to, $subject, $body, $headersStr, '-f' . $cfg['from']);
+    if (!$ok) $err = 'mail() returned false';
+    return $ok;
+}
+
 /* ----------------------------- guards ----------------------------- */
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -185,6 +264,49 @@ if (!empty($missing)) {
     respond(false, 'Please complete the required field(s): ' . implode(', ', $missing) . '.', $wantsJson, 422);
 }
 
+/* --------------------- generate the branded PDF --------------------- */
+
+$patientName = trim(field('patient_full_names') . ' ' . field('patient_surname'));
+if ($patientName === '') $patientName = 'Patient';
+
+require_once __DIR__ . '/intake-pdf.php';
+
+// Flatten the transparent canvas signature onto white (FPDF cannot read alpha PNGs).
+$sigJpgPath = '';
+if ($sigBinary !== '' && function_exists('imagecreatefromstring')) {
+    $src = @imagecreatefromstring($sigBinary);
+    if ($src) {
+        $sw = imagesx($src); $sh = imagesy($src);
+        $dst = imagecreatetruecolor($sw, $sh);
+        $whiteBg = imagecolorallocate($dst, 255, 255, 255);
+        imagefilledrectangle($dst, 0, 0, $sw, $sh, $whiteBg);
+        imagealphablending($dst, true);
+        imagecopy($dst, $src, 0, 0, 0, 0, $sw, $sh);
+        $sigJpgPath = tempnam(sys_get_temp_dir(), 'fcbsig');
+        @imagejpeg($dst, $sigJpgPath, 92);   // FPDF is told the type is 'JPG', so no extension is needed
+    }
+}
+
+$pdfFields = array();
+foreach (array(
+    'referring_doctor', 'member_surname', 'member_full_names', 'member_id', 'member_age', 'member_cell',
+    'member_email', 'member_workplace', 'member_contact_no', 'member_address', 'medical_aid_name',
+    'medical_aid_option', 'medical_aid_number', 'patient_surname', 'patient_full_names', 'patient_id',
+    'patient_age', 'patient_cell', 'patient_email', 'patient_workplace', 'patient_contact_no', 'patient_address',
+    'diagnosis', 'date_of_injury', 'allergies', 'chronic_conditions', 'emergency_contact', 'emergency_number',
+    'consent_terms', 'consent_popia', 'consent_version', 'sig_full_name', 'sig_id', 'sig_date',
+) as $k) $pdfFields[$k] = field($k);
+
+$pdfBytes = '';
+try {
+    $pdfBytes = build_intake_pdf($pdfFields, $sigJpgPath);
+} catch (Throwable $e) {
+    @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
+        date('c') . '  PDF generation failed -> ' . $e->getMessage() . "\n", FILE_APPEND | LOCK_EX);
+    $pdfBytes = '';
+}
+if ($sigJpgPath !== '' && is_file($sigJpgPath)) @unlink($sigJpgPath);
+
 /* --------------------- assemble the email body -------------------- */
 
 $sections = array(
@@ -234,55 +356,61 @@ $sections = array(
     ),
 );
 
-$brand       = '#5e3362';
-$patientName = trim(field('patient_full_names') . ' ' . field('patient_surname'));
-if ($patientName === '') $patientName = 'Patient';
-$sigCid = 'signature@cajeebotes';
+$brand = '#5e3362';
 
-$html  = '<div style="font-family:\'DM Sans\',Arial,sans-serif;color:#3f2a44;max-width:640px;margin:0 auto;">';
+// Full plain-text dump (kept so the mailbox stays searchable); the HTML view is clean.
+$submittedAt = date('D, d M Y H:i') . ' (server time)';
+$text  = "NEW PATIENT INTAKE FORM\nSubmitted via cajeebotes.com/patient-intake\n" . str_repeat('=', 48) . "\n";
+foreach ($sections as $sectionTitle => $rows) {
+    $text .= "\n" . strtoupper($sectionTitle) . "\n" . str_repeat('-', 40) . "\n";
+    foreach ($rows as $label => $value) {
+        $text .= str_pad($label . ':', 24) . ' ' . ($value === '' ? '-' : $value) . "\n";
+    }
+}
+$text .= "\nThe complete signed intake form is attached to this email as a PDF.\n";
+$text .= "\n" . str_repeat('=', 48) . "\nSubmitted: " . $submittedAt . "\nFrom IP: " . ($clientIp !== '' ? $clientIp : 'unknown') . "\n";
+
+// Clean HTML summary — the attached PDF is the primary document.
+$sm = function ($v) { return htmlspecialchars($v !== '' ? $v : '—', ENT_QUOTES); };
+$html  = '<div style="font-family:Arial,Helvetica,sans-serif;color:#3f2a44;max-width:600px;margin:0 auto;">';
 $html .= '<div style="background:' . $brand . ';color:#fff;padding:18px 22px;border-radius:12px 12px 0 0;">';
 $html .= '<h2 style="margin:0;font-size:18px;">New Patient Intake Form</h2>';
 $html .= '<p style="margin:4px 0 0;font-size:13px;opacity:.9;">Submitted via cajeebotes.com/patient-intake</p></div>';
-$html .= '<div style="border:1px solid #e8d4e6;border-top:0;border-radius:0 0 12px 12px;padding:6px 20px 20px;">';
-
-$text  = "NEW PATIENT INTAKE FORM\nSubmitted via cajeebotes.com/patient-intake\n" . str_repeat('=', 48) . "\n";
-
-foreach ($sections as $sectionTitle => $rows) {
-    $html .= '<h3 style="color:' . $brand . ';border-bottom:2px solid #f5e8f3;padding-bottom:6px;margin:22px 0 8px;font-size:15px;">'
-           . htmlspecialchars($sectionTitle, ENT_QUOTES) . '</h3>';
-    $html .= '<table style="width:100%;border-collapse:collapse;font-size:14px;">';
-    $text .= "\n" . strtoupper($sectionTitle) . "\n" . str_repeat('-', 40) . "\n";
-    foreach ($rows as $label => $value) {
-        $shown = ($value === '') ? '—' : $value;
-        $html .= '<tr><td style="padding:5px 10px 5px 0;color:#7c5f80;vertical-align:top;width:42%;">'
-               . htmlspecialchars($label, ENT_QUOTES) . '</td>'
-               . '<td style="padding:5px 0;vertical-align:top;">' . nl2br(htmlspecialchars($shown, ENT_QUOTES)) . '</td></tr>';
-        $text .= str_pad($label . ':', 24) . ' ' . $shown . "\n";
-    }
-    $html .= '</table>';
+$html .= '<div style="border:1px solid #e8d4e6;border-top:0;border-radius:0 0 12px 12px;padding:20px 22px;">';
+$html .= '<div style="background:#f5e8f3;border:1px solid #e8d4e6;border-radius:10px;padding:14px 16px;margin-bottom:16px;">';
+$html .= '<div style="font-size:12px;color:#7c5f80;font-weight:bold;letter-spacing:.05em;">PATIENT</div>';
+$html .= '<div style="font-size:17px;color:' . $brand . ';font-weight:bold;margin-top:2px;">' . $sm($patientName) . '</div>';
+$html .= '<table style="width:100%;font-size:13px;margin-top:10px;">';
+$html .= '<tr><td style="color:#7c5f80;padding:2px 0;width:38%;">ID Number</td><td>' . $sm(field('patient_id')) . '</td></tr>';
+$html .= '<tr><td style="color:#7c5f80;padding:2px 0;">Cell</td><td>' . $sm(field('patient_cell')) . '</td></tr>';
+$html .= '<tr><td style="color:#7c5f80;padding:2px 0;">Medical Aid</td><td>' . $sm(field('medical_aid_name')) . ' &middot; ' . $sm(field('medical_aid_number')) . '</td></tr>';
+$html .= '<tr><td style="color:#7c5f80;padding:2px 0;">Submitted</td><td>' . $sm($submittedAt) . '</td></tr>';
+$html .= '</table></div>';
+if ($pdfBytes !== '') {
+    $html .= '<div style="background:#eef8f1;border:1px solid #bfe3cd;border-radius:10px;padding:14px 16px;color:#1e7d52;font-size:14px;">'
+           . '&#128206; <b>The complete signed intake form is attached as a PDF</b> &mdash; ready to print and file.</div>';
+} else {
+    $html .= '<div style="background:#fdeceb;border:1px solid #f3c6c1;border-radius:10px;padding:14px 16px;color:#c0392b;font-size:13px;">'
+           . 'The PDF could not be generated for this submission &mdash; the full details are in the plain-text part of this email.</div>';
 }
-
-// Signature image (inline)
-$html .= '<h3 style="color:' . $brand . ';border-bottom:2px solid #f5e8f3;padding-bottom:6px;margin:22px 0 8px;font-size:15px;">Signature</h3>';
-$html .= '<img src="cid:' . $sigCid . '" alt="Patient signature" style="max-width:360px;border:1px solid #e8d4e6;border-radius:8px;background:#fff;padding:6px;">';
-$text .= "\nSIGNATURE\n" . str_repeat('-', 40) . "\n(see attached signature image)\n";
-
-$submittedAt = date('D, d M Y H:i') . ' (server time)';
-$html .= '<p style="margin-top:24px;font-size:12px;color:#9b7a9e;border-top:1px solid #f5e8f3;padding-top:12px;">'
-       . 'Submitted: ' . htmlspecialchars($submittedAt, ENT_QUOTES) . '<br>'
-       . 'From IP: ' . htmlspecialchars($clientIp !== '' ? $clientIp : 'unknown', ENT_QUOTES) . '</p></div></div>';
-$text .= "\n" . str_repeat('=', 48) . "\nSubmitted: " . $submittedAt . "\nFrom IP: " . ($clientIp !== '' ? $clientIp : 'unknown') . "\n";
+$html .= '<p style="margin-top:16px;font-size:12px;color:#9b7a9e;">Reply to this email to contact the patient directly.</p>';
+$html .= '</div></div>';
 
 /* ------------------------- MIME assembly -------------------------- */
-// multipart/related  ->  [ multipart/alternative (text + html) ] + [ inline PNG ]
+// multipart/mixed  ->  [ multipart/alternative (text + html) ] + [ PDF attachment ]
 
 $fromHeader = addressHeader($FROM_NAME, $FROM_EMAIL);
 $subject    = encodeHeaderText('New Patient Intake — ' . $patientName);
 
-$outer = 'rel_' . bin2hex(random_bytes(10));
+$outer = 'mix_' . bin2hex(random_bytes(10));
 $inner = 'alt_' . bin2hex(random_bytes(10));
 
+// Date + Message-ID are required by RFC 5322 and their absence is a strong spam signal.
+$messageId = '<' . bin2hex(random_bytes(16)) . '@cajeebotes.com>';
+
 $headers  = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Date: ' . date('r') . "\r\n";
+$headers .= 'Message-ID: ' . $messageId . "\r\n";
 $headers .= 'From: ' . $fromHeader . "\r\n";
 
 // Reply-To: prefer the patient's email, then the member's.
@@ -294,40 +422,50 @@ if ($replyEmail !== '') {
     $headers .= 'Reply-To: ' . addressHeader(field('patient_full_names') . ' ' . field('patient_surname'), $replyEmail) . "\r\n";
 }
 $headers .= 'X-Mailer: CajeeBotes-Intake' . "\r\n";
-$headers .= 'Content-Type: multipart/related; boundary="' . $outer . '"; type="multipart/alternative"' . "\r\n";
+$headers .= 'Content-Type: multipart/mixed; boundary="' . $outer . '"' . "\r\n";
 
 $body  = '--' . $outer . "\r\n";
 $body .= 'Content-Type: multipart/alternative; boundary="' . $inner . '"' . "\r\n\r\n";
 
 $body .= '--' . $inner . "\r\n";
 $body .= 'Content-Type: text/plain; charset=UTF-8' . "\r\n";
-$body .= 'Content-Transfer-Encoding: 8bit' . "\r\n\r\n" . $text . "\r\n";
+$body .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n" . chunk_split(base64_encode($text)) . "\r\n";
 
 $body .= '--' . $inner . "\r\n";
 $body .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
-$body .= 'Content-Transfer-Encoding: 8bit' . "\r\n\r\n" . $html . "\r\n";
+$body .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n" . chunk_split(base64_encode($html)) . "\r\n";
 $body .= '--' . $inner . '--' . "\r\n\r\n";
 
-$body .= '--' . $outer . "\r\n";
-$body .= 'Content-Type: image/png; name="signature.png"' . "\r\n";
-$body .= 'Content-Transfer-Encoding: base64' . "\r\n";
-$body .= 'Content-ID: <' . $sigCid . '>' . "\r\n";
-$body .= 'Content-Disposition: inline; filename="signature.png"' . "\r\n\r\n";
-$body .= chunk_split(base64_encode($sigBinary)) . "\r\n";
+if ($pdfBytes !== '') {
+    $pdfName = 'Patient-Intake-' . trim(preg_replace('/[^A-Za-z0-9]+/', '-', $patientName), '-') . '-' . date('Y-m-d') . '.pdf';
+    $body .= '--' . $outer . "\r\n";
+    $body .= 'Content-Type: application/pdf; name="' . $pdfName . '"' . "\r\n";
+    $body .= 'Content-Transfer-Encoding: base64' . "\r\n";
+    $body .= 'Content-Disposition: attachment; filename="' . $pdfName . '"' . "\r\n\r\n";
+    $body .= chunk_split(base64_encode($pdfBytes)) . "\r\n";
+}
 $body .= '--' . $outer . '--';
 
-$sent = @mail($TO_EMAIL, $subject, $body, $headers, '-f' . $FROM_EMAIL);
+$sendErr = '';
+$sent = deliver($SMTP, $TO_EMAIL, $subject, $body, $headers, $sendErr);
 
 if (!$sent) {
+    // Record the reason (no patient PII) so delivery problems can be diagnosed.
+    @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
+        date('c') . '  ' . ($SMTP['enabled'] ? 'SMTP' : 'mail()') . ' MAIN failed -> ' . $sendErr . "\n",
+        FILE_APPEND | LOCK_EX);
     respond(false, "We couldn't send your form just now. Please try again in a moment, or call us on 064 652 0684.", $wantsJson, 500);
 }
 
 /* ---- Optional short acknowledgement to the patient (no medical detail) ---- */
 if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
     $ackHead = 'MIME-Version: 1.0' . "\r\n"
+             . 'Date: ' . date('r') . "\r\n"
+             . 'Message-ID: <' . bin2hex(random_bytes(16)) . '@cajeebotes.com>' . "\r\n"
              . 'From: ' . $fromHeader . "\r\n"
              . 'Reply-To: ' . addressHeader($TO_NAME, $TO_EMAIL) . "\r\n"
-             . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
+             . 'Content-Type: text/html; charset=UTF-8' . "\r\n"
+             . 'Content-Transfer-Encoding: base64' . "\r\n";
     $ackFirst = htmlspecialchars(field('patient_full_names') !== '' ? field('patient_full_names') : 'there', ENT_QUOTES);
     $ackBody = '<div style="font-family:\'DM Sans\',Arial,sans-serif;color:#3f2a44;max-width:520px;margin:0 auto;">'
              . '<div style="background:' . $brand . ';color:#fff;padding:18px 22px;border-radius:12px 12px 0 0;">'
@@ -338,7 +476,8 @@ if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
              . '<a href="mailto:care@cajeebotes.com" style="color:' . $brand . ';">care@cajeebotes.com</a>.</p>'
              . '<p style="margin-top:20px;">Warm regards,<br><strong>Cajee Botes Orthotist &amp; Prosthetist</strong></p>'
              . '</div></div>';
-    @mail(field('patient_email'), encodeHeaderText('We received your intake form — Cajee Botes'), $ackBody, $ackHead, '-f' . $FROM_EMAIL);
+    $ackErr = '';
+    deliver($SMTP, field('patient_email'), encodeHeaderText('We received your intake form — Cajee Botes'), chunk_split(base64_encode($ackBody)), $ackHead, $ackErr);
 }
 
 respond(true, 'Thank you — your intake form has been received. Our team will be in touch shortly.', $wantsJson);
