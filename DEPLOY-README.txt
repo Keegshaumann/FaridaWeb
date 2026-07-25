@@ -1,6 +1,23 @@
 CAJEE BOTES WEBSITE — HOSTINGER DEPLOYMENT GUIDE
 ================================================
 
+!!! BEFORE YOU REDEPLOY — ONE RULE !!!
+--------------------------------------
+Do NOT delete this file on the server:
+
+    public_html/patient-intake/mail-config.php
+
+It holds the care@cajeebotes.com mailbox password, so it is kept out of GitHub
+and is NOT part of any upload. Uploading new files over the top of it is safe —
+it is left alone. It only vanishes if you empty the patient-intake folder first.
+
+If it does get deleted, the intake form still sends, but the emails may start
+going to spam. To fix it: on your Mac, open the patient-intake folder, copy
+mail-config.php, and upload that one file back to public_html/patient-intake/.
+
+Everything else in patient-intake/ can be overwritten freely.
+
+
 WHAT YOU HAVE
 -------------
 cajee-hostinger.zip   The website, ready to upload. Contains index.html, the
