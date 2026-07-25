@@ -48,12 +48,15 @@ $wantsJson =
     (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest')
     || (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false);
 
-/** Send the response in whichever format the caller expects, then stop. */
-function respond($ok, $message, $wantsJson, $httpCode = 200) {
+/** Send the response in whichever format the caller expects, then stop.
+ *  $extra adds fields to the JSON body (delivery details the page shows the patient). */
+function respond($ok, $message, $wantsJson, $httpCode = 200, $extra = array()) {
     http_response_code($httpCode);
     if ($wantsJson) {
         header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(array('ok' => $ok, 'error' => $ok ? null : $message));
+        $payload = array('ok' => $ok, 'error' => $ok ? null : $message);
+        foreach ($extra as $k => $v) $payload[$k] = $v;
+        echo json_encode($payload);
     } else {
         header('Content-Type: text/html; charset=utf-8');
         $title  = $ok ? 'Form received' : 'Something went wrong';
@@ -183,7 +186,24 @@ function smtp_send($cfg, $to, $subject, $headersStr, $body, &$err) {
     // For SMTP we must include To: and Subject: inside the DATA block ourselves.
     $message = 'To: ' . $to . "\r\n" . 'Subject: ' . $subject . "\r\n" . $headersStr . "\r\n" . $body;
     $message = preg_replace('/^\./m', '..', $message);   // dot-stuffing (RFC 5321)
-    fwrite($fp, $message . "\r\n.\r\n");
+    $message .= "\r\n.\r\n";
+
+    // A single fwrite() can write FEWER bytes than asked on an SSL stream, which
+    // silently truncates a message carrying a PDF. Loop until every byte is out.
+    $len = strlen($message);
+    $off = 0;
+    $stalled = 0;
+    while ($off < $len) {
+        $n = @fwrite($fp, substr($message, $off, 8192));
+        if ($n === false) { $err = 'write failed after ' . $off . ' of ' . $len . ' bytes'; @fclose($fp); return false; }
+        if ($n === 0) {
+            if (++$stalled > 200) { $err = 'write stalled at ' . $off . ' of ' . $len . ' bytes'; @fclose($fp); return false; }
+            usleep(20000);
+            continue;
+        }
+        $stalled = 0;
+        $off += $n;
+    }
     if (!$step('250', 'message accepted')) return false;
 
     $put('QUIT'); @fclose($fp);
@@ -269,8 +289,6 @@ if (!empty($missing)) {
 $patientName = trim(field('patient_full_names') . ' ' . field('patient_surname'));
 if ($patientName === '') $patientName = 'Patient';
 
-require_once __DIR__ . '/intake-pdf.php';
-
 // Flatten the transparent canvas signature onto white (FPDF cannot read alpha PNGs).
 $sigJpgPath = '';
 if ($sigBinary !== '' && function_exists('imagecreatefromstring')) {
@@ -297,15 +315,46 @@ foreach (array(
     'consent_terms', 'consent_popia', 'consent_version', 'sig_full_name', 'sig_id', 'sig_date',
 ) as $k) $pdfFields[$k] = field($k);
 
+// A full form with a signature needs headroom; the default 128M limit is usually
+// fine, but a low shared-hosting limit would kill the request outright.
+@ini_set('memory_limit', '256M');
+
 $pdfBytes = '';
+$pdfError = '';
 try {
+    // Loaded here, not at the top of the file: a missing library must degrade to
+    // "email without PDF", never to a fatal error that loses the submission.
+    foreach (array('/intake-pdf.php', '/lib/fpdf.php', '/lib/font/helvetica.php') as $needed) {
+        if (!is_readable(__DIR__ . $needed)) {
+            throw new RuntimeException('Missing on the server: patient-intake' . $needed);
+        }
+    }
+    require_once __DIR__ . '/intake-pdf.php';
     $pdfBytes = build_intake_pdf($pdfFields, $sigJpgPath);
+    if (!is_string($pdfBytes) || $pdfBytes === '') {
+        $pdfBytes = '';
+        $pdfError = 'The PDF builder returned no data.';
+    }
 } catch (Throwable $e) {
-    @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
-        date('c') . '  PDF generation failed -> ' . $e->getMessage() . "\n", FILE_APPEND | LOCK_EX);
     $pdfBytes = '';
+    $pdfError = get_class($e) . ': ' . $e->getMessage()
+              . ' (' . basename($e->getFile()) . ' line ' . $e->getLine() . ')';
+}
+if ($pdfError !== '') {
+    @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
+        date('c') . '  PDF generation failed -> ' . $pdfError . "\n", FILE_APPEND | LOCK_EX);
 }
 if ($sigJpgPath !== '' && is_file($sigJpgPath)) @unlink($sigJpgPath);
+
+/** One-line summary of the PHP environment — only ever shown to the practice, and
+ *  only when the PDF failed, so a delivery problem can be diagnosed from the email. */
+function envSummary() {
+    $ext = array();
+    foreach (array('gd', 'iconv', 'mbstring', 'openssl') as $e) {
+        $ext[] = $e . '=' . (extension_loaded($e) ? 'yes' : 'NO');
+    }
+    return 'PHP ' . PHP_VERSION . ' | memory_limit=' . ini_get('memory_limit') . ' | ' . implode(' ', $ext);
+}
 
 /* --------------------- assemble the email body -------------------- */
 
@@ -372,6 +421,7 @@ $text .= "\n" . str_repeat('=', 48) . "\nSubmitted: " . $submittedAt . "\nFrom I
 
 // Clean HTML summary — the attached PDF is the primary document.
 $sm = function ($v) { return htmlspecialchars($v !== '' ? $v : '—', ENT_QUOTES); };
+$sigCid = 'sig' . bin2hex(random_bytes(8)) . '@cajeebotes.com';
 $html  = '<div style="font-family:Arial,Helvetica,sans-serif;color:#3f2a44;max-width:600px;margin:0 auto;">';
 $html .= '<div style="background:' . $brand . ';color:#fff;padding:18px 22px;border-radius:12px 12px 0 0;">';
 $html .= '<h2 style="margin:0;font-size:18px;">New Patient Intake Form</h2>';
@@ -391,18 +441,47 @@ if ($pdfBytes !== '') {
            . '&#128206; <b>The complete signed intake form is attached as a PDF</b> &mdash; ready to print and file.</div>';
 } else {
     $html .= '<div style="background:#fdeceb;border:1px solid #f3c6c1;border-radius:10px;padding:14px 16px;color:#c0392b;font-size:13px;">'
-           . 'The PDF could not be generated for this submission &mdash; the full details are in the plain-text part of this email.</div>';
+           . '<b>The PDF could not be generated for this submission.</b> All the details are still below and in the '
+           . 'plain-text part of this email, and the signature is attached as an image.<br><br>'
+           . '<span style="font-size:12px;">Reason: ' . htmlspecialchars($pdfError, ENT_QUOTES) . '<br>'
+           . 'Server: ' . htmlspecialchars(envSummary(), ENT_QUOTES) . '</span></div>';
+}
+
+// The signature always travels with the email, so a PDF problem can never cost you
+// the signed proof of consent.
+$html .= '<div style="margin-top:16px;border:1px solid #e8d4e6;border-radius:10px;padding:14px 16px;">'
+       . '<div style="font-size:12px;color:#7c5f80;font-weight:bold;letter-spacing:.05em;">SIGNATURE</div>'
+       . '<img src="cid:' . $sigCid . '" alt="Patient signature" style="max-width:100%;margin-top:8px;">'
+       . '<div style="font-size:12px;color:#7c5f80;margin-top:6px;">'
+       . $sm(field('sig_full_name')) . ' &middot; ' . $sm(field('sig_id')) . ' &middot; ' . $sm(field('sig_date'))
+       . '</div></div>';
+
+// Full field list in the email body too — searchable, and readable without opening the PDF.
+foreach ($sections as $sectionTitle => $rows) {
+    $html .= '<h3 style="color:' . $brand . ';border-bottom:2px solid #f5e8f3;padding-bottom:6px;margin:22px 0 8px;font-size:15px;">'
+           . htmlspecialchars($sectionTitle, ENT_QUOTES) . '</h3><table style="width:100%;font-size:13px;">';
+    foreach ($rows as $label => $value) {
+        $html .= '<tr><td style="color:#7c5f80;padding:3px 0;width:38%;vertical-align:top;">'
+               . htmlspecialchars($label, ENT_QUOTES) . '</td><td style="padding:3px 0;">' . $sm($value) . '</td></tr>';
+    }
+    $html .= '</table>';
 }
 $html .= '<p style="margin-top:16px;font-size:12px;color:#9b7a9e;">Reply to this email to contact the patient directly.</p>';
 $html .= '</div></div>';
 
 /* ------------------------- MIME assembly -------------------------- */
-// multipart/mixed  ->  [ multipart/alternative (text + html) ] + [ PDF attachment ]
+// multipart/mixed
+//   -> multipart/related
+//        -> multipart/alternative (text + html)
+//        -> signature PNG (inline, referenced by cid: from the HTML)
+//   -> PDF attachment
 
 $fromHeader = addressHeader($FROM_NAME, $FROM_EMAIL);
-$subject    = encodeHeaderText('New Patient Intake — ' . $patientName);
+$subject    = encodeHeaderText('New Patient Intake — ' . $patientName
+             . ($pdfBytes === '' ? ' [PDF FAILED]' : ''));
 
 $outer = 'mix_' . bin2hex(random_bytes(10));
+$rel   = 'rel_' . bin2hex(random_bytes(10));
 $inner = 'alt_' . bin2hex(random_bytes(10));
 
 // Date + Message-ID are required by RFC 5322 and their absence is a strong spam signal.
@@ -425,6 +504,9 @@ $headers .= 'X-Mailer: CajeeBotes-Intake' . "\r\n";
 $headers .= 'Content-Type: multipart/mixed; boundary="' . $outer . '"' . "\r\n";
 
 $body  = '--' . $outer . "\r\n";
+$body .= 'Content-Type: multipart/related; boundary="' . $rel . '"' . "\r\n\r\n";
+
+$body .= '--' . $rel . "\r\n";
 $body .= 'Content-Type: multipart/alternative; boundary="' . $inner . '"' . "\r\n\r\n";
 
 $body .= '--' . $inner . "\r\n";
@@ -435,6 +517,15 @@ $body .= '--' . $inner . "\r\n";
 $body .= 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 $body .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n" . chunk_split(base64_encode($html)) . "\r\n";
 $body .= '--' . $inner . '--' . "\r\n\r\n";
+
+// Inline signature — the practice keeps the signed proof even if the PDF fails.
+$body .= '--' . $rel . "\r\n";
+$body .= 'Content-Type: image/png; name="signature.png"' . "\r\n";
+$body .= 'Content-Transfer-Encoding: base64' . "\r\n";
+$body .= 'Content-ID: <' . $sigCid . '>' . "\r\n";
+$body .= 'Content-Disposition: inline; filename="signature.png"' . "\r\n\r\n";
+$body .= chunk_split(base64_encode($sigBinary)) . "\r\n";
+$body .= '--' . $rel . '--' . "\r\n\r\n";
 
 if ($pdfBytes !== '') {
     $pdfName = 'Patient-Intake-' . trim(preg_replace('/[^A-Za-z0-9]+/', '-', $patientName), '-') . '-' . date('Y-m-d') . '.pdf';
@@ -458,7 +549,10 @@ if (!$sent) {
 }
 
 /* ---- Optional short acknowledgement to the patient (no medical detail) ---- */
+$ackSent  = false;
+$ackEmail = '';
 if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
+    $ackEmail = field('patient_email');
     $ackHead = 'MIME-Version: 1.0' . "\r\n"
              . 'Date: ' . date('r') . "\r\n"
              . 'Message-ID: <' . bin2hex(random_bytes(16)) . '@cajeebotes.com>' . "\r\n"
@@ -471,13 +565,25 @@ if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
              . '<div style="background:' . $brand . ';color:#fff;padding:18px 22px;border-radius:12px 12px 0 0;">'
              . '<h2 style="margin:0;font-size:18px;">Thank you, ' . $ackFirst . '</h2></div>'
              . '<div style="border:1px solid #e8d4e6;border-top:0;border-radius:0 0 12px 12px;padding:18px 22px;">'
-             . '<p>We\'ve received your patient intake form and our team will review it and be in touch to confirm your appointment.</p>'
+             . '<p>Your completed intake form was emailed securely to our practice at '
+             . '<strong>care@cajeebotes.com</strong> as a signed PDF. This email is your confirmation that we received it.</p>'
+             . '<p>Our team will review it and be in touch to confirm your appointment.</p>'
              . '<p>If you need to reach us in the meantime, call <strong>064 652 0684</strong> or email '
              . '<a href="mailto:care@cajeebotes.com" style="color:' . $brand . ';">care@cajeebotes.com</a>.</p>'
              . '<p style="margin-top:20px;">Warm regards,<br><strong>Cajee Botes Orthotist &amp; Prosthetist</strong></p>'
              . '</div></div>';
-    $ackErr = '';
-    deliver($SMTP, field('patient_email'), encodeHeaderText('We received your intake form — Cajee Botes'), chunk_split(base64_encode($ackBody)), $ackHead, $ackErr);
+    $ackErr  = '';
+    $ackSent = deliver($SMTP, $ackEmail, encodeHeaderText('We received your intake form — Cajee Botes'), chunk_split(base64_encode($ackBody)), $ackHead, $ackErr);
+    if (!$ackSent) {
+        @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
+            date('c') . '  patient ACK failed -> ' . $ackErr . "\n", FILE_APPEND | LOCK_EX);
+    }
 }
 
-respond(true, 'Thank you — your intake form has been received. Our team will be in touch shortly.', $wantsJson);
+// The page uses these to tell the patient exactly where their form went.
+respond(true, 'Thank you — your intake form has been received. Our team will be in touch shortly.', $wantsJson, 200, array(
+    'practice_email' => $TO_EMAIL,
+    'pdf_attached'   => $pdfBytes !== '',
+    'ack_sent'       => (bool) $ackSent,
+    'ack_email'      => $ackSent ? $ackEmail : '',
+));

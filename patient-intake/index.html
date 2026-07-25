@@ -551,7 +551,7 @@
       <div class="actions">
         <div class="privacy-line">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span>Your details are sent securely and directly to Cajee Botes and are never shared with third parties. Fields marked <span class="req">*</span> are required.</span>
+          <span>When you submit, your completed form is emailed securely and directly to Cajee Botes at <b>care@cajeebotes.com</b> as a signed PDF, and a confirmation is sent to the patient email address you provide. Your details are never shared with third parties. Fields marked <span class="req">*</span> are required.</span>
         </div>
         <button type="submit" class="submit" id="submitBtn">Submit Intake Form</button>
       </div>
@@ -562,8 +562,9 @@
       <div class="check">
         <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e7d52" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
       </div>
-      <h2>Thank you — your form has been received</h2>
-      <p>We've sent your intake form to Cajee Botes. Our team will review it and be in touch to confirm your appointment.</p>
+      <h2>Thank you — your form has been sent</h2>
+      <p id="thanksSent">Your completed form has been emailed securely to Cajee Botes at <b>care@cajeebotes.com</b> as a signed PDF. Our team will review it and be in touch to confirm your appointment.</p>
+      <p id="thanksAck" style="margin-top:10px;display:none;"></p>
       <p style="margin-top:8px;font-size:0.85rem;">If you need to reach us urgently, call <a href="tel:+27646520684">064&nbsp;652&nbsp;0684</a>.</p>
     </div>
 
@@ -735,6 +736,26 @@
       }
 
       /* ================= SUBMIT ================= */
+      /* Tell the patient exactly where the form went, using what the server reports. */
+      function showThanks(j) {
+        var sentLine = document.getElementById("thanksSent");
+        var ackLine  = document.getElementById("thanksAck");
+        var practice = (j && j.practice_email) ? j.practice_email : "care@cajeebotes.com";
+
+        if (sentLine) {
+          sentLine.innerHTML = "Your completed form has been emailed securely to Cajee Botes at <b>" +
+            practice.replace(/[<>&]/g, "") + "</b>" +
+            (j && j.pdf_attached === false ? "" : " as a signed PDF") +
+            ". Our team will review it and be in touch to confirm your appointment.";
+        }
+        if (ackLine && j && j.ack_sent && j.ack_email) {
+          ackLine.innerHTML = "A confirmation email is on its way to <b>" +
+            String(j.ack_email).replace(/[<>&]/g, "") +
+            "</b> — please check your spam folder if you don't see it.";
+          ackLine.style.display = "";
+        }
+      }
+
       function showError(msg) {
         statusErr.classList.add("show");
         requestAnimationFrame(function () { statusErr.textContent = msg; });
@@ -788,6 +809,7 @@
             clearTimeout(timeout);
             // Success requires an EXPLICIT ok:true — never infer success from a 200 with a non-JSON body
             if (o.res.ok && o.j && o.j.ok === true) {
+              showThanks(o.j);
               form.style.display = "none";
               thanks.classList.add("show");
               thanks.scrollIntoView({ behavior: "smooth", block: "start" });
