@@ -53,14 +53,14 @@ export function ServicesPage() {
     },
     {
       title: "Medical Compression",
-      description: "Specialist compression garments for lymphoedema management, oedema control, and post-surgical recovery.",
+      description: "Our compression specialism — graduated compression stockings, pantyhose and made-to-measure compression garments in compression class A to class 3.",
       image: compressionGarmentsImg,
       link: "/services/compression",
       features: [
-        "Medical-grade compression garments",
-        "Lymphoedema and oedema management",
-        "Scar therapy and burn management",
-        "Flight socks and sports compression"
+        "Below-knee (BK) and thigh-high (AK) compression stockings",
+        "Compression pantyhose, tights and maternity compression",
+        "Compression class A, 1, 2 and 3 — measured and fitted",
+        "Flat-knit compression for lymphoedema and lipoedema"
       ],
     },
     {
@@ -92,10 +92,10 @@ export function ServicesPage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotic & Prosthetic Services in South Africa | Cajee Botes"
-        title="Orthotic & Prosthetic Services"
-        description="Explore our custom orthotics, prosthetics, mobility aids and compression garments — individually assessed and fitted across South Africa."
-        keywords="orthotist prosthetist South Africa, orthotic services, prosthetic services, custom orthotics, off-the-shelf orthotics, mobility aids, medical compression, breast prosthetics"
+        fullTitle="Orthotic, Prosthetic & Compression Services | Cajee Botes"
+        title="Orthotic, Prosthetic & Compression Services"
+        description="Explore our custom orthotics, prosthetics, mobility aids and medical compression services — compression stockings and garments individually assessed and fitted across South Africa."
+        keywords="orthotist prosthetist South Africa, orthotic services, prosthetic services, medical compression services, compression stockings, compression garments, compression therapy South Africa, custom orthotics, off-the-shelf orthotics, mobility aids, breast prosthetics"
       />
       {/* Hero Section */}
       
@@ -111,7 +111,7 @@ export function ServicesPage() {
               Our Services
             </h1>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-              We offer a full range of orthotic and prosthetic services, from custom-made devices to off-the-shelf solutions. Each service is delivered with the same commitment to individualised, assessment-led care.
+              We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each service is delivered with the same commitment to individualised, assessment-led care.
             </p>
           </div>
 

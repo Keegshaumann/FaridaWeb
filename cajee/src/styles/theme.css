@@ -52,6 +52,21 @@
   --text-dark: #5E3362;
   --text-muted: #9B7A9E;
   --white-off: #F5E8F3;
+
+  /* Compression specialism palette — same brand hue, re-weighted dark so the
+     compression pages read as a distinct clinical department. The four class
+     tints double as the pressure scale (Class A -> Class 3). */
+  --comp-ink: #2A1430;
+  --comp-ink-2: #3D1F44;
+  --comp-plum: #5E3362;
+  --comp-violet: #8B5A8E;
+  --comp-lilac: #B891B5;
+  --comp-mist: #EDE4EF;
+  --comp-shell: #F5E8F3;
+  --comp-class-a: #D9C4D7;
+  --comp-class-1: #B891B5;
+  --comp-class-2: #8B5A8E;
+  --comp-class-3: #5E3362;
 }
 
 .dark {

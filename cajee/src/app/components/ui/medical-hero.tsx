@@ -69,12 +69,18 @@ export function MedicalHero() {
       <div ref={contentRef} className="relative z-10 h-full flex items-end px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20">
         <div className="container mx-auto max-w-7xl w-full flex flex-col lg:flex-row items-end justify-between gap-8">
           {/* Title - Bottom Left */}
-          <div className="lg:max-w-xl">
+          <div className="lg:max-w-2xl">
             <WordPullUp
-              words="Restoring Movement. Supporting Independence."
+              words="Orthotics, Prosthetics & Medical Compression Specialists"
               className="text-left text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
               style={{ mixBlendMode: 'difference', color: 'white' }}
             />
+            <p
+              className="mt-4 text-base md:text-lg lg:text-xl leading-relaxed"
+              style={{ mixBlendMode: 'difference', color: 'white' }}
+            >
+              Restoring movement through orthotics, prosthetics &amp; compression therapy
+            </p>
           </div>
           
           {/* Paragraph & Buttons - Right Side */}

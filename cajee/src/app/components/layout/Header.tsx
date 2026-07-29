@@ -44,6 +44,11 @@ export function Header() {
     return location.pathname.startsWith(path);
   };
 
+  // The compression page opens on a dark plum hero, so the header needs its
+  // solid backdrop from the top rather than only after scrolling.
+  const solidHeader =
+    isScrolled || mobileMenuOpen || location.pathname.startsWith("/services/compression");
+
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -64,7 +69,7 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-      isScrolled || mobileMenuOpen
+      solidHeader
         ? "border-b border-border/40 bg-[#F5E8F3]/95 backdrop-blur supports-[backdrop-filter]:bg-[#F5E8F3]/80 shadow-sm"
         : ""
     }`}

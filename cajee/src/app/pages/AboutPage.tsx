@@ -42,8 +42,8 @@ export function AboutPage() {
       <SEO
         fullTitle="About Farida Cajee-Botes | Orthotist & Prosthetist"
         title="About Farida Cajee-Botes"
-        description="Meet Farida Cajee-Botes, a qualified Orthotist & Prosthetist offering orthotic and prosthetic care in South Africa, with mobile home and hospital visits."
-        keywords="Farida Cajee-Botes, qualified orthotist, certified prosthetist, orthotic specialist South Africa, prosthetic specialist, mobile orthotist, home visit prosthetist"
+        description="Meet Farida Cajee-Botes, a qualified Orthotist & Prosthetist offering orthotic, prosthetic and medical compression care in South Africa, with mobile home and hospital visits."
+        keywords="Farida Cajee-Botes, qualified orthotist, certified prosthetist, orthotic specialist South Africa, prosthetic specialist, medical compression specialist, compression garment fitter, mobile orthotist, home visit prosthetist"
       />
       
       {/* Hero Section */}

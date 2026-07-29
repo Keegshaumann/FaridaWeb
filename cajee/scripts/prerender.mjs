@@ -15,12 +15,16 @@ import puppeteer from "puppeteer-core";
 const DIST = join(dirname(fileURLToPath(import.meta.url)), "..", "dist");
 const PORT = 4180;
 
-const EDGE_PATHS = [
+// Windows Edge first (the usual build machine), then macOS Edge/Chrome so the
+// static build can also be regenerated from a Mac.
+const BROWSER_PATHS = [
   "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
   "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+  "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
 ];
-const executablePath = EDGE_PATHS.find((p) => existsSync(p));
-if (!executablePath) throw new Error("Microsoft Edge not found for prerendering");
+const executablePath = BROWSER_PATHS.find((p) => existsSync(p));
+if (!executablePath) throw new Error("No Edge/Chrome browser found for prerendering");
 
 // Blog slugs come straight from the data file so new posts prerender automatically.
 const blogData = readFileSync(join(DIST, "..", "src", "app", "data", "blog-posts.ts"), "utf8");

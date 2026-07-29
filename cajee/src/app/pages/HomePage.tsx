@@ -15,6 +15,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SEO } from "../components/SEO";
+import { LegDiagram } from "../components/compression/LegDiagram";
 
 // Import product images
 import customOrthoticsImg from "@/assets/9aabea5badc8e319a69eaad9da1dd23b1c7e6481.webp";
@@ -76,15 +77,15 @@ export function HomePage() {
     },
     {
       title: "Medical Compression",
-      description: "Specialist compression garments for lymphoedema management, oedema control, and post-surgical recovery.",
+      description: "Our compression specialism — graduated compression stockings, pantyhose and made-to-measure compression garments in compression class A to class 3.",
       image: compressionGarmentsImg,
       hoverImage: compressionGarmentsHoverImg,
       link: "/services/compression",
       features: [
-        "Medical-grade compression garments",
-        "Lymphoedema and oedema management",
-        "Scar therapy and burn management",
-        "Flight socks and sports compression"
+        "Below-knee (BK) and thigh-high (AK) compression stockings",
+        "Compression pantyhose, tights and maternity compression",
+        "Compression class A, 1, 2 and 3 — measured and fitted",
+        "Flat-knit compression for lymphoedema and lipoedema"
       ],
     },
     {
@@ -174,10 +175,10 @@ export function HomePage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotic & Prosthetic Care South Africa | Cajee Botes"
-        title="Orthotic & Prosthetic Care in South Africa"
-        description="Professional orthotic and prosthetic care in South Africa: custom devices, compression and mobility support, plus home and hospital assessments."
-        keywords="orthotist prosthetist South Africa, custom orthotics, prosthetic limbs, medical compression garments, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphedema treatment, orthotic devices"
+        fullTitle="Orthotics, Prosthetics & Compression | Cajee Botes"
+        title="Orthotics, Prosthetics & Medical Compression"
+        description="Orthotist and prosthetist in South Africa specialising in orthotics, prosthetics and medical compression — compression stockings and garments measured and fitted at the practice, at home or in hospital."
+        keywords="orthotist prosthetist South Africa, medical compression, compression specialist, compression stockings South Africa, compression garments, compression therapy, custom orthotics, prosthetic limbs, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphoedema compression, orthotic devices"
       />
       
       {/* Hero Section - Pink/Purple gradient with Warp shader */}
@@ -192,7 +193,7 @@ export function HomePage() {
         <div className="relative z-10">
           <AccordionFeatureSection
             mainHeading="Restoring Movement. Supporting Independence."
-            mainDescription="At Cajee Botes Orthotist Prosthetist, care begins with understanding your condition, your goals, and your daily environment. Orthotic and prosthetic devices are not prescribed based on available stock, but on a comprehensive clinical assessment to ensure that each intervention supports safe mobility, comfort, and long-term function. During the initial phase of practice, assessments and fittings are provided through a mobile service in both home and hospital settings. This allows rehabilitation to begin early for patients who may be unable to travel following surgery, injury, or illness."
+            mainDescription="At Cajee Botes Orthotist Prosthetist, care begins with understanding your condition, your goals, and your daily environment. Orthotic, prosthetic and compression devices are not prescribed based on available stock, but on a comprehensive clinical assessment to ensure that each intervention supports safe mobility, comfort, and long-term function. During the initial phase of practice, assessments and fittings are provided through a mobile service in both home and hospital settings. This allows rehabilitation to begin early for patients who may be unable to travel following surgery, injury, or illness."
             features={[
               {
                 id: 1,
@@ -246,7 +247,7 @@ export function HomePage() {
                     Care Where You Need It
                   </h2>
                   <p className="text-[var(--text-muted)] leading-relaxed mb-6">
-                    We offer a mobile home and hospital service model, bringing professional orthotic and prosthetic care directly to you. Whether you're recovering at home, in hospital, or unable to travel, we conduct comprehensive assessments in your own environment to ensure the most appropriate and functional outcomes.
+                    We offer a mobile home and hospital service model, bringing professional orthotic, prosthetic and compression care directly to you. Whether you're recovering at home, in hospital, or unable to travel, we conduct comprehensive assessments — including compression measuring and fitting — in your own environment to ensure the most appropriate and functional outcomes.
                   </p>
                   <Link to="/about">
                     <Button variant="default" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full">
@@ -294,7 +295,7 @@ export function HomePage() {
               Our Services
             </h2>
             <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
-              Comprehensive orthotic and prosthetic care tailored to your needs
+              Comprehensive orthotic, prosthetic and medical compression care tailored to your needs
             </p>
           </div>
         </div>
@@ -320,6 +321,70 @@ export function HomePage() {
         
         {/* Blur transition to next section */}
         
+      </section>
+
+      {/* Compression specialism band — teases the dedicated compression clinic */}
+      <section className="relative overflow-hidden bg-[var(--comp-ink)] py-14 md:py-20">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-50"
+          style={{
+            background:
+              "radial-gradient(60rem 34rem at 82% 10%, rgba(184,145,181,0.32), transparent 62%), radial-gradient(50rem 32rem at 0% 100%, rgba(139,90,142,0.35), transparent 60%)",
+          }}
+        />
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 md:flex-row md:gap-14">
+            <div className="w-28 flex-shrink-0 md:w-36">
+              <LegDiagram
+                coverTop={0.48}
+                onDark
+                className="h-auto w-full"
+                label="Leg wearing a below-knee graduated compression stocking"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
+                Our compression specialism
+              </p>
+              <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
+                We specialise in medical compression
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-white/70">
+                A dedicated lower-limb compression clinic within the practice — graduated compression
+                stockings, compression pantyhose and made-to-measure compression garments, in
+                compression class A through class 3, measured and fitted on the leg.
+              </p>
+              <div className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start">
+                {[
+                  "Below-knee (BK)",
+                  "Thigh-high (AK)",
+                  "Pantyhose",
+                  "Class A · 1 · 2 · 3",
+                  "Flat-knit & circular-knit",
+                ].map((chip) => (
+                  <span
+                    key={chip}
+                    className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-sm text-white/80"
+                  >
+                    {chip}
+                  </span>
+                ))}
+              </div>
+              <div className="mt-8 flex justify-center md:justify-start">
+                <Link to="/services/compression">
+                  <Button
+                    size="lg"
+                    className="rounded-full bg-[var(--comp-shell)] px-8 text-[var(--comp-plum)] hover:bg-white"
+                  >
+                    Explore Medical Compression
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Why Choose Us - Pink gradient */}
@@ -427,7 +492,7 @@ export function HomePage() {
               Care Where You Are
             </h2>
             <p className="text-[var(--text-muted)] leading-relaxed">
-              Cajee Botes Orthotist &amp; Prosthetist is an HPCSA-registered practice based in Centurion, providing orthotic and prosthetic care across Gauteng — including Pretoria, Midrand, Johannesburg and surrounding areas. Because every assessment can happen at home or at the hospital bedside, patients who struggle to travel after surgery, amputation or injury can begin rehabilitation without delay. From custom orthotics and prosthetic limbs to compression garments, mobility aids and breast prostheses, every device is prescribed after an individual clinical assessment and fitted with ongoing review — so your support keeps pace as your needs change.
+              Cajee Botes Orthotist &amp; Prosthetist is an HPCSA-registered practice based in Centurion, providing orthotic, prosthetic and medical compression care across Gauteng — including Pretoria, Midrand, Johannesburg and surrounding areas. Because every assessment can happen at home or at the hospital bedside, patients who struggle to travel after surgery, amputation or injury can begin rehabilitation — and start compression therapy — without delay. From custom orthotics and prosthetic limbs to graduated compression stockings, compression garments, mobility aids and breast prostheses, every device is prescribed after an individual clinical assessment and fitted with ongoing review — so your support keeps pace as your needs change.
             </p>
           </div>
         </div>

@@ -103,7 +103,7 @@ export function SEO({
       '@type': 'MedicalBusiness',
       name: 'Cajee Botes Orthotist Prosthetist',
       image: ogImage,
-      description: 'Professional orthotics and prosthetics services in South Africa with mobile home and hospital assessments.',
+      description: 'Professional orthotics, prosthetics and medical compression services in South Africa, with mobile home and hospital assessments and compression garment fitting.',
       telephone: '+27646520684',
       email: 'care@cajeebotes.com',
       url: baseUrl,
@@ -129,7 +129,17 @@ export function SEO({
         'https://g.page/r/CRVd5g59XrdmEAI',
       ],
       priceRange: '$$',
-      knowsAbout: ['Orthotics', 'Prosthetics', 'Medical Compression', 'Mobility Aids', 'Breast Prosthetics'],
+      knowsAbout: [
+        'Orthotics',
+        'Prosthetics',
+        'Medical Compression',
+        'Compression Therapy',
+        'Graduated Compression Stockings',
+        'Compression Garment Fitting',
+        'Lymphoedema Compression',
+        'Mobility Aids',
+        'Breast Prosthetics',
+      ],
       areaServed: [
         { '@type': 'City', name: 'Centurion' },
         { '@type': 'City', name: 'Pretoria' },
@@ -163,7 +173,8 @@ export function SEO({
             itemOffered: {
               '@type': 'Service',
               name: 'Medical Compression',
-              description: 'Compression garments for lymphedema and edema',
+              description:
+                'Graduated compression stockings, compression pantyhose and made-to-measure compression garments in compression class A to class 3, measured and fitted for lymphoedema, oedema and venous conditions',
             },
           },
           {

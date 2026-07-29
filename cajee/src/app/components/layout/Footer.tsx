@@ -25,7 +25,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-white/80 text-sm leading-relaxed mb-4">
-              Providing individualised, assessment-led care for people living with injury, illness, or physical impairment.
+              Providing individualised, assessment-led orthotic, prosthetic and medical compression
+              care for people living with injury, illness, or physical impairment.
             </p>
             
             {/* Social Media Links */}
@@ -68,6 +69,11 @@ export function Footer() {
               <li>
                 <Link to="/services" className="text-white/80 hover:text-white text-sm transition-colors">
                   Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/compression" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Medical Compression
                 </Link>
               </li>
               <li>

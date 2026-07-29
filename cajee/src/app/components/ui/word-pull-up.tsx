@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { motion, Variants } from "motion/react";
 
 import { cn } from "./utils";
@@ -37,19 +38,22 @@ export function WordPullUp({
       initial="hidden"
       animate="show"
       className={cn(
-        "font-display text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
+        "font-display text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm",
         className,
       )}
       style={style}
     >
-      {words.split(" ").map((word, i) => (
-        <motion.span className="text-[40px] text-[48px] text-[40px] text-[44px] text-[40px] text-justify text-[#000000]"
-          key={i}
-          variants={framerProps}
-          style={{ display: "inline-block", paddingRight: "8px" }}
-        >
-          {word === "" ? <span>&nbsp;</span> : word}
-        </motion.span>
+      {words.split(" ").map((word, i, all) => (
+        // A real space is emitted between words so the heading still reads as a
+        // sentence to crawlers and screen readers, not one run-on string.
+        // Size and colour are inherited from the heading so the caller's
+        // responsive classes actually take effect.
+        <Fragment key={i}>
+          <motion.span variants={framerProps} style={{ display: "inline-block" }}>
+            {word === "" ? <span>&nbsp;</span> : word}
+          </motion.span>
+          {i < all.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </motion.h1>
   );
