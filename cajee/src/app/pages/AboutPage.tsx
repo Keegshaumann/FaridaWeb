@@ -4,12 +4,6 @@ import { Link } from "react-router";
 import { Button } from "../components/ui/button";
 import { motion } from "motion/react";
 import faridaImage from "@/assets/8bc488eb1600d499b9d860b11fca9c3eefc7f847.webp";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "../components/ui/accordion";
 import { SafeWarp } from "../components/ui/safe-warp";
 import { SEO } from "../components/SEO";
 
@@ -18,7 +12,7 @@ export function AboutPage() {
     {
       id: "1",
       title: "Individualised, Assessment-Led Care",
-      description: "Every intervention begins with a comprehensive clinical assessment. Orthoses and prostheses are prescribed according to diagnosis, functional goals, and daily environment — ensuring appropriate support, optimal fit, and long-term function.",
+      description: "Every intervention begins with a comprehensive clinical assessment. Orthoses and prostheses are prescribed according to diagnosis, functional goals, and daily environment, ensuring appropriate support, optimal fit, and long-term function.",
     },
     {
       id: "2",
@@ -28,7 +22,7 @@ export function AboutPage() {
     {
       id: "3",
       title: "Functional & Thoughtful Design",
-      description: "Devices are selected and designed to prioritise comfort, durability, and real-life usability — supporting independence at home, work, school, and in the community.",
+      description: "Devices are selected and designed to prioritise comfort, durability, and real-life usability, supporting independence at home, work, school, and in the community.",
     },
     {
       id: "4",
@@ -37,12 +31,69 @@ export function AboutPage() {
     },
   ];
 
+  // Registration numbers are the practice's own, as published on its patient intake
+  // form. They are the only checkable authority signal available for a YMYL health
+  // page, so they belong in both the visible copy and the structured data.
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    mainEntity: {
+      "@type": "Person",
+      name: "Farida Cajee-Botes",
+      jobTitle: "Orthotist & Prosthetist",
+      url: "https://www.cajeebotes.com/about",
+      worksFor: {
+        "@type": "MedicalBusiness",
+        name: "Farida Cajee-Botes Orthotist Prosthetist",
+        url: "https://www.cajeebotes.com",
+      },
+      workLocation: {
+        "@type": "Place",
+        name: "Orthocast Morningside",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Block F, Ground Floor, Rochester Place, 173 Rivonia Road, Morningside",
+          addressLocality: "Sandton",
+          addressRegion: "Gauteng",
+          postalCode: "2196",
+          addressCountry: "ZA",
+        },
+      },
+      hasCredential: [
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Professional registration",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "Health Professions Council of South Africa",
+            url: "https://www.hpcsa.co.za/",
+          },
+          identifier: "OS 0015148",
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Practice number",
+          recognizedBy: { "@type": "Organization", name: "Board of Healthcare Funders" },
+          identifier: "1321412",
+        },
+      ],
+      knowsAbout: [
+        "Orthotics",
+        "Prosthetics",
+        "Medical compression therapy",
+        "Mobility aids",
+        "Breast prostheses",
+      ],
+    },
+  };
+
   return (
     <>
       <SEO
+        schema={personSchema}
         fullTitle="About Farida Cajee-Botes | Orthotist & Prosthetist"
         title="About Farida Cajee-Botes"
-        description="Meet Farida Cajee-Botes, a qualified Orthotist & Prosthetist offering orthotic, prosthetic and medical compression care in South Africa, with mobile home and hospital visits."
+        description="Farida Cajee-Botes is a qualified orthotist and prosthetist consulting in Morningside, Sandton, with home and hospital visits across Gauteng."
         keywords="Farida Cajee-Botes, qualified orthotist, certified prosthetist, orthotic specialist South Africa, prosthetic specialist, medical compression specialist, compression garment fitter, mobile orthotist, home visit prosthetist"
       />
       
@@ -152,6 +203,59 @@ export function AboutPage() {
                 >
                   With a deep commitment to assessment-led care, Farida works closely with patients, caregivers, and hospital teams to design and prescribe orthotic and prosthetic devices that support real-world function, dignity, and long-term independence.
                 </motion.p>
+                <motion.div
+                  className="mb-8 max-w-lg"
+                  variants={{
+                    hidden: { y: 20, opacity: 0 },
+                    visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+                  }}
+                >
+                  <h2 className="mb-3 text-sm font-bold uppercase tracking-widest text-[var(--accent-purple)]">
+                    Registrations
+                  </h2>
+                  {/* A real table, not a div grid: these are the only checkable
+                      authority signals on a health page, and tables are what search
+                      engines and AI assistants actually extract. */}
+                  <table className="w-full text-left text-sm text-[var(--text-muted)]">
+                    <caption className="sr-only">
+                      Professional registration and practice numbers for Farida Cajee-Botes
+                    </caption>
+                    <tbody>
+                      <tr className="border-b border-[var(--purple-soft)]/40">
+                        <th scope="row" className="py-2 pr-4 font-medium text-[var(--text-dark)]">
+                          HPCSA registration
+                        </th>
+                        <td className="py-2">OS 0015148</td>
+                      </tr>
+                      <tr className="border-b border-[var(--purple-soft)]/40">
+                        <th scope="row" className="py-2 pr-4 font-medium text-[var(--text-dark)]">
+                          Practice number
+                        </th>
+                        <td className="py-2">1321412</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" className="py-2 pr-4 font-medium text-[var(--text-dark)]">
+                          Company registration
+                        </th>
+                        <td className="py-2">2026/136620/21</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p className="mt-3 text-xs text-[var(--text-muted)]">
+                    Registration can be checked on the{" "}
+                    <a
+                      href="https://www.hpcsa.co.za/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:text-[var(--text-dark)]"
+                    >
+                      Health Professions Council of South Africa
+                    </a>{" "}
+                    register. Consulting rooms at Orthocast Morningside, 173 Rivonia Road,
+                    Sandton, with home and hospital visits across Gauteng.
+                  </p>
+                </motion.div>
+
                 <Link to="/contact#book">
                   <motion.div
                     className="inline-block text-sm font-bold tracking-widest text-[var(--accent-purple)] transition-colors hover:text-[var(--accent-purple)]/80 cursor-pointer"
@@ -224,24 +328,29 @@ export function AboutPage() {
               </p>
             </div>
 
-            <Accordion type="single" defaultValue="1" collapsible className="w-full">
-              {whyChooseUs.map((item) => (
-                <AccordionItem value={item.id} key={item.id} className="last:border-b">
-                  <AccordionTrigger className="text-left pl-6 md:pl-14 overflow-hidden text-foreground/20 duration-200 hover:no-underline cursor-pointer -space-y-6 data-[state=open]:space-y-0 data-[state=open]:text-[var(--accent-purple)] [&>svg]:hidden">
-                    <div className="flex flex-1 items-start gap-4">
-                      <p className="text-xs pt-2">{item.id}</p>
-                      <h3 className="uppercase relative text-left text-xl md:text-3xl font-semibold">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </AccordionTrigger>
-
-                  <AccordionContent className="text-[var(--text-muted)] pb-6 pl-6 md:px-20 text-base leading-relaxed">
+            {/* Native <details> so every description reaches the prerendered HTML.
+                A Radix accordion unmounts closed panels, which previously hid the
+                practitioner's credentials from crawlers. */}
+            <div className="w-full">
+              {whyChooseUs.map((item, i) => (
+                <details
+                  key={item.id}
+                  name="why-choose-us"
+                  open={i === 0}
+                  className="group border-b"
+                >
+                  <summary className="flex cursor-pointer list-none items-start gap-4 py-4 pl-6 text-left text-foreground/20 duration-200 group-open:text-[var(--accent-purple)] md:pl-14">
+                    <p className="pt-2 text-xs">{item.id}</p>
+                    <h3 className="relative text-left text-xl font-semibold uppercase md:text-3xl">
+                      {item.title}
+                    </h3>
+                  </summary>
+                  <div className="pb-6 pl-6 text-base leading-relaxed text-[var(--text-muted)] md:px-20">
                     {item.description}
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                </details>
               ))}
-            </Accordion>
+            </div>
           </div>
         </div>
         {/* Blur transition to next section */}

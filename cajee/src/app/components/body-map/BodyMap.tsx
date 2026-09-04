@@ -34,7 +34,7 @@ function Hotspot({
     <button
       type="button"
       onClick={() => onSelect(point)}
-      aria-label={`${point.label} — see how we can help`}
+      aria-label={`${point.label}: see how we can help`}
       aria-pressed={active}
       className={`group absolute flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full hover:z-30 focus-visible:z-30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--text-dark)] focus-visible:ring-offset-2 ${
         active ? "z-30" : "z-10"
@@ -165,7 +165,7 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
 
             <p className="mt-5 text-xs leading-relaxed text-[var(--text-muted)]">
               This is a guide, not a diagnosis. Guidance is general and informed by clinical and
-              manufacturer sources — the right device is always confirmed after an individual assessment.
+              manufacturer sources. The right device is always confirmed after an individual assessment.
             </p>
           </motion.div>
         ) : (
@@ -181,7 +181,7 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
             </div>
             <h3 className="text-xl font-semibold text-[var(--text-dark)]">Where does it hurt?</h3>
             <p className="mt-2 max-w-xs text-[var(--text-muted)]">
-              Tap a point on the body — or pick a condition below — to see the orthotic or prosthetic
+              Tap a point on the body, or pick a condition below, to see the orthotic or prosthetic
               solution we'd recommend, and the service that covers it.
             </p>
           </motion.div>

@@ -19,12 +19,15 @@ const REVIEWS = [
   },
   {
     name: "Kattleen Govindasamy",
-    text: "I had such a wonderful experience with my prosthetist, Farida! She did a cosmetic shaping for me and the results came out absolutely amazing. I truly can't compliment her enough on her time, precision, and attention to detail — it really shows in her work. What stood out the most was her patience and the way she takes the time to reassure and guide her clients throughout the process. Highly recommend Farida to anyone looking for exceptional skill, care, and professionalism!",
+    text: "I had such a wonderful experience with my prosthetist, Farida! She did a cosmetic shaping for me and the results came out absolutely amazing. I truly can't compliment her enough on her time, precision, and attention to detail. It really shows in her work. What stood out the most was her patience and the way she takes the time to reassure and guide her clients throughout the process. Highly recommend Farida to anyone looking for exceptional skill, care, and professionalism!",
   },
 ];
 
 const READ_REVIEWS_URL = "https://search.google.com/local/reviews?placeid=ChIJF3_HdUqDCiURFV3mDn1et2Y";
-const LEAVE_REVIEW_URL = "https://g.page/r/CRVd5g59XrdmEAI/review";
+// New reviews must land on the Morningside profile (the one at Rochester Place).
+// READ_REVIEWS_URL still points at the older profile because the existing reviews
+// live there; switch it once Google has transferred them across.
+const LEAVE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJ_Zc-eJJzlR4RaIWAjmCryqg";
 
 const AVATAR_COLORS = ["bg-[var(--purple-medium)]", "bg-[var(--accent-purple)]", "bg-[var(--pink-medium)]", "bg-[var(--text-dark)]"];
 

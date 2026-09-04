@@ -1,9 +1,4 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./ui/accordion";
+import { ChevronDown } from "lucide-react";
 
 interface FeatureItem {
   id: number;
@@ -35,7 +30,7 @@ export function AccordionFeatureSection({
             </h2>
             {/* Shorter description for mobile, full for desktop */}
             <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 lg:hidden">
-              At Cajee Botes Orthotist Prosthetist, care begins with understanding your unique needs. Every device is prescribed based on comprehensive clinical assessment, not available stock.
+              At Farida Cajee-Botes Orthotist Prosthetist, care begins with understanding your unique needs. Every device is prescribed based on comprehensive clinical assessment, not available stock.
             </p>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 hidden lg:block">
               {mainDescription}
@@ -50,32 +45,34 @@ export function AccordionFeatureSection({
               />
             </div>
 
-            {/* Accordion */}
-            <Accordion
-              type="single"
-              collapsible
-              className="w-full space-y-3 text-left"
-              defaultValue="item-1"
-            >
-              {features.map((feature) => (
-                <AccordionItem
+            {/* Disclosure list. Native <details> keeps every description in the
+                prerendered HTML; a Radix accordion unmounts closed panels and hid
+                them from crawlers and AI answer engines. */}
+            <div className="w-full space-y-3 text-left">
+              {features.map((feature, i) => (
+                <details
                   key={feature.id}
-                  value={`item-${feature.id}`}
-                  className="group rounded-2xl border border-[#5E3362]/10 last:border-b bg-white/45 px-5 transition-[background-color,border-color,box-shadow] duration-200 ease-out data-[state=closed]:hover:bg-white/70 data-[state=open]:bg-white data-[state=open]:border-[#5E3362]/15 data-[state=open]:shadow-[0_12px_32px_-16px_rgba(94,51,98,0.28)]"
+                  name="feature-accordion"
+                  open={i === 0}
+                  className="group rounded-2xl border border-[#5E3362]/10 bg-white/45 px-5 transition-[background-color,border-color,box-shadow] duration-200 ease-out hover:bg-white/70 open:bg-white open:border-[#5E3362]/15 open:shadow-[0_12px_32px_-16px_rgba(94,51,98,0.28)]"
                 >
-                  <AccordionTrigger className="cursor-pointer items-center gap-4 py-4 text-left !no-underline hover:no-underline [&>svg]:size-8 [&>svg]:shrink-0 [&>svg]:translate-y-0 [&>svg]:rounded-full [&>svg]:p-2 [&>svg]:bg-[#5E3362]/[0.07] [&>svg]:text-[var(--text-dark)] [&>svg]:transition-[transform,background-color,color] [&>svg]:duration-200 [&>svg]:ease-out [&[data-state=open]>svg]:bg-[var(--text-dark)] [&[data-state=open]>svg]:text-[var(--pink-light)]">
-                    <h3 className="text-base md:text-[17px] font-medium leading-snug text-left text-[#5E3362]/70 transition-colors duration-200 group-data-[state=open]:text-[var(--text-dark)]">
+                  <summary className="flex cursor-pointer list-none items-center gap-4 py-4 text-left">
+                    <h3 className="flex-1 text-base md:text-[17px] font-medium leading-snug text-[#5E3362]/70 transition-colors duration-200 group-open:text-[var(--text-dark)]">
                       {feature.title}
                     </h3>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-5 text-left">
+                    <ChevronDown
+                      aria-hidden="true"
+                      className="size-8 shrink-0 rounded-full bg-[#5E3362]/[0.07] p-2 text-[var(--text-dark)] transition-[transform,background-color,color] duration-200 ease-out group-open:rotate-180 group-open:bg-[var(--text-dark)] group-open:text-[var(--pink-light)]"
+                    />
+                  </summary>
+                  <div className="pb-5 text-left">
                     <p className="text-[15px] leading-relaxed text-[#5E3362]/75">
                       {feature.description}
                     </p>
-                  </AccordionContent>
-                </AccordionItem>
+                  </div>
+                </details>
               ))}
-            </Accordion>
+            </div>
           </div>
 
           {/* Right Column - Image (Desktop Only) */}

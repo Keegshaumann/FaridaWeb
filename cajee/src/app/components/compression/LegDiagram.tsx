@@ -2,7 +2,7 @@
 //
 // One shape does two jobs: it shows how far up the leg a given compression
 // length reaches (AD / AF / AG / AT), and it shows the graduated pressure
-// profile — strongest at the ankle, easing as it travels up the leg.
+// profile: strongest at the ankle, easing as it travels up the leg.
 
 interface LegDiagramProps {
   /** How much of the leg the garment covers, measured from the foot up (0–1). */

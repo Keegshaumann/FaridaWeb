@@ -1,4 +1,4 @@
-# robots.txt for Cajee Botes Orthotist & Prosthetist
+# robots.txt for Farida Cajee-Botes Orthotist & Prosthetist
 # https://www.cajeebotes.com
 
 # Allow all search engines to crawl the site

@@ -14,12 +14,7 @@ import {
   Stethoscope,
 } from "lucide-react";
 import { Button } from "../../components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "../../components/ui/accordion";
+import { FaqSection, faqPageSchema } from "@/app/components/FaqSection";
 import { SEO } from "../../components/SEO";
 import { LegDiagram } from "../../components/compression/LegDiagram";
 import { CompressionClassSelector } from "../../components/compression/CompressionClassSelector";
@@ -54,12 +49,12 @@ const WHY_SPECIALIST = [
   {
     icon: Ruler,
     title: "Measured on the leg, in the morning",
-    body: "Every compression garment we dispense is built from measurements taken at each landmark the garment is knitted to — before the leg has had the day to swell.",
+    body: "Every compression garment we dispense is built from measurements taken at each landmark the garment is knitted to, before the leg has had the day to swell.",
   },
   {
     icon: ShieldCheck,
     title: "Screened before anything is fitted",
-    body: "Arterial supply, skin integrity and sensation are checked first. Compression is powerful treatment, and it is not safe for every leg — screening for that is part of the fitting.",
+    body: "Arterial supply, skin integrity and sensation are checked first. Compression is powerful treatment, and it is not safe for every leg. Screening for that is part of the fitting.",
   },
   {
     icon: HeartPulse,
@@ -94,7 +89,7 @@ export function CompressionPage() {
         name: "Medical Compression Garments & Compression Stockings",
         provider: {
           "@type": "MedicalBusiness",
-          name: "Cajee Botes Orthotist Prosthetist",
+          name: "Farida Cajee-Botes Orthotist Prosthetist",
           url: "https://www.cajeebotes.com",
         },
         areaServed: ["Centurion", "Pretoria", "Midrand", "Johannesburg", "Gauteng", "South Africa"],
@@ -114,24 +109,17 @@ export function CompressionPage() {
           })),
         },
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: COMPRESSION_FAQS.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
-        })),
-      },
+      faqPageSchema(COMPRESSION_FAQS),
     ],
   };
 
   return (
     <>
       <SEO
-        fullTitle="Medical Compression Specialists | Cajee Botes"
+        fullTitle="Medical Compression Garments & Stockings | Sandton"
         title="Medical Compression Specialists"
-        description="Specialist medical compression in South Africa — graduated compression stockings, compression pantyhose and made-to-measure compression garments in compression class A to class 3, measured and fitted by an orthotist."
-        keywords="medical compression, compression specialist South Africa, compression stockings, graduated compression, compression therapy, compression garments, compression class 1 2 3, below knee compression stockings, thigh high compression stockings, compression pantyhose, compression tights, lymphoedema compression, varicose veins compression stockings, flat knit compression, compression fitting Centurion, compression stockings Pretoria, compression stockings Gauteng"
+        description="Graduated compression stockings and made-to-measure garments, class A to 3, measured and fitted by an orthotist in Sandton or at your home."
+        keywords="medical compression, compression specialist South Africa, compression stockings, graduated compression, compression therapy, compression garments, compression class 1 2 3, below knee compression stockings, thigh high compression stockings, compression pantyhose, compression tights, lymphoedema compression, varicose veins compression stockings, flat knit compression, compression fitting Morningside, compression stockings Sandton, compression fitting Centurion, compression stockings Pretoria, compression stockings Gauteng"
         schema={faqSchema}
       />
 
@@ -166,12 +154,12 @@ export function CompressionPage() {
 
               <h1 className="mt-6 text-4xl font-bold leading-[1.08] text-white md:text-5xl lg:text-6xl">
                 Medical Compression{" "}
-                <span className="block text-[var(--comp-lilac)]">Specialists</span>
+                <span className="block text-[var(--comp-lilac)]">Garments and Stockings</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
                 Graduated compression stockings, compression pantyhose and made-to-measure
-                compression garments — measured, prescribed and fitted by a qualified orthotist.
+                compression garments: measured, prescribed and fitted by a qualified orthotist.
                 Compression class A through class 3, below-knee (BK) through to pantyhose.
               </p>
 
@@ -197,7 +185,7 @@ export function CompressionPage() {
               </div>
 
               <p className="mt-7 text-sm text-white/45">
-                Compression assessments at the practice in Centurion, at home, or at the hospital
+                Compression assessments at the Morningside rooms, at home, or at the hospital
                 bedside across Gauteng.
               </p>
             </div>
@@ -223,7 +211,7 @@ export function CompressionPage() {
                   />
                 </motion.div>
                 <p className="mt-4 text-center text-sm leading-relaxed text-white/60">
-                  Pressure is highest at the ankle and eases up the leg — that gradient is what moves
+                  Pressure is highest at the ankle and eases up the leg. That gradient is what moves
                   fluid in the right direction.
                 </p>
               </div>
@@ -265,7 +253,7 @@ export function CompressionPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-[var(--text-muted)]">
               A compression garment is a medical device with a dose. The right compression, in the
-              right class, in the right length, worn every day, changes how a leg looks and feels —
+              right class, in the right length, worn every day, changes how a leg looks and feels;
               the wrong one does nothing at all, and can do harm.
             </p>
           </div>
@@ -312,7 +300,7 @@ export function CompressionPage() {
                   Blood has to travel from your feet back up to your heart against gravity. It is
                   pushed there by the calf muscle pump and held in place by a series of one-way
                   valves. When those valves leak or the pump is not working, blood and fluid pool in
-                  the lower leg — and that is where the aching, heaviness and swelling come from.
+                  the lower leg, and that is where the aching, heaviness and swelling come from.
                 </p>
                 <p>
                   A graduated compression garment applies its strongest pressure at the ankle and
@@ -322,7 +310,7 @@ export function CompressionPage() {
                 </p>
                 <p>
                   This is also why compression is measured in millimetres of mercury (mmHg) at the
-                  ankle, and why compression is worn from the moment you get up — putting a garment on
+                  ankle, and why compression is worn from the moment you get up. Putting a garment on
                   a leg that has already swollen is treating the problem after it has happened.
                 </p>
               </div>
@@ -366,7 +354,7 @@ export function CompressionPage() {
               Compression classes
             </p>
             <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">
-              Class A to Class 3 — what each level of compression is for
+              Class A to Class 3: what each level of compression is for
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-white/65">
               Compression strength is described in classes, and each class is a defined pressure range
@@ -392,7 +380,7 @@ export function CompressionPage() {
               Below-knee, above-knee, thigh-high or pantyhose
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-[var(--text-muted)]">
-              The rule is simple — the compression garment has to cover everything that swells. Choose
+              The rule is simple: the compression garment has to cover everything that swells. Choose
               a length to see exactly where it stops on the leg.
             </p>
           </div>
@@ -415,7 +403,7 @@ export function CompressionPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-[var(--text-muted)]">
               Two compression garments can carry the same class and behave completely differently.
-              How the fabric is knitted decides how it holds a limb — and it is the decision most
+              How the fabric is knitted decides how it holds a limb, and it is the decision most
               often got wrong.
             </p>
           </div>
@@ -566,7 +554,7 @@ export function CompressionPage() {
               </ul>
             </div>
 
-            {/* Other compression — deliberately a small block */}
+            {/* Other compression: deliberately a small block */}
             <div className="rounded-3xl border-2 border-dashed border-[var(--comp-lilac)]/50 bg-[var(--comp-mist)]/60 p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--comp-violet)]">
                 Beyond the lower limb
@@ -605,36 +593,19 @@ export function CompressionPage() {
         </div>
       </section>
 
-      {/* ──────────────────────── FAQs ──────────────────────── */}
-      <section className="relative bg-[var(--comp-mist)] py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
-              Compression questions
-            </p>
-            <h2 className="mt-4 text-3xl font-bold text-[var(--comp-plum)] md:text-4xl">
-              Compression, answered
-            </h2>
-
-            <Accordion type="single" collapsible className="mt-8">
-              {COMPRESSION_FAQS.map((f) => (
-                <AccordionItem
-                  key={f.q}
-                  value={f.q}
-                  className="border-b border-[var(--comp-lilac)]/30"
-                >
-                  <AccordionTrigger className="text-left text-lg font-semibold text-[var(--comp-plum)] hover:no-underline">
-                    {f.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base leading-relaxed text-[var(--text-muted)]">
-                    {f.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </div>
-      </section>
+      <FaqSection
+        faqs={COMPRESSION_FAQS}
+        eyebrow="Compression questions"
+        heading="Compression, answered"
+        theme={{
+          section: "bg-[var(--comp-mist)]",
+          eyebrow: "text-[var(--comp-violet)]",
+          heading: "text-[var(--comp-plum)]",
+          question: "text-[var(--comp-plum)]",
+          answer: "text-[var(--text-muted)]",
+          divider: "border-[var(--comp-lilac)]/30",
+        }}
+      />
 
       {/* ──────────────────────── CTA ──────────────────────── */}
       <section className="relative overflow-hidden bg-[var(--comp-ink)] py-16 md:py-24">
@@ -677,7 +648,7 @@ export function CompressionPage() {
               </a>
             </div>
             <p className="mt-7 text-sm text-white/45">
-              Compression fitting at our Centurion practice, or at your home or hospital bed across
+              Compression fitting at our Morningside rooms, or at your home or hospital bed across
               Pretoria, Midrand, Johannesburg and greater Gauteng.
             </p>
           </div>

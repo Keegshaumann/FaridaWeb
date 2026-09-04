@@ -14,7 +14,7 @@ interface Props {
 export function ServiceProductsSection({
   service,
   heading = "Devices We Provide",
-  intro = "A selection of the devices we fit within this service. Filter by area of the body to find what fits your needs — the right device is always confirmed after an individual assessment.",
+  intro = "A selection of the devices we fit within this service. Filter by area of the body to find what fits your needs. The right device is always confirmed after an individual assessment.",
 }: Props) {
   const items = useMemo(() => DEVICES.filter((d) => d.service === service), [service]);
   const bodyParts = useMemo(() => {

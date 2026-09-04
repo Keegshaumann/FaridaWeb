@@ -1,7 +1,7 @@
 import type { BodyView } from "./anatomy-data";
 
 /**
- * Anatomical figure for the body map — a clean render of the actual muscular
+ * Anatomical figure for the body map: a clean render of the actual muscular
  * anatomy model (CC0). Front/back PNGs live in /public/anatomy and are swappable
  * without touching the map logic. The parent overlays hotspots by percentage,
  * so the image sits behind them at object-contain within a fixed aspect box.

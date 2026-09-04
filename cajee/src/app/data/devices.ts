@@ -1,6 +1,6 @@
 import type { Device } from "./device-types";
 
-// AUTO-CURATED device catalogue — generic, no supplier/brand names.
+// AUTO-CURATED device catalogue: generic, no supplier/brand names.
 // Every entry is image-swappable via components/products/product-images.ts.
 export const DEVICES: Device[] = [
   {
@@ -9,7 +9,7 @@ export const DEVICES: Device[] = [
     name: "Lower Limb Prosthetics (Above-Knee, Below-Knee & Partial Foot)",
     bodyPart: "Lower Limb",
     useCase: "For individuals with an above-knee, below-knee or partial foot amputation who want to stand, walk and return to daily activity.",
-    description: "A complete lower limb prosthesis custom-built around an individually moulded socket, restoring weight-bearing, balance and a natural walking pattern. Every component is selected and aligned by the prosthetist based on your assessment, mobility goals and lifestyle — you don't need to choose parts yourself.",
+    description: "A complete lower limb prosthesis custom-built around an individually moulded socket, restoring weight-bearing, balance and a natural walking pattern. Every component is selected and aligned by the prosthetist based on your assessment, mobility goals and lifestyle. You don't need to choose parts yourself.",
     features: ["Above-knee (AK), below-knee (BK) and partial foot solutions","Individually cast, custom-moulded socket for comfort and control","Componentry selected by the prosthetist to match your mobility goals","Ongoing alignment, adjustment and review included"],
   },
   {
@@ -126,8 +126,8 @@ export const DEVICES: Device[] = [
     name: "Hernia Support Belt",
     bodyPart: "Hip",
     useCase: "For adults with a reducible inguinal or groin hernia needing comfortable support during daily activity.",
-    description: "A prefabricated support belt with a targeted compression pad that holds a reducible groin hernia gently supported during standing, walking and daily activity. It eases discomfort and the dragging sensation while surgical review is awaited or not appropriate — it does not repair the hernia itself.",
-    features: ["Targeted, adjustable compression pad","Single- and double-sided options","Low-profile fit under clothing","Supports symptoms — does not repair the hernia"],
+    description: "A prefabricated support belt with a targeted compression pad that holds a reducible groin hernia gently supported during standing, walking and daily activity. It eases discomfort and the dragging sensation while surgical review is awaited or not appropriate. It does not repair the hernia itself.",
+    features: ["Targeted, adjustable compression pad","Single- and double-sided options","Low-profile fit under clothing","Supports symptoms but does not repair the hernia"],
   },
   {
     id: "maternity-support-belt",
@@ -225,7 +225,7 @@ export const DEVICES: Device[] = [
     name: "Custom-Moulded Foot Orthotics (Insoles)",
     bodyPart: "Ankle & Foot",
     useCase: "For foot pain, deformity or abnormal loading patterns needing an insole shaped precisely to the individual foot.",
-    description: "Every insole we provide is custom-made following an individual assessment — prefabricated insoles are not stocked. Each custom foot orthosis is individually moulded from a cast, foam impression or 3D scan of the patient's foot to help redistribute pressure and support the foot's natural alignment, built to the person's specific foot shape and prescribed correction, then fitted inside their own or recommended footwear.",
+    description: "Every insole we provide is custom-made following an individual assessment. Prefabricated insoles are not stocked. Each custom foot orthosis is individually moulded from a cast, foam impression or 3D scan of the patient's foot to help redistribute pressure and support the foot's natural alignment, built to the person's specific foot shape and prescribed correction, then fitted inside their own or recommended footwear.",
     features: ["Individually moulded from a cast, impression or scan","Helps redistribute plantar pressure to reduce localised strain","Can incorporate posting or wedging for alignment support","Available in a range of density materials for different needs"],
   },
   {
@@ -243,7 +243,7 @@ export const DEVICES: Device[] = [
     name: "Custom Moulded Bennett Brace",
     bodyPart: "Spine & Back",
     useCase: "For patients needing firm, custom-made lower-back and thoracolumbar support with a comfortable fabric front.",
-    description: "A Bennett brace is a custom-made spinal orthosis combining a rigid, individually moulded posterior frame — a pelvic band and thoracic band joined by paraspinal supports — with a strong fabric corset front that closes with wide adjustable straps. Moulded from a cast or scan of the patient's torso, it supports the spine and limits bending while remaining lower-profile and more breathable than a full rigid body jacket.",
+    description: "A Bennett brace is a custom-made spinal orthosis combining a rigid, individually moulded posterior frame (a pelvic band and thoracic band joined by paraspinal supports) with a strong fabric corset front that closes with wide adjustable straps. Moulded from a cast or scan of the patient's torso, it supports the spine and limits bending while remaining lower-profile and more breathable than a full rigid body jacket.",
     features: ["Custom-made from a cast or scan of the torso","Rigid posterior frame with a comfortable fabric corset front","Wide adjustable front straps for a secure fit","Lower-profile and more breathable than a full body jacket"],
   },
   {

@@ -22,11 +22,11 @@
 return array(
     // Where completed intake forms are delivered:
     'to_email'    => 'care@cajeebotes.com',
-    'to_name'     => 'Cajee Botes Orthotist & Prosthetist',
+    'to_name'     => 'Farida Cajee-Botes Orthotist & Prosthetist',
 
     // The "From" address (must be your own domain mailbox):
     'from_email'  => 'care@cajeebotes.com',
-    'from_name'   => 'Cajee Botes Website',
+    'from_name'   => 'Farida Cajee-Botes Website',
 
     // SMTP — cajeebotes.com email is on its own mail server (NOT Hostinger).
     'smtp_host'   => 'mail.cajeebotes.com',

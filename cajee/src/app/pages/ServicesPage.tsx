@@ -53,13 +53,13 @@ export function ServicesPage() {
     },
     {
       title: "Medical Compression",
-      description: "Our compression specialism — graduated compression stockings, pantyhose and made-to-measure compression garments in compression class A to class 3.",
+      description: "Our compression specialism: graduated compression stockings, pantyhose and made-to-measure compression garments in compression class A to class 3.",
       image: compressionGarmentsImg,
       link: "/services/compression",
       features: [
         "Below-knee (BK) and thigh-high (AK) compression stockings",
         "Compression pantyhose, tights and maternity compression",
-        "Compression class A, 1, 2 and 3 — measured and fitted",
+        "Compression class A, 1, 2 and 3: measured and fitted",
         "Flat-knit compression for lymphoedema and lipoedema"
       ],
     },
@@ -92,9 +92,9 @@ export function ServicesPage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotic, Prosthetic & Compression Services | Cajee Botes"
+        fullTitle="Orthotic & Prosthetic Services Sandton | Farida Cajee-Botes"
         title="Orthotic, Prosthetic & Compression Services"
-        description="Explore our custom orthotics, prosthetics, mobility aids and medical compression services — compression stockings and garments individually assessed and fitted across South Africa."
+        description="Prosthetics, custom orthotics, braces, medical compression, mobility aids and breast prostheses, fitted in Sandton or at your home."
         keywords="orthotist prosthetist South Africa, orthotic services, prosthetic services, medical compression services, compression stockings, compression garments, compression therapy South Africa, custom orthotics, off-the-shelf orthotics, mobility aids, breast prosthetics"
       />
       {/* Hero Section */}
@@ -108,7 +108,7 @@ export function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto mb-16 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
-              Our Services
+              Orthotic and Prosthetic Services in Sandton
             </h1>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
               We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each service is delivered with the same commitment to individualised, assessment-led care.

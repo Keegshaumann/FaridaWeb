@@ -84,7 +84,7 @@ interface PatientFormData {
 
 // Password for the /admin panel, provided at build time via VITE_ADMIN_PASSWORD
 // in an untracked .env file. If unset, admin login is disabled entirely.
-// Note: any client-side gate is recoverable from the bundle — move auth
+// Note: any client-side gate is recoverable from the bundle; move auth
 // server-side (e.g. Supabase Auth) before storing sensitive data.
 const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "";
 

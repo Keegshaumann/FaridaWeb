@@ -18,9 +18,9 @@ export function ConditionsPage() {
   return (
     <>
       <SEO
-        fullTitle="Conditions We Treat | Cajee Botes Orthotist & Prosthetist"
+        fullTitle="Conditions We Treat | Farida Cajee-Botes"
         title="Conditions We Treat"
-        description="Find your pain on our interactive body map and see the orthotic or prosthetic solution — braces, insoles, compression or prosthetics — that can help."
+        description="Find your pain on our interactive body map and see the orthotic or prosthetic solution (braces, insoles, compression or prosthetics) that can help."
         keywords="orthotic solutions for pain, knee brace, ankle brace, back support, cervical collar, plantar fasciitis insole, hernia support belt, lymphoedema compression, prosthetic limb South Africa"
       />
 
@@ -60,11 +60,11 @@ export function ConditionsPage() {
               Where does it hurt?
             </h2>
             <p className="mt-3 text-[var(--text-muted)] leading-relaxed">
-              Select a point on the body — or a condition — to see the device we'd recommend and the
+              Select a point on the body, or a condition, to see the device we'd recommend and the
               service that provides it.
             </p>
             <p className="mt-3 text-sm text-[var(--text-muted)]/80">
-              This is a guide, not a diagnosis — every recommendation is confirmed by an individual
+              This is a guide, not a diagnosis. Every recommendation is confirmed by an individual
               clinical assessment.
             </p>
           </div>
@@ -84,7 +84,7 @@ export function ConditionsPage() {
             </h2>
             <p className="mt-3 text-[var(--text-muted)] leading-relaxed">
               This is a guide, not a diagnosis. If your pain isn't listed, or you're not sure which
-              solution is right for you, get in touch — every treatment plan begins with a thorough,
+              solution is right for you, get in touch. Every treatment plan begins with a thorough,
               individual assessment in your home or hospital room.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

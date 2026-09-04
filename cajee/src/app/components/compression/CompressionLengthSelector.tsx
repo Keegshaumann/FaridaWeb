@@ -4,10 +4,10 @@ import { Check } from "lucide-react";
 import { COMPRESSION_LENGTHS } from "./compression-data";
 import { LegDiagram } from "./LegDiagram";
 
-// Lets a patient see exactly where each compression length stops on the leg —
+// Lets a patient see exactly where each compression length stops on the leg,
 // the question that decides between a BK (AD) and an AK (AG) stocking.
 export function CompressionLengthSelector() {
-  const [active, setActive] = useState(0); // AD / below-knee — the length most often fitted
+  const [active, setActive] = useState(0); // AD / below-knee: the length most often fitted
   const len = COMPRESSION_LENGTHS[active];
 
   return (
@@ -20,7 +20,7 @@ export function CompressionLengthSelector() {
             type="button"
             onClick={() => setActive(i)}
             aria-pressed={i === active}
-            aria-label={`${l.code} — ${l.name}`}
+            aria-label={`${l.code}: ${l.name}`}
             className={`flex items-baseline gap-2 rounded-full px-4 py-2.5 text-sm font-medium transition-all active:scale-95 ${
               i === active
                 ? "bg-[var(--comp-plum)] text-white shadow-md"

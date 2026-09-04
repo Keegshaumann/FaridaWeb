@@ -83,9 +83,9 @@ export function CaseStudiesPage() {
   return (
     <>
       <SEO
-        fullTitle="Patient Case Studies | Cajee Botes Orthotist & Prosthetist"
+        fullTitle="Patient Case Studies | Farida Cajee-Botes"
         title="Patient Case Studies"
-        description="Real patient outcomes from Cajee Botes Orthotist & Prosthetist — orthotic, prosthetic and mobility case studies from across South Africa."
+        description="Real patient outcomes from Farida Cajee-Botes Orthotist & Prosthetist: orthotic, prosthetic and mobility case studies from across South Africa."
         keywords="orthotic case studies, prosthetic case studies South Africa, patient outcomes orthotist, rehabilitation case studies, prosthetic success stories"
       />
       {/* Hero Section */}
@@ -94,7 +94,7 @@ export function CaseStudiesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
-              Case Studies & Insights
+              Patient Case Studies
             </h1>
             <p className="text-lg md:text-xl text-[var(--text-muted)] leading-relaxed">
               Patient stories and professional insights from our practice

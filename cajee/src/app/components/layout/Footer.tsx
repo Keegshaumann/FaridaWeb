@@ -1,5 +1,5 @@
 ﻿import { Link } from "react-router";
-import { Phone, Mail, MapPin, Instagram, Facebook, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook, Star, Home } from "lucide-react";
 import { trackButtonClick } from "../GoogleAnalytics";
 
 export function Footer() {
@@ -13,12 +13,13 @@ export function Footer() {
       <div aria-hidden="true" className="absolute inset-0 bg-[#bf00ff0f] pointer-events-none" />
 
       <div className="relative z-0 container mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <h2 className="sr-only">Site footer</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="flex flex-col mb-4">
               <span className="text-xl font-semibold text-white">
-                Cajee Botes
+                Farida Cajee-Botes
               </span>
               <span className="text-sm text-white/70">
                 Orthotist & Prosthetist
@@ -72,11 +73,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/services/compression" className="text-white/80 hover:text-white text-sm transition-colors">
-                  Medical Compression
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-white/80 hover:text-white text-sm transition-colors">
                   Contact
                 </Link>
@@ -104,9 +100,51 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Services */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/services" className="text-white/80 hover:text-white text-sm transition-colors">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/prosthetics" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Prosthetics
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/custom-orthotics" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Custom Orthotics
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/off-the-shelf-orthotics" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Braces and Supports
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/compression" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Medical Compression
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/mobility-aids" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Mobility Aids
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/breast-prosthetics" className="text-white/80 hover:text-white text-sm transition-colors">
+                  Breast Prostheses
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Contact Us</h3>
+            <h3 className="font-semibold text-white mb-4">Contact details</h3>
             <ul className="space-y-3 bg-[#00000000]">
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
@@ -129,9 +167,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                 <div className="text-white/80 text-sm">
-                  <p>Centurion, Gauteng</p>
-                  <p>South Africa</p>
-                  <p className="mt-1 text-xs italic">Home Visits Available</p>
+                  <p>Morningside, Sandton (by appointment)</p>
+                  <p>Home visits across Gauteng</p>
                 </div>
               </li>
             </ul>
@@ -141,7 +178,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Reviews</h3>
             <a
-              href="https://g.page/r/CRVd5g59XrdmEAI/review"
+              href="https://search.google.com/local/writereview?placeid=ChIJ_Zc-eJJzlR4RaIWAjmCryqg"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] hover:shadow-lg text-white px-4 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
@@ -156,9 +193,70 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Where to find us: one physical practice, plus the home-visit service area */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 pt-8 border-t border-white/20">
+          <div>
+            <h3 className="font-semibold text-white mb-5">Where to find us</h3>
+
+            <div className="flex items-start gap-3 mb-6">
+              <MapPin className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-white text-sm font-semibold mb-1">
+                  Consulting rooms in Morningside, Sandton
+                </p>
+                <address className="not-italic text-white/80 text-sm leading-relaxed">
+                  Orthocast Morningside<br />
+                  Block F, Ground Floor, Rochester Place<br />
+                  173 Rivonia Road, Morningside, Sandton, 2196
+                </address>
+                <p className="text-white/70 text-xs mt-1.5 italic">
+                  Assessments and fittings by appointment.
+                </p>
+                <a
+                  href="https://maps.google.com/?cid=12162722174863443304"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-white/90 hover:text-white text-sm underline underline-offset-4 mt-2 transition-colors"
+                >
+                  Get directions
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <Home className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-white text-sm font-semibold mb-1">
+                  Home visits across Centurion and greater Gauteng
+                </p>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Mobile assessments and fittings in your own home or at the hospital bedside
+                  across Centurion, Pretoria, Midrand, Sandton and Johannesburg.
+                </p>
+                <p className="text-white/70 text-xs mt-1.5 italic">
+                  Home visits by arrangement. There are no consulting rooms in Centurion.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <iframe
+              title="Map showing Orthocast Morningside, 173 Rivonia Road, Sandton"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.074890533255!2d28.0545417!3d-26.096473900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e957392783e97fd%3A0xa8caab608e808568!2sOrthocast%20Morningside%20(Farida%20Cajee-Botes%20Orthotist%20and%20Prosthetist)!5e0!3m2!1sen!2sza!4v1788555592960!5m2!1sen!2sza"
+              width="600"
+              height="450"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              className="w-full h-[260px] sm:h-[300px] lg:h-full lg:min-h-[280px] rounded-2xl border-0 shadow-lg"
+            />
+          </div>
+        </div>
+
         <div className="pt-8 border-t border-white/20">
           <p className="text-center text-white/70 text-sm">
-            © {new Date().getFullYear()} Cajee Botes Orthotist Prosthetist. All rights reserved.
+            © {new Date().getFullYear()} Farida Cajee-Botes Orthotist Prosthetist. All rights reserved.
           </p>
         </div>
       </div>

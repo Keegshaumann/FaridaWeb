@@ -114,7 +114,46 @@ for (const route of ROUTES) {
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, "index.html"), html, "utf8");
     const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
-    console.log(`ok  ${route}  (${Math.round(html.length / 1024)} KB, ~${words} words raw)`);
+
+    // Guard against silently losing content to collapsed widgets. Radix-style
+    // components unmount closed panels, so a page can lose every FAQ answer and
+    // still render an h1. Google also treats marking up invisible content as a
+    // structured-data violation, so schema and visible text must agree.
+    const visible = html.replace(/<script[\s\S]*?<\/script>/g, "");
+    const answers = [];
+    for (const m of html.matchAll(
+      /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g
+    )) {
+      let parsed;
+      try {
+        parsed = JSON.parse(m[1]);
+      } catch {
+        console.warn(`WARN ${route}: a JSON-LD block does not parse`);
+        continue;
+      }
+      const walk = (node) => {
+        if (Array.isArray(node)) return node.forEach(walk);
+        if (!node || typeof node !== "object") return;
+        if (node["@type"] === "FAQPage") {
+          for (const q of node.mainEntity ?? []) {
+            const text = q?.acceptedAnswer?.text;
+            if (text) answers.push(text);
+          }
+        }
+        Object.values(node).forEach(walk);
+      };
+      walk(parsed);
+    }
+    const hidden = answers.filter((a) => !visible.includes(a.slice(0, 60)));
+    if (hidden.length) {
+      throw new Error(
+        `${hidden.length} of ${answers.length} FAQ answers are in the JSON-LD but not in the ` +
+          `rendered HTML. A collapsed accordion is almost certainly unmounting them.`
+      );
+    }
+    const faqNote = answers.length ? `, ${answers.length} FAQ answers visible` : "";
+
+    console.log(`ok  ${route}  (${Math.round(html.length / 1024)} KB, ~${words} words raw${faqNote})`);
     ok++;
   } catch (err) {
     console.error(`FAIL ${route}: ${err.message}`);

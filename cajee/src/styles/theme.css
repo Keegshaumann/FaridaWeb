@@ -336,3 +336,10 @@
     background: linear-gradient(to bottom, transparent, rgba(253, 241, 255, 0.8));
   }
 }
+/* FAQ disclosure widgets.
+   The FAQ accordions are native <details>/<summary> so that every answer stays in
+   the prerendered HTML for search engines and AI answer engines. Tailwind's
+   list-none hides the marker in Blink and Gecko; WebKit needs this pseudo-element. */
+summary::-webkit-details-marker {
+  display: none;
+}

@@ -71,7 +71,7 @@ export function MedicalHero() {
           {/* Title - Bottom Left */}
           <div className="lg:max-w-2xl">
             <WordPullUp
-              words="Orthotics, Prosthetics & Medical Compression Specialists"
+              words="Orthotics, Prosthetics and Medical Compression in Sandton"
               className="text-left text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
               style={{ mixBlendMode: 'difference', color: 'white' }}
             />

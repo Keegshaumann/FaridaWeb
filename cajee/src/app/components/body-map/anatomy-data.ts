@@ -1,8 +1,8 @@
 // Data for the interactive "Conditions We Treat" body map.
 // Each pain point maps a body region to the specific orthotic/prosthetic device
-// an orthotist would provide, and links to the Cajee Botes service that covers it.
+// an orthotist would provide, and links to the Farida Cajee-Botes service that covers it.
 // Clinical rationale + device names are drawn from general clinical and
-// manufacturer guidance and are kept deliberately conservative — devices
+// manufacturer guidance and are kept deliberately conservative: devices
 // support / offload / stabilise; they are not cures.
 
 import type { BodyPart } from "../../data/device-types";
@@ -23,7 +23,7 @@ export interface PainPoint {
   howItHelps: string;
   /** One-line friendly summary. */
   blurb: string;
-  /** Mapped Cajee Botes service. */
+  /** Mapped Farida Cajee-Botes service. */
   serviceName: string;
   serviceSlug: string;
 }
@@ -115,7 +115,7 @@ export const PAIN_POINTS: PainPoint[] = [
     y: 50,
     device: "Hernia support belt (inguinal hernia truss)",
     howItHelps:
-      "A hernia support belt applies gentle, targeted pressure over a reducible inguinal hernia to hold it supported during standing, walking and daily activity, easing discomfort and the dragging sensation. It manages symptoms while surgical review is awaited or not appropriate — it does not repair the hernia itself.",
+      "A hernia support belt applies gentle, targeted pressure over a reducible inguinal hernia to hold it supported during standing, walking and daily activity, easing discomfort and the dragging sensation. It manages symptoms while surgical review is awaited or not appropriate. It does not repair the hernia itself.",
     blurb: "A fitted hernia support belt keeps a groin hernia comfortably supported during daily activity.",
     serviceName: "Off-the-Shelf Orthotics",
     serviceSlug: "/services/off-the-shelf-orthotics",
@@ -141,7 +141,7 @@ export const PAIN_POINTS: PainPoint[] = [
     y: 88,
     device: "Graduated medical compression garment (flat-knit sleeve or stocking, typically Class 2–3)",
     howItHelps:
-      "A fitted graduated compression garment applies controlled, even pressure — highest at the far end of the limb — to support lymphatic and venous return and help reduce and manage swelling. It is worn during the day for long-term maintenance and doesn't cure the underlying condition.",
+      "A fitted graduated compression garment applies controlled, even pressure (highest at the far end of the limb) to support lymphatic and venous return and help reduce and manage swelling. It is worn during the day for long-term maintenance and doesn't cure the underlying condition.",
     blurb: "A properly fitted compression garment controls swelling from lymphoedema or oedema and keeps you comfortable.",
     serviceName: "Medical Compression",
     serviceSlug: "/services/compression",
@@ -165,7 +165,7 @@ export const PAIN_POINTS: PainPoint[] = [
     view: "back",
     x: 38,
     y: 70,
-    device: "Knee brace / support — hinged or patella-stabilising, or an offloading brace for compartment osteoarthritis",
+    device: "Knee brace / support: hinged or patella-stabilising, or an offloading brace for compartment osteoarthritis",
     howItHelps:
       "A fitted knee brace stabilises the joint, guides patellar tracking and applies graded compression to control pain and swelling. An offloading brace uses a 3-point leverage system to shift load away from the worn compartment in osteoarthritis. It supports and offloads the knee but doesn't cure the cause.",
     blurb: "A properly fitted knee brace stabilises and offloads the joint in arthritis, instability or kneecap pain.",

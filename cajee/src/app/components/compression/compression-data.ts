@@ -4,7 +4,7 @@
 // mediven / SIGVARIS garments fitted in South Africa are certified against),
 // where the stated pressure is always measured at the ankle. Class A sits below
 // medical compression class 1 and is a light-support class rather than a RAL
-// compression class — it is included because patients ask for it by name.
+// compression class. It is included because patients ask for it by name.
 
 export interface CompressionClass {
   /** Short label used on chips and the pressure scale, e.g. "Class 2". */
@@ -32,7 +32,7 @@ export const COMPRESSION_CLASSES: CompressionClass[] = [
     strength: "Light support",
     intensity: 0.25,
     colour: "var(--comp-class-a)",
-    feel: "Gentle and barely noticeable — a light hug around the ankle that you forget you are wearing.",
+    feel: "Gentle and barely noticeable, a light hug around the ankle that you forget you are wearing.",
     summary:
       "A light-support class that sits below medical compression class 1. Often called support hosiery, travel socks or flight socks, it is used for comfort and prevention rather than to treat diagnosed venous disease.",
     indications: [
@@ -51,7 +51,7 @@ export const COMPRESSION_CLASSES: CompressionClass[] = [
     strength: "Light compression",
     intensity: 0.45,
     colour: "var(--comp-class-1)",
-    feel: "Clearly firm at the ankle and easing as it travels up the leg — comfortable to wear all day from the first fitting.",
+    feel: "Clearly firm at the ankle and easing as it travels up the leg, comfortable to wear all day from the first fitting.",
     summary:
       "The entry point of true medical compression. Class 1 is prescribed where symptoms are present but the leg is still healthy enough not to need stronger pressure.",
     indications: [
@@ -263,17 +263,17 @@ export const COMPRESSION_JOURNEY: { step: string; title: string; body: string }[
   {
     step: "01",
     title: "Compression assessment",
-    body: "We take your history, examine the leg, check the skin and screen for anything that would make compression unsafe — arterial disease in particular. Compression is only dispensed once we are satisfied it is the right treatment for your leg.",
+    body: "We take your history, examine the leg, check the skin and screen for anything that would make compression unsafe: arterial disease in particular. Compression is only dispensed once we are satisfied it is the right treatment for your leg.",
   },
   {
     step: "02",
     title: "Measurement",
-    body: "The leg is measured at every landmark the garment is knitted to — ankle, calf, below the knee, thigh and the relevant lengths. Measurements are taken first thing in the morning, before the leg has had a chance to swell.",
+    body: "The leg is measured at every landmark the garment is knitted to: ankle, calf, below the knee, thigh and the relevant lengths. Measurements are taken first thing in the morning, before the leg has had a chance to swell.",
   },
   {
     step: "03",
     title: "Compression prescription",
-    body: "Class, length, knit, toe style, grip top and fabric are chosen together. Two people with the same diagnosis rarely leave with the same garment — dexterity, skin, climate and what you will realistically wear all count.",
+    body: "Class, length, knit, toe style, grip top and fabric are chosen together. Two people with the same diagnosis rarely leave with the same garment. Dexterity, skin, climate and what you will realistically wear all count.",
   },
   {
     step: "04",
@@ -289,10 +289,10 @@ export const COMPRESSION_JOURNEY: { step: string; title: string; body: string }[
 
 export const COMPRESSION_CARE: string[] = [
   "Put your compression garment on first thing in the morning, before the leg swells",
-  "Wash after every one to two wears in warm water — washing restores the elastic fibres",
+  "Wash after every one to two wears in warm water; washing restores the elastic fibres",
   "No fabric softener, no bleach and no tumble dryer",
   "Dry flat, away from direct sun and heaters",
-  "Use donning gloves — they protect both your skin and the garment",
+  "Use donning gloves; they protect both your skin and the garment",
   "Check your skin daily, especially over the shin, heel and any bony point",
   "Wear two garments in rotation so one is always clean and ready",
   "Replace roughly every six months, or sooner if it becomes easy to pull on",
@@ -312,7 +312,7 @@ export const COMPRESSION_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What is the difference between BK and AK compression stockings?",
-    a: "BK — below-knee, designated AD — runs from the foot to just below the knee and is the most commonly fitted length. AK — thigh-high, designated AG — carries the compression up to the upper thigh and is held by a silicone grip top. The rule is simple: the garment must cover the whole area that swells. If your swelling stops below the knee, a below-knee stocking is both sufficient and easier to live with; if the thigh is involved, a thigh-high or pantyhose length is needed.",
+    a: "BK (below-knee, designated AD) runs from the foot to just below the knee and is the most commonly fitted length. AK (thigh-high, designated AG) carries the compression up to the upper thigh and is held by a silicone grip top. The rule is simple: the garment must cover the whole area that swells. If your swelling stops below the knee, a below-knee stocking is both sufficient and easier to live with; if the thigh is involved, a thigh-high or pantyhose length is needed.",
   },
   {
     q: "How long do compression stockings last?",
@@ -320,19 +320,19 @@ export const COMPRESSION_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Are compression stockings supposed to be uncomfortable?",
-    a: "They should feel firm, never painful. Firmness at the ankle that eases as it moves up the leg is exactly what graduated compression is meant to feel like. Pain, numbness, pins and needles, a change in toe colour, or a garment that digs in or rolls down are not normal — they usually mean the size, class or length is wrong, and they are worth a refit rather than abandoning compression altogether.",
+    a: "They should feel firm, never painful. Firmness at the ankle that eases as it moves up the leg is exactly what graduated compression is meant to feel like. Pain, numbness, pins and needles, a change in toe colour, or a garment that digs in or rolls down are not normal. They usually mean the size, class or length is wrong, and they are worth a refit rather than abandoning compression altogether.",
   },
   {
     q: "Can I sleep in my compression stockings?",
-    a: "Day compression garments are removed at night. Lying flat already takes gravity out of the equation, and wearing daytime compression in bed adds risk without adding benefit. Where swelling needs controlling overnight, a purpose-made night garment or an adjustable compression wrap is prescribed instead — these use a different, low-stiffness construction designed for lying down.",
+    a: "Day compression garments are removed at night. Lying flat already takes gravity out of the equation, and wearing daytime compression in bed adds risk without adding benefit. Where swelling needs controlling overnight, a purpose-made night garment or an adjustable compression wrap is prescribed instead. These use a different, low-stiffness construction designed for lying down.",
   },
   {
     q: "When should compression not be worn?",
-    a: "Compression is not safe for everyone. Significant arterial disease, an untreated deep vein thrombosis, uncontrolled heart failure, active infection such as cellulitis, and severe peripheral neuropathy all need medical clearance before any compression garment is fitted. This is precisely why compression is assessed and dispensed by a clinician rather than bought off a shelf — screening for these is part of the fitting.",
+    a: "Compression is not safe for everyone. Significant arterial disease, an untreated deep vein thrombosis, uncontrolled heart failure, active infection such as cellulitis, and severe peripheral neuropathy all need medical clearance before any compression garment is fitted. This is precisely why compression is assessed and dispensed by a clinician rather than bought off a shelf. Screening for these is part of the fitting.",
   },
   {
     q: "What is the difference between flat-knit and circular-knit compression?",
-    a: "Circular-knit garments are knitted seamlessly in a tube. They are finer, more cosmetic and suit legs that are still a normal shape — the usual choice for venous conditions. Flat-knit garments are knitted flat and seamed, which lets them be built to any limb shape. They are thicker and stiffer, will not cut into skin folds, and are the standard for lymphoedema, lipoedema and limbs whose shape has changed.",
+    a: "Circular-knit garments are knitted seamlessly in a tube. They are finer, more cosmetic and suit legs that are still a normal shape, and are the usual choice for venous conditions. Flat-knit garments are knitted flat and seamed, which lets them be built to any limb shape. They are thicker and stiffer, will not cut into skin folds, and are the standard for lymphoedema, lipoedema and limbs whose shape has changed.",
   },
   {
     q: "Does medical aid cover compression garments in South Africa?",
@@ -340,6 +340,6 @@ export const COMPRESSION_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Do you fit compression garments at home or in hospital?",
-    a: "Yes. Compression assessments, measuring and fitting can be done at the practice in Centurion, at your home, or at the hospital bedside across Gauteng — including Pretoria, Midrand and Johannesburg. Patients who cannot travel after surgery or during treatment are exactly the patients who most need compression started early.",
+    a: "Yes. Compression assessments, measuring and fitting can be done at the consulting rooms in Morningside, Sandton, at your home, or at the hospital bedside across Gauteng, including Johannesburg, Centurion, Pretoria and Midrand. Patients who cannot travel after surgery or during treatment are exactly the patients who most need compression started early.",
   },
 ];

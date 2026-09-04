@@ -7,7 +7,7 @@ export function NotFoundPage() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-[var(--pink-light)] via-white to-[var(--purple-light)]">
       <SEO
-        fullTitle="Page Not Found | Cajee Botes"
+        fullTitle="Page Not Found | Farida Cajee-Botes"
         title="Page Not Found"
         description="The page you're looking for doesn't exist or has been moved."
         noindex

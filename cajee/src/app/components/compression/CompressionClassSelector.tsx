@@ -7,7 +7,7 @@ import { COMPRESSION_CLASSES } from "./compression-data";
 // step from Class A through to Class 3 and see, in one place, what the class
 // means in mmHg, what it feels like, and what it is prescribed for.
 export function CompressionClassSelector() {
-  const [active, setActive] = useState(2); // Class 2 — the most commonly prescribed
+  const [active, setActive] = useState(2); // Class 2: the most commonly prescribed
   const cls = COMPRESSION_CLASSES[active];
 
   return (
@@ -24,7 +24,7 @@ export function CompressionClassSelector() {
               aria-pressed={selected}
               // The stacked spans have no whitespace between them, so spell the
               // chip out for screen readers.
-              aria-label={`${c.label} — ${c.strength}, ${c.mmHg} mmHg`}
+              aria-label={`${c.label}: ${c.strength}, ${c.mmHg} mmHg`}
               className={`group relative overflow-hidden rounded-2xl border p-4 text-left transition-all duration-300 active:scale-[0.98] ${
                 selected
                   ? "border-[var(--comp-lilac)] bg-white/[0.09] shadow-[0_0_0_1px_rgba(184,145,181,0.4)]"
@@ -37,7 +37,7 @@ export function CompressionClassSelector() {
               <span className="mt-1 block text-lg font-bold text-white">{c.label}</span>
               <span className="mt-0.5 block text-sm tabular-nums text-white/60">{c.mmHg} mmHg</span>
 
-              {/* Pressure bar — grows with the class */}
+              {/* Pressure bar: grows with the class */}
               <span className="mt-3 block h-1.5 w-full overflow-hidden rounded-full bg-white/10">
                 <motion.span
                   className="block h-full rounded-full"
@@ -109,7 +109,7 @@ export function CompressionClassSelector() {
         Classes follow the European RAL standard used by the compression garments dispensed in South
         Africa, and the pressure quoted is always the pressure at the ankle. Class 4 compression (over
         49&nbsp;mmHg) and clinician-applied multi-layer compression bandaging are available on request.
-        Your compression class is confirmed at assessment — never chosen from a shelf.
+        Your compression class is confirmed at assessment, never chosen from a shelf.
       </p>
     </div>
   );

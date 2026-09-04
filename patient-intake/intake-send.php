@@ -1,6 +1,6 @@
 <?php
 /**
- * Cajee Botes — Patient Intake Form mailer
+ * Farida Cajee-Botes — Patient Intake Form mailer
  * ----------------------------------------
  * Receives the intake form POST, validates + sanitises it, and emails a
  * formatted copy (with the drawn signature embedded inline) to the practice.
@@ -21,9 +21,9 @@ $mailcfg = @include __DIR__ . '/mail-config.php';
 if (!is_array($mailcfg)) $mailcfg = array();
 
 $TO_EMAIL   = isset($mailcfg['to_email'])   ? $mailcfg['to_email']   : 'care@cajeebotes.com';
-$TO_NAME    = isset($mailcfg['to_name'])    ? $mailcfg['to_name']    : 'Cajee Botes Orthotist & Prosthetist';
+$TO_NAME    = isset($mailcfg['to_name'])    ? $mailcfg['to_name']    : 'Farida Cajee-Botes Orthotist & Prosthetist';
 $FROM_EMAIL = isset($mailcfg['from_email']) ? $mailcfg['from_email'] : 'care@cajeebotes.com';
-$FROM_NAME  = isset($mailcfg['from_name'])  ? $mailcfg['from_name']  : 'Cajee Botes Website';
+$FROM_NAME  = isset($mailcfg['from_name'])  ? $mailcfg['from_name']  : 'Farida Cajee-Botes Website';
 
 $SEND_PATIENT_ACK = true;   // short "we received your form" note to the patient (no medical detail)
 
@@ -477,7 +477,7 @@ $html .= '</div></div>';
 //   -> PDF attachment
 
 $fromHeader = addressHeader($FROM_NAME, $FROM_EMAIL);
-$subject    = encodeHeaderText('New Patient Intake — ' . $patientName
+$subject    = encodeHeaderText('New Patient Intake: ' . $patientName
              . ($pdfBytes === '' ? ' [PDF FAILED]' : ''));
 
 $outer = 'mix_' . bin2hex(random_bytes(10));
@@ -570,10 +570,10 @@ if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
              . '<p>Our team will review it and be in touch to confirm your appointment.</p>'
              . '<p>If you need to reach us in the meantime, call <strong>064 652 0684</strong> or email '
              . '<a href="mailto:care@cajeebotes.com" style="color:' . $brand . ';">care@cajeebotes.com</a>.</p>'
-             . '<p style="margin-top:20px;">Warm regards,<br><strong>Cajee Botes Orthotist &amp; Prosthetist</strong></p>'
+             . '<p style="margin-top:20px;">Warm regards,<br><strong>Farida Cajee-Botes Orthotist &amp; Prosthetist</strong></p>'
              . '</div></div>';
     $ackErr  = '';
-    $ackSent = deliver($SMTP, $ackEmail, encodeHeaderText('We received your intake form — Cajee Botes'), chunk_split(base64_encode($ackBody)), $ackHead, $ackErr);
+    $ackSent = deliver($SMTP, $ackEmail, encodeHeaderText('We received your intake form: Farida Cajee-Botes'), chunk_split(base64_encode($ackBody)), $ackHead, $ackErr);
     if (!$ackSent) {
         @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
             date('c') . '  patient ACK failed -> ' . $ackErr . "\n", FILE_APPEND | LOCK_EX);
@@ -581,7 +581,7 @@ if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
 }
 
 // The page uses these to tell the patient exactly where their form went.
-respond(true, 'Thank you — your intake form has been received. Our team will be in touch shortly.', $wantsJson, 200, array(
+respond(true, 'Thank you. Your intake form has been received. Our team will be in touch shortly.', $wantsJson, 200, array(
     'practice_email' => $TO_EMAIL,
     'pdf_attached'   => $pdfBytes !== '',
     'ack_sent'       => (bool) $ackSent,

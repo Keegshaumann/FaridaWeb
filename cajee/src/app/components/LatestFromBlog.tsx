@@ -3,7 +3,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 import { sortedPosts } from "../data/blog-posts";
 import { formatPostDate } from "./blog/RichText";
 
-/** Homepage teaser for the three newest advice articles — real crawlable
+/** Homepage teaser for the three newest advice articles: real crawlable
  *  content with internal links to the blog's answer pages. */
 export function LatestFromBlog() {
   const posts = sortedPosts().slice(0, 3);
@@ -17,7 +17,7 @@ export function LatestFromBlog() {
             Advice &amp; Answers
           </h2>
           <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-            Clinician-written answers to the questions patients ask us most about orthotic and prosthetic care — from costs and medical aid funding to living with a prosthetic leg.
+            Clinician-written answers to the questions patients ask us most about orthotic and prosthetic care, from costs and medical aid funding to living with a prosthetic leg.
           </p>
         </div>
 

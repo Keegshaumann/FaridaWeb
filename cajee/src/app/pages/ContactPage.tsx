@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Star, FileText } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Star, FileText, Home } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { GoogleReviews } from "../components/GoogleReviews";
 import { SignupForm } from "../components/SignupForm";
@@ -17,17 +17,17 @@ export function ContactPage() {
   return (
     <>
       <SEO
-        fullTitle="Contact Us & Book an Assessment | Cajee Botes Centurion"
+        fullTitle="Orthotist & Prosthetist in Morningside, Sandton | Contact"
         title="Contact Us & Book an Assessment"
-        description="Book a mobile home or hospital assessment with Cajee Botes Orthotist & Prosthetist in Centurion, Gauteng. Call, email or message us today."
-        keywords="contact orthotist prosthetist, book assessment South Africa, mobile home visit orthotist, hospital prosthetic assessment, Centurion orthotist"
+        description="Book an assessment at our Morningside consulting rooms in Sandton, or a home visit across Centurion, Pretoria, Midrand and Johannesburg. Call 064 652 0684."
+        keywords="orthotist Morningside, prosthetist Sandton, orthotist Sandton, prosthetist Morningside, orthotist Rivonia Road, mobile orthotist Centurion, home visit prosthetist Centurion, book orthotist assessment Gauteng"
       />
       {/* Hero Section */}
       <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
-              Contact Us
+              Book an Assessment in Morningside, Sandton
             </h1>
             <p className="text-lg md:text-xl text-[var(--text-muted)] leading-relaxed">
               Get in touch to book an assessment or make an enquiry
@@ -82,19 +82,29 @@ export function ContactPage() {
                     </a>
                   </div>
 
-                  {/* Location */}
+                  {/* Consulting rooms */}
                   <div className="bg-gradient-to-br from-[var(--pink-light)] to-[var(--pink-soft)] rounded-2xl p-6 text-center">
                     <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
                       <MapPin className="h-7 w-7 text-[var(--accent-purple)]" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Location</h3>
-                    <p className="text-base text-[var(--text-muted)]">
-                      Centurion, Gauteng<br />
-                      South Africa
-                    </p>
+                    <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Consulting Rooms</h3>
+                    <address className="not-italic text-base text-[var(--text-muted)] leading-relaxed">
+                      Orthocast Morningside<br />
+                      Block F, Ground Floor, Rochester Place<br />
+                      173 Rivonia Road, Morningside<br />
+                      Sandton, 2196
+                    </address>
                     <p className="text-sm text-[var(--accent-purple)] mt-2 italic font-medium">
-                      Home Visits Available
+                      By appointment
                     </p>
+                    <a
+                      href="https://maps.google.com/?cid=12162722174863443304"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-sm text-[var(--accent-purple)] underline underline-offset-4 mt-2 hover:opacity-80 transition-opacity"
+                    >
+                      Get directions
+                    </a>
                   </div>
 
                   {/* Hours */}
@@ -106,6 +116,21 @@ export function ContactPage() {
                     <p className="text-base text-[var(--text-muted)]">
                       By appointment<br />
                       Mobile service available
+                    </p>
+                  </div>
+
+                  {/* Home-visit service area */}
+                  <div className="bg-gradient-to-br from-[var(--pink-light)] to-[var(--pink-soft)] rounded-2xl p-6 text-center sm:col-span-2">
+                    <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
+                      <Home className="h-7 w-7 text-[var(--accent-purple)]" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Home Visits</h3>
+                    <p className="text-base text-[var(--text-muted)] leading-relaxed">
+                      Assessments and fittings in your own home or at the hospital bedside across
+                      Centurion, Pretoria, Midrand, Sandton and Johannesburg.
+                    </p>
+                    <p className="text-sm text-[var(--accent-purple)] mt-2 italic font-medium">
+                      By arrangement. No consulting rooms in Centurion
                     </p>
                   </div>
                 </div>
@@ -150,7 +175,7 @@ export function ContactPage() {
 
                   {/* Review Button */}
                   <a
-                    href="https://g.page/r/CRVd5g59XrdmEAI/review"
+                    href="https://search.google.com/local/writereview?placeid=ChIJ_Zc-eJJzlR4RaIWAjmCryqg"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] hover:shadow-lg text-white px-4 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105 mb-3"

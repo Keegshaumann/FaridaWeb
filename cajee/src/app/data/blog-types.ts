@@ -1,4 +1,4 @@
-// Types for the static, SEO-focused blog. Posts are authored in blog-posts.ts —
+// Types for the static, SEO-focused blog. Posts are authored in blog-posts.ts;
 // content strings support one inline syntax: [link text](url). Internal urls
 // start with "/", everything else renders as an external reference link.
 
@@ -16,7 +16,7 @@ export interface BlogReference {
 export interface BlogPost {
   slug: string;
   title: string;
-  /** Short SEO title (<=60 chars incl. " | Cajee Botes"); falls back to title. */
+  /** Short SEO title (<=60 chars incl. " | Farida Cajee-Botes"); falls back to title. */
   metaTitle?: string;
   category: "Orthotics" | "Prosthetics" | "General";
   /** ISO date the post is published under (spread across the year). */

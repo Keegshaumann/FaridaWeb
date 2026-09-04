@@ -77,14 +77,14 @@ export function HomePage() {
     },
     {
       title: "Medical Compression",
-      description: "Our compression specialism — graduated compression stockings, pantyhose and made-to-measure compression garments in compression class A to class 3.",
+      description: "Our compression specialism: graduated compression stockings, pantyhose and made-to-measure compression garments in compression class A to class 3.",
       image: compressionGarmentsImg,
       hoverImage: compressionGarmentsHoverImg,
       link: "/services/compression",
       features: [
         "Below-knee (BK) and thigh-high (AK) compression stockings",
         "Compression pantyhose, tights and maternity compression",
-        "Compression class A, 1, 2 and 3 — measured and fitted",
+        "Compression class A, 1, 2 and 3: measured and fitted",
         "Flat-knit compression for lymphoedema and lipoedema"
       ],
     },
@@ -175,9 +175,9 @@ export function HomePage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotics, Prosthetics & Compression | Cajee Botes"
+        fullTitle="Orthotics & Prosthetics Sandton | Farida Cajee-Botes"
         title="Orthotics, Prosthetics & Medical Compression"
-        description="Orthotist and prosthetist in South Africa specialising in orthotics, prosthetics and medical compression — compression stockings and garments measured and fitted at the practice, at home or in hospital."
+        description="Orthotist and prosthetist in Morningside, Sandton. Custom orthotics, prosthetic limbs, braces and medical compression, fitted after assessment."
         keywords="orthotist prosthetist South Africa, medical compression, compression specialist, compression stockings South Africa, compression garments, compression therapy, custom orthotics, prosthetic limbs, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphoedema compression, orthotic devices"
       />
       
@@ -193,7 +193,7 @@ export function HomePage() {
         <div className="relative z-10">
           <AccordionFeatureSection
             mainHeading="Restoring Movement. Supporting Independence."
-            mainDescription="At Cajee Botes Orthotist Prosthetist, care begins with understanding your condition, your goals, and your daily environment. Orthotic, prosthetic and compression devices are not prescribed based on available stock, but on a comprehensive clinical assessment to ensure that each intervention supports safe mobility, comfort, and long-term function. During the initial phase of practice, assessments and fittings are provided through a mobile service in both home and hospital settings. This allows rehabilitation to begin early for patients who may be unable to travel following surgery, injury, or illness."
+            mainDescription="At Farida Cajee-Botes Orthotist Prosthetist, care begins with understanding your condition, your goals, and your daily environment. Orthotic, prosthetic and compression devices are not prescribed based on available stock, but on a comprehensive clinical assessment to ensure that each intervention supports safe mobility, comfort, and long-term function. During the initial phase of practice, assessments and fittings are provided through a mobile service in both home and hospital settings. This allows rehabilitation to begin early for patients who may be unable to travel following surgery, injury, or illness."
             features={[
               {
                 id: 1,
@@ -247,7 +247,7 @@ export function HomePage() {
                     Care Where You Need It
                   </h2>
                   <p className="text-[var(--text-muted)] leading-relaxed mb-6">
-                    We offer a mobile home and hospital service model, bringing professional orthotic, prosthetic and compression care directly to you. Whether you're recovering at home, in hospital, or unable to travel, we conduct comprehensive assessments — including compression measuring and fitting — in your own environment to ensure the most appropriate and functional outcomes.
+                    We offer a mobile home and hospital service model, bringing professional orthotic, prosthetic and compression care directly to you. Whether you're recovering at home, in hospital, or unable to travel, we conduct comprehensive assessments, including compression measuring and fitting, in your own environment to ensure the most appropriate and functional outcomes.
                   </p>
                   <Link to="/about">
                     <Button variant="default" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full">
@@ -323,7 +323,7 @@ export function HomePage() {
         
       </section>
 
-      {/* Compression specialism band — teases the dedicated compression clinic */}
+      {/* Compression specialism band: teases the dedicated compression clinic */}
       <section className="relative overflow-hidden bg-[var(--comp-ink)] py-14 md:py-20">
         <div
           aria-hidden="true"
@@ -351,7 +351,7 @@ export function HomePage() {
                 We specialise in medical compression
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-white/70">
-                A dedicated lower-limb compression clinic within the practice — graduated compression
+                A dedicated lower-limb compression clinic within the practice: graduated compression
                 stockings, compression pantyhose and made-to-measure compression garments, in
                 compression class A through class 3, measured and fitted on the leg.
               </p>
@@ -440,7 +440,7 @@ export function HomePage() {
               <Link to="/conditions" aria-label="Explore the conditions we treat" className="group relative">
                 <img
                   src="/anatomy/hero-muscle.png"
-                  alt="Muscular anatomy figure — explore the conditions we treat"
+                  alt="Muscular anatomy figure: explore the conditions we treat"
                   className="h-auto w-64 max-w-full drop-shadow-xl transition-transform duration-300 group-hover:scale-[1.03] sm:w-72"
                   loading="lazy"
                 />
@@ -455,7 +455,7 @@ export function HomePage() {
                 Where does it hurt?
               </h2>
               <p className="mt-4 text-lg text-[var(--text-muted)] leading-relaxed">
-                From neck and back pain to knees, ankles and feet — pinpoint your pain on our interactive
+                From neck and back pain to knees, ankles and feet, pinpoint your pain on our interactive
                 body map and discover the orthotic or prosthetic solution that can help.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start">
@@ -484,7 +484,7 @@ export function HomePage() {
       {/* Case Studies Section */}
       <CaseStudiesSection />
 
-      {/* Service area — local relevance for patients and search */}
+      {/* Service area: local relevance for patients and search */}
       <section className="relative py-12 bg-[#F5E8F3]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
@@ -492,7 +492,7 @@ export function HomePage() {
               Care Where You Are
             </h2>
             <p className="text-[var(--text-muted)] leading-relaxed">
-              Cajee Botes Orthotist &amp; Prosthetist is an HPCSA-registered practice based in Centurion, providing orthotic, prosthetic and medical compression care across Gauteng — including Pretoria, Midrand, Johannesburg and surrounding areas. Because every assessment can happen at home or at the hospital bedside, patients who struggle to travel after surgery, amputation or injury can begin rehabilitation — and start compression therapy — without delay. From custom orthotics and prosthetic limbs to graduated compression stockings, compression garments, mobility aids and breast prostheses, every device is prescribed after an individual clinical assessment and fitted with ongoing review — so your support keeps pace as your needs change.
+              Farida Cajee-Botes Orthotist &amp; Prosthetist is an HPCSA-registered practice consulting from Orthocast Morningside in Sandton, providing orthotic, prosthetic and medical compression care across Gauteng, including Johannesburg, Centurion, Pretoria, Midrand and surrounding areas. Because every assessment can happen at home or at the hospital bedside, patients who struggle to travel after surgery, amputation or injury can begin rehabilitation and start compression therapy without delay. From custom orthotics and prosthetic limbs to graduated compression stockings, compression garments, mobility aids and breast prostheses, every device is prescribed after an individual clinical assessment and fitted with ongoing review, so your support keeps pace as your needs change.
             </p>
           </div>
         </div>

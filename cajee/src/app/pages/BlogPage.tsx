@@ -10,9 +10,9 @@ export function BlogPage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotics & Prosthetics Advice Blog | Cajee Botes"
+        fullTitle="Orthotics & Prosthetics Advice Blog | Farida Cajee-Botes"
         title="Advice & Answers Blog"
-        description="Clear, clinician-written answers to the questions South Africans ask most about orthotics, prosthetics, braces and insoles — by Farida Cajee-Botes."
+        description="Clear, clinician-written answers to the questions South Africans ask most about orthotics, prosthetics, braces and insoles. By Farida Cajee-Botes."
         keywords="orthotics blog, prosthetics blog South Africa, orthotist advice, prosthetic limb questions, custom orthotics questions"
       />
 
@@ -21,7 +21,7 @@ export function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
-              Advice & Answers
+              Orthotics and Prosthetics Advice
             </h1>
             <p className="text-lg md:text-xl text-[var(--text-muted)] leading-relaxed">
               Clinician-written answers to the questions patients ask us most about orthotics and prosthetics.

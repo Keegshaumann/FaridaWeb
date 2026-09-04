@@ -4,9 +4,9 @@ export function TermsAndConditionsPage() {
   return (
     <>
       <SEO
-        fullTitle="Terms & Conditions | Cajee Botes Orthotist & Prosthetist"
+        fullTitle="Terms & Conditions | Farida Cajee-Botes"
         title="Terms & Conditions"
-        description="The terms and conditions that apply when you use the Cajee Botes Orthotist & Prosthetist website and services in South Africa."
+        description="The terms and conditions that apply when you use the Farida Cajee-Botes Orthotist & Prosthetist website and services in South Africa."
         keywords="terms and conditions, website terms, orthotist prosthetist South Africa"
       />
       {/* Hero Section */}
@@ -46,7 +46,7 @@ export function TermsAndConditionsPage() {
                   2. About the Practice
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  Cajee Botes Orthotist Prosthetist is a private orthotic and prosthetic practice based in Centurion, Gauteng, South Africa, practising in accordance with the requirements of the Health Professions Council of South Africa (HPCSA). We can be contacted on 064 652 0684 or at care@cajeebotes.com.
+                  Farida Cajee-Botes Orthotist Prosthetist is a private orthotic and prosthetic practice consulting from Morningside, Sandton, Gauteng, South Africa, with home and hospital visits across the province, practising in accordance with the requirements of the Health Professions Council of South Africa (HPCSA). We can be contacted on 064 652 0684 or at care@cajeebotes.com.
                 </p>
               </section>
 
@@ -64,7 +64,7 @@ export function TermsAndConditionsPage() {
                   4. No Medical Advice
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  Content on this website — including device descriptions and the interactive conditions guide — is general information for educational purposes only and does not constitute medical, clinical or professional advice. Always consult a registered healthcare practitioner about your specific condition, and never delay seeking care because of something you have read on this website.
+                  Content on this website, including device descriptions and the interactive conditions guide, is general information for educational purposes only and does not constitute medical, clinical or professional advice. Always consult a registered healthcare practitioner about your specific condition, and never delay seeking care because of something you have read on this website.
                 </p>
               </section>
 
@@ -118,7 +118,7 @@ export function TermsAndConditionsPage() {
                   10. Privacy and Personal Information
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  We process personal information — including health information, which is special personal information — in accordance with the Protection of Personal Information Act (POPIA) and applicable health legislation, as set out in our Privacy Policy. Unresolved privacy complaints may be directed to the Information Regulator of South Africa.
+                  We process personal information (including health information, which is special personal information) in accordance with the Protection of Personal Information Act (POPIA) and applicable health legislation, as set out in our Privacy Policy. Unresolved privacy complaints may be directed to the Information Regulator of South Africa.
                 </p>
               </section>
 
@@ -136,7 +136,7 @@ export function TermsAndConditionsPage() {
                   12. Intellectual Property
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  All content on this website — text, images, logos and graphics — belongs to the practice or its licensors. It may not be reproduced, modified or distributed without prior written consent, other than for personal, non-commercial viewing.
+                  All content on this website (text, images, logos and graphics) belongs to the practice or its licensors. It may not be reproduced, modified or distributed without prior written consent, other than for personal, non-commercial viewing.
                 </p>
               </section>
 
@@ -163,7 +163,7 @@ export function TermsAndConditionsPage() {
                   15. Disclaimers and Limitation of Liability
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  This website is provided "as is" and we do not warrant that it will be error-free, uninterrupted or free of viruses. To the extent permitted by law — and without excluding any liability that may not lawfully be excluded under the Consumer Protection Act — the practice is not liable for loss arising from reliance on website content. Nothing in these Terms limits your statutory rights as a consumer or patient.
+                  This website is provided "as is" and we do not warrant that it will be error-free, uninterrupted or free of viruses. To the extent permitted by law, and without excluding any liability that may not lawfully be excluded under the Consumer Protection Act, the practice is not liable for loss arising from reliance on website content. Nothing in these Terms limits your statutory rights as a consumer or patient.
                 </p>
               </section>
 

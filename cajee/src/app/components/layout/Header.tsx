@@ -1,10 +1,8 @@
-import image_4c69079a0a086c245294fb463bb6e821e7f346c9 from '@/assets/4c69079a0a086c245294fb463bb6e821e7f346c9.webp'
-import image_1b89765aa02a5485b64ba3d7abb36c5813cdbf75 from '@/assets/1b89765aa02a5485b64ba3d7abb36c5813cdbf75.webp'
+import practiceLogo from '@/assets/rowan-berkowitz-logo.png'
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
-import logoFallback from "@/assets/e101d3ed40c991ab187e673779af5c0942eb599a.webp";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -78,20 +76,16 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src={image_4c69079a0a086c245294fb463bb6e821e7f346c9} 
-              alt="Cajee Botes Logo" 
+            <img
+              src={practiceLogo}
+              alt="Farida Cajee-Botes Orthotist & Prosthetist logo"
               className="h-14 w-14 object-contain"
-              onError={(e) => {
-                // Fallback to static logo image if GIF fails to load
-                const target = e.target as HTMLImageElement;
-                target.src = logoFallback;
-                target.onerror = null; // Prevent infinite loop
-              }}
+              width={56}
+              height={56}
             />
             <div className="flex flex-col">
               <span className="text-lg font-semibold tracking-tight text-[var(--text-dark)]">
-                Cajee Botes
+                Farida Cajee-Botes
               </span>
               <span className="text-xs text-[var(--text-muted)]">
                 Orthotist & Prosthetist
@@ -110,9 +104,11 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <div className="relative">
+            <div className="group relative">
               <button
                 className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-all duration-200 text-sm hover:shadow-md active:scale-95 ${ isActive("/services") ? "bg-[var(--pink-soft)] text-[var(--text-dark)] shadow-sm" : "text-[var(--text-muted)] hover:bg-[var(--purple-soft)] hover:text-[var(--text-dark)]" } text-[#000000]`}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
                 onClick={(e) => {
                   e.stopPropagation();
                   setServicesOpen(!servicesOpen);
@@ -121,22 +117,24 @@ export function Header() {
                 Services
                 <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              {servicesOpen && (
-                <div className="absolute left-0 mt-2 w-56 origin-top-left rounded-md bg-[#FDF1FF] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div className="py-1">
-                    {serviceLinks.map((link) => (
-                      <Link
-                        key={link.path}
-                        to={link.path}
-                        className={`block px-4 py-2 text-sm transition-all duration-200 hover:shadow-sm ${ isActive(link.path) ? "bg-[var(--pink-soft)] text-[var(--text-dark)]" : "text-[var(--text-muted)] hover:bg-[var(--purple-soft)] hover:text-[var(--text-dark)]" } text-[#000000]`}
-                        onClick={() => setServicesOpen(false)}
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
+              <div
+                className={`absolute left-0 mt-2 w-56 origin-top-left rounded-md bg-[#FDF1FF] shadow-lg ring-1 ring-black ring-opacity-5 transition-opacity duration-150 focus:outline-none group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 ${
+                  servicesOpen ? "visible opacity-100" : "invisible opacity-0"
+                }`}
+              >
+                <div className="py-1">
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      className={`block px-4 py-2 text-sm transition-all duration-200 hover:shadow-sm ${ isActive(link.path) ? "bg-[var(--pink-soft)] text-[var(--text-dark)]" : "text-[var(--text-muted)] hover:bg-[var(--purple-soft)] hover:text-[var(--text-dark)]" } text-[#000000]`}
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
                 </div>
-              )}
+              </div>
             </div>
             <Link to="/contact#book">
               <Button className="ml-3 bg-[#FDF1FF] hover:bg-[#FDF1FF]/90 text-[var(--text-dark)] rounded-full px-5 h-9 text-sm border-2 border-[var(--text-dark)] text-[#000000]">

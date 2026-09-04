@@ -7,7 +7,7 @@ type WarpProps = ComponentProps<typeof Warp>;
 /**
  * Returns true only when the browser can create a WebGL2 context.
  * @paper-design/shaders specifically requires WebGL2 (getContext("webgl2")) and
- * throws "WebGL is not supported in this browser" otherwise — so we must match
+ * throws "WebGL is not supported in this browser" otherwise, so we must match
  * that exact requirement (a WebGL1-only environment must fall back too).
  */
 function hasWebGL(): boolean {

@@ -8,7 +8,7 @@ interface SEOProps {
   ogImage?: string;
   canonicalUrl?: string;
   schema?: object;
-  /** Overrides the auto-composed "<title> | Cajee Botes…" when set (used to keep titles within 50–60 chars). */
+  /** Overrides the auto-composed "<title> | Farida Cajee-Botes…" when set (used to keep titles within 50–60 chars). */
   fullTitle?: string;
   /** Ask crawlers not to index this page (404, thin utility pages). */
   noindex?: boolean;
@@ -27,7 +27,7 @@ export function SEO({
   const location = useLocation();
   const baseUrl = 'https://www.cajeebotes.com';
   const fullUrl = canonicalUrl || `${baseUrl}${location.pathname}`;
-  const fullTitle = fullTitleProp || `${title} | Cajee Botes Orthotist & Prosthetist`;
+  const fullTitle = fullTitleProp || `${title} | Farida Cajee-Botes Orthotist & Prosthetist`;
 
   useEffect(() => {
     // Set document title
@@ -50,7 +50,7 @@ export function SEO({
     // Basic meta tags
     setMetaTag('description', description);
     if (keywords) setMetaTag('keywords', keywords);
-    setMetaTag('author', 'Cajee Botes Orthotist Prosthetist');
+    setMetaTag('author', 'Farida Cajee-Botes Orthotist Prosthetist');
     setMetaTag('robots', noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large');
     setMetaTag('googlebot', noindex ? 'noindex, follow' : 'index, follow');
     
@@ -60,7 +60,7 @@ export function SEO({
     setMetaTag('og:url', fullUrl, true);
     setMetaTag('og:type', 'website', true);
     setMetaTag('og:image', ogImage, true);
-    setMetaTag('og:site_name', 'Cajee Botes Orthotist & Prosthetist', true);
+    setMetaTag('og:site_name', 'Farida Cajee-Botes Orthotist & Prosthetist', true);
     setMetaTag('og:locale', 'en_ZA', true);
 
     // Twitter Card meta tags
@@ -101,7 +101,7 @@ export function SEO({
     const organizationSchema = {
       '@context': 'https://schema.org',
       '@type': 'MedicalBusiness',
-      name: 'Cajee Botes Orthotist Prosthetist',
+      name: 'Farida Cajee-Botes Orthotist Prosthetist',
       image: ogImage,
       description: 'Professional orthotics, prosthetics and medical compression services in South Africa, with mobile home and hospital assessments and compression garment fitting.',
       telephone: '+27646520684',
@@ -109,15 +109,18 @@ export function SEO({
       url: baseUrl,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Centurion',
+        streetAddress: 'Block F, Ground Floor, Rochester Place, 173 Rivonia Road, Morningside',
+        addressLocality: 'Sandton',
         addressRegion: 'Gauteng',
+        postalCode: '2196',
         addressCountry: 'ZA',
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: -25.8603,
-        longitude: 28.1894,
+        latitude: -26.0964739,
+        longitude: 28.0545417,
       },
+      hasMap: 'https://maps.google.com/?cid=12162722174863443304',
       founder: {
         '@type': 'Person',
         name: 'Farida Cajee-Botes',
@@ -126,7 +129,7 @@ export function SEO({
       sameAs: [
         'https://www.instagram.com/faridabotes/',
         'https://www.facebook.com/Cajeebotes/',
-        'https://g.page/r/CRVd5g59XrdmEAI',
+        'https://maps.google.com/?cid=12162722174863443304',
       ],
       priceRange: '$$',
       knowsAbout: [
@@ -141,10 +144,11 @@ export function SEO({
         'Breast Prosthetics',
       ],
       areaServed: [
+        { '@type': 'City', name: 'Sandton' },
+        { '@type': 'City', name: 'Johannesburg' },
         { '@type': 'City', name: 'Centurion' },
         { '@type': 'City', name: 'Pretoria' },
         { '@type': 'City', name: 'Midrand' },
-        { '@type': 'City', name: 'Johannesburg' },
         { '@type': 'AdministrativeArea', name: 'Gauteng' },
         { '@type': 'Country', name: 'South Africa' },
       ],

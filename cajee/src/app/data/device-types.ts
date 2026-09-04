@@ -32,7 +32,7 @@ export interface Device {
   bodyPart: BodyPart;
   /** One concise line: who it's for / when it's used. */
   useCase: string;
-  /** 2–3 sentence patient-facing description (conservative — support/offload/stabilise/replace). */
+  /** 2–3 sentence patient-facing description (conservative: support/offload/stabilise/replace). */
   description: string;
   features: string[];
 }

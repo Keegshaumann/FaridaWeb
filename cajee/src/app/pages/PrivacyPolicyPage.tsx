@@ -4,9 +4,9 @@ export function PrivacyPolicyPage() {
   return (
     <>
       <SEO
-        fullTitle="Privacy Policy | Cajee Botes Orthotist & Prosthetist"
+        fullTitle="Privacy Policy | Farida Cajee-Botes"
         title="Privacy Policy"
-        description="How Cajee Botes Orthotist & Prosthetist collects, uses and protects your personal information in line with POPIA."
+        description="How Farida Cajee-Botes Orthotist & Prosthetist collects, uses and protects your personal information in line with POPIA."
         keywords="privacy policy, POPIA compliance, patient data protection South Africa"
       />
       {/* Hero Section */}
@@ -40,7 +40,7 @@ export function PrivacyPolicyPage() {
                   1. Introduction
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-                  Cajee Botes Orthotist Prosthetist ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                  Farida Cajee-Botes Orthotist Prosthetist ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                 </p>
                 <p className="text-[var(--text-muted)] leading-relaxed">
                   By using our website and services, you agree to the collection and use of information in accordance with this policy.
@@ -150,6 +150,7 @@ export function PrivacyPolicyPage() {
                 </p>
                 <ul className="list-disc pl-6 mb-4 text-[var(--text-muted)] space-y-2">
                   <li><strong>Google Analytics:</strong> For website analytics and performance tracking</li>
+                  <li><strong>Google Maps:</strong> The map showing our consulting rooms is embedded from Google Maps, which may set cookies and receive your IP address when that part of the page loads</li>
                   <li><strong>WhatsApp:</strong> For communication and customer support</li>
                   <li><strong>Email Service Providers:</strong> For sending communications</li>
                   <li><strong>Hosting Providers:</strong> For website hosting and data storage</li>
@@ -221,7 +222,7 @@ export function PrivacyPolicyPage() {
                 </p>
                 <div className="bg-[#FDF1FF] rounded-xl p-6 mb-4">
                   <p className="text-[var(--text-dark)] mb-2">
-                    <strong>Cajee Botes Orthotist Prosthetist</strong>
+                    <strong>Farida Cajee-Botes Orthotist Prosthetist</strong>
                   </p>
                   <p className="text-[var(--text-muted)] mb-1">
                     <strong>Email:</strong> <a href="mailto:care@cajeebotes.com" className="text-[var(--accent-purple)] hover:underline">care@cajeebotes.com</a>
@@ -230,7 +231,7 @@ export function PrivacyPolicyPage() {
                     <strong>Phone:</strong> <a href="tel:0646520684" className="text-[var(--accent-purple)] hover:underline">064 652 0684</a>
                   </p>
                   <p className="text-[var(--text-muted)]">
-                    <strong>Location:</strong> Centurion, Gauteng, South Africa
+                    <strong>Location:</strong> Morningside, Sandton, Gauteng, South Africa
                   </p>
                 </div>
               </section>

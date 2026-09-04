@@ -5,6 +5,8 @@ import { Check } from "lucide-react";
 import { SEO } from "./SEO";
 import { ServiceProductsSection } from "./products/ServiceProductsSection";
 import type { ServiceSlug } from "../data/device-types";
+import { FaqSection, faqPageSchema, type Faq } from "./FaqSection";
+import { getPostBySlug } from "../data/blog-posts";
 
 interface ServicePageTemplateProps {
   title: string;
@@ -20,6 +22,10 @@ interface ServicePageTemplateProps {
   seoFullTitle?: string;
   seoDescription?: string;
   seoKeywords?: string;
+  /** Rendered as a crawlable <details> list and mirrored into FAQPage schema. */
+  faqs?: Faq[];
+  /** Blog slugs to link down to. Service pages previously linked to no articles at all. */
+  relatedSlugs?: string[];
 }
 
 export function ServicePageTemplate({
@@ -35,7 +41,10 @@ export function ServicePageTemplate({
   seoFullTitle,
   seoDescription,
   seoKeywords,
+  faqs,
+  relatedSlugs,
 }: ServicePageTemplateProps) {
+  const related = (relatedSlugs ?? []).map(getPostBySlug).filter(Boolean);
   return (
     <>
       {/* Hero Section */}
@@ -122,6 +131,29 @@ export function ServicePageTemplate({
               </p>
             </section>
 
+            {/* Related reading. Service pages previously linked to no blog article at
+                all, so the long-tail content the blog earns had nowhere to flow. */}
+            {related.length > 0 && (
+              <section className="pt-8">
+                <h2 className="text-2xl font-semibold text-[var(--text-dark)] mb-4">
+                  Related reading
+                </h2>
+                <ul className="space-y-3">
+                  {related.map((r) => (
+                    <li key={r!.slug}>
+                      <Link
+                        to={`/blog/${r!.slug}`}
+                        className="text-[var(--accent-purple)] underline underline-offset-4 hover:opacity-80"
+                      >
+                        {r!.title}
+                      </Link>
+                      <p className="mt-1 text-sm text-[var(--text-muted)]">{r!.excerpt}</p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             {/* CTA */}
             <section className="text-center pt-8">
               <h3 className="text-2xl font-semibold text-[var(--text-dark)] mb-4">
@@ -147,6 +179,14 @@ export function ServicePageTemplate({
         </div>
       </div>
 
+      {faqs && faqs.length > 0 && (
+        <FaqSection
+          faqs={faqs}
+          eyebrow="Common questions"
+          heading={`${title}: your questions answered`}
+        />
+      )}
+
       {/* SEO */}
       {seoTitle && seoDescription && (
         <SEO
@@ -154,6 +194,7 @@ export function ServicePageTemplate({
           fullTitle={seoFullTitle}
           description={seoDescription}
           keywords={seoKeywords}
+          schema={faqs && faqs.length > 0 ? faqPageSchema(faqs) : undefined}
         />
       )}
     </>
