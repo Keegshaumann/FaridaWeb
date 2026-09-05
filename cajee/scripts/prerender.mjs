@@ -114,12 +114,26 @@ for (const route of ROUTES) {
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, "index.html"), html, "utf8");
     const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+    const visibleHtml = html.replace(/<script[\s\S]*?<\/script>/g, "");
+
+    // A crashed route still renders an h1 or h2, so the h1/h2 wait above passes and
+    // the route is written out as "ok". Catch the router error boundary explicitly:
+    // shipping a page that says "Unexpected Application Error" is far worse than
+    // failing the build.
+    for (const marker of ["Unexpected Application Error", "is not defined", "is not a function"]) {
+      if (visibleHtml.includes(marker)) {
+        throw new Error(
+          `page rendered a runtime error ("${marker}"). The route crashed; ` +
+            `it must not be published.`
+        );
+      }
+    }
 
     // Guard against silently losing content to collapsed widgets. Radix-style
     // components unmount closed panels, so a page can lose every FAQ answer and
     // still render an h1. Google also treats marking up invisible content as a
     // structured-data violation, so schema and visible text must agree.
-    const visible = html.replace(/<script[\s\S]*?<\/script>/g, "");
+    const visible = visibleHtml;
     const answers = [];
     for (const m of html.matchAll(
       /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g

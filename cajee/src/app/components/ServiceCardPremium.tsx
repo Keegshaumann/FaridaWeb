@@ -4,6 +4,9 @@ import { motion } from "motion/react";
 import { Button } from "./ui/button";
 
 interface ServiceCardPremiumProps {
+  /** The services hub renders these directly under its h1, so they must be h2
+   *  there. On the homepage they sit under an h2, so h3 is correct. */
+  headingLevel?: 2 | 3;
   index: number;
   title: string;
   description: string;
@@ -13,6 +16,7 @@ interface ServiceCardPremiumProps {
 }
 
 export function ServiceCardPremium({
+  headingLevel = 3,
   index,
   title,
   description,
@@ -20,6 +24,7 @@ export function ServiceCardPremium({
   features,
   link,
 }: ServiceCardPremiumProps) {
+  const Heading = (headingLevel === 2 ? "h2" : "h3") as "h2" | "h3";
   const indexFormatted = index.toString().padStart(2, '0');
 
   return (
@@ -55,9 +60,9 @@ export function ServiceCardPremium({
         {/* Content */}
         <div className="flex flex-col flex-grow relative z-20">
           {/* Title */}
-          <h3 className="text-2xl font-bold text-[#FDF1FF] mb-4 pr-12">
+          <Heading className="text-2xl font-bold text-[#FDF1FF] mb-4 pr-12">
             {title}
-          </h3>
+          </Heading>
 
           {/* Description */}
           <p className="text-[#FDF1FF]/80 leading-relaxed mb-6 text-sm">

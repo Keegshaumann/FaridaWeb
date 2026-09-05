@@ -14,6 +14,9 @@ interface AccordionFeatureSectionProps {
   /** Condensed copy shown on small screens. Google indexes mobile-first, so this
    *  is the version it primarily reads: keep it a true summary, not a stub. */
   mainDescriptionShort?: string;
+  /** Describes the image. Defaults to the heading, which is poor alt text:
+   *  a screen reader has just announced that heading. Pass a real description. */
+  imageAlt?: string;
   features: FeatureItem[];
   image: string;
 }
@@ -23,6 +26,7 @@ export function AccordionFeatureSection({
   subHeading,
   mainDescription,
   mainDescriptionShort,
+  imageAlt,
   features,
   image,
 }: AccordionFeatureSectionProps) {
@@ -40,19 +44,28 @@ export function AccordionFeatureSection({
                 {subHeading}
               </h3>
             )}
-            {/* Shorter description for mobile, full for desktop */}
-            <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 lg:hidden">
-              {mainDescriptionShort ?? mainDescription}
-            </p>
-            <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 hidden lg:block">
-              {mainDescription}
-            </p>
+            {/* One paragraph unless a distinct mobile variant is supplied. Rendering
+                both branches with identical text put the same copy in the DOM twice. */}
+            {mainDescriptionShort ? (
+              <>
+                <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 lg:hidden">
+                  {mainDescriptionShort}
+                </p>
+                <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 hidden lg:block">
+                  {mainDescription}
+                </p>
+              </>
+            ) : (
+              <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8">
+                {mainDescription}
+              </p>
+            )}
 
             {/* Mobile Image - appears once below description */}
             <div className="mb-8 lg:hidden">
               <img
                 src={image}
-                alt={mainHeading}
+                alt={imageAlt ?? mainHeading}
                 className="w-full h-auto rounded-lg object-cover"
               />
             </div>

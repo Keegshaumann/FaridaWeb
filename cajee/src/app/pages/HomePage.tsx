@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import { Button } from "../components/ui/button";
-import { ServiceCard } from "../components/ServiceCard";
 import { ServiceCardPremium } from "../components/ServiceCardPremium";
 import { CaseStudiesSection } from "../components/CaseStudiesSection";
 import { LatestFromBlog } from "../components/LatestFromBlog";
@@ -223,6 +222,7 @@ export function HomePage() {
               }
             ]}
             image={workshopImg}
+            imageAlt="Farida Cajee-Botes holding a prosthetic socket at her workbench, with tools and footwear on the bench behind her"
           />
         </div>
         {/* Blur transition to next section */}

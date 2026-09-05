@@ -1,6 +1,5 @@
 import { PageHero } from "../components/PageHero";
 import { SEO } from "../components/SEO";
-import { ServiceCard } from "../components/ServiceCard";
 import { ServiceCardPremium } from "../components/ServiceCardPremium";
 import { Link } from "react-router";
 import { Button } from "../components/ui/button";
@@ -120,6 +119,7 @@ export function ServicesPage() {
             {productCategories.map((service, index) => (
               <div key={service.title} className="flex">
                 <ServiceCardPremium
+                  headingLevel={2}
                   index={index + 1}
                   title={service.title}
                   description={service.description}
@@ -133,9 +133,9 @@ export function ServicesPage() {
 
           {/* CTA */}
           <div className="text-center mt-16">
-            <h3 className="text-2xl font-semibold text-[var(--text-dark)] mb-4">
+            <h2 className="text-2xl font-semibold text-[var(--text-dark)] mb-4">
               Ready to get started?
-            </h3>
+            </h2>
             <p className="text-[var(--text-muted)] mb-6">
               Contact us to book an assessment or discuss which service is right for you
             </p>
