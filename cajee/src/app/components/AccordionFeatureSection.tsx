@@ -40,7 +40,7 @@ export function AccordionFeatureSection({
               {mainHeading}
             </h2>
             {subHeading && (
-              <h3 className="text-xl md:text-2xl font-semibold text-[var(--accent-purple)] mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold text-[var(--text-dark)] mb-4">
                 {subHeading}
               </h3>
             )}
@@ -104,7 +104,7 @@ export function AccordionFeatureSection({
           <div className="hidden lg:block sticky top-24">
             <img
               src={image}
-              alt={mainHeading}
+              alt={imageAlt ?? mainHeading}
               className="w-full h-auto rounded-lg object-cover shadow-lg"
             />
           </div>

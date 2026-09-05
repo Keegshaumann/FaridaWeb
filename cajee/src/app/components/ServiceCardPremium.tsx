@@ -39,7 +39,7 @@ export function ServiceCardPremium({
       {/* Card Container */}
       <div className="relative h-full bg-[var(--text-dark)] rounded-3xl p-6 pt-24 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col overflow-visible">
         {/* Floating Image - Sticking out the top left */}
-        <div className="absolute -top-32 -left-4 w-[400px] h-80 transition-transform duration-300 z-0 pointer-events-none">
+        <div className="absolute -top-32 -left-4 w-[400px] max-w-[100vw] h-80 transition-transform duration-300 z-0 pointer-events-none">
           <div className="relative w-full h-full">
             {/* Glow effect */}
             <div className="absolute inset-0 bg-[var(--accent-purple)] rounded-3xl blur-3xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>

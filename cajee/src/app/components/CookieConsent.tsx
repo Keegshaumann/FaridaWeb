@@ -60,7 +60,7 @@ export function CookieConsent() {
               </h3>
               <p className="text-sm text-[var(--text-muted)] leading-relaxed">
                 We use cookies and similar technologies to improve your experience on our website, 
-                analyze site traffic, and personalize content. By clicking "Accept All", you consent 
+                analyse site traffic, and personalize content. By clicking "Accept All", you consent 
                 to our use of cookies for analytics and tracking. This helps us understand how 
                 visitors use our site and improve our services.
               </p>

@@ -98,7 +98,7 @@ export function PrivacyPolicyPage() {
                   <li>To improve our website and user experience</li>
                   <li>To send you relevant information and updates (with your consent)</li>
                   <li>To comply with legal obligations and healthcare regulations</li>
-                  <li>To analyze website traffic and usage patterns</li>
+                  <li>To analyse website traffic and usage patterns</li>
                 </ul>
               </section>
 
@@ -108,7 +108,7 @@ export function PrivacyPolicyPage() {
                   4. Data Protection and Security
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-                  We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+                  We implement appropriate technical and organisational security measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. These measures include:
                 </p>
                 <ul className="list-disc pl-6 mb-4 text-[var(--text-muted)] space-y-2">
                   <li>Secure server infrastructure</li>
@@ -128,7 +128,7 @@ export function PrivacyPolicyPage() {
                   5. Cookies and Tracking Technologies
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-                  Our website uses cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. We use:
+                  Our website uses cookies and similar tracking technologies to enhance your browsing experience and analyse website traffic. We use:
                 </p>
                 <ul className="list-disc pl-6 mb-4 text-[var(--text-muted)] space-y-2">
                   <li><strong>Essential Cookies:</strong> Required for the website to function properly</li>

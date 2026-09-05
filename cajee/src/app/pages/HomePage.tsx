@@ -273,7 +273,7 @@ export function HomePage() {
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-4 h-4 w-4 flex-shrink-0 text-[var(--accent-purple)]" />
-                      Personalized Care
+                      Personalised Care
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-4 h-4 w-4 flex-shrink-0 text-[var(--accent-purple)]" />
