@@ -1551,7 +1551,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "When should you see someone about compression?",
         "paragraphs": [
           "Book an assessment if you have been prescribed a class and are unsure what to buy, if you have lymphoedema, a venous ulcer, swelling present in the morning or a history of DVT, if you have diabetes or known arterial disease and compression has been suggested, or if a garment you already wear hurts, rolls, cuts in or slides down. If your legs are simply tired at the end of a long day, buy the pharmacy pair and spend the money elsewhere.",
-          "Farida Cajee-Botes is an HPCSA-registered orthotist and prosthetist (registration OS 0015148), seeing patients by appointment at the Orthocast Morningside consulting rooms in Sandton, with home and hospital visits across Centurion, Pretoria, Midrand, Sandton and Johannesburg. [Book an assessment](/contact) and we will start with screening and measurement rather than with a product.",
+          "Farida Cajee-Botes is an HPCSA-registered orthotist and prosthetist, seeing patients by appointment at the Orthocast Morningside consulting rooms in Sandton, with home and hospital visits across Centurion, Pretoria, Midrand, Sandton and Johannesburg. [Book an assessment](/contact) and we will start with screening and measurement rather than with a product.",
           "This article is general information and is not a substitute for individual clinical assessment. Compression is not safe for every leg, so if you have arterial disease, heart failure, diabetes with reduced sensation, or an unexplained swollen or painful leg, speak to your doctor before starting compression of any class."
         ]
       }

@@ -80,7 +80,7 @@ export const offTheShelfFaqs: Faq[] = [
   },
   {
     q: "What do braces and supports cost, and will my medical aid pay for one?",
-    a: "Prices run from inexpensive elastic sleeves to hinged and post-operative devices that cost a great deal more, so we quote you before anything is ordered. Medical aid cover varies by scheme and by plan. Discovery Health Medical Scheme, as one published example, lists orthotics under its External Medical Items Benefit for 2026, funded at 100% of the Discovery Health Rate up to an annual limit that depends on your plan, and paid from your Medical Savings Account and Above Threshold Benefit. Other schemes structure it differently, so check yours. We bill under practice number 1321412 and supply the clinical motivation and coding your scheme asks for.",
+    a: "Prices run from inexpensive elastic sleeves to hinged and post-operative devices that cost a great deal more, so we quote you before anything is ordered. Medical aid cover varies by scheme and by plan. Discovery Health Medical Scheme, as one published example, lists orthotics under its External Medical Items Benefit for 2026, funded at 100% of the Discovery Health Rate up to an annual limit that depends on your plan, and paid from your Medical Savings Account and Above Threshold Benefit. Other schemes structure it differently, so check yours. We supply the clinical motivation and coding your scheme asks for.",
   },
   {
     q: "What is the difference between an off-the-shelf brace and a custom-made one?",

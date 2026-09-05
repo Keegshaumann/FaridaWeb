@@ -59,24 +59,6 @@ export function AboutPage() {
           addressCountry: "ZA",
         },
       },
-      hasCredential: [
-        {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "Professional registration",
-          recognizedBy: {
-            "@type": "Organization",
-            name: "Health Professions Council of South Africa",
-            url: "https://www.hpcsa.co.za/",
-          },
-          identifier: "OS 0015148",
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          credentialCategory: "Practice number",
-          recognizedBy: { "@type": "Organization", name: "Board of Healthcare Funders" },
-          identifier: "1321412",
-        },
-      ],
       knowsAbout: [
         "Orthotics",
         "Prosthetics",
@@ -203,59 +185,6 @@ export function AboutPage() {
                 >
                   With a deep commitment to assessment-led care, Farida works closely with patients, caregivers, and hospital teams to design and prescribe orthotic and prosthetic devices that support real-world function, dignity, and long-term independence.
                 </motion.p>
-                <motion.div
-                  className="mb-8 max-w-lg"
-                  variants={{
-                    hidden: { y: 20, opacity: 0 },
-                    visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
-                  }}
-                >
-                  <h2 className="mb-3 text-sm font-bold uppercase tracking-widest text-[var(--accent-purple)]">
-                    Registrations
-                  </h2>
-                  {/* A real table, not a div grid: these are the only checkable
-                      authority signals on a health page, and tables are what search
-                      engines and AI assistants actually extract. */}
-                  <table className="w-full text-left text-sm text-[var(--text-muted)]">
-                    <caption className="sr-only">
-                      Professional registration and practice numbers for Farida Cajee-Botes
-                    </caption>
-                    <tbody>
-                      <tr className="border-b border-[var(--purple-soft)]/40">
-                        <th scope="row" className="py-2 pr-4 font-medium text-[var(--text-dark)]">
-                          HPCSA registration
-                        </th>
-                        <td className="py-2">OS 0015148</td>
-                      </tr>
-                      <tr className="border-b border-[var(--purple-soft)]/40">
-                        <th scope="row" className="py-2 pr-4 font-medium text-[var(--text-dark)]">
-                          Practice number
-                        </th>
-                        <td className="py-2">1321412</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" className="py-2 pr-4 font-medium text-[var(--text-dark)]">
-                          Company registration
-                        </th>
-                        <td className="py-2">2026/136620/21</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p className="mt-3 text-xs text-[var(--text-muted)]">
-                    Registration can be checked on the{" "}
-                    <a
-                      href="https://www.hpcsa.co.za/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline underline-offset-2 hover:text-[var(--text-dark)]"
-                    >
-                      Health Professions Council of South Africa
-                    </a>{" "}
-                    register. Consulting rooms at Orthocast Morningside, 173 Rivonia Road,
-                    Sandton, with home and hospital visits across Gauteng.
-                  </p>
-                </motion.div>
-
                 <Link to="/contact#book">
                   <motion.div
                     className="inline-block text-sm font-bold tracking-widest text-[var(--accent-purple)] transition-colors hover:text-[var(--accent-purple)]/80 cursor-pointer"

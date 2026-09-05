@@ -245,8 +245,7 @@ export function BlogPostPage() {
                   {post.author}
                 </Link>{" "}
                 is a qualified Orthotist and Prosthetist registered with the Health
-                Professions Council of South Africa (HPCSA registration OS 0015148,
-                practice number 1321412). She consults from Orthocast Morningside at 173
+                Professions Council of South Africa. She consults from Orthocast Morningside at 173
                 Rivonia Road, Sandton, and sees patients at home or at the hospital
                 bedside across Centurion, Pretoria, Midrand and Johannesburg.
               </p>
