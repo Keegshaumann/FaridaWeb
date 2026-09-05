@@ -69,7 +69,7 @@ export const customOrthoticsFaqs: Faq[] = [
   },
   {
     q: "Do you fit orthotics at home or in hospital?",
-    a: "Yes. Assessment, casting or scanning, fitting and review can all be done at the consulting rooms at Orthocast Morningside in Sandton, at your home, or at a hospital bedside across Johannesburg, Sandton, Midrand, Centurion and Pretoria. For orthotics a home visit is not just convenience: seeing the actual stairs, doorways, floor surfaces and shoes a device has to cope with changes what gets prescribed. The consulting rooms are by appointment only, so please phone 064 652 0684 or email care@cajeebotes.com to arrange a time.",
+    a: "Yes. Assessment, casting or scanning, fitting and review can all be done at the consulting rooms at Orthocast Morningside in Sandton, at your home, or at a hospital bedside across Johannesburg, Sandton, Midrand, Centurion and Pretoria. For orthotics a home visit is not just convenience: seeing the actual stairs, doorways, floor surfaces and shoes a device has to cope with changes what gets prescribed. The consulting rooms are by appointment only, so please phone 011 883 9100 for a rooms appointment, or 064 652 0684 to arrange a home visit.",
   },
 ];
 

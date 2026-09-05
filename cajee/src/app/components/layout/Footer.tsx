@@ -148,12 +148,22 @@ export function Footer() {
             <ul className="space-y-3 bg-[#00000000]">
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
-                <a
-                  href="tel:0646520684"
-                  className="text-white/90 hover:text-white text-sm transition-colors font-bold"
-                >
-                  064 652 0684
-                </a>
+                <div className="text-sm">
+                  <a
+                    href="tel:+27118839100"
+                    className="text-white/90 hover:text-white transition-colors font-bold"
+                  >
+                    011 883 9100
+                  </a>
+                  <p className="text-white/70 text-xs">Morningside rooms</p>
+                  <a
+                    href="tel:+27646520684"
+                    className="mt-2 inline-block text-white/90 hover:text-white transition-colors font-bold"
+                  >
+                    064 652 0684
+                  </a>
+                  <p className="text-white/70 text-xs">Home visits</p>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
@@ -209,7 +219,12 @@ export function Footer() {
                   Block F, Ground Floor, Rochester Place<br />
                   173 Rivonia Road, Morningside, Sandton, 2196
                 </address>
-                <p className="text-white/70 text-xs mt-1.5 italic">
+                <p className="text-white/80 text-sm mt-1.5">
+                  <a href="tel:+27118839100" className="font-semibold hover:text-white">
+                    011 883 9100
+                  </a>
+                </p>
+                <p className="text-white/70 text-xs mt-1 italic">
                   Assessments and fittings by appointment.
                 </p>
                 <a
@@ -233,7 +248,12 @@ export function Footer() {
                   Mobile assessments and fittings in your own home or at the hospital bedside
                   across Centurion, Pretoria, Midrand, Sandton and Johannesburg.
                 </p>
-                <p className="text-white/70 text-xs mt-1.5 italic">
+                <p className="text-white/80 text-sm mt-1.5">
+                  <a href="tel:+27646520684" className="font-semibold hover:text-white">
+                    064 652 0684
+                  </a>
+                </p>
+                <p className="text-white/70 text-xs mt-1 italic">
                   Home visits by arrangement. There are no consulting rooms in Centurion.
                 </p>
               </div>

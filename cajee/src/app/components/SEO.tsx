@@ -74,7 +74,7 @@ export function SEO({
     setMetaTag('geo.placename', 'South Africa');
 
     // Business meta tags
-    setMetaTag('contact', '+27646520684');
+    setMetaTag('contact', '+27118839100');
 
     // Set canonical URL
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -104,7 +104,25 @@ export function SEO({
       name: 'Farida Cajee-Botes Orthotist Prosthetist',
       image: ogImage,
       description: 'Professional orthotics, prosthetics and medical compression services in South Africa, with mobile home and hospital assessments and compression garment fitting.',
-      telephone: '+27646520684',
+      // Primary number must match the Google Business Profile for the Morningside
+      // rooms; the mobile is published as an additional contact point.
+      telephone: '+27118839100',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+27118839100',
+          contactType: 'Appointments',
+          areaServed: 'ZA',
+          availableLanguage: 'en',
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+27646520684',
+          contactType: 'Home visits',
+          areaServed: 'ZA',
+          availableLanguage: 'en',
+        },
+      ],
       email: 'care@cajeebotes.com',
       url: baseUrl,
       address: {

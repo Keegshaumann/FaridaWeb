@@ -64,7 +64,7 @@ class IntakePDF extends FPDF {
         $this->SetY(-12);
         $this->SetFont('Helvetica', '', 7.5);
         $this->SetTextColor($this->brand[0], $this->brand[1], $this->brand[2]);
-        $this->Cell(0, 5, $this->t('Morningside, Sandton   |   064 652 0684   |   care@cajeebotes.com   |   www.cajeebotes.com'), 0, 1, 'C');
+        $this->Cell(0, 5, $this->t('Morningside, Sandton   |   011 883 9100   |   064 652 0684   |   care@cajeebotes.com'), 0, 1, 'C');
         $this->SetTextColor(150, 150, 150);
         $this->Cell(0, 4, $this->t('Confidential patient document   -   Page ' . $this->PageNo()), 0, 0, 'C');
     }

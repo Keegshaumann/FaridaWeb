@@ -61,11 +61,19 @@ export function ContactPage() {
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Phone</h3>
                     <a
-                      href="tel:0646520684"
-                      className="text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
+                      href="tel:+27118839100"
+                      className="block text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
+                    >
+                      011 883 9100
+                    </a>
+                    <p className="text-xs text-[var(--text-muted)]">Morningside rooms</p>
+                    <a
+                      href="tel:+27646520684"
+                      className="mt-2 block text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
                     >
                       064 652 0684
                     </a>
+                    <p className="text-xs text-[var(--text-muted)]">Home visits</p>
                   </div>
 
                   {/* Email */}
@@ -94,7 +102,13 @@ export function ContactPage() {
                       173 Rivonia Road, Morningside<br />
                       Sandton, 2196
                     </address>
-                    <p className="text-sm text-[var(--accent-purple)] mt-2 italic font-medium">
+                    <a
+                      href="tel:+27118839100"
+                      className="mt-2 block text-base font-medium text-[var(--accent-purple)] hover:opacity-80"
+                    >
+                      011 883 9100
+                    </a>
+                    <p className="text-sm text-[var(--accent-purple)] mt-1 italic font-medium">
                       By appointment
                     </p>
                     <a
@@ -129,7 +143,13 @@ export function ContactPage() {
                       Assessments and fittings in your own home or at the hospital bedside across
                       Centurion, Pretoria, Midrand, Sandton and Johannesburg.
                     </p>
-                    <p className="text-sm text-[var(--accent-purple)] mt-2 italic font-medium">
+                    <a
+                      href="tel:+27646520684"
+                      className="mt-2 block text-base font-medium text-[var(--accent-purple)] hover:opacity-80"
+                    >
+                      064 652 0684
+                    </a>
+                    <p className="text-sm text-[var(--accent-purple)] mt-1 italic font-medium">
                       By arrangement. No consulting rooms in Centurion
                     </p>
                   </div>

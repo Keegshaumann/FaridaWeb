@@ -9,6 +9,9 @@ interface FeatureItem {
 interface AccordionFeatureSectionProps {
   mainHeading: string;
   mainDescription: string;
+  /** Condensed copy shown on small screens. Google indexes mobile-first, so this
+   *  is the version it primarily reads: keep it a true summary, not a stub. */
+  mainDescriptionShort?: string;
   features: FeatureItem[];
   image: string;
 }
@@ -16,6 +19,7 @@ interface AccordionFeatureSectionProps {
 export function AccordionFeatureSection({
   mainHeading,
   mainDescription,
+  mainDescriptionShort,
   features,
   image,
 }: AccordionFeatureSectionProps) {
@@ -30,7 +34,7 @@ export function AccordionFeatureSection({
             </h2>
             {/* Shorter description for mobile, full for desktop */}
             <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 lg:hidden">
-              At Farida Cajee-Botes Orthotist Prosthetist, care begins with understanding your unique needs. Every device is prescribed based on comprehensive clinical assessment, not available stock.
+              {mainDescriptionShort ?? mainDescription}
             </p>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 hidden lg:block">
               {mainDescription}

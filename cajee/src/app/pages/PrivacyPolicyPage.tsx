@@ -228,7 +228,7 @@ export function PrivacyPolicyPage() {
                     <strong>Email:</strong> <a href="mailto:care@cajeebotes.com" className="text-[var(--accent-purple)] hover:underline">care@cajeebotes.com</a>
                   </p>
                   <p className="text-[var(--text-muted)] mb-1">
-                    <strong>Phone:</strong> <a href="tel:0646520684" className="text-[var(--accent-purple)] hover:underline">064 652 0684</a>
+                    <strong>Phone:</strong> <a href="tel:+27118839100" className="text-[var(--accent-purple)] hover:underline">011 883 9100</a>
                   </p>
                   <p className="text-[var(--text-muted)]">
                     <strong>Location:</strong> Morningside, Sandton, Gauteng, South Africa

@@ -20,7 +20,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "How much does a prosthetic leg cost in South Africa?",
         "paragraphs": [
-          "There is no single figure, but there are useful ranges. In South Africa, a basic below-knee (transtibial) prosthesis is typically reported in the region of R63,000–R85,000 for entry-level components, rising to roughly R150,000–R200,000 or more for advanced carbon-fibre and hydraulic componentry, depending on the socket, suspension system and foot technology chosen. Above-knee (transfemoral) prostheses cost more because a prosthetic knee joint is added to the build, generally ranging from around R85,000 to R250,000 or more; builds that include a microprocessor-controlled knee sit at the top end, commonly reported in the R150,000–R400,000+ bracket for the complete leg. These figures reflect South African market pricing surveys [South Africa Lists](https://southafricalists.com/artificial-leg-price-in-south-africa/) rather than a fixed price list. Every amputee's situation is different, and Farida Cajee-Botes provides a written, itemised quotation after a proper assessment rather than a quote from a website. [Book an assessment](/contact) to get figures specific to you."
+          "There is no single honest figure, and that is the real answer. A prosthetic leg is built, not bought off a shelf: the socket is made to your residual limb and carries most of the clinical time, while the components bought in from manufacturers, chiefly the foot and, for an above-knee limb, the knee joint, carry most of the hardware cost. An above-knee prosthesis costs more than a below-knee one because a knee joint is added to the build, and a microprocessor-controlled knee sits at the top of that range. We have chosen not to publish rand ranges for the limb itself, because the figures circulating on South African price-comparison pages are not attributed to any published survey and we will not repeat numbers we cannot stand behind. What is verifiable is the funding side: the South African Orthotic and Prosthetic Association states that the medical aid benefit \"can range anything between R3,000 and a maximum of R55,000, excluding ex gratia or PMB\" [SAOPA](https://saopa.co.za/reimbursement/). Every amputee's situation is different, and Farida Cajee-Botes provides a written, itemised quotation after a proper assessment rather than a quote from a website. [Book an assessment](/contact) to get figures specific to you."
         ]
       },
       {
@@ -32,13 +32,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Below-knee (transtibial) prostheses",
         "paragraphs": [
-          "For a below-knee amputation, the main cost drivers are the socket design and the type of prosthetic foot. A basic mechanical foot for level-ground walking sits at the lower end of the range, while carbon-fibre, energy-storing or hydraulic ankle-foot units used for more active lifestyles push costs toward the upper end. Reported South African figures put entry-level below-knee builds in the region of R63,000–R85,000, rising toward R150,000–R200,000 or more for advanced carbon-fibre componentry [South Africa Lists](https://southafricalists.com/artificial-leg-price-in-south-africa/). Liners, which support and protect the residual limb inside the socket, are a recurring cost on top of the initial build and are generally replaced on an annual basis, worth budgeting for alongside our [compression and residual-limb management options](/services/compression)."
+          "For a below-knee amputation, the main cost drivers are the socket design and the type of prosthetic foot. A basic mechanical foot for level-ground walking sits at the lower end of the range, while carbon-fibre, energy-storing or hydraulic ankle-foot units used for more active lifestyles push costs toward the upper end. What drives the number is the socket and the foot, not a catalogue price. Liners, which support and protect the residual limb inside the socket, are a recurring cost on top of the initial build and are generally replaced on an annual basis, worth budgeting for alongside our [compression and residual-limb management options](/services/compression)."
         ]
       },
       {
         "heading": "Above-knee (transfemoral) prostheses and microprocessor knees",
         "paragraphs": [
-          "Above-knee prostheses cost more than below-knee ones for a straightforward reason: they need a knee joint as well as a foot, and that joint is one of the most technically complex, and expensive, components in prosthetics. A simple mechanical knee keeps costs closer to the lower end of the above-knee range, while a microprocessor-controlled knee, which uses onboard sensors and a computer to adjust resistance during walking in real time, sits at the top end; complete builds in this category are commonly reported in the R150,000–R400,000+ bracket, with costs running higher still for the most advanced componentry [South Africa Lists](https://southafricalists.com/artificial-leg-price-in-south-africa/). Our [prosthetics service](/services/prosthetics) covers assessment, componentry selection and fitting for both below-knee and above-knee limbs, matched to your goals and, importantly, to what your funding route will support."
+          "Above-knee prostheses cost more than below-knee ones for a straightforward reason: they need a knee joint as well as a foot, and that joint is one of the most technically complex, and expensive, components in prosthetics. A simple mechanical knee keeps costs closer to the lower end of the above-knee range, while a microprocessor-controlled knee, which uses onboard sensors and a computer to adjust resistance during walking in real time, sits at the top end. Our [prosthetics service](/services/prosthetics) covers assessment, componentry selection and fitting for both below-knee and above-knee limbs, matched to your goals and, importantly, to what your funding route will support."
         ]
       },
       {
@@ -111,9 +111,9 @@ export const BLOG_POSTS: BlogPost[] = [
         "url": "https://amputee-coalition.org/resources/financial-assistance-for-prosthetic-services/"
       },
       {
-        "title": "Artificial Leg Price In South Africa (2025)",
-        "publisher": "South Africa Lists",
-        "url": "https://southafricalists.com/artificial-leg-price-in-south-africa/"
+        "title": "Reimbursement: medical aid benefits, PMB, ex gratia and RAF",
+        "publisher": "South African Orthotic and Prosthetic Association (SAOPA)",
+        "url": "https://saopa.co.za/reimbursement/"
       }
     ]
   },

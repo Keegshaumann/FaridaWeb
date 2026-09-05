@@ -207,7 +207,7 @@ export function CompressionPage() {
                     showScale
                     onDark
                     className="mx-auto h-auto w-full max-w-[320px]"
-                    label="Diagram of a leg in a compression stocking, showing 100% pressure at the ankle, 70% at the calf and 40% at the thigh"
+                    label="Diagram of a leg in a compression stocking, showing pressure highest at the ankle and falling up the leg, to 50 to 80 per cent at the calf and 20 to 60 per cent at the thigh"
                   />
                 </motion.div>
                 <p className="mt-4 text-center text-sm leading-relaxed text-white/60">
@@ -284,7 +284,7 @@ export function CompressionPage() {
                 coverTop={1}
                 showScale
                 className="h-auto w-full"
-                label="Graduated compression profile: 100% pressure at the ankle, 70% at the calf, 40% at the thigh"
+                label="Graduated compression profile: pressure is highest at the ankle and falls up the leg, to 50 to 80 per cent at the calf and 20 to 60 per cent at the thigh"
               />
             </div>
 
@@ -315,20 +315,43 @@ export function CompressionPage() {
                 </p>
               </div>
 
-              <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                {[
-                  { pct: "100%", label: "at the ankle" },
-                  { pct: "≈70%", label: "at the calf" },
-                  { pct: "≈40%", label: "at the thigh" },
-                ].map((p) => (
-                  <div
-                    key={p.pct}
-                    className="rounded-2xl bg-white/80 px-5 py-4 ring-1 ring-[var(--comp-lilac)]/25"
-                  >
-                    <p className="text-2xl font-bold tabular-nums text-[var(--comp-plum)]">{p.pct}</p>
-                    <p className="mt-0.5 text-sm text-[var(--comp-violet)]">{p.label}</p>
-                  </div>
-                ))}
+              {/* A real table, not a grid of divs: this is comparative data, and the
+                  figures are the ranges the standard actually permits rather than a
+                  single fixed profile. */}
+              <div className="mt-8 overflow-x-auto">
+                <table className="w-full border-collapse text-left text-sm">
+                  <caption className="mb-3 text-left text-sm text-[var(--comp-violet)]">
+                    Pressure remaining up the leg, as a percentage of the pressure at the
+                    ankle. Ranges are those permitted by the RAL-GZ 387 standard, Table 8;
+                    the exact figure depends on the compression class.
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col" className="border-b-2 border-[var(--comp-lilac)]/40 px-3 py-2 font-semibold text-[var(--comp-plum)]">
+                        Measuring point
+                      </th>
+                      <th scope="col" className="border-b-2 border-[var(--comp-lilac)]/40 px-3 py-2 font-semibold text-[var(--comp-plum)]">
+                        Pressure remaining
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {[
+                      { point: "Ankle (point B)", pct: "100% (the reference)" },
+                      { point: "Calf (point C)", pct: "50 to 80%" },
+                      { point: "Thigh (points F and G)", pct: "20 to 60%" },
+                    ].map((r) => (
+                      <tr key={r.point}>
+                        <th scope="row" className="border-b border-[var(--comp-lilac)]/25 px-3 py-2 font-medium text-[var(--comp-plum)]">
+                          {r.point}
+                        </th>
+                        <td className="border-b border-[var(--comp-lilac)]/25 px-3 py-2 tabular-nums text-[var(--text-muted)]">
+                          {r.pct}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -637,13 +660,13 @@ export function CompressionPage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <a href="tel:0646520684">
+              <a href="tel:+27118839100">
                 <Button
                   size="lg"
                   variant="outline"
                   className="h-12 w-full rounded-full border-2 border-white/30 bg-transparent px-8 text-white hover:bg-white/10 hover:text-white sm:w-auto"
                 >
-                  Call 064 652 0684
+                  Call 011 883 9100
                 </Button>
               </a>
             </div>

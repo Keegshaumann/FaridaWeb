@@ -193,7 +193,8 @@ export function HomePage() {
         <div className="relative z-10">
           <AccordionFeatureSection
             mainHeading="Restoring Movement. Supporting Independence."
-            mainDescription="At Farida Cajee-Botes Orthotist Prosthetist, care begins with understanding your condition, your goals, and your daily environment. Orthotic, prosthetic and compression devices are not prescribed based on available stock, but on a comprehensive clinical assessment to ensure that each intervention supports safe mobility, comfort, and long-term function. During the initial phase of practice, assessments and fittings are provided through a mobile service in both home and hospital settings. This allows rehabilitation to begin early for patients who may be unable to travel following surgery, injury, or illness."
+            mainDescriptionShort="Farida Cajee-Botes is a qualified orthotist and prosthetist, registered with the HPCSA. Nothing is prescribed from stock: every device follows a full clinical assessment, at her Morningside rooms or at your home or hospital bedside."
+            mainDescription="Farida Cajee-Botes is a qualified orthotist and prosthetist, registered with the HPCSA. She begins with your condition, your goals and the environment you actually live in, because a device that works in a clinic and not on your stairs has not worked. Nothing is prescribed from what happens to be in stock: every orthosis, prosthesis and compression garment follows a full clinical assessment, so it supports safe mobility, comfort and long-term function. Farida consults from her rooms in Morningside, Sandton, and travels to homes and hospital bedsides across Gauteng, so rehabilitation can start early for people who cannot easily travel after surgery, injury or illness."
             features={[
               {
                 id: 1,

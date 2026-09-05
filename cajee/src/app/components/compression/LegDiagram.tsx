@@ -9,7 +9,10 @@ interface LegDiagramProps {
   coverTop?: number;
   /** Draws a waistband above the leg, for pantyhose and waist-attached lengths. */
   waistband?: boolean;
-  /** Shows the 100% / 70% / 40% graduated-pressure callouts. */
+  /** Shows the graduated-pressure callouts. Values are the residual pressure ratios
+   *  permitted by RAL-GZ 387 Table 8, expressed as a percentage of ankle pressure;
+   *  the exact figure varies by compression class, so these are ranges, not fixed
+   *  values. Table 8: measuring point C 50-80%, F/G 20-60% (narrower at class 3). */
   showScale?: boolean;
   /** Tints the diagram for a dark background. */
   onDark?: boolean;
@@ -117,8 +120,8 @@ export function LegDiagram({
         <g fontFamily="inherit">
           {[
             { y: 444, pct: "100%", note: "ankle" },
-            { y: 330, pct: "70%", note: "calf" },
-            { y: 140, pct: "40%", note: "thigh" },
+            { y: 330, pct: "50–80%", note: "calf" },
+            { y: 140, pct: "20–60%", note: "thigh" },
           ].map((m) => (
             <g key={m.pct}>
               <line x1="140" y1={m.y} x2="176" y2={m.y} stroke={scaleLine} strokeWidth="1.5" />
