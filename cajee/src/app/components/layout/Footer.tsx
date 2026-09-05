@@ -177,8 +177,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
                 <div className="text-white/80 text-sm">
-                  <p>Morningside, Sandton (by appointment)</p>
-                  <p>Home visits across Gauteng</p>
+                  <p>Morningside, by appointment</p>
+                  <p>Centurion, home and hospital visits</p>
                 </div>
               </li>
             </ul>
