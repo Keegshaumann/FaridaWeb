@@ -8,6 +8,8 @@ interface FeatureItem {
 
 interface AccordionFeatureSectionProps {
   mainHeading: string;
+  /** Optional sub-heading between the section heading and the copy. */
+  subHeading?: string;
   mainDescription: string;
   /** Condensed copy shown on small screens. Google indexes mobile-first, so this
    *  is the version it primarily reads: keep it a true summary, not a stub. */
@@ -18,6 +20,7 @@ interface AccordionFeatureSectionProps {
 
 export function AccordionFeatureSection({
   mainHeading,
+  subHeading,
   mainDescription,
   mainDescriptionShort,
   features,
@@ -29,9 +32,14 @@ export function AccordionFeatureSection({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-[100px] py-8 md:py-12 lg:py-[50px] bg-[#00000000]">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)] mb-6">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)] mb-4">
               {mainHeading}
             </h2>
+            {subHeading && (
+              <h3 className="text-xl md:text-2xl font-semibold text-[var(--accent-purple)] mb-4">
+                {subHeading}
+              </h3>
+            )}
             {/* Shorter description for mobile, full for desktop */}
             <p className="text-lg text-[var(--text-muted)] leading-relaxed mb-8 lg:hidden">
               {mainDescriptionShort ?? mainDescription}
