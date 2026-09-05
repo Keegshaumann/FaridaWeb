@@ -485,16 +485,43 @@ export function HomePage() {
       {/* Case Studies Section */}
       <CaseStudiesSection />
 
-      {/* Service area: local relevance for patients and search */}
+      {/* Farida's own statement of how she practises. Written by her; used as
+          supplied. Multi-paragraph body is left-aligned because centred text at
+          this length is hard to read. */}
       <section className="relative py-12 bg-[#F5E8F3]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-4">
-              Care Where You Are
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6 text-center">
+              Personalised Care, Wherever You Need It
             </h2>
-            <p className="text-[var(--text-muted)] leading-relaxed">
-              Farida Cajee-Botes Orthotist &amp; Prosthetist is an HPCSA-registered practice consulting from Orthocast Morningside in Sandton, providing orthotic, prosthetic and medical compression care across Gauteng, including Johannesburg, Centurion, Pretoria, Midrand and surrounding areas. Because every assessment can happen at home or at the hospital bedside, patients who struggle to travel after surgery, amputation or injury can begin rehabilitation and start compression therapy without delay. From custom orthotics and prosthetic limbs to graduated compression stockings, compression garments, mobility aids and breast prostheses, every device is prescribed after an individual clinical assessment and fitted with ongoing review, so your support keeps pace as your needs change.
-            </p>
+            <div className="space-y-4 text-left text-[var(--text-muted)] leading-relaxed">
+              <p>
+                I am an HPCSA-registered Orthotist &amp; Prosthetist currently practising in
+                Morningside, Sandton, where I provide comprehensive orthotic, prosthetic and
+                medical compression services.
+              </p>
+              <p>
+                My clinical approach begins with a thorough assessment of each patient&rsquo;s
+                needs, lifestyle and goals. I believe that orthotic and prosthetic care should
+                never be about simply selecting a device from available stock. It should be about
+                finding the right solution for the individual.
+              </p>
+              <p>
+                My areas of clinical interest include custom orthotics, prosthetic rehabilitation,
+                medical compression, breast prostheses and post-operative support, with a
+                particular focus on providing solutions that are practical, comfortable and
+                clinically appropriate.
+              </p>
+              <p>
+                Where appropriate, I also provide consultations at hospitals, healthcare
+                facilities and patients&rsquo; homes, particularly when mobility, recovery or
+                medical circumstances make travelling difficult.
+              </p>
+              <p>
+                I work closely with patients and their healthcare teams, so that every device fits
+                the wider plan for recovery and for daily life.
+              </p>
+            </div>
           </div>
         </div>
       </section>
