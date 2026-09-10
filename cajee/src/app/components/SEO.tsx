@@ -117,7 +117,7 @@ export function SEO({
         },
         {
           '@type': 'ContactPoint',
-          telephone: '+27646520684',
+          telephone: '+27799982203',
           contactType: 'Home visits',
           areaServed: 'ZA',
           availableLanguage: 'en',

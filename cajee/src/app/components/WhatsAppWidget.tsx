@@ -3,7 +3,7 @@ import { cn } from "./ui/utils";
 import { trackWhatsAppClick } from "./GoogleAnalytics";
 
 export function WhatsAppWidget() {
-  const whatsappUrl = "https://api.whatsapp.com/send/?phone=27646520684&text&type=phone_number&app_absent=0";
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=27799982203&text&type=phone_number&app_absent=0";
   const text = "BOOK ASSESSMENT • BOOK ASSESSMENT • ";
 
   const handleClick = () => {

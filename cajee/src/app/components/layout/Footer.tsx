@@ -78,11 +78,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-white/80 hover:text-white text-sm transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
                 <Link to="/blog" className="text-white/80 hover:text-white text-sm transition-colors">
                   Blog
                 </Link>
@@ -157,10 +152,10 @@ export function Footer() {
                   </a>
                   <p className="text-white/70 text-xs">Morningside rooms</p>
                   <a
-                    href="tel:+27646520684"
+                    href="tel:+27799982203"
                     className="mt-2 inline-block text-white/90 hover:text-white transition-colors font-bold"
                   >
-                    064 652 0684
+                    079 998 2203
                   </a>
                   <p className="text-white/70 text-xs">Home visits</p>
                 </div>
@@ -223,6 +218,18 @@ export function Footer() {
                   <a href="tel:+27118839100" className="font-semibold hover:text-white">
                     011 883 9100
                   </a>
+                  <span className="text-white/60"> · Reception</span>
+                </p>
+                <p className="text-white/80 text-sm mt-1">
+                  <a
+                    href="https://wa.me/27799982203"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold hover:text-white"
+                  >
+                    079 998 2203
+                  </a>
+                  <span className="text-white/60"> · WhatsApp</span>
                 </p>
                 <p className="text-white/70 text-xs mt-1 italic">
                   Assessments and fittings by appointment.
@@ -249,8 +256,8 @@ export function Footer() {
                   across Centurion, Pretoria, Midrand, Sandton and Johannesburg.
                 </p>
                 <p className="text-white/80 text-sm mt-1.5">
-                  <a href="tel:+27646520684" className="font-semibold hover:text-white">
-                    064 652 0684
+                  <a href="tel:+27799982203" className="font-semibold hover:text-white">
+                    079 998 2203
                   </a>
                 </p>
                 <p className="text-white/70 text-xs mt-1 italic">

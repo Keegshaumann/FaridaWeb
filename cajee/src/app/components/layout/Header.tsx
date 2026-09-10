@@ -1,4 +1,4 @@
-import practiceLogo from '@/assets/rowan-berkowitz-logo.png'
+import practiceLogo from '@/assets/cajee-logo-lockup.png'
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -51,7 +51,6 @@ export function Header() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Conditions", path: "/conditions" },
-    { name: "Case Studies", path: "/case-studies" },
     { name: "Blog", path: "/blog" },
   ];
 
@@ -78,19 +77,11 @@ export function Header() {
           <Link to="/" className="flex items-center space-x-3">
             <img
               src={practiceLogo}
-              alt="Farida Cajee-Botes Orthotist & Prosthetist logo"
-              className="h-14 w-14 object-contain"
-              width={56}
-              height={56}
+              alt="Farida Cajee-Botes Orthotist & Prosthetist"
+              className="h-12 w-auto object-contain sm:h-14"
+              width={244}
+              height={70}
             />
-            <div className="flex flex-col">
-              <span className="text-lg font-semibold tracking-tight text-[var(--text-dark)]">
-                Farida Cajee-Botes
-              </span>
-              <span className="text-xs text-[var(--text-muted)]">
-                Orthotist & Prosthetist
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

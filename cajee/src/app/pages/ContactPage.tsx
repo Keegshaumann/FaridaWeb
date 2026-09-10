@@ -1,12 +1,15 @@
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Star, FileText, Home } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Star, FileText, Home, MessageCircle } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { GoogleReviews } from "../components/GoogleReviews";
-import { SignupForm } from "../components/SignupForm";
-import { trackButtonClick } from "../components/GoogleAnalytics";
+import { trackButtonClick, trackWhatsAppClick } from "../components/GoogleAnalytics";
 
 export function ContactPage() {
   const handleReviewClick = () => {
     trackButtonClick('google_review', 'contact_page');
+  };
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick();
   };
 
   const handleBrochureClick = () => {
@@ -19,7 +22,7 @@ export function ContactPage() {
       <SEO
         fullTitle="Orthotist & Prosthetist in Morningside, Sandton | Contact"
         title="Contact Us & Book an Assessment"
-        description="Book an assessment at our Morningside consulting rooms in Sandton, or a home visit across Centurion, Pretoria, Midrand and Johannesburg. Call 064 652 0684."
+        description="Book an assessment at our Morningside consulting rooms in Sandton, or a home visit across Centurion, Pretoria, Midrand and Johannesburg. Book on WhatsApp or call 079 998 2203."
         keywords="orthotist Morningside, prosthetist Sandton, orthotist Sandton, prosthetist Morningside, orthotist Rivonia Road, mobile orthotist Centurion, home visit prosthetist Centurion, book orthotist assessment Gauteng"
       />
       {/* Hero Section */}
@@ -61,19 +64,19 @@ export function ContactPage() {
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Phone</h3>
                     <a
-                      href="tel:+27118839100"
+                      href="tel:+27799982203"
                       className="block text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
+                    >
+                      079 998 2203
+                    </a>
+                    <p className="text-xs text-[var(--text-muted)]">Home visits</p>
+                    <a
+                      href="tel:+27118839100"
+                      className="mt-2 block text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
                     >
                       011 883 9100
                     </a>
                     <p className="text-xs text-[var(--text-muted)]">Morningside rooms</p>
-                    <a
-                      href="tel:+27646520684"
-                      className="mt-2 block text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
-                    >
-                      064 652 0684
-                    </a>
-                    <p className="text-xs text-[var(--text-muted)]">Home visits</p>
                   </div>
 
                   {/* Email */}
@@ -144,10 +147,10 @@ export function ContactPage() {
                       Centurion, Pretoria, Midrand, Sandton and Johannesburg.
                     </p>
                     <a
-                      href="tel:+27646520684"
+                      href="tel:+27799982203"
                       className="mt-2 block text-base font-medium text-[var(--accent-purple)] hover:opacity-80"
                     >
-                      064 652 0684
+                      079 998 2203
                     </a>
                     <p className="text-sm text-[var(--accent-purple)] mt-1 italic font-medium">
                       By arrangement. No consulting rooms in Centurion
@@ -221,17 +224,39 @@ export function ContactPage() {
 
               {/* Right Column: Signup Form */}
               <div id="book" className="lg:sticky lg:top-24">
-                <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-                  <div className="mb-6">
-                    <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-2">
-                      Request an Assessment
-                    </h2>
-                    <p className="text-base text-[var(--text-muted)]">
-                      Fill out the form and we'll be in touch soon.
-                    </p>
+                <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center mx-auto mb-4 shadow-md">
+                    <MessageCircle className="h-8 w-8 text-white" />
                   </div>
-                  
-                  <SignupForm />
+                  <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-2">
+                    Request an Assessment
+                  </h2>
+                  <p className="text-base text-[var(--text-muted)] mb-6">
+                    Message us on WhatsApp and we'll be in touch soon to arrange your
+                    assessment, at the Morningside rooms or in your own home.
+                  </p>
+
+                  <a
+                    href="https://wa.me/27799982203"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20BA5A] text-white px-4 py-3.5 rounded-full text-base font-semibold transition-all hover:shadow-lg hover:scale-105"
+                    onClick={handleWhatsAppClick}
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    Book on WhatsApp
+                  </a>
+
+                  <p className="text-sm text-[var(--text-muted)] mt-5">
+                    Prefer to call?{" "}
+                    <a href="tel:+27799982203" className="font-semibold text-[var(--accent-purple)] hover:underline">
+                      079 998 2203
+                    </a>
+                    {" "}or{" "}
+                    <a href="tel:+27118839100" className="font-semibold text-[var(--accent-purple)] hover:underline">
+                      011 883 9100
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>

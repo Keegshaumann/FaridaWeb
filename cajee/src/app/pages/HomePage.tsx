@@ -1,9 +1,7 @@
 import { Link } from "react-router";
 import { Button } from "../components/ui/button";
 import { ServiceCardPremium } from "../components/ServiceCardPremium";
-import { CaseStudiesSection } from "../components/CaseStudiesSection";
 import { LatestFromBlog } from "../components/LatestFromBlog";
-import { SignupForm } from "../components/SignupForm";
 import { Heart, Users, Home, Award, Phone, Mail, Check, ArrowRight } from "lucide-react";
 import { MedicalHero } from "../components/ui/medical-hero";
 import { VelocityScroll } from "../components/ui/velocity-scroll";
@@ -481,9 +479,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Case Studies Section */}
-      <CaseStudiesSection />
 
       {/* Farida's own statement of how she practises. Written by her; used as
           supplied. Multi-paragraph body is left-aligned because centred text at

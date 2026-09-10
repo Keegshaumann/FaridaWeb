@@ -240,7 +240,7 @@ if ($elapsed > 0 && $elapsed < $MIN_FILL_SECS) {
 
 $clientIp = isset($_SERVER['REMOTE_ADDR']) ? preg_replace('/[^0-9a-f:.]/i', '', $_SERVER['REMOTE_ADDR']) : '';
 if (rateLimited($clientIp, $RATE_MAX, $RATE_WINDOW)) {
-    respond(false, "You've submitted this form several times recently. Please wait a little while, or call us on 064 652 0684.", $wantsJson, 429);
+    respond(false, "You've submitted this form several times recently. Please wait a little while, or call us on 079 998 2203.", $wantsJson, 429);
 }
 
 /* --------------------------- validation --------------------------- */
@@ -545,7 +545,7 @@ if (!$sent) {
     @file_put_contents(sys_get_temp_dir() . '/fcb_intake_maillog.txt',
         date('c') . '  ' . ($SMTP['enabled'] ? 'SMTP' : 'mail()') . ' MAIN failed -> ' . $sendErr . "\n",
         FILE_APPEND | LOCK_EX);
-    respond(false, "We couldn't send your form just now. Please try again in a moment, or call us on 064 652 0684.", $wantsJson, 500);
+    respond(false, "We couldn't send your form just now. Please try again in a moment, or call us on 079 998 2203.", $wantsJson, 500);
 }
 
 /* ---- Optional short acknowledgement to the patient (no medical detail) ---- */
@@ -568,7 +568,7 @@ if ($SEND_PATIENT_ACK && validEmail(field('patient_email'))) {
              . '<p>Your completed intake form was emailed securely to our practice at '
              . '<strong>care@cajeebotes.com</strong> as a signed PDF. This email is your confirmation that we received it.</p>'
              . '<p>Our team will review it and be in touch to confirm your appointment.</p>'
-             . '<p>If you need to reach us in the meantime, call <strong>064 652 0684</strong> or email '
+             . '<p>If you need to reach us in the meantime, call <strong>079 998 2203</strong> or email '
              . '<a href="mailto:care@cajeebotes.com" style="color:' . $brand . ';">care@cajeebotes.com</a>.</p>'
              . '<p style="margin-top:20px;">Warm regards,<br><strong>Farida Cajee-Botes Orthotist &amp; Prosthetist</strong></p>'
              . '</div></div>';

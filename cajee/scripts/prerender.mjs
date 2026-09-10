@@ -36,7 +36,6 @@ const ROUTES = [
   "/services",
   "/conditions",
   "/contact",
-  "/case-studies",
   "/blog",
   ...blogSlugs.map((s) => `/blog/${s}`),
   "/services/prosthetics",

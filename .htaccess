@@ -9,6 +9,10 @@ Options -Indexes
   RewriteEngine On
   RewriteBase /
 
+  # Retired page: /case-studies was removed. 301 to the blog so indexed URLs
+  # and any inbound links land somewhere useful instead of the SPA 404.
+  RewriteRule ^case-studies/?$ /blog [R=301,L]
+
   # Prerendered pages live as <route>/index.html. Serve them directly without
   # mod_dir's trailing-slash 301 so canonical URLs resolve in one hop.
   <IfModule mod_dir.c>

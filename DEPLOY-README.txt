@@ -85,6 +85,6 @@ STILL EXTERNAL / NOT YET CONFIGURED (optional, for later)
 
 CONTACT DETAILS BAKED INTO THE SITE
 -----------------------------------
-Phone:    064 652 0684
+Phone:    079 998 2203
 Email:    care@cajeebotes.com
 These come through tel:/mailto:/WhatsApp links and need no backend.

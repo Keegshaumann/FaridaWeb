@@ -5,7 +5,6 @@ import { AboutPage } from "./pages/AboutPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { ConditionsPage } from "./pages/ConditionsPage";
 import { ContactPage } from "./pages/ContactPage";
-import { CaseStudiesPage } from "./pages/CaseStudiesPage";
 import { AdminPage } from "./pages/AdminPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { TermsAndConditionsPage } from "./pages/TermsAndConditionsPage";
@@ -29,7 +28,6 @@ export const router = createBrowserRouter([
       { path: "services", Component: ServicesPage },
       { path: "conditions", Component: ConditionsPage },
       { path: "contact", Component: ContactPage },
-      { path: "case-studies", Component: CaseStudiesPage },
       { path: "blog", Component: BlogPage },
       { path: "blog/:slug", Component: BlogPostPage },
       { path: "services/prosthetics", Component: ProstheticsPage },
