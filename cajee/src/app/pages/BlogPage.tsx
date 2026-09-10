@@ -17,7 +17,7 @@ export function BlogPage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-[#F5E8F3] pt-[90px] pb-4">
+      <section className="relative bg-[#E9F4FB] pt-[90px] pb-4">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
@@ -31,7 +31,7 @@ export function BlogPage() {
       </section>
 
       {/* Posts grid */}
-      <section className="relative py-12 md:py-16 bg-[#F5E8F3]">
+      <section className="relative py-12 md:py-16 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
             <div className="max-w-xl mx-auto rounded-2xl bg-white p-10 text-center shadow-sm">

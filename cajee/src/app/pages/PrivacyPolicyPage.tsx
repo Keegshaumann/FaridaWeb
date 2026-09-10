@@ -10,7 +10,7 @@ export function PrivacyPolicyPage() {
         keywords="privacy policy, POPIA compliance, patient data protection South Africa"
       />
       {/* Hero Section */}
-      <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
+      <section className="relative bg-[#E9F4FB] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
@@ -24,7 +24,7 @@ export function PrivacyPolicyPage() {
       </section>
 
       {/* Privacy Policy Content */}
-      <section className="relative py-16 md:py-24 bg-[#F5E8F3] bg-[#ffffff00]">
+      <section className="relative py-16 md:py-24 bg-[#E9F4FB] bg-[#ffffff00]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
             
@@ -220,7 +220,7 @@ export function PrivacyPolicyPage() {
                 <p className="text-[var(--text-muted)] leading-relaxed mb-4">
                   If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
                 </p>
-                <div className="bg-[#FDF1FF] rounded-xl p-6 mb-4">
+                <div className="bg-[#F4FBFF] rounded-xl p-6 mb-4">
                   <p className="text-[var(--text-dark)] mb-2">
                     <strong>Farida Cajee-Botes Orthotist Prosthetist</strong>
                   </p>

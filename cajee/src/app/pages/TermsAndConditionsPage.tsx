@@ -10,7 +10,7 @@ export function TermsAndConditionsPage() {
         keywords="terms and conditions, website terms, orthotist prosthetist South Africa"
       />
       {/* Hero Section */}
-      <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
+      <section className="relative bg-[#E9F4FB] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
@@ -24,7 +24,7 @@ export function TermsAndConditionsPage() {
       </section>
 
       {/* Terms Content */}
-      <section className="relative py-16 md:py-24 bg-[#F5E8F3] bg-[#ffffff00]">
+      <section className="relative py-16 md:py-24 bg-[#E9F4FB] bg-[#ffffff00]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="prose prose-lg max-w-none">

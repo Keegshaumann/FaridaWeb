@@ -3,6 +3,15 @@ import type { Faq } from "../components/FaqSection";
 // Written against verified sources; anything that could not be checked against an
 // openable source was deliberately left out rather than estimated.
 
+
+// Shared across every service: the practice is private and does not bill schemes
+// directly. Defined once so the wording (and its FAQ schema) can never drift
+// between service pages.
+export const privatePracticeFaq: Faq = {
+  q: "Is this a private practice, and how does payment work?",
+  a: "Yes. Farida Cajee-Botes is a private orthotic and prosthetic practice, and we do not bill medical schemes directly. Accounts are settled in full at the time of your assessment or on collection of your device, and we give you a detailed invoice with the appropriate codes so you can submit the claim to your medical aid and be reimbursed directly by them. Where it helps your claim, we prepare the itemised quotation, clinical motivation and pre-authorisation paperwork before anything is ordered. What your scheme pays back depends on your plan and available benefits, and that decision rests with the scheme, so any amount they do not cover remains payable by you.",
+};
+
 export const prostheticsFaqs: Faq[] = [
   {
     q: "How much does a prosthetic leg cost in South Africa?",
@@ -36,6 +45,7 @@ export const prostheticsFaqs: Faq[] = [
     q: "How often does a prosthetic leg need to be replaced?",
     a: "Plan on roughly five years for the mechanical components, sooner for the socket, and far sooner for a growing child. Össur South Africa states that you can expect to replace the mechanical components approximately every five years, and the Road Accident Fund generally funds a new prosthesis on about the same five-year cycle. The Amputee Coalition is more cautious, putting the working life of a prosthesis at anywhere from several months to several years depending on age, activity level and growth. Sockets are replaced more often than components, particularly in the first year and in children, which is why young patients are reviewed on a much shorter cycle.",
   },
+  privatePracticeFaq,
 ];
 
 export const customOrthoticsFaqs: Faq[] = [
@@ -71,6 +81,7 @@ export const customOrthoticsFaqs: Faq[] = [
     q: "Do you fit orthotics at home or in hospital?",
     a: "Yes. Assessment, casting or scanning, fitting and review can all be done at the consulting rooms at Orthocast Morningside in Sandton, at your home, or at a hospital bedside across Johannesburg, Sandton, Midrand, Centurion and Pretoria. For orthotics a home visit is not just convenience: seeing the actual stairs, doorways, floor surfaces and shoes a device has to cope with changes what gets prescribed. The consulting rooms are by appointment only, so please phone 011 883 9100 for a rooms appointment, or 079 998 2203 to arrange a home visit.",
   },
+  privatePracticeFaq,
 ];
 
 export const offTheShelfFaqs: Faq[] = [
@@ -106,6 +117,7 @@ export const offTheShelfFaqs: Faq[] = [
     q: "How long do I wear an ankle brace after a sprain, and will it weaken the joint?",
     a: "A brace after an ankle sprain is there to let you move safely, not to keep the ankle still, and it is worn while you rebuild strength rather than indefinitely. The evidence favours functional treatment, meaning support plus early movement, over immobilisation: better range of motion, less stiffness, better joint stability and an earlier return to work and sport. That is also the answer to the weakening worry, because a brace used alongside proper rehabilitation does not do the muscles' job for them. If you have sprained the same ankle before, ankle taping or a brace has good evidence for preventing the next one, particularly during sport.",
   },
+  privatePracticeFaq,
 ];
 
 export const mobilityAidsFaqs: Faq[] = [
@@ -141,6 +153,7 @@ export const mobilityAidsFaqs: Faq[] = [
     q: "Do you come to the house, or do we have to bring my father in?",
     a: "We come to you. Mobility equipment is assessed where it will be used, so home visits are the normal way we work across Centurion, Pretoria, Midrand, Sandton and Johannesburg, and we see patients at the hospital bedside before discharge. Doorway widths, the height of the bed and the toilet, the step at the front door and the surface underfoot all change which device is right, and none of it is visible in a consulting room. Consulting rooms in Morningside, Sandton are available by appointment if you would rather come in.",
   },
+  privatePracticeFaq,
 ];
 
 export const breastProsthesesFaqs: Faq[] = [
@@ -176,4 +189,5 @@ export const breastProsthesesFaqs: Faq[] = [
     q: "Can I be fitted at home instead of coming in?",
     a: "Yes. Fittings are done at the consulting rooms in Morningside, Sandton, at your home, or at your hospital bedside across Johannesburg, Sandton, Midrand, Centurion and Pretoria. A first fitting means undressing to the waist in front of a stranger, at a point when you may not yet want to look at your own chest, so many women prefer their own bedroom, their own mirror and their own bras to try against. Appointments are private and unhurried, and you are welcome to bring someone with you. Bring the bras you actually wear every day, not the good one.",
   },
+  privatePracticeFaq,
 ];

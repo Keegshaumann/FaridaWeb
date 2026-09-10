@@ -12,6 +12,10 @@ Options -Indexes
   RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
   RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
 
+  # Retired page: /case-studies was removed. 301 to the blog so indexed URLs
+  # and any inbound links land somewhere useful instead of the SPA 404.
+  RewriteRule ^case-studies/?$ /blog [R=301,L]
+
   # Prerendered pages live as <route>/index.html. Serve them directly without
   # mod_dir's trailing-slash 301 so canonical URLs resolve in one hop.
   <IfModule mod_dir.c>

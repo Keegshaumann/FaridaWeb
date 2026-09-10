@@ -83,7 +83,7 @@ export function AboutPage() {
       
 
       {/* Introduction Section - Two Column Layout */}
-      <section className="relative py-16 md:py-24 bg-[#F5E8F3] overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-[#E9F4FB] overflow-hidden">
         {/* Background Warp Shader */}
         <div className="absolute inset-0 opacity-20 z-0">
           <SafeWarp
@@ -99,10 +99,10 @@ export function AboutPage() {
             rotation={0}
             speed={0.5}
             colors={[
-              "hsl(330, 60%, 85%)", // soft pink
-              "hsl(280, 50%, 75%)", // soft purple
-              "hsl(340, 55%, 90%)", // light pink
-              "hsl(270, 45%, 80%)", // light purple
+              "hsl(196, 62%, 85%)", // soft pink
+              "hsl(212, 52%, 74%)", // soft purple
+              "hsl(193, 58%, 90%)", // light pink
+              "hsl(214, 48%, 79%)", // light purple
             ]}
           />
         </div>
@@ -244,7 +244,7 @@ export function AboutPage() {
       {/* Why Choose Us Section */}
       <section className="relative py-16 md:py-24 bg-[var(--pink-light)]">
         {/* Blur transition from previous section */}
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-[#FDF1FF]/60 backdrop-blur-md pointer-events-none z-0"></div>
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-[#F4FBFF]/60 backdrop-blur-md pointer-events-none z-0"></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
@@ -283,11 +283,11 @@ export function AboutPage() {
           </div>
         </div>
         {/* Blur transition to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#FDF1FF]/90 backdrop-blur-md pointer-events-none z-0"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#F4FBFF]/90 backdrop-blur-md pointer-events-none z-0"></div>
       </section>
 
       {/* Our Approach Section */}
-      <section className="relative py-16 md:py-24 bg-[#F5E8F3]">
+      <section className="relative py-16 md:py-24 bg-[#E9F4FB]">
         {/* Blur transition from previous section */}
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-[var(--pink-light)]/60 backdrop-blur-md pointer-events-none z-0"></div>
         
@@ -363,7 +363,7 @@ export function AboutPage() {
       
 
       {/* CTA Section */}
-      <section className="relative py-16 md:py-24 bg-[#F5E8F3]">
+      <section className="relative py-16 md:py-24 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h3 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)] mb-4">

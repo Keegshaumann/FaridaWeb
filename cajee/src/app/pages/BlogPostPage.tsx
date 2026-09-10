@@ -76,7 +76,7 @@ export function BlogPostPage() {
       />
 
       {/* Hero */}
-      <section className="relative bg-[#F5E8F3] pt-[90px] pb-6">
+      <section className="relative bg-[#E9F4FB] pt-[90px] pb-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <Link to="/blog" className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--purple-medium)] hover:text-[var(--text-dark)]">
@@ -115,7 +115,7 @@ export function BlogPostPage() {
       </section>
 
       {/* Article */}
-      <section className="relative pb-16 bg-[#F5E8F3]">
+      <section className="relative pb-16 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto mb-6 overflow-hidden rounded-2xl shadow-sm">
             <img

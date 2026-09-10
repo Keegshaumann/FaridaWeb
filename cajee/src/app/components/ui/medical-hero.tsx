@@ -28,10 +28,10 @@ export function MedicalHero() {
           rotation={0}
           speed={1}
           colors={[
-            "hsl(310, 35%, 72%)",
-            "hsl(300, 30%, 68%)",
-            "hsl(305, 33%, 75%)",
-            "hsl(302, 32%, 70%)",
+            "hsl(202, 45%, 72%)",
+            "hsl(208, 42%, 66%)",
+            "hsl(198, 48%, 75%)",
+            "hsl(205, 44%, 69%)",
           ]}
         />
       </div>
@@ -90,12 +90,12 @@ export function MedicalHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-start lg:justify-end">
               <Link to="/contact#book">
-                <Button size="lg" className="bg-[#F5E8F3] hover:bg-[#F5E8F3]/90 text-[var(--text-dark)] rounded-full px-6 h-11 shadow-lg border-2 border-[var(--text-dark)]">
+                <Button size="lg" className="bg-[#E9F4FB] hover:bg-[#E9F4FB]/90 text-[var(--text-dark)] rounded-full px-6 h-11 shadow-lg border-2 border-[var(--text-dark)]">
                   Book an Assessment
                 </Button>
               </Link>
               <Link to="/services">
-                <Button size="lg" variant="outline" className="rounded-full px-6 h-11 border-2 border-[var(--text-dark)] text-[var(--text-dark)] bg-[#F5E8F3] hover:bg-[#F5E8F3]/90">
+                <Button size="lg" variant="outline" className="rounded-full px-6 h-11 border-2 border-[var(--text-dark)] text-[var(--text-dark)] bg-[#E9F4FB] hover:bg-[#E9F4FB]/90">
                   Explore Services
                 </Button>
               </Link>

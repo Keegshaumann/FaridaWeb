@@ -26,7 +26,7 @@ export function ContactPage() {
         keywords="orthotist Morningside, prosthetist Sandton, orthotist Sandton, prosthetist Morningside, orthotist Rivonia Road, mobile orthotist Centurion, home visit prosthetist Centurion, book orthotist assessment Gauteng"
       />
       {/* Hero Section */}
-      <section className="relative bg-[#F5E8F3] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
+      <section className="relative bg-[#E9F4FB] bg-[#ffffff00] px-[0px] pt-[90px] pb-[10px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-[var(--text-dark)] mb-4">
@@ -42,7 +42,7 @@ export function ContactPage() {
       </section>
 
       {/* Contact Information Section */}
-      <section className="relative py-16 md:py-24 bg-[#F5E8F3] bg-[#ffffff00]">
+      <section className="relative py-16 md:py-24 bg-[#E9F4FB] bg-[#ffffff00]">
         {/* Blur transition from previous section */}
         
         
@@ -59,7 +59,7 @@ export function ContactPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                   {/* Phone */}
                   <div className="bg-gradient-to-br from-[var(--purple-light)] to-[var(--purple-soft)] rounded-2xl p-6 text-center">
-                    <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <div className="w-14 h-14 rounded-full bg-[#F4FBFF] flex items-center justify-center mx-auto mb-3 shadow-md">
                       <Phone className="h-7 w-7 text-[var(--accent-purple)]" />
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Phone</h3>
@@ -81,7 +81,7 @@ export function ContactPage() {
 
                   {/* Email */}
                   <div className="bg-gradient-to-br from-[var(--pink-light)] to-[var(--pink-soft)] rounded-2xl p-6 text-center">
-                    <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <div className="w-14 h-14 rounded-full bg-[#F4FBFF] flex items-center justify-center mx-auto mb-3 shadow-md">
                       <Mail className="h-7 w-7 text-[var(--accent-purple)]" />
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Email</h3>
@@ -95,7 +95,7 @@ export function ContactPage() {
 
                   {/* Consulting rooms */}
                   <div className="bg-gradient-to-br from-[var(--pink-light)] to-[var(--pink-soft)] rounded-2xl p-6 text-center">
-                    <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <div className="w-14 h-14 rounded-full bg-[#F4FBFF] flex items-center justify-center mx-auto mb-3 shadow-md">
                       <MapPin className="h-7 w-7 text-[var(--accent-purple)]" />
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Consulting Rooms</h3>
@@ -126,7 +126,7 @@ export function ContactPage() {
 
                   {/* Hours */}
                   <div className="bg-gradient-to-br from-[var(--purple-light)] to-[var(--purple-soft)] rounded-2xl p-6 text-center">
-                    <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <div className="w-14 h-14 rounded-full bg-[#F4FBFF] flex items-center justify-center mx-auto mb-3 shadow-md">
                       <Clock className="h-7 w-7 text-[var(--accent-purple)]" />
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Hours</h3>
@@ -138,7 +138,7 @@ export function ContactPage() {
 
                   {/* Home-visit service area */}
                   <div className="bg-gradient-to-br from-[var(--pink-light)] to-[var(--pink-soft)] rounded-2xl p-6 text-center sm:col-span-2">
-                    <div className="w-14 h-14 rounded-full bg-[#FDF1FF] flex items-center justify-center mx-auto mb-3 shadow-md">
+                    <div className="w-14 h-14 rounded-full bg-[#F4FBFF] flex items-center justify-center mx-auto mb-3 shadow-md">
                       <Home className="h-7 w-7 text-[var(--accent-purple)]" />
                     </div>
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Home Visits</h3>
@@ -213,7 +213,7 @@ export function ContactPage() {
                     href="https://drive.google.com/file/d/1QUXbNrNWFkF7sk_d9Q2pJQ9c6XdGozsW/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-white border-2 border-[var(--accent-purple)] text-[var(--accent-purple)] hover:bg-[#FDF1FF] px-4 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
+                    className="flex items-center justify-center gap-2 w-full bg-white border-2 border-[var(--accent-purple)] text-[var(--accent-purple)] hover:bg-[#F4FBFF] px-4 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105"
                     onClick={handleBrochureClick}
                   >
                     <FileText className="h-4 w-4" />
@@ -246,6 +246,23 @@ export function ContactPage() {
                     <MessageCircle className="h-5 w-5" />
                     Book on WhatsApp
                   </a>
+
+                  {/* Private practice billing terms, stated up front so nobody is
+                      surprised by the account on the day. Mirrors clause 9 of the
+                      Terms and the shared FAQ on every service page. */}
+                  <div className="mt-6 pt-5 border-t border-[var(--purple-soft)] text-left">
+                    <p className="text-sm font-semibold text-[var(--text-dark)] mb-1.5">
+                      A note on payment
+                    </p>
+                    <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                      This is a private practice and we do not bill medical schemes
+                      directly. Accounts are settled in full at your assessment or when
+                      you collect your device. You are given a detailed invoice with the
+                      correct codes to claim back from your medical aid, and we prepare
+                      the quotation and clinical motivation where that helps your claim.
+                      What your scheme reimburses depends on your plan and benefits.
+                    </p>
+                  </div>
 
                   <p className="text-sm text-[var(--text-muted)] mt-5">
                     Prefer to call?{" "}

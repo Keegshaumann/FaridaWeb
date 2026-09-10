@@ -67,7 +67,7 @@ export function Header() {
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${
       solidHeader
-        ? "border-b border-border/40 bg-[#F5E8F3]/95 backdrop-blur supports-[backdrop-filter]:bg-[#F5E8F3]/80 shadow-sm"
+        ? "border-b border-border/40 bg-[#E9F4FB]/95 backdrop-blur supports-[backdrop-filter]:bg-[#E9F4FB]/80 shadow-sm"
         : ""
     }`}
     >
@@ -109,7 +109,7 @@ export function Header() {
                 <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               <div
-                className={`absolute left-0 mt-2 w-56 origin-top-left rounded-md bg-[#FDF1FF] shadow-lg ring-1 ring-black ring-opacity-5 transition-opacity duration-150 focus:outline-none group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 ${
+                className={`absolute left-0 mt-2 w-56 origin-top-left rounded-md bg-[#F4FBFF] shadow-lg ring-1 ring-black ring-opacity-5 transition-opacity duration-150 focus:outline-none group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 ${
                   servicesOpen ? "visible opacity-100" : "invisible opacity-0"
                 }`}
               >
@@ -128,7 +128,7 @@ export function Header() {
               </div>
             </div>
             <Link to="/contact#book">
-              <Button className="ml-3 bg-[#FDF1FF] hover:bg-[#FDF1FF]/90 text-[var(--text-dark)] rounded-full px-5 h-9 text-sm border-2 border-[var(--text-dark)] text-[#000000]">
+              <Button className="ml-3 bg-[#F4FBFF] hover:bg-[#F4FBFF]/90 text-[var(--text-dark)] rounded-full px-5 h-9 text-sm border-2 border-[var(--text-dark)] text-[#000000]">
                 Book Assessment
               </Button>
             </Link>
@@ -204,7 +204,7 @@ export function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="pt-2"
               >
-                <Button className="w-full bg-[#FDF1FF] hover:bg-[#FDF1FF]/90 text-[var(--text-dark)] rounded-full border-2 border-[var(--text-dark)]">
+                <Button className="w-full bg-[#F4FBFF] hover:bg-[#F4FBFF]/90 text-[var(--text-dark)] rounded-full border-2 border-[var(--text-dark)]">
                   Book Assessment
                 </Button>
               </Link>

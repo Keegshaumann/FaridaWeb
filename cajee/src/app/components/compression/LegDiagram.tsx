@@ -39,9 +39,9 @@ export function LegDiagram({
 }: LegDiagramProps) {
   const coverY = LEG_BOTTOM - Math.max(0, Math.min(1, coverTop)) * (LEG_BOTTOM - LEG_TOP);
   const outline = onDark ? "rgba(245,232,243,0.55)" : "var(--comp-violet)";
-  const skin = onDark ? "rgba(245,232,243,0.10)" : "rgba(94,51,98,0.06)";
+  const skin = onDark ? "rgba(245,232,243,0.10)" : "rgba(11,58,99,0.06)";
   const scaleText = onDark ? "rgba(245,232,243,0.92)" : "var(--comp-plum)";
-  const scaleLine = onDark ? "rgba(245,232,243,0.35)" : "rgba(94,51,98,0.25)";
+  const scaleLine = onDark ? "rgba(245,232,243,0.35)" : "rgba(11,58,99,0.25)";
 
   // Unique-per-instance ids so several diagrams can share a page safely.
   const uid = `leg-${coverTop}-${waistband ? "w" : "n"}-${onDark ? "d" : "l"}`;
@@ -110,7 +110,7 @@ export function LegDiagram({
             y1={coverY}
             x2="160"
             y2={coverY}
-            stroke={onDark ? "#F5E8F3" : "var(--comp-plum)"}
+            stroke={onDark ? "#E9F4FB" : "var(--comp-plum)"}
             strokeWidth="3"
           />
         </g>

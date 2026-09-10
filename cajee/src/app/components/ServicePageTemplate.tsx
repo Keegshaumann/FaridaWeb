@@ -62,11 +62,11 @@ export function ServicePageTemplate({
           </div>
         </div>
         {/* Blur transition to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#F5E8F3]/90 backdrop-blur-md pointer-events-none z-0"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#E9F4FB]/90 backdrop-blur-md pointer-events-none z-0"></div>
       </section>
 
       {/* Main Content */}
-      <div className="relative py-16 md:py-24 bg-[#F5E8F3]">
+      <div className="relative py-16 md:py-24 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto space-y-16">
             {/* What is it? + How can it help? side by side so the devices appear sooner */}

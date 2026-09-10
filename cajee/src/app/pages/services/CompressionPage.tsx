@@ -131,7 +131,7 @@ export function CompressionPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.55]"
           style={{
             background:
-              "radial-gradient(90rem 45rem at 78% 8%, rgba(184,145,181,0.30), transparent 62%), radial-gradient(60rem 40rem at 0% 100%, rgba(139,90,142,0.35), transparent 60%)",
+              "radial-gradient(90rem 45rem at 78% 8%, rgba(184,145,181,0.30), transparent 62%), radial-gradient(60rem 40rem at 0% 100%, rgba(0,96,192,0.35), transparent 60%)",
           }}
         />
         {/* Knit-line texture */}
@@ -368,7 +368,7 @@ export function CompressionPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.45]"
           style={{
             background:
-              "radial-gradient(70rem 40rem at 20% 0%, rgba(139,90,142,0.40), transparent 60%), radial-gradient(60rem 40rem at 100% 100%, rgba(184,145,181,0.25), transparent 60%)",
+              "radial-gradient(70rem 40rem at 20% 0%, rgba(0,96,192,0.40), transparent 60%), radial-gradient(60rem 40rem at 100% 100%, rgba(184,145,181,0.25), transparent 60%)",
           }}
         />
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
@@ -637,7 +637,7 @@ export function CompressionPage() {
           className="pointer-events-none absolute inset-0 opacity-50"
           style={{
             background:
-              "radial-gradient(60rem 34rem at 50% 0%, rgba(139,90,142,0.45), transparent 65%)",
+              "radial-gradient(60rem 34rem at 50% 0%, rgba(0,96,192,0.45), transparent 65%)",
           }}
         />
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">

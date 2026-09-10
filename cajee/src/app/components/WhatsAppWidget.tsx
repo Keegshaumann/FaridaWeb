@@ -49,7 +49,7 @@ export function WhatsAppWidget() {
             ))}
           </p>
 
-          <div className="relative w-[50px] h-[50px] rounded-full text-[#25D366] bg-[#F5E8F3] flex items-center justify-center overflow-hidden">
+          <div className="relative w-[50px] h-[50px] rounded-full text-[#25D366] bg-[#E9F4FB] flex items-center justify-center overflow-hidden">
             <MessageCircle 
               className="absolute w-7 h-7 transition-transform duration-300 ease-in-out whatsapp-icon-first"
               style={{ transform: "translate(0, 0)" }}

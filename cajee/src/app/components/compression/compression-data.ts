@@ -342,4 +342,8 @@ export const COMPRESSION_FAQS: { q: string; a: string }[] = [
     q: "Do you fit compression garments at home or in hospital?",
     a: "Yes. Compression assessments, measuring and fitting can be done at the consulting rooms in Morningside, Sandton, at your home, or at the hospital bedside across Gauteng, including Johannesburg, Centurion, Pretoria and Midrand. Patients who cannot travel after surgery or during treatment are exactly the patients who most need compression started early.",
   },
+  {
+    q: "Is this a private practice, and how does payment work?",
+    a: "Yes. Farida Cajee-Botes is a private orthotic and prosthetic practice, and we do not bill medical schemes directly. Accounts are settled in full at the time of your assessment or on collection of your device, and we give you a detailed invoice with the appropriate codes so you can submit the claim to your medical aid and be reimbursed directly by them. Where it helps your claim, we prepare the itemised quotation, clinical motivation and pre-authorisation paperwork before anything is ordered. What your scheme pays back depends on your plan and available benefits, and that decision rests with the scheme, so any amount they do not cover remains payable by you.",
+  },
 ];

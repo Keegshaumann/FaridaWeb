@@ -501,7 +501,7 @@ export function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F5E8F3] py-12">
+    <div className="min-h-screen bg-[#E9F4FB] py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">

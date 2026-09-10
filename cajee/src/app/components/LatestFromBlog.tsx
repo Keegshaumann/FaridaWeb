@@ -10,7 +10,7 @@ export function LatestFromBlog() {
   if (posts.length === 0) return null;
 
   return (
-    <section className="relative py-16 md:py-20 bg-[#F5E8F3]">
+    <section className="relative py-16 md:py-20 bg-[#E9F4FB]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)] mb-3">

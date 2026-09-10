@@ -79,19 +79,19 @@ export function AccordionFeatureSection({
                   key={feature.id}
                   name="feature-accordion"
                   open={i === 0}
-                  className="group rounded-2xl border border-[#5E3362]/10 bg-white/45 px-5 transition-[background-color,border-color,box-shadow] duration-200 ease-out hover:bg-white/70 open:bg-white open:border-[#5E3362]/15 open:shadow-[0_12px_32px_-16px_rgba(94,51,98,0.28)]"
+                  className="group rounded-2xl border border-[#0B3A63]/10 bg-white/45 px-5 transition-[background-color,border-color,box-shadow] duration-200 ease-out hover:bg-white/70 open:bg-white open:border-[#0B3A63]/15 open:shadow-[0_12px_32px_-16px_rgba(11,58,99,0.28)]"
                 >
                   <summary className="flex cursor-pointer list-none items-center gap-4 py-4 text-left">
-                    <h3 className="flex-1 text-base md:text-[17px] font-medium leading-snug text-[#5E3362]/70 transition-colors duration-200 group-open:text-[var(--text-dark)]">
+                    <h3 className="flex-1 text-base md:text-[17px] font-medium leading-snug text-[#0B3A63]/70 transition-colors duration-200 group-open:text-[var(--text-dark)]">
                       {feature.title}
                     </h3>
                     <ChevronDown
                       aria-hidden="true"
-                      className="size-8 shrink-0 rounded-full bg-[#5E3362]/[0.07] p-2 text-[var(--text-dark)] transition-[transform,background-color,color] duration-200 ease-out group-open:rotate-180 group-open:bg-[var(--text-dark)] group-open:text-[var(--pink-light)]"
+                      className="size-8 shrink-0 rounded-full bg-[#0B3A63]/[0.07] p-2 text-[var(--text-dark)] transition-[transform,background-color,color] duration-200 ease-out group-open:rotate-180 group-open:bg-[var(--text-dark)] group-open:text-[var(--pink-light)]"
                     />
                   </summary>
                   <div className="pb-5 text-left">
-                    <p className="text-[15px] leading-relaxed text-[#5E3362]/75">
+                    <p className="text-[15px] leading-relaxed text-[#0B3A63]/75">
                       {feature.description}
                     </p>
                   </div>

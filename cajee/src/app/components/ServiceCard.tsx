@@ -28,7 +28,7 @@ export function ServiceCard({ title, description, image, link, bgColor, index = 
         <div className={`${bgClass} p-6 pb-8 rounded-2xl h-full flex flex-col min-h-[400px]`}>
           {/* Image container - allows image to "pop out" */}
           <div className="relative -mt-16 mb-6 mx-auto w-full max-w-[240px] aspect-square flex items-center justify-center">
-            <div className="absolute inset-0 bg-[#F5E8F3] rounded-full blur-2xl opacity-60"></div>
+            <div className="absolute inset-0 bg-[#E9F4FB] rounded-full blur-2xl opacity-60"></div>
             <img
               src={image}
               alt={title}

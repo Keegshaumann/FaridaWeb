@@ -46,7 +46,7 @@ function Hotspot({
         className={`pointer-events-none absolute inset-0 m-auto h-7 w-7 rounded-full transition-opacity ${
           active ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
         }`}
-        style={{ background: "radial-gradient(circle, rgba(94,51,98,0.35) 0%, rgba(94,51,98,0) 70%)" }}
+        style={{ background: "radial-gradient(circle, rgba(11,58,99,0.35) 0%, rgba(11,58,99,0) 70%)" }}
       />
       {/* dot */}
       <span
@@ -93,7 +93,7 @@ function Figure({
 
 function DetailPanel({ selected }: { selected: PainPoint | null }) {
   return (
-    <div className="rounded-2xl bg-[#FDF1FF] p-6 shadow-sm md:p-8">
+    <div className="rounded-2xl bg-[#F4FBFF] p-6 shadow-sm md:p-8">
       <AnimatePresence mode="wait">
         {selected ? (
           <motion.div

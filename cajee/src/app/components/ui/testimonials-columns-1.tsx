@@ -29,7 +29,7 @@ export const TestimonialsColumn = (props: {
         className="flex flex-col gap-6 pb-6 bg-background bg-[#ffffff1c]"
       >
         {duplicatedTestimonials.map(({ text, image, name, role }, index) => (
-          <div className="p-10 rounded-3xl border shadow-lg shadow-primary/10 max-w-xs w-full bg-[#F5E8F3]" key={index}>
+          <div className="p-10 rounded-3xl border shadow-lg shadow-primary/10 max-w-xs w-full bg-[#E9F4FB]" key={index}>
             <div className="text-[var(--text-muted)] leading-relaxed">{text}</div>
             <div className="flex items-center gap-2 mt-5">
               <img

@@ -43,7 +43,7 @@ function Stars() {
 
 export function GoogleReviews() {
   return (
-    <section className="relative py-16 md:py-24 bg-[#F5E8F3]">
+    <section className="relative py-16 md:py-24 bg-[#E9F4FB]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)] mb-3">

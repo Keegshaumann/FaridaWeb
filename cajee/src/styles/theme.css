@@ -2,71 +2,71 @@
 
 :root {
   --font-size: 16px;
-  --background: #F5E8F3;
-  --foreground: #5E3362;
-  --card: #F5E8F3;
-  --card-foreground: #5E3362;
-  --popover: #F5E8F3;
-  --popover-foreground: #5E3362;
-  --primary: #5E3362;
-  --primary-foreground: #F5E8F3;
-  --secondary: #E8D4E6;
-  --secondary-foreground: #5E3362;
+  --background: #E9F4FB;
+  --foreground: #0B3A63;
+  --card: #E9F4FB;
+  --card-foreground: #0B3A63;
+  --popover: #E9F4FB;
+  --popover-foreground: #0B3A63;
+  --primary: #0B3A63;
+  --primary-foreground: #E9F4FB;
+  --secondary: #CFE6F7;
+  --secondary-foreground: #0B3A63;
   --muted: #F5ECF7;
-  --muted-foreground: #9B7A9E;
-  --accent: #D9C4D7;
-  --accent-foreground: #5E3362;
+  --muted-foreground: #5B7E99;
+  --accent: #B8DCF2;
+  --accent-foreground: #0B3A63;
   --destructive: #d4183d;
-  --destructive-foreground: #F5E8F3;
-  --border: rgba(94, 51, 98, 0.1);
+  --destructive-foreground: #E9F4FB;
+  --border: rgba(11, 58, 99, 0.1);
   --input: transparent;
-  --input-background: #F5E8F3;
-  --switch-background: #D5BBD3;
+  --input-background: #E9F4FB;
+  --switch-background: #A8D4EE;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #B891B5;
+  --ring: #0090D8;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 1rem;
-  --sidebar: #F5E8F3;
-  --sidebar-foreground: #5E3362;
-  --sidebar-primary: #5E3362;
-  --sidebar-primary-foreground: #F5E8F3;
-  --sidebar-accent: #E8D4E6;
-  --sidebar-accent-foreground: #5E3362;
-  --sidebar-border: rgba(94, 51, 98, 0.1);
-  --sidebar-ring: #B891B5;
+  --sidebar: #E9F4FB;
+  --sidebar-foreground: #0B3A63;
+  --sidebar-primary: #0B3A63;
+  --sidebar-primary-foreground: #E9F4FB;
+  --sidebar-accent: #CFE6F7;
+  --sidebar-accent-foreground: #0B3A63;
+  --sidebar-border: rgba(11, 58, 99, 0.1);
+  --sidebar-ring: #0090D8;
   
   /* Custom colors for this medical site */
-  --pink-light: #F5E8F3;
-  --pink-soft: #E8D4E6;
-  --pink-medium: #A473A1;
-  --purple-light: #EDE4EF;
-  --purple-soft: #D9C4D7;
-  --purple-medium: #8B5A8E;
-  --mauve: #D5BBD3;
-  --accent-purple: #B891B5;
-  --text-dark: #5E3362;
-  --text-muted: #9B7A9E;
-  --white-off: #F5E8F3;
+  --pink-light: #E9F4FB;
+  --pink-soft: #CFE6F7;
+  --pink-medium: #2C7FC4;
+  --purple-light: #DCEDF9;
+  --purple-soft: #B8DCF2;
+  --purple-medium: #0060C0;
+  --mauve: #A8D4EE;
+  --accent-purple: #0090D8;
+  --text-dark: #0B3A63;
+  --text-muted: #5B7E99;
+  --white-off: #E9F4FB;
 
   /* Compression specialism palette — same brand hue, re-weighted dark so the
      compression pages read as a distinct clinical department. The four class
      tints double as the pressure scale (Class A -> Class 3). */
-  --comp-ink: #2A1430;
-  --comp-ink-2: #3D1F44;
-  --comp-plum: #5E3362;
-  --comp-violet: #8B5A8E;
-  --comp-lilac: #B891B5;
-  --comp-mist: #EDE4EF;
-  --comp-shell: #F5E8F3;
-  --comp-class-a: #D9C4D7;
-  --comp-class-1: #B891B5;
-  --comp-class-2: #8B5A8E;
-  --comp-class-3: #5E3362;
+  --comp-ink: #06203A;
+  --comp-ink-2: #0A2D4F;
+  --comp-plum: #0B3A63;
+  --comp-violet: #0060C0;
+  --comp-lilac: #0090D8;
+  --comp-mist: #DCEDF9;
+  --comp-shell: #E9F4FB;
+  --comp-class-a: #B8DCF2;
+  --comp-class-1: #0090D8;
+  --comp-class-2: #0060C0;
+  --comp-class-3: #0B3A63;
 }
 
 .dark {

@@ -100,7 +100,7 @@ export function ServicesPage() {
       
 
       {/* Services Grid Section */}
-      <section className="relative py-16 md:py-32 pt-32 bg-[#f5e8f3]">
+      <section className="relative py-16 md:py-32 pt-32 bg-[#E9F4FB]">
         {/* Blur transition from previous section */}
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-[var(--purple-soft)]/60 backdrop-blur-md pointer-events-none z-0"></div>
         

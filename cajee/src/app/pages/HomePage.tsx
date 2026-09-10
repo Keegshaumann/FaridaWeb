@@ -21,7 +21,7 @@ import mobilityAidsImg from "@/assets/424428bc84af628c229a68e5a8e17f73eb46101c.w
 import compressionGarmentsImg from "@/assets/93d9306dca2d06ebc10714a568c9f5598f582439.webp";
 import breastProstheticsImg from "@/assets/538a1e8e3cf714b78cdc63eff3781dc6a8484b41.webp";
 import limbProstheticsImg from "@/assets/3425be9966550c5581635147cd454de36d66ca07.webp";
-import workshopImg from "@/assets/a83f936979af43b1f3576745d4abf5e601cb3f01.webp";
+import faridaGraduationImg from "@/assets/farida-graduation.webp";
 import customOrthoticsHoverImg from "@/assets/333a3e1dd99582b83c3f9c38dead3e13c3cf6dd8.webp";
 import offTheShelfHoverImg from "@/assets/e5730945e19fdb01e509b02c9949458b5176689c.webp";
 import mobilityAidsHoverImg from "@/assets/0c656bc256881f7d19efdc0720e6c85ef11b2335.webp";
@@ -182,11 +182,11 @@ export function HomePage() {
       <section className="relative">
         <MedicalHero />
         {/* Blur transition to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#F5E8F3]/90 backdrop-blur-md pointer-events-none z-0"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#E9F4FB]/90 backdrop-blur-md pointer-events-none z-0"></div>
       </section>
 
       {/* Restoring Movement Section with Accordion - White */}
-      <section className="relative bg-[#F5E8F3]">
+      <section className="relative bg-[#E9F4FB]">
         <div className="relative z-10">
           <AccordionFeatureSection
             mainHeading="Restoring Movement. Supporting Independence."
@@ -219,8 +219,8 @@ export function HomePage() {
                 description: "Evidence-based interventions provided by a qualified orthotist and prosthetist committed to the highest standards of care."
               }
             ]}
-            image={workshopImg}
-            imageAlt="Farida Cajee-Botes holding a prosthetic socket at her workbench, with tools and footwear on the bench behind her"
+            image={faridaGraduationImg}
+            imageAlt="Farida Cajee-Botes on her graduation day, wearing her academic cap and gown and holding her qualification certificate"
           />
         </div>
         {/* Blur transition to next section */}
@@ -228,12 +228,12 @@ export function HomePage() {
       </section>
 
       {/* Contact Info Bar */}
-      <section className="bg-[#FDF1FF] border-b border-border/40" ref={ref}>
+      <section className="bg-[#F4FBFF] border-b border-border/40" ref={ref}>
         
       </section>
 
       {/* Mobile Service Model - Light Gray */}
-      <section className="relative px-[0px] pt-[30px] pb-[0px] bg-[#f5e8f3]">
+      <section className="relative px-[0px] pt-[30px] pb-[0px] bg-[#E9F4FB]">
         {/* Blur transition from previous section */}
         
         
@@ -286,7 +286,7 @@ export function HomePage() {
       </section>
 
       {/* Services Grid - Light Gray (continues from above) */}
-      <section className="relative py-16 md:py-32 pt-32 bg-[#f5e8f3]">
+      <section className="relative py-16 md:py-32 pt-32 bg-[#E9F4FB]">
         {/* Section Header */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10">
           <div className="text-center">
@@ -329,7 +329,7 @@ export function HomePage() {
           className="pointer-events-none absolute inset-0 opacity-50"
           style={{
             background:
-              "radial-gradient(60rem 34rem at 82% 10%, rgba(184,145,181,0.32), transparent 62%), radial-gradient(50rem 32rem at 0% 100%, rgba(139,90,142,0.35), transparent 60%)",
+              "radial-gradient(60rem 34rem at 82% 10%, rgba(184,145,181,0.32), transparent 62%), radial-gradient(50rem 32rem at 0% 100%, rgba(0,96,192,0.35), transparent 60%)",
           }}
         />
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,7 +405,7 @@ export function HomePage() {
             {whyChooseUs.map((item) => (
               <div
                 key={item.title}
-                className="bg-[#FDF1FF] rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-[#F4FBFF] rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 rounded-full bg-[var(--purple-soft)] flex items-center justify-center mb-4">
                   <item.icon className="h-6 w-6 text-[var(--accent-purple)]" />
@@ -483,7 +483,7 @@ export function HomePage() {
       {/* Farida's own statement of how she practises. Written by her; used as
           supplied. Multi-paragraph body is left-aligned because centred text at
           this length is hard to read. */}
-      <section className="relative py-12 bg-[#F5E8F3]">
+      <section className="relative py-12 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6 text-center">

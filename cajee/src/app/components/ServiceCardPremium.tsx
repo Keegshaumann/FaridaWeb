@@ -60,12 +60,12 @@ export function ServiceCardPremium({
         {/* Content */}
         <div className="flex flex-col flex-grow relative z-20">
           {/* Title */}
-          <Heading className="text-2xl font-bold text-[#FDF1FF] mb-4 pr-12">
+          <Heading className="text-2xl font-bold text-[#F4FBFF] mb-4 pr-12">
             {title}
           </Heading>
 
           {/* Description */}
-          <p className="text-[#FDF1FF]/80 leading-relaxed mb-6 text-sm">
+          <p className="text-[#F4FBFF]/80 leading-relaxed mb-6 text-sm">
             {description}
           </p>
 
@@ -76,7 +76,7 @@ export function ServiceCardPremium({
                 <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[var(--accent-purple)]/20 flex items-center justify-center mt-0.5">
                   <Check className="w-3 h-3 text-[var(--accent-purple)]" />
                 </div>
-                <span className="text-[#FDF1FF]/70 text-sm leading-snug">
+                <span className="text-[#F4FBFF]/70 text-sm leading-snug">
                   {feature}
                 </span>
               </li>

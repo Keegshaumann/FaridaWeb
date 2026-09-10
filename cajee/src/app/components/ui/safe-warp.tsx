@@ -24,7 +24,7 @@ const isShaderWebGLError = (msg: unknown): boolean =>
 
 /** Build a CSS gradient from the shader's colour list so the fallback matches. */
 function gradientFromColors(colors?: readonly string[]): string {
-  const c = colors && colors.length ? [...colors] : ["hsl(310, 35%, 72%)", "hsl(300, 30%, 68%)"];
+  const c = colors && colors.length ? [...colors] : ["hsl(202, 45%, 72%)", "hsl(208, 42%, 66%)"];
   if (c.length === 1) c.push(c[0]);
   const stops = c
     .map((color, i) => `${color} ${Math.round((i / (c.length - 1)) * 100)}%`)
