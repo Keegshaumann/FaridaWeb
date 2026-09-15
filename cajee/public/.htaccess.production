@@ -2,6 +2,30 @@
 
 Options -Indexes
 
+# Never serve internal files. The whole repo reaches public_html, so without
+# this the site served the React source and node_modules under /cajee/,
+# DEPLOY-README.txt (which names the file holding the mailbox password) and
+# the git dotfiles to anyone (found with curl on 2026-09-15).
+# RedirectMatch 404 returns a real 404, not a 403 that confirms a file exists.
+# patient-intake/lib/ and mail-config*.php are loaded by PHP from disk
+# (include/require_once), so blocking them over HTTP does not affect the form.
+# FilesMatch is a second layer for mail-config*.php in case PHP ever stops
+# executing; it is untested on Hostinger, so keep the RedirectMatch line.
+# error_log is the file PHP hosts write next to scripts when warnings fire.
+# A new public file of a blocked type (.md, .zip, .mjs) needs an exception.
+# /.well-known/ stays open because SSL certificate renewal uses it.
+RedirectMatch 404 ^/cajee(/|$)
+RedirectMatch 404 ^/DEPLOY-README\.txt$
+RedirectMatch 404 ^/patient-intake/(lib(/|$)|mail-config)
+RedirectMatch 404 /node_modules(/|$)
+RedirectMatch 404 (^|/)error_log$
+RedirectMatch 404 /\.(?!well-known(/|$))
+RedirectMatch 404 \.(md|log|bak|sql|sh|ya?ml|lock|zip|rar|tsx?|mjs)$
+RedirectMatch 404 /(package(-lock)?|tsconfig)\.json$
+<FilesMatch "^mail-config.*\.php$">
+  Require all denied
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
