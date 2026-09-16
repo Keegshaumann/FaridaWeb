@@ -64,8 +64,9 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     "keyTakeaways": [
-      "A basic below-knee prosthesis in South Africa is typically reported in the region of R63,000–R85,000 for entry-level components, rising to roughly R150,000–R200,000 or more for advanced carbon-fibre and hydraulic componentry, according to South African market pricing sources.",
-      "Above-knee prostheses cost more because a prosthetic knee joint is added, generally taking the total from around R85,000 up to R250,000 or more; builds that include a microprocessor-controlled knee sit at the top of the range, commonly reported in the R150,000–R400,000+ bracket for the complete leg.",
+      "There is no single honest price for a prosthetic leg in South Africa. The socket is moulded for one person's residual limb and the components are chosen for how that person lives, so the cost is worked out per patient rather than read off a price list.",
+      "This practice does not publish rand ranges for the limb itself. The figures circulating on South African price-comparison pages are not attributed to any published survey, and we do not repeat numbers we cannot stand behind.",
+      "An above-knee prosthesis costs more than a below-knee one because a knee joint is added to the build. A simple mechanical knee sits at the lower end of that range and a microprocessor-controlled knee, which adjusts resistance as you walk, sits at the top.",
       "Medical aid Prescribed Minimum Benefits (PMBs), the Road Accident Fund and COIDA are the three main funding routes in South Africa, each with different rules, tariffs and authorisation processes.",
       "Because so much depends on residual limb shape, activity level and funding source, a written itemised quotation after a proper assessment is the only reliable way to know your actual cost."
     ],
