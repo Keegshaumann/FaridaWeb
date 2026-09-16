@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "../components/ui/button";
-import { X, Plus, Trash2, Lock, Upload, Mail, Phone, User, BarChart3, TrendingUp, Users, MousePointer, Calendar, MapPin, FileText, ClipboardList } from "lucide-react";
+import { X, Plus, Trash2, Lock, Mail, Phone, User, BarChart3, TrendingUp, Users, MousePointer, Calendar, MapPin, FileText, ClipboardList } from "lucide-react";
 import { projectId, publicAnonKey } from "/utils/supabase/info";
-import { populateCaseStudies } from "../utils/populateCaseStudies";
 import { AnalyticsDashboard } from "../components/AnalyticsDashboard";
 
 interface CaseStudy {
@@ -356,20 +355,6 @@ export function AdminPage() {
         setFormData({ ...formData, image: reader.result as string });
       };
       reader.readAsDataURL(file);
-    }
-  };
-
-  const handlePopulateSamples = async () => {
-    if (!confirm("This will add 6 sample case studies. Continue?")) return;
-    
-    try {
-      const results = await populateCaseStudies();
-      const successCount = results.filter(r => r.success).length;
-      alert(`Successfully created ${successCount} out of ${results.length} case studies`);
-      fetchCaseStudies();
-    } catch (error) {
-      console.error("Error populating samples:", error);
-      alert("Error populating sample case studies");
     }
   };
 
@@ -1184,22 +1169,12 @@ export function AdminPage() {
               <h2 className="text-xl font-bold text-[var(--text-dark)]">
                 All Case Studies ({caseStudies.length})
               </h2>
-              {caseStudies.length === 0 && (
-                <Button
-                  onClick={handlePopulateSamples}
-                  variant="outline"
-                  className="rounded-full"
-                >
-                  <Upload className="w-4 h-4 mr-2" />
-                  Load Sample Data
-                </Button>
-              )}
             </div>
 
             {caseStudies.length === 0 ? (
               <div className="text-center py-8">
                 <p className="text-[var(--text-muted)] mb-4">
-                  No case studies yet. Create your first one or load sample data!
+                  No case studies yet. Create your first one.
                 </p>
               </div>
             ) : (
