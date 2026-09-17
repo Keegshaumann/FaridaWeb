@@ -108,12 +108,35 @@ REBUILDING FROM SOURCE
 ----------------------
     cd cajee
     npm install
-    npm run build        # vite build -> cajee/dist
-    npm run prerender    # writes one real HTML file per route into cajee/dist
+    node scripts/sitemap.mjs      # refreshes the dates in public/sitemap.xml
+    npm run build                 # vite build -> cajee/dist
+    npm run prerender             # one real HTML file per route into cajee/dist
 
 Then copy the contents of cajee/dist over the repository root, leaving
 patient-intake/, DEPLOY-README.txt, .gitignore and .gitattributes alone, and
 delete any old hashed files in assets/ that the new build replaced.
+Copy cajee/public/sitemap.xml over the root sitemap.xml as well - the build
+does that for you inside cajee/dist, so copying dist over the root covers it.
+
+    scripts/sitemap.mjs     Rewrites public/sitemap.xml: every address it had
+                            before plus any new blog article, each with a real
+                            last-changed date (an article's own dateUpdated;
+                            for other pages, the last commit that touched what
+                            that page is built from). It needs git, and it
+                            refuses to write a sitemap that would drop an
+                            address. Run it before a rebuild so the dates are
+                            true on the day the files go up.
+
+    scripts/image-sizes.mjs Rewrites src/app/data/image-sizes.ts, the map of
+                            real pixel sizes that puts width and height on
+                            every <img>. Run it after adding, replacing or
+                            resizing any image in public/ or src/assets/,
+                            otherwise the new image ships with no size and the
+                            page can jump as it loads. It refuses to run if two
+                            images share a file name but are different sizes.
+
+    The prerender step will use Edge, then Chrome, whichever starts first, or
+    the browser at PRERENDER_BROWSER if you set it.
 
 There is NO Single Page App catch-all in .htaccess any more. Every public
 address is a real prerendered file. That is deliberate: the old catch-all made
