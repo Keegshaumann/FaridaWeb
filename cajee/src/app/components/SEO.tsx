@@ -149,7 +149,11 @@ export function SEO({
         'https://www.facebook.com/Cajeebotes/',
         'https://maps.google.com/?cid=12162722174863443304',
       ],
-      priceRange: '$$',
+      // No priceRange. It used to read '$$' - dollar signs on a practice that
+      // charges in rand, on a site that publishes no prices at all. It is not a
+      // ranking signal and it was the only thing on the site quoting a price of
+      // any kind. Removed 2026-09-17; do not add it back without real figures
+      // from Farida, and if it ever comes back it belongs in rand.
       knowsAbout: [
         'Orthotics',
         'Prosthetics',
