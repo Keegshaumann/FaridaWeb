@@ -16,6 +16,29 @@
 //     furniture (header, footer, styling) is deliberately not in those lists:
 //     restyling a button is not a change to what a page says.
 //
+// Known limit, read this before trusting a date: the rule above is file-level,
+// not sentence-level. A commit that only touches presentation inside a page's
+// own source file - width and height attributes on an image, a class name, a
+// wrapper div - moves that page's date even though the page says exactly what
+// it said before. That is the same kind of change the furniture exclusion above
+// is meant to keep out of the dates; it just happens to live in the page's own
+// file, where this script cannot see the difference.
+//
+// So the script prints, for every page, which file and which commit decided its
+// date. Read that list when you re-run this before an upload. If a page's date
+// was set by a commit that changed nothing a reader would notice, the honest
+// lastmod is the earlier one - pass over that page by hand rather than
+// publishing a date that says the page changed when it did not. An inflated
+// lastmod is the fault this script was written to fix, and it is just as much a
+// fault when the script causes it.
+//
+// Checked on 2026-09-17: of the five pages dated that day, / and /blog were
+// touched by ecfffef6, which only added image width and height - but both also
+// take their content from src/app/data/blog-posts.ts, which 5ad8dbb6 changed
+// the same day for real (the medical aid article's co-payment wording). So
+// their dates hold on their own merits; nothing was inflated. /contact
+// (3dec423e) and /services/compression (18777a66, ecfffef6) are genuine too.
+//
 // Usage: node scripts/sitemap.mjs   (needs git; run before an upload)
 //
 // This script never invents an address. The list below is the same 28
@@ -56,18 +79,22 @@ const PAGES = [
   ["/blog", "weekly", "0.8", ["src/app/pages/BlogPage.tsx", "src/app/data/blog-posts.ts"]],
 ];
 
-function lastCommitDate(file) {
-  const out = execFileSync("git", ["log", "-1", "--format=%cs", "--", file], {
+function lastCommit(file) {
+  const out = execFileSync("git", ["log", "-1", "--format=%cs%x09%h%x09%s", "--", file], {
     cwd: ROOT,
     encoding: "utf8",
   }).trim();
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(out)) {
+  const [date, hash, ...subject] = out.split("\t");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
     throw new Error(`No commit date for ${file} - is it committed? git said: "${out}"`);
   }
-  return out;
+  return { date, hash, subject: subject.join("\t"), file };
 }
 
-const newestOf = (files) => files.map(lastCommitDate).sort().at(-1);
+// The newest commit across a page's source files, and which file and commit it
+// was - so the person running this before an upload can see what moved a date.
+const newestOf = (files) =>
+  files.map(lastCommit).sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)).at(-1);
 
 // Blog articles, straight from the data file so a new one needs no edit here.
 const blog = readFileSync(join(ROOT, "src", "app", "data", "blog-posts.ts"), "utf8");
@@ -80,13 +107,19 @@ if (posts.length !== expectedPosts) {
   throw new Error(`Read ${posts.length} article dates but the data file has ${expectedPosts} articles. Refusing to write a sitemap that would drop an address.`);
 }
 
+const why = [];
+
 const entries = [
-  ...PAGES.map(([path, changefreq, priority, sources]) => ({
-    loc: `${BASE}${path}`,
-    lastmod: newestOf(sources),
-    changefreq,
-    priority,
-  })),
+  ...PAGES.map(([path, changefreq, priority, sources]) => {
+    const newest = newestOf(sources);
+    why.push({ path, ...newest });
+    return {
+      loc: `${BASE}${path}`,
+      lastmod: newest.date,
+      changefreq,
+      priority,
+    };
+  }),
   ...posts.map((p) => ({
     loc: `${BASE}/blog/${p.slug}`,
     lastmod: p.lastmod,
@@ -130,3 +163,14 @@ if (missing.length) {
 writeFileSync(OUT, xml, "utf8");
 const dates = new Set(entries.map((e) => e.lastmod));
 console.log(`Wrote public/sitemap.xml: ${entries.length} addresses (was ${previousLocs.length}), ${dates.size} distinct dates.`);
+
+// Article dates come from the article's own dateUpdated and need no explaining.
+// Every other page's date came from a commit, so say which one. Check the rows
+// dated today before you upload: if the commit named only moved presentation,
+// the page did not really change and the date should not say it did.
+console.log("\nWhere each non-article date came from:\n");
+const pad = Math.max(...why.map((w) => w.path.length));
+for (const w of why.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))) {
+  console.log(`  ${w.date}  ${w.path.padEnd(pad)}  ${w.hash}  ${w.subject}`);
+  console.log(`  ${" ".repeat(10)}  ${" ".repeat(pad)}  set by ${w.file}`);
+}
