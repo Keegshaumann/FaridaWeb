@@ -48,11 +48,17 @@ RedirectMatch 404 /(package(-lock)?|tsconfig)\.json$
   # Normalise trailing-slash URLs to the canonical non-slash form
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^(.+)/$ /$1 [R=301,L]
-  # Single Page App fallback: serve index.html for any path that is not a real
-  # file or directory, so client-side routes (e.g. /about) work on refresh.
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  # No Single Page App catch-all here, on purpose. Every public route is
+  # prerendered to its own <route>/index.html by scripts/prerender.mjs, so no
+  # fallback is needed -- and the catch-all that used to sit here made EVERY
+  # made-up address answer 200 with the homepage, which lets junk URLs into
+  # Google's index as if they were real pages (confirmed live 2026-09-16 and
+  # 2026-09-17: /this-page-does-not-exist-test and
+  # /blog/child-walking-on-toes-when-to-worry.jpg both returned 200).
+  # An address that is not a real file or folder now falls through to the
+  # ErrorDocument 404 at the bottom of this file.
+  # A NEW ROUTE MUST BE ADDED TO THE ROUTES LIST IN scripts/prerender.mjs,
+  # or it will 404 on a direct visit even though it works inside the app.
 </IfModule>
 
 # Gzip / Brotli compression
@@ -95,4 +101,4 @@ RedirectMatch 404 /(package(-lock)?|tsconfig)\.json$
   Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
