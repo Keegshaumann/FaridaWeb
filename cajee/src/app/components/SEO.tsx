@@ -12,6 +12,20 @@ interface SEOProps {
   fullTitle?: string;
   /** Ask crawlers not to index this page (404, thin utility pages). */
   noindex?: boolean;
+  /**
+   * Open Graph type. Every page said 'website', including the 14 articles.
+   * An article shared to Facebook, LinkedIn or WhatsApp is laid out
+   * differently when it says so, and article:published_time /
+   * article:modified_time below are only read when this is 'article'.
+   */
+  ogType?: 'website' | 'article';
+  /**
+   * Article dates, YYYY-MM-DD. Pass the same values the page's BlogPosting
+   * schema publishes - post.date and post.dateUpdated ?? post.date - so the
+   * two can never disagree. Ignored unless ogType is 'article'.
+   */
+  articlePublished?: string;
+  articleModified?: string;
 }
 
 export function SEO({
@@ -23,6 +37,9 @@ export function SEO({
   schema,
   fullTitle: fullTitleProp,
   noindex = false,
+  ogType = 'website',
+  articlePublished,
+  articleModified,
 }: SEOProps) {
   const location = useLocation();
   const baseUrl = 'https://www.cajeebotes.com';
@@ -47,6 +64,13 @@ export function SEO({
       element.setAttribute('content', content);
     };
 
+    // Inside the app a page change does not reload the document, so a tag left
+    // by the previous page stays in the head until something removes it.
+    const removeMetaTag = (name: string, isProperty = false) => {
+      const attribute = isProperty ? 'property' : 'name';
+      document.querySelectorAll(`meta[${attribute}="${name}"]`).forEach((el) => el.remove());
+    };
+
     // Basic meta tags
     setMetaTag('description', description);
     if (keywords) setMetaTag('keywords', keywords);
@@ -58,10 +82,21 @@ export function SEO({
     setMetaTag('og:title', fullTitle, true);
     setMetaTag('og:description', description, true);
     setMetaTag('og:url', fullUrl, true);
-    setMetaTag('og:type', 'website', true);
+    setMetaTag('og:type', ogType, true);
     setMetaTag('og:image', ogImage, true);
     setMetaTag('og:site_name', 'Farida Cajee-Botes Orthotist & Prosthetist', true);
     setMetaTag('og:locale', 'en_ZA', true);
+
+    // Article dates. These belong on an article and nowhere else, so they are
+    // removed again on any other page - otherwise the last article a visitor
+    // read would leave its dates on the service page they clicked through to.
+    if (ogType === 'article' && articlePublished) {
+      setMetaTag('article:published_time', articlePublished, true);
+      setMetaTag('article:modified_time', articleModified || articlePublished, true);
+    } else {
+      removeMetaTag('article:published_time', true);
+      removeMetaTag('article:modified_time', true);
+    }
 
     // Twitter Card meta tags
     setMetaTag('twitter:card', 'summary_large_image');
@@ -85,9 +120,15 @@ export function SEO({
     }
     canonicalLink.setAttribute('href', fullUrl);
 
-    // Add schema.org structured data
+    // Add schema.org structured data. A page with no schema of its own has to
+    // take the last page's block down: inside the app nothing reloads the
+    // document, so without this a visitor moving from /services/compression to
+    // /contact carried the compression page's Service markup with them. It
+    // never showed on a direct visit, which is what a crawler does, but the
+    // markup a page carries should describe that page and nothing else.
+    const existingSchema = document.querySelector('script#page-schema');
     if (schema) {
-      let schemaScript = document.querySelector('script#page-schema');
+      let schemaScript = existingSchema;
       if (!schemaScript) {
         schemaScript = document.createElement('script');
         schemaScript.setAttribute('type', 'application/ld+json');
@@ -95,6 +136,8 @@ export function SEO({
         document.head.appendChild(schemaScript);
       }
       schemaScript.textContent = JSON.stringify(schema);
+    } else if (existingSchema) {
+      existingSchema.remove();
     }
 
     // Add global organization schema
@@ -240,7 +283,19 @@ export function SEO({
     }
     orgSchemaScript.textContent = JSON.stringify(organizationSchema);
 
-  }, [fullTitle, title, description, keywords, ogImage, fullUrl, schema, noindex]);
+  }, [
+    fullTitle,
+    title,
+    description,
+    keywords,
+    ogImage,
+    fullUrl,
+    schema,
+    noindex,
+    ogType,
+    articlePublished,
+    articleModified,
+  ]);
 
   return null;
 }

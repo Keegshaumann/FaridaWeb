@@ -71,12 +71,18 @@ export function BlogPostPage() {
 
   return (
     <>
+      {/* ogType: an article is an article, not a "website". The two dates are
+          the same fields the BlogPosting block above publishes, so a shared
+          link and the structured data can never disagree. */}
       <SEO
         fullTitle={post.metaTitle ?? `${post.title} | Farida Cajee-Botes`}
         title={post.title}
         description={post.metaDescription}
         ogImage={`https://www.cajeebotes.com${post.image}`}
         schema={articleSchema}
+        ogType="article"
+        articlePublished={post.date}
+        articleModified={post.dateUpdated ?? post.date}
       />
 
       {/* Hero */}
