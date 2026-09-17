@@ -6,10 +6,15 @@ import { SEO } from "../components/SEO";
 export function NotFoundPage() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-[var(--pink-light)] via-white to-[var(--purple-light)]">
+      {/* Prerendered to dist/404.html and served by Apache for every address the
+          server does not recognise (ErrorDocument 404 in .htaccess). The
+          canonical points at that real file rather than at whatever made-up
+          address the visitor typed. */}
       <SEO
         fullTitle="Page Not Found | Farida Cajee-Botes"
         title="Page Not Found"
         description="The page you're looking for doesn't exist or has been moved."
+        canonicalUrl="https://www.cajeebotes.com/404.html"
         noindex
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

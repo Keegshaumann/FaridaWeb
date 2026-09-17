@@ -46,7 +46,15 @@ const ROUTES = [
   "/services/breast-prosthetics",
   "/privacy-policy",
   "/terms-and-conditions",
+  // Written out as dist/404.html, not /404/index.html, because Apache's
+  // "ErrorDocument 404 /404.html" in .htaccess serves it for every address the
+  // server does not recognise. It must be a real, branded page: before this
+  // existed the server answered 200 with the homepage for any made-up address.
+  "/404",
 ];
+
+// Routes that are not published at <route>/index.html.
+const OUTPUT_OVERRIDES = { "/404": "404.html" };
 
 const MIME = {
   ".html": "text/html", ".js": "text/javascript", ".css": "text/css",
@@ -109,9 +117,11 @@ for (const route of ROUTES) {
       return "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
     });
 
-    const outDir = route === "/" ? DIST : join(DIST, ...route.split("/").filter(Boolean));
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, "index.html"), html, "utf8");
+    const outFile = OUTPUT_OVERRIDES[route]
+      ? join(DIST, OUTPUT_OVERRIDES[route])
+      : join(route === "/" ? DIST : join(DIST, ...route.split("/").filter(Boolean)), "index.html");
+    mkdirSync(dirname(outFile), { recursive: true });
+    writeFileSync(outFile, html, "utf8");
     const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
     const visibleHtml = html.replace(/<script[\s\S]*?<\/script>/g, "");
 
