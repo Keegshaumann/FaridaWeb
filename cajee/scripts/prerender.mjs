@@ -15,16 +15,20 @@ import puppeteer from "puppeteer-core";
 const DIST = join(dirname(fileURLToPath(import.meta.url)), "..", "dist");
 const PORT = 4180;
 
-// Windows Edge first (the usual build machine), then macOS Edge/Chrome so the
-// static build can also be regenerated from a Mac.
+// Windows Edge first (the usual build machine), then Windows Chrome, then
+// macOS Edge/Chrome so the static build can also be regenerated from a Mac.
+// Set PRERENDER_BROWSER to a full path to force a particular one.
 const BROWSER_PATHS = [
+  process.env.PRERENDER_BROWSER,
   "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
   "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
   "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-];
-const executablePath = BROWSER_PATHS.find((p) => existsSync(p));
-if (!executablePath) throw new Error("No Edge/Chrome browser found for prerendering");
+].filter(Boolean);
+const candidates = BROWSER_PATHS.filter((p) => existsSync(p));
+if (candidates.length === 0) throw new Error("No Edge/Chrome browser found for prerendering");
 
 // Blog slugs come straight from the data file so new posts prerender automatically.
 const blogData = readFileSync(join(DIST, "..", "src", "app", "data", "blog-posts.ts"), "utf8");
@@ -81,11 +85,29 @@ const server = createServer((req, res) => {
 
 await new Promise((resolve) => server.listen(PORT, resolve));
 
-const browser = await puppeteer.launch({
-  executablePath,
-  headless: true,
-  args: ["--no-sandbox", "--disable-gpu"],
-});
+// Being installed is not the same as being able to start: an Edge that is
+// mid-update, or blocked by policy, exits immediately and puppeteer reports
+// only "Failed to launch the browser process". Try each installed browser in
+// turn and use the first that actually opens, so a broken Edge does not stop
+// the whole static build from being regenerated.
+let browser;
+const launchFailures = [];
+for (const executablePath of candidates) {
+  try {
+    browser = await puppeteer.launch({
+      executablePath,
+      headless: true,
+      args: ["--no-sandbox", "--disable-gpu"],
+    });
+    console.log(`Prerendering with ${executablePath}`);
+    break;
+  } catch (err) {
+    launchFailures.push(`${executablePath}: ${err.message.split("\n")[0]}`);
+  }
+}
+if (!browser) {
+  throw new Error(`No installed browser would launch for prerendering:\n  ${launchFailures.join("\n  ")}`);
+}
 
 const page = await browser.newPage();
 await page.setViewport({ width: 1280, height: 900 });
