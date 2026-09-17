@@ -21,6 +21,21 @@ export interface BlogPost {
   category: "Orthotics" | "Prosthetics" | "General";
   /** ISO date the post is published under (spread across the year). */
   date: string;
+  /**
+   * ISO date the article's text was last changed. Set it in the same commit
+   * that changes the article, or it silently goes stale and becomes another
+   * unverifiable claim on the page.
+   *
+   * Leave it out on an article that has not been changed since publication:
+   * the page then shows no "Last updated" line and dateModified falls back to
+   * datePublished, which is the truth for an unchanged article.
+   *
+   * It deliberately does NOT say "reviewed". A date labelled "reviewed" on a
+   * health page claims a clinician read it again on that day. This field only
+   * records that the text changed. If Farida does start re-reading articles on
+   * a schedule, add a separate reviewer and date rather than relabelling this.
+   */
+  dateUpdated?: string;
   author: string;
   /** Header image path (public/), shown on the card and at the top of the post. */
   image: string;

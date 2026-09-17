@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Link, useParams } from "react-router";
-import { ArrowLeft, Calendar, CheckCircle2, Clock, User } from "lucide-react";
+import { ArrowLeft, Calendar, CheckCircle2, Clock, RefreshCw, User } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { Button } from "../components/ui/button";
 import { getPostBySlug, sortedPosts } from "../data/blog-posts";
@@ -47,7 +47,10 @@ export function BlogPostPage() {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.date,
-    dateModified: post.date,
+    // Falls back to the publish date only when the article has never been
+    // changed. Before dateUpdated existed this was hard-wired to post.date, so
+    // an article could be rewritten and still report itself as untouched.
+    dateModified: post.dateUpdated ?? post.date,
     inLanguage: "en-ZA",
     author: {
       "@type": "Person",
@@ -105,6 +108,12 @@ export function BlogPostPage() {
                 <Calendar className="h-4 w-4" />
                 {formatPostDate(post.date)}
               </span>
+              {post.dateUpdated && (
+                <span className="inline-flex items-center gap-1.5">
+                  <RefreshCw className="h-4 w-4" />
+                  Last updated {formatPostDate(post.dateUpdated)}
+                </span>
+              )}
               <span className="inline-flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
                 {post.readMinutes} min read
