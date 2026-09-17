@@ -106,6 +106,13 @@ whichever one is in place.
 
 REBUILDING FROM SOURCE
 ----------------------
+cajee/dist is BUILD OUTPUT. It is not stored in this repository (it is in
+.gitignore), so a fresh clone has no cajee/dist at all until you run the build
+below. If you do have one on your machine, it is whatever you last built and
+may be older than the source - never copy it over the root without rebuilding
+first. The copy that is stored, and the copy you upload, is the repository
+ROOT.
+
     cd cajee
     npm install
     node scripts/sitemap.mjs      # refreshes the dates in public/sitemap.xml
