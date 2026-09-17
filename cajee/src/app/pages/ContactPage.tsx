@@ -19,10 +19,14 @@ export function ContactPage() {
 
   return (
     <>
+      {/* The description below is 144 characters. Google cuts a description off
+          at around 155, and the previous wording ran to 175 - long enough that
+          the phone number on the end was clipped out of the search result.
+          Keep any rewrite under 155. */}
       <SEO
         fullTitle="Orthotist & Prosthetist in Morningside, Sandton | Contact"
         title="Contact Us & Book an Assessment"
-        description="Book an assessment at our Morningside consulting rooms in Sandton, or a home visit across Centurion, Pretoria, Midrand and Johannesburg. Book on WhatsApp or call 079 998 2203."
+        description="Assessments at our Morningside rooms in Sandton, or home visits in Centurion, Pretoria, Midrand and Johannesburg. Call or WhatsApp 079 998 2203."
         keywords="orthotist Morningside, prosthetist Sandton, orthotist Sandton, prosthetist Morningside, orthotist Rivonia Road, mobile orthotist Centurion, home visit prosthetist Centurion, book orthotist assessment Gauteng"
       />
       {/* Hero Section */}
