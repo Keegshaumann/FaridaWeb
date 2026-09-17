@@ -134,7 +134,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "The short answer",
         "paragraphs": [
-          "Yes. Most South African medical schemes cover prosthetics and orthotics, but the extent of that cover depends heavily on your scheme, your chosen plan option, and how the device is motivated and coded. Cover generally comes from one of two places: an annual external medical appliance benefit with its own rand limit, or Prescribed Minimum Benefits (PMBs), where a qualifying condition unlocks guaranteed funding without the usual sub-limits. Reported appliance benefit limits across South African schemes range from roughly R3,000 up to R55,000 or more a year depending on the plan, excluding PMB or ex gratia payments [SAOPA](https://saopa.co.za/reimbursement/), and independent scheme comparisons show similarly wide variation, with some comprehensive options publishing external prosthesis limits well above R55,000 per family [medicalaid.com](https://medicalaid.com/medical-aids/best-medical-aid-schemes-that-cover-prosthetics/). Co-payments of 10–30% are also common on advanced, custom or imported components [Medical Aid Online](https://medicalaidonline.co.za/prosthetics-cover-medical-aid/). Two patients with the same amputation, on two different schemes, can therefore end up facing very different out-of-pocket costs. Understanding which funding route applies to you, and getting the pre-authorisation paperwork right the first time, usually makes the biggest difference to how smoothly the process goes."
+          "Yes. Most South African medical schemes cover prosthetics and orthotics, but the extent of that cover depends heavily on your scheme, your chosen plan option, and how the device is motivated and coded. Cover generally comes from one of two places: an annual external medical appliance benefit with its own rand limit, or Prescribed Minimum Benefits (PMBs), where a qualifying condition unlocks guaranteed funding without the usual sub-limits. Reported appliance benefit limits across South African schemes range from roughly R3,000 up to R55,000 or more a year depending on the plan, excluding PMB or ex gratia payments [SAOPA](https://saopa.co.za/reimbursement/), and independent scheme comparisons show similarly wide variation, with some comprehensive options publishing external prosthesis limits well above R55,000 per family [medicalaid.com](https://medicalaid.com/medical-aids/best-medical-aid-schemes-that-cover-prosthetics/). Co-payments are also common on advanced, custom or imported components. We do not quote a percentage for them, because the amount depends on your scheme, your plan and the specific component, and the only figure worth planning around is the one your scheme confirms in writing when it authorises the device. Two patients with the same amputation, on two different schemes, can therefore end up facing very different out-of-pocket costs. Understanding which funding route applies to you, and getting the pre-authorisation paperwork right the first time, usually makes the biggest difference to how smoothly the process goes."
         ]
       },
       {
@@ -147,7 +147,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Co-payments on imported and high-tech components",
         "paragraphs": [
-          "Many of the higher-performing prosthetic feet, microprocessor knees, carbon-fibre components and specialised orthotic materials used in modern practice are imported, and schemes frequently apply a co-payment when a device exceeds their reference tariff or falls outside their preferred component list. Reported co-payments for these advanced or imported items commonly sit in the 10–30% range, and even at that percentage the rand amount can still be substantial on a higher-end device [Medical Aid Online](https://medicalaidonline.co.za/prosthetics-cover-medical-aid/). Whether a co-payment applies, and how large it is, depends on the specific component, the scheme's designated service provider (DSP) arrangements, and whether a clinically equivalent, locally available option exists.",
+          "Many of the higher-performing prosthetic feet, microprocessor knees, carbon-fibre components and specialised orthotic materials used in modern practice are imported, and schemes frequently apply a co-payment when a device exceeds their reference tariff or falls outside their preferred component list. We are not going to put a percentage on those co-payments, because we have no figure published by a scheme or by SAOPA that we can point you at, and on a higher-end device even a modest share of the cost is a large rand amount. Whether a co-payment applies, and how large it is, depends on the specific component, the scheme's designated service provider (DSP) arrangements, and whether a clinically equivalent, locally available option exists.",
           "This is one of the most common sources of billing surprise for patients, which is why we discuss component choice and likely co-payments with you up front, before an order is placed, rather than after."
         ]
       },
@@ -188,17 +188,12 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "keyTakeaways": [
       "Most SA medical aids fund prosthetics and orthotics via an annual external appliance benefit, reported to range from about R3,000 to R55,000+ depending on scheme and plan.",
-      "Co-payments of 10–30% are common on imported or high-tech components such as microprocessor knees, advanced feet, or carbon-fibre parts.",
+      "Co-payments are common on imported or high-tech components such as microprocessor knees, advanced feet, or carbon-fibre parts. We do not quote a percentage: have yours confirmed in writing before the order goes in.",
       "PMBs can fund amputation-related prosthetics outside the standard appliance limit, based on diagnosis rather than how the injury occurred, but interpretation varies between schemes.",
       "Ex gratia payments are discretionary top-ups some schemes consider once standard benefit and PMB routes are exhausted.",
       "RAF (motor vehicle accidents) and COIDA (workplace injuries) are separate funding routes from medical aid, each with their own claims and pre-authorisation process."
     ],
     "references": [
-      {
-        "title": "Prosthetics Medical Aid Coverage in South Africa",
-        "publisher": "Medical Aid Online",
-        "url": "https://medicalaidonline.co.za/prosthetics-cover-medical-aid/"
-      },
       {
         "title": "5 Best Medical Aid Schemes That Cover Prosthetics",
         "publisher": "medicalaid.com",
