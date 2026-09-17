@@ -27,6 +27,7 @@ import {
   KNIT_TYPES,
   OTHER_COMPRESSION,
 } from "../../components/compression/compression-data";
+import { imageSize } from "../../data/image-sizes";
 
 // Compression is a specialism in its own right at this practice, so this page
 // deliberately steps away from the shared ServicePageTemplate: same brand hue,
@@ -607,6 +608,7 @@ export function CompressionPage() {
                       <img
                         src={o.image}
                         alt={o.name}
+                        {...imageSize(o.image)}
                         loading="lazy"
                         className="h-full w-full object-contain p-1.5"
                       />

@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { ArrowRight, Calendar } from "lucide-react";
 import { sortedPosts } from "../data/blog-posts";
 import { formatPostDate } from "./blog/RichText";
+import { imageSize } from "../data/image-sizes";
 
 /** Homepage teaser for the three newest advice articles: real crawlable
  *  content with internal links to the blog's answer pages. */
@@ -32,6 +33,7 @@ export function LatestFromBlog() {
                 <img
                   src={post.image}
                   alt={post.imageAlt}
+                  {...imageSize(post.image)}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                 />

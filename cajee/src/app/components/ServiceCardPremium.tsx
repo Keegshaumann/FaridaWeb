@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Check } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
+import { imageSize } from "../data/image-sizes";
 
 interface ServiceCardPremiumProps {
   /** The services hub renders these directly under its h1, so they must be h2
@@ -47,6 +48,7 @@ export function ServiceCardPremium({
             <img
               src={image}
               alt={title}
+              {...imageSize(image)}
               className="relative z-10 w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
             />
           </div>

@@ -5,6 +5,7 @@ import { SEO } from "../components/SEO";
 import { Button } from "../components/ui/button";
 import { getPostBySlug, sortedPosts } from "../data/blog-posts";
 import { RichText, formatPostDate } from "../components/blog/RichText";
+import { imageSize } from "../data/image-sizes";
 import { NotFoundPage } from "./NotFoundPage";
 
 export function BlogPostPage() {
@@ -130,6 +131,7 @@ export function BlogPostPage() {
             <img
               src={post.image}
               alt={post.imageAlt}
+              {...imageSize(post.image)}
               className="aspect-[16/9] w-full object-cover"
             />
           </div>
