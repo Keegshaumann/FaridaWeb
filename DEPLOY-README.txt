@@ -1,31 +1,38 @@
 CAJEE BOTES WEBSITE — HOSTINGER DEPLOYMENT GUIDE
 ================================================
 
-PUSHING TO GITHUB DOES NOT PUBLISH ANYTHING
--------------------------------------------
-There is no build or deploy action in this repository, on any branch. A push
-to GitHub changes GitHub and nothing else. The live site only changes when a
-person uploads files to Hostinger by hand.
+THE SITE DEPLOYS FROM THIS REPOSITORY
+-------------------------------------
+Hostinger is connected to this GitHub repository and serves the `main` branch.
+To publish: commit to `main`, push, then click Deploy in hPanel (Advanced ->
+Git). Nobody uploads files by hand.
 
-(If Hostinger's own Git deployment feature has been switched on in hPanel,
-that would pull a branch on its own. Nobody here has checked hPanel, so treat
-that as unknown rather than as "no".)
+If you find yourself in the File Manager moving files around, stop. Something is
+misconfigured, and the deployment settings are what to fix, not the files.
+
+  CORRECTED 20 SEPTEMBER 2026. This section used to say, in capitals, that
+  pushing to GitHub publishes nothing and that the live site only changes when
+  someone uploads by hand. That was wrong. It cost an afternoon of uploading,
+  deleting and cache-purging that could never have worked.
+
+  It did carry a caveat saying nobody had actually checked hPanel. The lesson:
+  a caveat like that is a job to go and do, not a footnote to skip past.
 
 
-!!! BEFORE YOU REDEPLOY — TWO RULES !!!
----------------------------------------
+!!! ONE FILE LIVES ONLY ON THE SERVER !!!
+-----------------------------------------
 
-RULE 1 — do NOT delete this file on the server:
+A deploy does not touch it, but emptying the folder by hand would:
 
     public_html/patient-intake/mail-config.php
 
-It holds the care@cajeebotes.com mailbox password, so it is kept out of GitHub
-and is NOT part of any upload. Uploading new files over the top of it is safe —
-it is left alone. It only vanishes if you empty the patient-intake folder first.
+It holds the care@cajeebotes.com mailbox password, so it is deliberately kept
+out of GitHub. A deploy leaves it alone. It only vanishes if someone empties the
+patient-intake folder by hand.
 
 If it does get deleted, the intake form still sends, but the emails may start
 going to spam. To fix it: open your local patient-intake folder, copy
-mail-config.php, and upload that one file back to public_html/patient-intake/.
+mail-config.php, and put that one file back in public_html/patient-intake/.
 
 Everything else in patient-intake/ can be overwritten freely.
 
@@ -44,15 +51,15 @@ the whole folder in one go and this cannot happen. Only a partial upload —
 .htaccess on its own — can cause it.
 
 
-WHAT YOU UPLOAD
----------------
-The ROOT of this repository is the site, ready to upload: index.html, 404.html,
+WHAT GETS SERVED
+----------------
+The ROOT of this repository is the site: index.html, 404.html,
 assets/, external/, the page folders (about/, blog/, services/, conditions/,
 contact/, devices/, anatomy/, privacy-policy/, terms-and-conditions/),
 patient-intake/, robots.txt, sitemap.xml, llms.txt, logo.png, og-image.jpg and
 the two .htaccess files.
 
-That is the only copy to deploy from. Do not upload:
+That is the only copy to deploy from. Not served:
   cajee/              the React source and its build folder (see below)
   DEPLOY-README.txt   this file
   .gitignore, .gitattributes
@@ -66,25 +73,33 @@ files. The one exception is patient-intake/, which is PHP and runs on the
 server; it is not produced by the build and must not be deleted from the root.
 
 
-HOW TO PUBLISH (Hostinger File Manager)
----------------------------------------
-1. hPanel  ->  Websites  ->  your site  ->  File Manager.
-2. Open the public_html folder.
-3. Upload the contents of the repository root into public_html. If you zip it
-   first, extract into public_html and then delete the zip.
-4. You should see index.html, 404.html, assets/, external/ and the page folders
-   directly inside public_html (NOT inside a sub-folder).
-5. Make sure "Show hidden files (dotfiles)" is ON in File Manager settings so
-   you can see the .htaccess file — it must be present.
-6. Visit the site and check, at minimum:
+HOW TO PUBLISH
+--------------
+1. Commit to `main` and push.
+2. hPanel -> Websites -> cajeebotes.com -> Advanced -> Git, then Deploy.
+3. Check the site:
        /                                   loads
        /about                              loads (a prerendered folder)
-       /some-address-that-does-not-exist   shows the site's own 404 page
+       /some-address-that-does-not-exist   returns a real 404, not the homepage
        /404.html                           shows the site's own 404 page
 
-IMPORTANT: the files must sit at the ROOT of the site (public_html), not in a
-sub-folder. The site loads its assets from "/", so a sub-folder shows a blank
-page.
+TO CHECK A DEPLOY ACTUALLY LANDED, compare the live file against what git
+stores, NOT against your local copy. This repository normalises line endings
+(.gitattributes sets `* text=auto`), so a local file differs in size from the
+served one even when the content is identical:
+
+    git show main:index.html > expected.html
+    curl -s https://www.cajeebotes.com/index.html > live.html
+    cmp expected.html live.html && echo "live matches main"
+
+IF A DEPLOY REPORTS SUCCESS AND THE SITE DOES NOT CHANGE, check the install
+path before anything else. Hostinger will not install a Git deployment into a
+folder that already has files in it, so a deployment can end up pointed
+somewhere harmless like `/` — quietly publishing to the account root instead of
+the website. That exact fault was found on the sister site cognexa.co.za on
+20 September 2026, after it had been silently broken for an unknown length of
+time. Fixing it meant deleting the repository entry, emptying public_html, and
+adding it again with the Directory field left blank.
 
 
 TWO .htaccess FILES — WHICH IS WHICH
