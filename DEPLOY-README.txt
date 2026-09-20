@@ -36,8 +36,10 @@ mail-config.php, and put that one file back in public_html/patient-intake/.
 
 Everything else in patient-intake/ can be overwritten freely.
 
-RULE 2 — 404.html must reach the server before, or in the same upload as,
-the .htaccess that points at it.
+A NOTE ON 404.html AND .htaccess
+--------------------------------
+These two must arrive together, which a deploy always does - it is only a
+partial hand-upload that could split them.
 
 The .htaccess ends with:
 
@@ -46,9 +48,8 @@ The .htaccess ends with:
 If that .htaccess is live and /404.html is missing, Apache cannot show the
 error page it was told to show, and every mistyped or dead address on a health
 practice's site answers with a bare server message reading "additionally, a 404
-Not Found error was encountered while trying to use an ErrorDocument". Upload
-the whole folder in one go and this cannot happen. Only a partial upload —
-.htaccess on its own — can cause it.
+Not Found error was encountered while trying to use an ErrorDocument". A deploy
+ships both, so this cannot happen unless someone moves files by hand.
 
 
 WHAT GETS SERVED
