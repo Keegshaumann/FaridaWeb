@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,14 +30,25 @@
     <meta property="og:locale" content="en_ZA" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Structured data for search engines and LLMs (also refreshed at runtime) -->
+    <!--
+      Structured data for search engines and LLMs. This is the SHELL copy:
+      src/app/components/SEO.tsx replaces the contents of this same
+      #organization-schema script at runtime and in every prerendered page, so
+      what is written here only ships if the prerender step is skipped or
+      fails. It must therefore never say anything SEO.tsx does not say - keep
+      the description, sameAs and knowsAbout below in step with that file, and
+      do not put a price field in either. The full reasoning is in SEO.tsx,
+      which is compiled away rather than shipped to every visitor; nothing in
+      this comment may repeat a field name the deploy checks grep the built
+      pages for.
+    -->
     <script type="application/ld+json" id="organization-schema">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Farida Cajee-Botes Orthotist Prosthetist",
       "image": "https://www.cajeebotes.com/og-image.jpg",
-      "description": "Professional orthotics and prosthetics services in South Africa with mobile home and hospital assessments.",
+      "description": "Professional orthotics, prosthetics and medical compression services in South Africa, with mobile home and hospital assessments and compression garment fitting.",
       "telephone": "+27118839100",
       "contactPoint": [
         { "@type": "ContactPoint", "telephone": "+27118839100", "contactType": "Appointments", "areaServed": "ZA", "availableLanguage": "en" },
@@ -63,10 +74,19 @@
       "sameAs": [
         "https://www.instagram.com/faridabotes/",
         "https://www.facebook.com/Cajeebotes/",
-        "https://g.page/r/CRVd5g59XrdmEAI"
+        "https://maps.google.com/?cid=12162722174863443304"
       ],
-      "priceRange": "$$",
-      "knowsAbout": ["Orthotics", "Prosthetics", "Medical Compression", "Mobility Aids", "Breast Prosthetics"],
+      "knowsAbout": [
+        "Orthotics",
+        "Prosthetics",
+        "Medical Compression",
+        "Compression Therapy",
+        "Graduated Compression Stockings",
+        "Compression Garment Fitting",
+        "Lymphoedema Compression",
+        "Mobility Aids",
+        "Breast Prosthetics"
+      ],
       "areaServed": [
         { "@type": "City", "name": "Sandton" },
         { "@type": "City", "name": "Johannesburg" },

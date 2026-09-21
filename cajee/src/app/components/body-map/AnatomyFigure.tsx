@@ -1,4 +1,5 @@
 import type { BodyView } from "./anatomy-data";
+import { imageSize } from "../../data/image-sizes";
 
 /**
  * Anatomical figure for the body map: a clean render of the actual muscular
@@ -11,6 +12,7 @@ export function AnatomyFigure({ view }: { view: BodyView }) {
     <img
       src={`/anatomy/${view}.png`}
       alt={`Anatomical ${view} view of the human muscular system`}
+      {...imageSize(`/anatomy/${view}.png`)}
       className="pointer-events-none h-full w-full select-none object-contain"
       draggable={false}
       loading="lazy"

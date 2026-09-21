@@ -27,6 +27,7 @@ import {
   KNIT_TYPES,
   OTHER_COMPRESSION,
 } from "../../components/compression/compression-data";
+import { imageSize } from "../../data/image-sizes";
 
 // Compression is a specialism in its own right at this practice, so this page
 // deliberately steps away from the shared ServicePageTemplate: same brand hue,
@@ -93,6 +94,12 @@ export function CompressionPage() {
           url: "https://www.cajeebotes.com",
         },
         areaServed: ["Centurion", "Pretoria", "Midrand", "Johannesburg", "Gauteng", "South Africa"],
+        // Each item below is typed as a Service, not a Product. The practice
+        // does not sell garments off a shelf: every one is measured on the leg,
+        // prescribed and fitted, and no price is attached to any of them. A
+        // Product with no price, availability or seller is an incomplete
+        // product listing; a fitting service with no price is simply a service.
+        // Changed 2026-09-17 - do not change it back to Product.
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Lower-limb compression garments",
@@ -105,7 +112,12 @@ export function CompressionPage() {
             "Flat-knit made-to-measure compression garments",
           ].map((name) => ({
             "@type": "Offer",
-            itemOffered: { "@type": "Product", name, category: "Medical compression garment" },
+            itemOffered: {
+              "@type": "Service",
+              name,
+              serviceType: "Compression garment measuring and fitting",
+              category: "Medical compression garment",
+            },
           })),
         },
       },
@@ -596,6 +608,7 @@ export function CompressionPage() {
                       <img
                         src={o.image}
                         alt={o.name}
+                        {...imageSize(o.image)}
                         loading="lazy"
                         className="h-full w-full object-contain p-1.5"
                       />

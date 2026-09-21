@@ -8,8 +8,12 @@ Allow: /
 # Disallow admin panel from search engines
 Disallow: /admin
 
-# Private, link-only patient intake form (not for public discovery)
-Disallow: /patient-intake
+# The patient intake form is NOT blocked here on purpose. It carries
+# <meta name="robots" content="noindex, nofollow, noarchive"> on the page
+# itself, and a crawler has to be allowed to fetch the page to read that tag.
+# Blocking it here meant Google never read the noindex, so the address could
+# still have been listed as a bare link if anyone linked to it. Keep the
+# noindex tag on patient-intake/index.html; do not put the block back.
 
 # Sitemap location
 Sitemap: https://www.cajeebotes.com/sitemap.xml
@@ -21,13 +25,11 @@ Crawl-delay: 1
 User-agent: Googlebot
 Allow: /
 Disallow: /admin
-Disallow: /patient-intake
 
 # Specific instructions for Bing
 User-agent: Bingbot
 Allow: /
 Disallow: /admin
-Disallow: /patient-intake
 
 # Block common bad bots (optional)
 User-agent: AhrefsBot

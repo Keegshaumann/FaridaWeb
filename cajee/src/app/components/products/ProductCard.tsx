@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import type { Device } from "../../data/device-types";
 import { deviceImage } from "./product-images";
+import { imageSize } from "../../data/image-sizes";
 
 export function ProductCard({ device }: { device: Device }) {
   return (
@@ -13,6 +14,7 @@ export function ProductCard({ device }: { device: Device }) {
         <img
           src={deviceImage(device)}
           alt={device.name}
+          {...imageSize(deviceImage(device))}
           className="absolute inset-0 h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />

@@ -5,7 +5,6 @@ import { AboutPage } from "./pages/AboutPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { ConditionsPage } from "./pages/ConditionsPage";
 import { ContactPage } from "./pages/ContactPage";
-import { AdminPage } from "./pages/AdminPage";
 import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { TermsAndConditionsPage } from "./pages/TermsAndConditionsPage";
 import { BlogPage } from "./pages/BlogPage";
@@ -40,9 +39,5 @@ export const router = createBrowserRouter([
       { path: "terms-and-conditions", Component: TermsAndConditionsPage },
       { path: "*", Component: NotFoundPage },
     ],
-  },
-  {
-    path: "/admin",
-    Component: AdminPage,
   },
 ]);

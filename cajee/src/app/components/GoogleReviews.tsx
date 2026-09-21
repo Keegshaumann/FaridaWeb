@@ -49,10 +49,20 @@ export function GoogleReviews() {
           <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text-dark)] mb-3">
             What Patients Say on Google
           </h2>
-          <div className="flex items-center justify-center gap-2">
-            <Stars />
-            <span className="text-sm font-semibold text-[var(--text-dark)]">5.0 on Google Reviews</span>
-          </div>
+          {/* No typed-in star rating or average here on purpose: a figure hard-coded
+              into the site cannot move when a lower review arrives and carries no
+              date. The live rating belongs on the Google Business Profile, which is
+              where this link sends the reader. */}
+          <a
+            href={READ_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--text-dark)] underline underline-offset-4 transition-opacity hover:opacity-70"
+            onClick={() => trackButtonClick("read_google_reviews_heading", "reviews_section")}
+          >
+            Read our reviews on Google
+            <ExternalLink className="h-4 w-4" />
+          </a>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 max-w-4xl mx-auto">

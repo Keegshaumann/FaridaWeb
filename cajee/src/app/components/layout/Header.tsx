@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
+import { imageSize } from "../../data/image-sizes";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -79,8 +80,7 @@ export function Header() {
               src={practiceLogo}
               alt="Farida Cajee-Botes Orthotist & Prosthetist"
               className="h-12 w-auto object-contain sm:h-14"
-              width={244}
-              height={70}
+              {...imageSize(practiceLogo)}
             />
           </Link>
 

@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
 import { Link, useParams } from "react-router";
-import { ArrowLeft, Calendar, CheckCircle2, Clock, User } from "lucide-react";
+import { ArrowLeft, Calendar, CheckCircle2, Clock, RefreshCw, User } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { Button } from "../components/ui/button";
 import { getPostBySlug, sortedPosts } from "../data/blog-posts";
 import { RichText, formatPostDate } from "../components/blog/RichText";
+import { imageSize } from "../data/image-sizes";
 import { NotFoundPage } from "./NotFoundPage";
 
 export function BlogPostPage() {
@@ -47,7 +48,10 @@ export function BlogPostPage() {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.date,
-    dateModified: post.date,
+    // Falls back to the publish date only when the article has never been
+    // changed. Before dateUpdated existed this was hard-wired to post.date, so
+    // an article could be rewritten and still report itself as untouched.
+    dateModified: post.dateUpdated ?? post.date,
     inLanguage: "en-ZA",
     author: {
       "@type": "Person",
@@ -67,12 +71,18 @@ export function BlogPostPage() {
 
   return (
     <>
+      {/* ogType: an article is an article, not a "website". The two dates are
+          the same fields the BlogPosting block above publishes, so a shared
+          link and the structured data can never disagree. */}
       <SEO
         fullTitle={post.metaTitle ?? `${post.title} | Farida Cajee-Botes`}
         title={post.title}
         description={post.metaDescription}
         ogImage={`https://www.cajeebotes.com${post.image}`}
         schema={articleSchema}
+        ogType="article"
+        articlePublished={post.date}
+        articleModified={post.dateUpdated ?? post.date}
       />
 
       {/* Hero */}
@@ -105,6 +115,12 @@ export function BlogPostPage() {
                 <Calendar className="h-4 w-4" />
                 {formatPostDate(post.date)}
               </span>
+              {post.dateUpdated && (
+                <span className="inline-flex items-center gap-1.5">
+                  <RefreshCw className="h-4 w-4" />
+                  Last updated {formatPostDate(post.dateUpdated)}
+                </span>
+              )}
               <span className="inline-flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
                 {post.readMinutes} min read
@@ -121,6 +137,7 @@ export function BlogPostPage() {
             <img
               src={post.image}
               alt={post.imageAlt}
+              {...imageSize(post.image)}
               className="aspect-[16/9] w-full object-cover"
             />
           </div>

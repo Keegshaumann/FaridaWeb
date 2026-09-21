@@ -7,6 +7,7 @@ import { WordPullUp } from "./word-pull-up";
 import compressionHand from "@/assets/77d6f8e28b13c674cd884a45561314f8bc9c3747.webp";
 import prostheticHand from "@/assets/bc7cb1d93a78168a45badcfc409e4f0629d4e07d.webp";
 import { SafeWarp } from "./safe-warp";
+import { imageSize } from "../../data/image-sizes";
 
 export function MedicalHero() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -42,6 +43,7 @@ export function MedicalHero() {
         <img
           src={compressionHand}
           alt="Compression orthotic device"
+          {...imageSize(compressionHand)}
           className="absolute top-0 right-0 h-full w-auto object-cover animate-arm-right"
           style={{ 
             transform: 'translateX(0)',
@@ -55,6 +57,7 @@ export function MedicalHero() {
         <img
           src={prostheticHand}
           alt="Prosthetic device"
+          {...imageSize(prostheticHand)}
           className="absolute bottom-0 left-0 h-full w-auto object-cover animate-arm-left"
           style={{ 
             transform: 'translateX(0)',

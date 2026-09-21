@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import { imageSize } from "../data/image-sizes";
 
 interface ServiceCardProps {
   title: string;
@@ -32,6 +33,7 @@ export function ServiceCard({ title, description, image, link, bgColor, index = 
             <img
               src={image}
               alt={title}
+              {...imageSize(image)}
               className="relative w-full h-full object-contain drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
             />
           </div>

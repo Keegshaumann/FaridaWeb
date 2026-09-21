@@ -12,6 +12,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SEO } from "../components/SEO";
+import { imageSize } from "../data/image-sizes";
 import { LegDiagram } from "../components/compression/LegDiagram";
 
 // Import product images
@@ -440,6 +441,7 @@ export function HomePage() {
                 <img
                   src="/anatomy/hero-muscle.png"
                   alt="Muscular anatomy figure: explore the conditions we treat"
+                  {...imageSize("/anatomy/hero-muscle.png")}
                   className="h-auto w-64 max-w-full drop-shadow-xl transition-transform duration-300 group-hover:scale-[1.03] sm:w-72"
                   loading="lazy"
                 />

@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import { imageSize } from "../data/image-sizes";
 
 interface FeatureItem {
   id: number;
@@ -66,6 +67,7 @@ export function AccordionFeatureSection({
               <img
                 src={image}
                 alt={imageAlt ?? mainHeading}
+                {...imageSize(image)}
                 className="w-full h-auto rounded-lg object-cover"
               />
             </div>
@@ -105,6 +107,7 @@ export function AccordionFeatureSection({
             <img
               src={image}
               alt={imageAlt ?? mainHeading}
+              {...imageSize(image)}
               className="w-full h-auto rounded-lg object-cover shadow-lg"
             />
           </div>

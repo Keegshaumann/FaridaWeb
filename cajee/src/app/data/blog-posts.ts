@@ -10,17 +10,18 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Prosthetic Leg Cost in South Africa | Farida Cajee-Botes",
     "category": "Prosthetics",
     "date": "2026-02-11",
+    "dateUpdated": "2026-09-16",
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-cost-south-africa.jpg",
     "imageAlt": "Below-knee prosthetic leg with carbon-fibre socket and titanium pylon on a prosthetics workbench",
-    "metaDescription": "A plain-language ZAR breakdown of prosthetic leg costs in South Africa, covering below-knee vs above-knee builds and medical aid, RAF and COIDA funding.",
-    "excerpt": "Prosthetic leg costs in South Africa vary enormously by component level and funding route. Here is what drives the price, in rand, and how medical aid, the RAF and COIDA fit in.",
+    "metaDescription": "What drives the cost of a prosthetic leg in South Africa, why it is quoted per patient, and how medical aid PMBs, the RAF and COIDA funding work.",
+    "excerpt": "Prosthetic leg costs in South Africa vary by component level and funding route. Here is what drives the price, why it is quoted per patient, and how medical aid, the RAF and COIDA fit in.",
     "readMinutes": 6,
     "sections": [
       {
         "heading": "How much does a prosthetic leg cost in South Africa?",
         "paragraphs": [
-          "There is no single honest figure, and that is the real answer. A prosthetic leg is built, not bought off a shelf: the socket is made to your residual limb and carries most of the clinical time, while the components bought in from manufacturers, chiefly the foot and, for an above-knee limb, the knee joint, carry most of the hardware cost. An above-knee prosthesis costs more than a below-knee one because a knee joint is added to the build, and a microprocessor-controlled knee sits at the top of that range. We have chosen not to publish rand ranges for the limb itself, because the figures circulating on South African price-comparison pages are not attributed to any published survey and we will not repeat numbers we cannot stand behind. What is verifiable is the funding side: the South African Orthotic and Prosthetic Association states that the medical aid benefit \"can range anything between R3,000 and a maximum of R55,000, excluding ex gratia or PMB\" [SAOPA](https://saopa.co.za/reimbursement/). Every amputee's situation is different, and Farida Cajee-Botes provides a written, itemised quotation after a proper assessment rather than a quote from a website. [Book an assessment](/contact) to get figures specific to you."
+          "There is no single honest figure, and that is the real answer. A prosthetic leg is built, not bought off a shelf: the socket is made to your residual limb and carries most of the clinical time, while the components bought in from manufacturers, chiefly the foot and, for an above-knee limb, the knee joint, carry most of the hardware cost. An above-knee prosthesis costs more than a below-knee one because a knee joint is added to the build, and a microprocessor-controlled knee costs more than a simple mechanical one. We have chosen not to publish rand ranges for the limb itself, because the figures circulating on South African price-comparison pages are not attributed to any published survey and we will not repeat numbers we cannot stand behind. What is verifiable is the funding side: the South African Orthotic and Prosthetic Association states that the medical aid benefit \"can range anything between R3,000 and a maximum of R55,000, excluding ex gratia or PMB\" [SAOPA](https://saopa.co.za/reimbursement/). Every amputee's situation is different, and Farida Cajee-Botes provides a written, itemised quotation after a proper assessment rather than a quote from a website. [Book an assessment](/contact) to get figures specific to you."
         ]
       },
       {
@@ -64,8 +65,9 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     "keyTakeaways": [
-      "A basic below-knee prosthesis in South Africa is typically reported in the region of R63,000–R85,000 for entry-level components, rising to roughly R150,000–R200,000 or more for advanced carbon-fibre and hydraulic componentry, according to South African market pricing sources.",
-      "Above-knee prostheses cost more because a prosthetic knee joint is added, generally taking the total from around R85,000 up to R250,000 or more; builds that include a microprocessor-controlled knee sit at the top of the range, commonly reported in the R150,000–R400,000+ bracket for the complete leg.",
+      "There is no single honest price for a prosthetic leg in South Africa. The socket is moulded for one person's residual limb and the components are chosen for how that person lives, so the cost is worked out per patient rather than read off a price list.",
+      "This practice does not publish rand ranges for the limb itself. The figures circulating on South African price-comparison pages are not attributed to any published survey, and we do not repeat numbers we cannot stand behind.",
+      "An above-knee prosthesis costs more than a below-knee one because a knee joint is added to the build. A simple mechanical knee costs less than a microprocessor-controlled knee, which adjusts resistance as you walk.",
       "Medical aid Prescribed Minimum Benefits (PMBs), the Road Accident Fund and COIDA are the three main funding routes in South Africa, each with different rules, tariffs and authorisation processes.",
       "Because so much depends on residual limb shape, activity level and funding source, a written itemised quotation after a proper assessment is the only reliable way to know your actual cost."
     ],
@@ -123,6 +125,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Medical Aid Cover for Prosthetics | Farida Cajee-Botes",
     "category": "General",
     "date": "2026-03-03",
+    "dateUpdated": "2026-09-17",
     "author": "Farida Cajee-Botes",
     "image": "/blog/medical-aid-prosthetics-orthotics-cover.jpg",
     "imageAlt": "Clinician and patient completing medical aid funding paperwork at a consultation desk",
@@ -133,7 +136,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "The short answer",
         "paragraphs": [
-          "Yes. Most South African medical schemes cover prosthetics and orthotics, but the extent of that cover depends heavily on your scheme, your chosen plan option, and how the device is motivated and coded. Cover generally comes from one of two places: an annual external medical appliance benefit with its own rand limit, or Prescribed Minimum Benefits (PMBs), where a qualifying condition unlocks guaranteed funding without the usual sub-limits. Reported appliance benefit limits across South African schemes range from roughly R3,000 up to R55,000 or more a year depending on the plan, excluding PMB or ex gratia payments [SAOPA](https://saopa.co.za/reimbursement/), and independent scheme comparisons show similarly wide variation, with some comprehensive options publishing external prosthesis limits well above R55,000 per family [medicalaid.com](https://medicalaid.com/medical-aids/best-medical-aid-schemes-that-cover-prosthetics/). Co-payments of 10–30% are also common on advanced, custom or imported components [Medical Aid Online](https://medicalaidonline.co.za/prosthetics-cover-medical-aid/). Two patients with the same amputation, on two different schemes, can therefore end up facing very different out-of-pocket costs. Understanding which funding route applies to you, and getting the pre-authorisation paperwork right the first time, usually makes the biggest difference to how smoothly the process goes."
+          "Yes. Most South African medical schemes cover prosthetics and orthotics, but the extent of that cover depends heavily on your scheme, your chosen plan option, and how the device is motivated and coded. Cover generally comes from one of two places: an annual external medical appliance benefit with its own rand limit, or Prescribed Minimum Benefits (PMBs), where a qualifying condition unlocks guaranteed funding without the usual sub-limits. Reported appliance benefit limits across South African schemes range from roughly R3,000 up to R55,000 or more a year depending on the plan, excluding PMB or ex gratia payments [SAOPA](https://saopa.co.za/reimbursement/), and independent scheme comparisons show similarly wide variation, with some comprehensive options publishing external prosthesis limits well above R55,000 per family [medicalaid.com](https://medicalaid.com/medical-aids/best-medical-aid-schemes-that-cover-prosthetics/). Co-payments are also common on advanced, custom or imported components. We do not quote a percentage for them, because the amount depends on your scheme, your plan and the specific component, and the only figure worth planning around is the one your scheme confirms in writing when it authorises the device. Two patients with the same amputation, on two different schemes, can therefore end up facing very different out-of-pocket costs. Understanding which funding route applies to you, and getting the pre-authorisation paperwork right the first time, usually makes the biggest difference to how smoothly the process goes."
         ]
       },
       {
@@ -146,7 +149,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Co-payments on imported and high-tech components",
         "paragraphs": [
-          "Many of the higher-performing prosthetic feet, microprocessor knees, carbon-fibre components and specialised orthotic materials used in modern practice are imported, and schemes frequently apply a co-payment when a device exceeds their reference tariff or falls outside their preferred component list. Reported co-payments for these advanced or imported items commonly sit in the 10–30% range, and even at that percentage the rand amount can still be substantial on a higher-end device [Medical Aid Online](https://medicalaidonline.co.za/prosthetics-cover-medical-aid/). Whether a co-payment applies, and how large it is, depends on the specific component, the scheme's designated service provider (DSP) arrangements, and whether a clinically equivalent, locally available option exists.",
+          "Many of the higher-performing prosthetic feet, microprocessor knees, carbon-fibre components and specialised orthotic materials used in modern practice are imported, and schemes frequently apply a co-payment when a device exceeds their reference tariff or falls outside their preferred component list. Whether a co-payment applies, and how large it is, depends on the specific component, the scheme's designated service provider (DSP) arrangements, and whether a clinically equivalent, locally available option exists. On a higher-end device, even a modest share of the cost is a large rand amount.",
           "This is one of the most common sources of billing surprise for patients, which is why we discuss component choice and likely co-payments with you up front, before an order is placed, rather than after."
         ]
       },
@@ -187,17 +190,12 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "keyTakeaways": [
       "Most SA medical aids fund prosthetics and orthotics via an annual external appliance benefit, reported to range from about R3,000 to R55,000+ depending on scheme and plan.",
-      "Co-payments of 10–30% are common on imported or high-tech components such as microprocessor knees, advanced feet, or carbon-fibre parts.",
+      "Co-payments are common on imported or high-tech components such as microprocessor knees, advanced feet, or carbon-fibre parts. Have yours confirmed in writing before the order goes in.",
       "PMBs can fund amputation-related prosthetics outside the standard appliance limit, based on diagnosis rather than how the injury occurred, but interpretation varies between schemes.",
       "Ex gratia payments are discretionary top-ups some schemes consider once standard benefit and PMB routes are exhausted.",
       "RAF (motor vehicle accidents) and COIDA (workplace injuries) are separate funding routes from medical aid, each with their own claims and pre-authorisation process."
     ],
     "references": [
-      {
-        "title": "Prosthetics Medical Aid Coverage in South Africa",
-        "publisher": "Medical Aid Online",
-        "url": "https://medicalaidonline.co.za/prosthetics-cover-medical-aid/"
-      },
       {
         "title": "5 Best Medical Aid Schemes That Cover Prosthetics",
         "publisher": "medicalaid.com",
