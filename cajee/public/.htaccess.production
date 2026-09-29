@@ -26,6 +26,15 @@ RedirectMatch 404 /(package(-lock)?|tsconfig)\.json$
   Require all denied
 </FilesMatch>
 
+# The four image folders are not pages and have no index.html, so the folder
+# address itself answers 404, with or without the slash. The images inside are
+# untouched. Without this the live server bounced /devices to /devices/ and
+# back forever (found 2026-09-17, still live 2026-09-29): it adds the slash to
+# a folder itself, despite DirectorySlash Off below, and the trailing-slash
+# rule below takes it off again. A new folder without an index.html that
+# should not be a page needs adding to this line.
+RedirectMatch 404 ^/(anatomy|assets|devices|external)/?$
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
