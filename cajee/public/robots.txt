@@ -5,9 +5,6 @@
 User-agent: *
 Allow: /
 
-# Disallow admin panel from search engines
-Disallow: /admin
-
 # The patient intake form is NOT blocked here on purpose. It carries
 # <meta name="robots" content="noindex, nofollow, noarchive"> on the page
 # itself, and a crawler has to be allowed to fetch the page to read that tag.
@@ -24,12 +21,10 @@ Crawl-delay: 1
 # Specific instructions for Google
 User-agent: Googlebot
 Allow: /
-Disallow: /admin
 
 # Specific instructions for Bing
 User-agent: Bingbot
 Allow: /
-Disallow: /admin
 
 # Block common bad bots (optional)
 User-agent: AhrefsBot
