@@ -29,7 +29,7 @@ export function MobilityAidsPage() {
       clinicalApproach="Our approach focuses on functional assessment in your home or hospital setting. We evaluate your physical abilities, environment layout, and daily routines to ensure mobility aids are appropriate, safe, and support long-term independence."
       seoTitle="Mobility Aids | Wheelchairs, Crutches, Walking Frames | South Africa"
       seoFullTitle="Wheelchairs, Walkers & Mobility Aids | Sandton"
-      seoDescription="Wheelchairs, walkers, rollators, crutches and walking aids fitted to support safe movement and independence, with expert guidance and home visits."
+      seoDescription="Wheelchairs, walkers, rollators, crutches and walking aids, fitted after an assessment in Sandton or at your home to support safe, independent movement."
       seoKeywords="mobility aids South Africa, wheelchairs, crutches, walking frames, walking sticks, rollators, transfer aids, bathroom safety equipment, mobility equipment supplier"
     />
   );
