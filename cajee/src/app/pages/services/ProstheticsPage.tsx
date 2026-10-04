@@ -27,7 +27,7 @@ export function ProstheticsPage() {
       clinicalApproach="Our approach begins with a comprehensive assessment of your physical condition, rehabilitation goals, daily environment, and functional needs. We conduct mobile home or hospital assessments where needed to ensure your prosthetic device supports real-world use and long-term independence."
       seoTitle="Prosthetic Limb Fitting & Management | Upper & Lower Limb Prosthetics"
       seoFullTitle="Prosthetic Limb Fitting in Sandton | Farida Cajee-Botes"
-      seoDescription="Expert upper and lower limb prosthetic fitting (feet, knees and hands) with paediatric care and mobile home and hospital assessments in South Africa."
+      seoDescription="Upper and lower limb prosthetic fitting in Sandton (feet, knees and hands), with children's prosthetic care and home or hospital visits across Gauteng."
       seoKeywords="prosthetic limbs South Africa, prosthetic leg fitting, prosthetic arm, limb prosthesis, amputee rehabilitation, prosthetic care, prosthetic specialist, mobile prosthetic service"
     />
   );
