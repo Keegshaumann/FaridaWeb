@@ -29,7 +29,7 @@ export function OffTheShelfOrthoticsPage() {
       clinicalApproach="All devices are recommended following clinical assessment to ensure they are appropriate for your condition, goals, and activity level. We provide guidance on use, application, and progression."
       seoTitle="Off-the-Shelf Orthotics | Ready-to-Wear Braces & Supports"
       seoFullTitle="Braces & Supports Fitted in Sandton | Farida Cajee-Botes"
-      seoDescription="Ready-to-fit orthotic braces and supports for the knee, ankle, back, wrist, neck and more, fitted after an individual assessment in South Africa."
+      seoDescription="Ready-to-fit braces and supports for the knee, ankle, back, wrist and neck, fitted after an individual assessment in Sandton or at your home."
       seoKeywords="off-the-shelf orthotics, ready-made braces, joint supports, ankle braces, knee supports, wrist braces, sports bracing, post-operative supports, orthotic devices South Africa"
     />
   );
