@@ -124,7 +124,7 @@ for (const route of ROUTES) {
   try {
     await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: "domcontentloaded", timeout: 45000 });
     await page.waitForSelector("h1, h2", { timeout: 20000 });
-    await new Promise((r) => setTimeout(r, 1200));
+    await new Promise((r) => setTimeout(r, 5000));
 
     const html = await page.evaluate(() => {
       // Strip ephemeral UI so the snapshot is clean page content; the live
