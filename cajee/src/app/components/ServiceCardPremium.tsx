@@ -88,7 +88,7 @@ export function ServiceCardPremium({
           {/* CTA Button */}
           <Link to={link} className="mt-auto">
             <Button className="w-full bg-[var(--accent-purple)] hover:bg-[var(--accent-purple)]/90 text-white rounded-full py-6 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
-              Learn More
+              Learn More<span className="sr-only"> about {title}</span>
               <svg
                 className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
                 fill="none"
