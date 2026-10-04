@@ -522,6 +522,10 @@ export function CompressionPage() {
             Not sure whether compression is the right treatment for your leg? Have a look at the{" "}
             <Link to="/conditions" className="font-medium text-[var(--comp-plum)] underline underline-offset-4">
               conditions we treat
+            </Link>
+            , read{" "}
+            <Link to="/blog/support-stockings-vs-compression-stockings" className="font-medium text-[var(--comp-plum)] underline underline-offset-4">
+              how support stockings differ from medical compression
             </Link>{" "}
             or book an assessment and we will tell you honestly.
           </p>
