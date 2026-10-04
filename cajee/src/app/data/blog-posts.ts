@@ -14,7 +14,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-cost-south-africa.jpg",
     "imageAlt": "Below-knee prosthetic leg with carbon-fibre socket and titanium pylon on a prosthetics workbench",
-    "metaDescription": "What drives the cost of a prosthetic leg in South Africa, why it is quoted per patient, and how medical aid PMBs, the RAF and COIDA funding work.",
+    "metaDescription": "What drives the price of a prosthetic (artificial) leg in South Africa, above or below the knee, why it is quoted per patient, and how it can be funded.",
     "excerpt": "Prosthetic leg costs in South Africa vary by component level and funding route. Here is what drives the price, why it is quoted per patient, and how medical aid, the RAF and COIDA fit in.",
     "readMinutes": 6,
     "sections": [
