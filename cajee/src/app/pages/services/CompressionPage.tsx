@@ -603,7 +603,11 @@ export function CompressionPage() {
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
                 Our focus is lower-limb compression, but upper-limb and body compression garments are
-                measured and ordered on request.
+                measured and ordered on request. After breast surgery, see also{" "}
+                <Link to="/services/breast-prosthetics" className="font-medium text-[var(--comp-plum)] underline underline-offset-4">
+                  breast prostheses and silicone restoration
+                </Link>
+                .
               </p>
               <ul className="mt-6 space-y-3">
                 {OTHER_COMPRESSION.map((o) => (
