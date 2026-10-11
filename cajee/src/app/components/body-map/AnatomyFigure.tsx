@@ -3,16 +3,17 @@ import { imageSize } from "../../data/image-sizes";
 
 /**
  * Anatomical figure for the body map: a clean render of the actual muscular
- * anatomy model (CC0). Front/back PNGs live in /public/anatomy and are swappable
+ * anatomy model (CC0). Front/back PNGs live in /public/anatomy, served as the
+ * WebP copies beside them, and are swappable
  * without touching the map logic. The parent overlays hotspots by percentage,
  * so the image sits behind them at object-contain within a fixed aspect box.
  */
 export function AnatomyFigure({ view }: { view: BodyView }) {
   return (
     <img
-      src={`/anatomy/${view}.png`}
+      src={`/anatomy/${view}.webp`}
       alt={`Anatomical ${view} view of the human muscular system`}
-      {...imageSize(`/anatomy/${view}.png`)}
+      {...imageSize(`/anatomy/${view}.webp`)}
       className="pointer-events-none h-full w-full select-none object-contain"
       draggable={false}
       loading="lazy"

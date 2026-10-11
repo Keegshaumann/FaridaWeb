@@ -1,4 +1,4 @@
-import practiceLogo from '@/assets/cajee-logo-lockup.png'
+import practiceLogo from '@/assets/cajee-logo-lockup.webp'
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X, ChevronDown } from "lucide-react";

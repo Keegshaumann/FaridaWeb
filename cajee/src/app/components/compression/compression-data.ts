@@ -299,10 +299,10 @@ export const COMPRESSION_CARE: string[] = [
 ];
 
 export const OTHER_COMPRESSION: { name: string; image: string }[] = [
-  { name: "Compression arm sleeves", image: "/devices/compression-arm-sleeve.png" },
-  { name: "Compression gloves & gauntlets", image: "/devices/compression-glove.png" },
-  { name: "Compression vests & chest garments", image: "/devices/mastectomy-vest.png" },
-  { name: "Scar & burn compression garments", image: "/devices/compression-bandaging.png" },
+  { name: "Compression arm sleeves", image: "/devices/compression-arm-sleeve.webp" },
+  { name: "Compression gloves & gauntlets", image: "/devices/compression-glove.webp" },
+  { name: "Compression vests & chest garments", image: "/devices/mastectomy-vest.webp" },
+  { name: "Scar & burn compression garments", image: "/devices/compression-bandaging.webp" },
 ];
 
 export const COMPRESSION_FAQS: { q: string; a: string }[] = [

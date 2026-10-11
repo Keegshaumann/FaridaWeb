@@ -439,9 +439,9 @@ export function HomePage() {
             <div className="order-2 flex justify-center md:order-1">
               <Link to="/conditions" aria-label="Explore the conditions we treat" className="group relative">
                 <img
-                  src="/anatomy/hero-muscle.png"
+                  src="/anatomy/hero-muscle.webp"
                   alt="Muscular anatomy figure: explore the conditions we treat"
-                  {...imageSize("/anatomy/hero-muscle.png")}
+                  {...imageSize("/anatomy/hero-muscle.webp")}
                   className="h-auto w-64 max-w-full drop-shadow-xl transition-transform duration-300 group-hover:scale-[1.03] sm:w-72"
                   loading="lazy"
                 />

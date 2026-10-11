@@ -1,6 +1,10 @@
 import type { Device } from "../../data/device-types";
 
-// Real, unbranded product photos live in /public/devices/{key}.png.
+// Real, unbranded product photos live in /public/devices/{key}.png, and each one
+// is served as the WebP copy beside it, /public/devices/{key}.webp (same pixel
+// size, about a tenth of the weight). A new photo needs both files: make the
+// .webp with `cwebp -q 90 -m 6 -sharp_yuv -metadata none {key}.png -o {key}.webp`,
+// then run `node scripts/image-sizes.mjs`.
 // imageKeyFor picks the most representative product image for each device; a few
 // image types are shared by closely-related devices (e.g. all prosthetic feet).
 // This is the single place visuals are chosen, so swapping a device's photo is
@@ -89,5 +93,5 @@ function imageKeyFor(d: Pick<Device, "service" | "bodyPart" | "name">): string {
 }
 
 export function deviceImage(device: Pick<Device, "service" | "bodyPart" | "name">): string {
-  return `/devices/${imageKeyFor(device)}.png`;
+  return `/devices/${imageKeyFor(device)}.webp`;
 }
