@@ -17,6 +17,15 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
+    <!-- DM Sans, the site font, from Google Fonts. Linked here rather than
+         @import-ed from src/styles/fonts.css: an @import is only found once
+         the site's own stylesheet has downloaded, which made the first paint
+         wait for two stylesheets one after the other. Linked here, both load
+         at the same time. Same font, same weights, same display=swap. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" />
+
     <!-- Open Graph / social defaults (per-page values are set at runtime) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Farida Cajee-Botes Orthotist &amp; Prosthetist" />
