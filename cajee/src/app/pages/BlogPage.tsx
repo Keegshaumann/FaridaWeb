@@ -41,7 +41,7 @@ export function BlogPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-              {posts.map((post) => (
+              {posts.map((post, i) => (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
@@ -53,7 +53,12 @@ export function BlogPage() {
                       alt={post.imageAlt}
                       {...imageSize(post.image)}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
+                      // The first card's picture is on screen when the page
+                      // opens (it is the largest thing in view on a phone), so
+                      // it loads at once and first; the rest wait for a scroll.
+                      // Lower-case fetchpriority because React 18 does not
+                      // know the attribute; the spread keeps TypeScript quiet.
+                      {...(i === 0 ? { fetchpriority: "high" } : { loading: "lazy" as const, decoding: "async" as const })}
                     />
                   </div>
                   <div className="flex flex-1 flex-col p-6">

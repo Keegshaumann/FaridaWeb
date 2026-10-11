@@ -68,6 +68,8 @@ export function AccordionFeatureSection({
                 src={image}
                 alt={imageAlt ?? mainHeading}
                 {...imageSize(image)}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto rounded-lg object-cover"
               />
             </div>
@@ -108,6 +110,8 @@ export function AccordionFeatureSection({
               src={image}
               alt={imageAlt ?? mainHeading}
               {...imageSize(image)}
+              loading="lazy"
+              decoding="async"
               className="w-full h-auto rounded-lg object-cover shadow-lg"
             />
           </div>

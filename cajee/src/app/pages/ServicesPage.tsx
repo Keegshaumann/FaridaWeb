@@ -126,6 +126,7 @@ export function ServicesPage() {
                   image={service.image}
                   features={service.features}
                   link={service.link}
+                  lazy={index >= 3}
                 />
               </div>
             ))}

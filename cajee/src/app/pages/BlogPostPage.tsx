@@ -138,6 +138,10 @@ export function BlogPostPage() {
               src={post.image}
               alt={post.imageAlt}
               {...imageSize(post.image)}
+              // The article's picture is the largest thing on screen when the
+              // page opens, so the browser fetches it ahead of other images.
+              // Lower-case because React 18 does not know fetchPriority.
+              {...{ fetchpriority: "high" }}
               className="aspect-[16/9] w-full object-cover"
             />
           </div>

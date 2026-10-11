@@ -313,6 +313,7 @@ export function HomePage() {
                   image={service.image}
                   features={service.features}
                   link={service.link}
+                  lazy
                 />
               </div>
             ))}

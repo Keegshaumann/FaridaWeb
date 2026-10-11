@@ -14,6 +14,11 @@ interface ServiceCardPremiumProps {
   image: string;
   features: string[];
   link: string;
+  /** True where the card always starts below the fold (every card on the
+   *  homepage, the second row on the services hub), so its picture waits
+   *  until the visitor scrolls near it. Leave it off for cards that can be
+   *  on screen when the page opens. */
+  lazy?: boolean;
 }
 
 export function ServiceCardPremium({
@@ -24,6 +29,7 @@ export function ServiceCardPremium({
   image,
   features,
   link,
+  lazy = false,
 }: ServiceCardPremiumProps) {
   const Heading = (headingLevel === 2 ? "h2" : "h3") as "h2" | "h3";
   const indexFormatted = index.toString().padStart(2, '0');
@@ -49,6 +55,7 @@ export function ServiceCardPremium({
               src={image}
               alt={title}
               {...imageSize(image)}
+              {...(lazy ? { loading: "lazy" as const, decoding: "async" as const } : {})}
               className="relative z-10 w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
             />
           </div>
