@@ -1,7 +1,9 @@
-# Farida Cajee-Botes Orthotist & Prosthetist — TESTING config (Apache/LiteSpeed)
-# Safe for a temporary Hostinger URL: it does NOT force the www / cajeebotes.com
-# domain, so it won't break a preview/temp subdomain. When you go live on the
-# real domain, rename .htaccess.production to .htaccess (see DEPLOY-README.txt).
+# Farida Cajee-Botes Orthotist & Prosthetist: the server config (Apache/LiteSpeed)
+# This is the file the live server reads. It sends the bare domain
+# cajeebotes.com to https://www.cajeebotes.com and leaves every other host name
+# alone, so it still works on a temporary Hostinger URL. HTTPS itself is forced
+# by the host. .htaccess.production is not read by the server. Never rename or
+# swap either file on the server (see DEPLOY-README.txt).
 
 Options -Indexes
 
@@ -41,6 +43,16 @@ RedirectMatch 404 ^/(anatomy|assets|devices|external)/?$
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # The one public address is https://www.cajeebotes.com, which the canonical
+  # tags and the sitemap use. Send the bare domain there in one hop, keeping
+  # the path and the query string. Only cajeebotes.com itself is matched.
+  # /.well-known/ is left alone so certificate checks on the bare domain are
+  # never redirected, and /404.html so that the ErrorDocument below still
+  # answers a missing address there with a 404 rather than a redirect.
+  RewriteCond %{HTTP_HOST} ^cajeebotes\.com$ [NC]
+  RewriteCond %{REQUEST_URI} !^/(\.well-known/|404\.html$)
+  RewriteRule ^ https://www.cajeebotes.com%{REQUEST_URI} [R=301,L]
 
   # Retired page: /case-studies was removed. 301 to the blog so indexed URLs
   # and any inbound links land somewhere useful instead of the SPA 404.
