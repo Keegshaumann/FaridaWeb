@@ -585,7 +585,7 @@
         <a href="mailto:care@cajeebotes.com">care@cajeebotes.com</a><br>
         Morningside, Sandton &middot; Gauteng, South Africa
       </div>
-      <div class="copy">© 2026 Farida Cajee-Botes Orthotist &amp; Prosthetist. All rights reserved. &middot; Home Visits Available</div>
+      <div class="copy">© <span id="copyYear">2026</span> Farida Cajee-Botes Orthotist &amp; Prosthetist. All rights reserved. &middot; Home Visits Available</div>
     </div>
   </footer>
 
@@ -602,6 +602,8 @@
       var todayISO = "";
       try {
         var d = new Date();
+        var cy = document.getElementById("copyYear");
+        if (cy) cy.textContent = String(d.getFullYear());
         todayISO = d.getFullYear() + "-" +
           String(d.getMonth() + 1).padStart(2, "0") + "-" +
           String(d.getDate()).padStart(2, "0");
