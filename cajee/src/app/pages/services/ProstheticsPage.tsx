@@ -9,7 +9,7 @@ export function ProstheticsPage() {
       serviceSlug="prosthetics"
       title="Prosthetic Limb Fitting in Sandton"
       subtitle="Restoring mobility, function, and independence following limb loss"
-      whatIsIt="Prosthetics are externally applied medical devices used to replace a missing limb or body part following amputation, trauma, or congenital limb difference. They are carefully designed and fitted to restore mobility, daily function, and independence."
+      whatIsIt="Prosthetics are externally applied medical devices used to replace a missing limb or body part following amputation, trauma, or congenital limb difference. They are carefully designed and fitted to restore mobility, daily function, and independence. Each prosthesis is custom-made for one person: the socket is moulded to your residual limb and the parts are chosen for how you live."
       benefits={[
         "Walking and standing safely",
         "Performing self-care tasks independently",

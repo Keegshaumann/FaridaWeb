@@ -490,7 +490,7 @@ export function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold text-[var(--text-dark)] mb-6 text-center">
-              Personalised Care, Wherever You Need It
+              Your Orthotist and Prosthetist, Wherever You Need It
             </h2>
             <div className="space-y-4 text-left text-[var(--text-muted)] leading-relaxed">
               <p>
