@@ -173,9 +173,9 @@ export function HomePage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotics & Prosthetics Sandton | Farida Cajee-Botes"
+        fullTitle="Orthotist & Prosthetist in Sandton | Farida Cajee-Botes"
         title="Orthotics, Prosthetics & Medical Compression"
-        description="Orthotist and prosthetist in Morningside, Sandton. Custom orthotics, prosthetic limbs, braces and medical compression, fitted after assessment."
+        description="Orthotist and prosthetist in Morningside, Sandton: custom braces and insoles, prosthetic limbs and medical compression, with home visits across Gauteng."
         keywords="orthotist prosthetist South Africa, medical compression, compression specialist, compression stockings South Africa, compression garments, compression therapy, custom orthotics, prosthetic limbs, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphoedema compression, orthotic devices"
       />
       
