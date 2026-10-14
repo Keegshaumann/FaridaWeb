@@ -26,7 +26,7 @@ export function ContactPage() {
           first shortening dropped "Book an assessment" for a flat "Assessments
           at", which fits but stops inviting anyone to do anything. */}
       <SEO
-        fullTitle="Orthotist & Prosthetist in Morningside, Sandton | Contact"
+        fullTitle="Book an Orthotist or Prosthetist in Morningside, Sandton"
         title="Contact Us & Book an Assessment"
         description="Book an assessment at our Morningside rooms in Sandton, or a home visit in Centurion, Pretoria, Midrand or Johannesburg. Call or WhatsApp 079 998 2203."
         keywords="orthotist Morningside, prosthetist Sandton, orthotist Sandton, prosthetist Morningside, orthotist Rivonia Road, mobile orthotist Centurion, home visit prosthetist Centurion, book orthotist assessment Gauteng"
