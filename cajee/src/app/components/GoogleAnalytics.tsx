@@ -4,6 +4,13 @@ import { useLocation } from 'react-router';
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = 'G-87YWW84BMB';
 
+// Second GA4 property (Position Xero's agency Analytics account), added
+// 15 October 2026 beside the one above, which stays as it is. It is configured
+// in the same script, straight after the first, so the same gtag.js loader and
+// the same cookie consent setting serve both. Page changes inside the app are
+// counted by the property's own history-change tracking.
+const GA_MEASUREMENT_ID_2 = 'G-GZ0WB3C5KX';
+
 export function GoogleAnalytics() {
   const location = useLocation();
 
@@ -47,6 +54,7 @@ export function GoogleAnalytics() {
       gtag('config', '${GA_MEASUREMENT_ID}', {
         page_path: window.location.pathname + window.location.search
       });
+      gtag('config', '${GA_MEASUREMENT_ID_2}');
     `;
     document.head.appendChild(script2);
   }, []);
