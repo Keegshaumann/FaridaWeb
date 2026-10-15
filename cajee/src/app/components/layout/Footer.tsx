@@ -283,8 +283,16 @@ export function Footer() {
 
         {/* pb-32 below md: the fixed WhatsApp badge (112px, 24px off the bottom) sat on this line on phones */}
         <div className="pt-8 pb-32 md:pb-0 border-t border-white/20">
+          {/* Credit: owner's instruction, 15 October 2026. Below sm it takes its own line and the dot goes, so no separator hangs */}
           <p className="text-center text-white/70 text-sm">
             © {new Date().getFullYear()} Farida Cajee-Botes Orthotist Prosthetist. All rights reserved.
+            <span aria-hidden="true" className="hidden sm:inline">{" · "}</span>
+            <span className="block sm:inline whitespace-nowrap mt-1 sm:mt-0">
+              Website by{" "}
+              <a href="https://www.positionxero.com/" className="text-white/80 hover:text-white transition-colors">
+                Position Xero
+              </a>
+            </span>
           </p>
         </div>
       </div>
