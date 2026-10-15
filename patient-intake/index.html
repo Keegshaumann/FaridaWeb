@@ -137,6 +137,12 @@
       padding: 11px 13px; width: 100%; transition: border-color .15s, box-shadow .15s, background .15s;
     }
     .field textarea { resize: vertical; min-height: 78px; }
+    /* Phones: iPhone Safari zooms the whole page into any field set below 16px
+       the moment it is tapped, and the visitor has to pinch back out after
+       every field (15 October 2026). */
+    @media (max-width: 767px) {
+      .field input, .field textarea, .field select { font-size: 16px; }
+    }
     .field input::placeholder, .field textarea::placeholder { color: var(--text-muted); opacity: 1; }
     .field input:focus,
     .field textarea:focus,

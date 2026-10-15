@@ -281,7 +281,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/20">
+        {/* pb-32 below md: the fixed WhatsApp badge (112px, 24px off the bottom) sat on this line on phones */}
+        <div className="pt-8 pb-32 md:pb-0 border-t border-white/20">
           <p className="text-center text-white/70 text-sm">
             © {new Date().getFullYear()} Farida Cajee-Botes Orthotist Prosthetist. All rights reserved.
           </p>
