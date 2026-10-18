@@ -286,8 +286,12 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Services Grid - Light Gray (continues from above) */}
-      <section className="relative py-16 md:py-32 pt-32 bg-[#E9F4FB]">
+      {/* Services Grid - Light Gray (continues from above). overflow-x-clip:
+          the floating card pictures are 400px wide and pushed past the right
+          edge from 1024 to about 1160px, so the page scrolled sideways. Clipping
+          at the section's edge (the window's edge) cuts only what was off
+          screen; nothing is clipped vertically. */}
+      <section className="relative py-16 md:py-32 pt-32 bg-[#E9F4FB] overflow-x-clip">
         {/* Section Header */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16 relative z-10">
           <div className="text-center">
