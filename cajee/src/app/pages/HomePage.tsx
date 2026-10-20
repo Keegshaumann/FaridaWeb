@@ -36,7 +36,7 @@ export function HomePage() {
   const productCategories = [
     {
       title: "Custom Orthotics",
-      description: "Individually designed orthotic devices crafted to support your unique biomechanical needs and rehabilitation goals.",
+      description: "Orthotic devices designed for you alone, to support the way your body moves and what you're working towards in rehab.",
       image: offTheShelfImg,
       hoverImage: customOrthoticsHoverImg,
       link: "/services/custom-orthotics",
@@ -49,7 +49,7 @@ export function HomePage() {
     },
     {
       title: "Off-the-Shelf Orthotics",
-      description: "High-quality prefabricated orthotic devices for immediate support during recovery, injury management, or post-operative care.",
+      description: "High-quality ready-made orthotic devices you can wear straight away, during recovery, for an injury or after an operation.",
       image: mobilityAidsImg,
       hoverImage: offTheShelfHoverImg,
       link: "/services/off-the-shelf-orthotics",
@@ -62,7 +62,7 @@ export function HomePage() {
     },
     {
       title: "Mobility Aids",
-      description: "Professional mobility equipment to support safe movement and independence in daily living and rehabilitation.",
+      description: "Professional mobility equipment to help you move safely and independently, day to day and during rehab.",
       image: customOrthoticsImg,
       hoverImage: mobilityAidsHoverImg,
       link: "/services/mobility-aids",
@@ -88,7 +88,7 @@ export function HomePage() {
     },
     {
       title: "Breast & Silicone Prosthetics",
-      description: "Compassionate, dignified care for breast, facial, and digit prosthetic needs with a focus on comfort and natural appearance.",
+      description: "Breast, facial, finger and toe prostheses, with compassionate, dignified care and a focus on comfort and a natural look.",
       image: breastProstheticsImg,
       hoverImage: breastProstheticsHoverImg,
       link: "/services/breast-prosthetics",
@@ -101,7 +101,7 @@ export function HomePage() {
     },
     {
       title: "Upper & Lower Limb Prosthetics",
-      description: "Advanced prosthetic solutions designed to restore function, mobility, and confidence for individuals with limb loss.",
+      description: "Upper and lower limb prostheses (artificial arms and legs) for people with limb loss, designed to restore function, mobility and confidence.",
       image: limbProstheticsImg,
       hoverImage: limbProstheticsHoverImg,
       link: "/services/prosthetics",
@@ -117,23 +117,23 @@ export function HomePage() {
   const whyChooseUs = [
     {
       icon: Heart,
-      title: "Individualised, Assessment-Led Care",
-      description: "Every treatment plan begins with understanding your unique needs, goals, and environment.",
+      title: "Assessment-Led Care, Planned for You",
+      description: "Every treatment plan starts with understanding what you need, what you're aiming for and your surroundings.",
     },
     {
       icon: Award,
       title: "Clinician-Led Expertise",
-      description: "Qualified orthotist and prosthetist providing evidence-based, patient-centred support.",
+      description: "You're seen by a qualified orthotist and prosthetist, and the support is evidence-based and built around you.",
     },
     {
       icon: Users,
-      title: "Functional & Thoughtful Design",
-      description: "Devices designed for real-life use, comfort, and long-term independence.",
+      title: "Designed for Everyday Life",
+      description: "Devices designed to be used in real life, comfortable to wear, and aimed at long-term independence.",
     },
     {
       icon: Home,
-      title: "Home & Hospital Accessibility",
-      description: "Mobile service bringing professional care to your home or hospital bedside.",
+      title: "Home and Hospital Visits",
+      description: "We bring professional care to your home or your hospital bedside.",
     },
   ];
 
@@ -190,34 +190,34 @@ export function HomePage() {
       <section className="relative bg-[#E9F4FB]">
         <div className="relative z-10">
           <AccordionFeatureSection
-            mainHeading="Restoring Movement. Supporting Independence."
+            mainHeading="Restoring Movement and Supporting Independence"
             subHeading="Personalised Orthotic & Prosthetic Care"
-            mainDescription="Farida is a qualified Orthotist & Prosthetist dedicated to providing thoughtful, clinically driven solutions tailored to each patient's individual needs. From orthotic and prosthetic care to medical compression and breast care, her approach is centred around understanding the person behind the prescription and finding solutions that support comfort, function and independence."
+            mainDescription="Farida is a qualified Orthotist & Prosthetist. Her work covers orthotic and prosthetic care, medical compression and breast care, and it's centred on understanding the person behind the prescription. What she recommends is a clinical decision made for that patient, to support their comfort, function and independence."
             features={[
               {
                 id: 1,
-                title: "Comprehensive, assessment-led care tailored to your diagnosis and daily living needs",
-                description: "Every treatment plan begins with a thorough assessment of your unique condition, lifestyle, and rehabilitation goals."
+                title: "A full assessment first, based on your diagnosis and the way you live",
+                description: "Every treatment plan starts with a thorough assessment: your condition, how you live, and what you're working towards in your rehabilitation."
               },
               {
                 id: 2,
-                title: "Mobile home and hospital visits to ensure early rehabilitation without unnecessary travel",
-                description: "Professional care delivered directly to your location, making quality orthotic and prosthetic services accessible during recovery."
+                title: "Home and hospital visits, so your rehabilitation starts early without unnecessary travel",
+                description: "We bring professional care to you, so quality orthotic and prosthetic services are within reach while you recover."
               },
               {
                 id: 3,
-                title: "Individualised treatment plans focused on long-term function and independence",
-                description: "Custom solutions designed to support your ongoing mobility, comfort, and quality of life."
+                title: "A plan made for you, aimed at function and independence for the long term",
+                description: "Designed around you, to keep supporting your mobility, comfort and quality of life."
               },
               {
                 id: 4,
-                title: "A respectful, culturally sensitive approach that prioritises dignity, privacy, and patient comfort",
-                description: "Care delivered with empathy, professionalism, and respect for your personal needs and preferences."
+                title: "Respectful and culturally sensitive, with your dignity, privacy and comfort put first",
+                description: "Care given with empathy and professionalism, and with respect for what you need and prefer."
               },
               {
                 id: 5,
-                title: "Professional, compassionate care delivered with attention to detail and ethical practice",
-                description: "Evidence-based interventions provided by a qualified orthotist and prosthetist committed to the highest standards of care."
+                title: "Compassionate and professional, with attention to detail and ethical practice",
+                description: "Treatment is evidence-based and comes from a qualified orthotist and prosthetist who holds herself to a high standard of care."
               }
             ]}
             image={faridaGraduationImg}
@@ -247,11 +247,11 @@ export function HomePage() {
                     Care Where You Need It
                   </h2>
                   <p className="text-[var(--text-muted)] leading-relaxed mb-6">
-                    We offer a mobile home and hospital service model, bringing professional orthotic, prosthetic and compression care directly to you. Whether you're recovering at home, in hospital, or unable to travel, we conduct comprehensive assessments, including compression measuring and fitting, in your own environment to ensure the most appropriate and functional outcomes.
+                    We run a mobile home and hospital service, so professional orthotic, prosthetic and compression care comes to you. If you're recovering at home, you're in hospital or you can't travel, we do the full assessment where you are, compression measuring and fitting included. Seeing you in your own environment is how we make sure the result is appropriate and works for you.
                   </p>
                   <Link to="/about">
                     <Button variant="default" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full">
-                      Learn More About Our Approach
+                      See How We Work
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -268,7 +268,7 @@ export function HomePage() {
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-4 h-4 w-4 flex-shrink-0 text-[var(--accent-purple)]" />
-                      Comprehensive Assessment
+                      Full Assessment
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-4 h-4 w-4 flex-shrink-0 text-[var(--accent-purple)]" />
@@ -299,7 +299,7 @@ export function HomePage() {
               Our Services
             </h2>
             <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
-              Comprehensive orthotic, prosthetic and medical compression care tailored to your needs
+              The full range of orthotic, prosthetic and medical compression care, matched to your needs
             </p>
           </div>
         </div>
@@ -403,7 +403,7 @@ export function HomePage() {
               Why Choose Us
             </h2>
             <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
-              Professional, compassionate care focused on long-term independence
+              Professional, compassionate care, with long-term independence as the goal
             </p>
           </div>
 
@@ -461,8 +461,8 @@ export function HomePage() {
                 Where does it hurt?
               </h2>
               <p className="mt-4 text-lg text-[var(--text-muted)] leading-relaxed">
-                From neck and back pain to knees, ankles and feet, pinpoint your pain on our interactive
-                body map and discover the orthotic or prosthetic solution that can help.
+                Neck, back, knees, ankles or feet: mark where it hurts on the interactive
+                body map and see which orthotic or prosthetic options can help.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-2 md:justify-start">
                 {["Neck Pain", "Lower Back Pain", "Knee Pain", "Ankle Pain", "Foot & Heel Pain"].map((c) => (

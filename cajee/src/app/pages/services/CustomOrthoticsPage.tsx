@@ -8,8 +8,8 @@ export function CustomOrthoticsPage() {
       relatedSlugs={["are-custom-orthotics-worth-it", "custom-orthotics-cost-south-africa", "child-walking-on-toes-when-to-worry"]}
       serviceSlug="custom-orthotics"
       title="Custom Orthotics in Sandton"
-      subtitle="Supporting, aligning, and improving function for lasting independence"
-      whatIsIt="Orthotics are externally applied medical devices designed to support, align, or improve the function of joints, muscles, and limbs affected by injury, neurological conditions, developmental delay, or musculoskeletal disorders."
+      subtitle="Orthoses made for your body: they support it, align it and help it work better, with lasting independence as the aim"
+      whatIsIt="Orthotics are medical devices worn on the outside of the body. They're designed to support or align joints, muscles and limbs, or to improve how they work, when an injury, a neurological condition, developmental delay or a musculoskeletal disorder has affected them."
       benefits={[
         "Improving walking pattern and posture",
         "Supporting weak or unstable joints",
@@ -27,7 +27,7 @@ export function CustomOrthoticsPage() {
         "Sports Orthotics",
         "Post-Operative Joint Support",
       ]}
-      clinicalApproach="Every orthotic prescription begins with comprehensive assessment, understanding your functional goals, home environment, and real-life mobility demands. We design devices that support independence and integrate seamlessly into your daily routine."
+      clinicalApproach="Before anything is prescribed, we do a full assessment: what you want to be able to do, your home, and how much moving around your day involves. Then we design a device that supports your independence and fits easily into your daily routine."
       seoTitle="Custom Orthotics | Orthotic Devices & Braces | South Africa"
       seoFullTitle="Custom Orthotics in Sandton | Farida Cajee-Botes"
       seoDescription="Custom-made orthotics in Sandton: AFOs, spinal and scoliosis braces and moulded insoles, individually fitted at the rooms, at home or in hospital."

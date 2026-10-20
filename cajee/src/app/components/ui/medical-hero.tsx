@@ -89,7 +89,7 @@ export function MedicalHero() {
           {/* Paragraph & Buttons - Right Side */}
           <div className="max-w-md text-left lg:text-right">
             <p className="mb-6 leading-relaxed text-sm lg:text-base" style={{ mixBlendMode: 'difference', color: 'white' }}>
-              Care begins with understanding your condition, goals, and daily environment. We provide clinician-led, individualised support for people living with injury, illness, or physical impairment.
+              Care starts with understanding your condition, your goals and your daily surroundings. It's led by a clinician and planned around you, for people living with an injury, an illness or a physical impairment.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-start lg:justify-end">
               <Link to="/contact#book">

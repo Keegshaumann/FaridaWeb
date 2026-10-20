@@ -288,7 +288,7 @@ export const DEVICES: Device[] = [
     name: "Standard/Attendant-Propelled Wheelchair",
     bodyPart: "Full Body",
     useCase: "For patients needing an easy-to-fold, transportable wheelchair that can be self-propelled or pushed by a caregiver.",
-    description: "A folding-frame manual wheelchair that provides a practical, general-purpose mobility solution for self-propulsion or attendant use. It folds compactly for transport and storage, supporting users with general, temporary or assisted mobility needs.",
+    description: "A folding-frame manual wheelchair that's a practical, general-purpose choice: you can propel it yourself or a caregiver can push it. It folds compactly for transport and storage, and suits general, temporary or assisted mobility needs.",
     features: ["Folding frame for easy transport and storage","Push handles for attendant propulsion","Removable or swing-away footrests and armrests","Available in a range of seat widths"],
   },
   {

@@ -11,23 +11,23 @@ export function AboutPage() {
   const whyChooseUs = [
     {
       id: "1",
-      title: "Individualised, Assessment-Led Care",
-      description: "Every intervention begins with a comprehensive clinical assessment. Orthoses and prostheses are prescribed according to diagnosis, functional goals, and daily environment, ensuring appropriate support, optimal fit, and long-term function.",
+      title: "Assessment-Led Care, Planned for You",
+      description: "Nothing is prescribed before a full clinical assessment. Orthoses and prostheses are then prescribed for your diagnosis, what you need to be able to do and where you live and move, so you get appropriate support, the right fit and function that lasts.",
     },
     {
       id: "2",
       title: "Clinician-Led Expertise",
-      description: "Care is delivered by Farida Cajee-Botes, a qualified Orthotist and Prosthetist committed to combining technical precision with a compassionate, patient-focused approach.",
+      description: "Your care comes from Farida Cajee-Botes herself, a qualified Orthotist and Prosthetist who pairs technical precision with compassion and keeps the focus on the patient.",
     },
     {
       id: "3",
-      title: "Functional & Thoughtful Design",
-      description: "Devices are selected and designed to prioritise comfort, durability, and real-life usability, supporting independence at home, work, school, and in the community.",
+      title: "Designed for Everyday Life",
+      description: "Devices are chosen and designed to be comfortable, to last and to be easy to use in real life, supporting your independence at home, at work, at school and out in the community.",
     },
     {
       id: "4",
-      title: "Home & Hospital Accessibility",
-      description: "Our mobile service model brings professional care to your home or hospital bedside, removing barriers to access and ensuring real-world appropriateness.",
+      title: "Home and Hospital Visits",
+      description: "We bring professional care to your home or hospital bedside, so getting to us isn't a barrier, and the device is fitted for the place you'll use it.",
     },
   ];
 
@@ -174,7 +174,7 @@ export function AboutPage() {
                     visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
                   }}
                 >
-                  Farida Cajee-Botes is a qualified Orthotist and Prosthetist providing individualised, clinician-led rehabilitation support for people living with injury, illness, or physical impairment across Gauteng, South Africa.
+                  Farida Cajee-Botes is a qualified Orthotist and Prosthetist working across Gauteng, South Africa. She supports people living with an injury, an illness or a physical impairment through their rehabilitation, and she leads each patient's care herself and plans it around that patient.
                 </motion.p>
                 <motion.p
                   className="mb-8 max-w-lg text-base text-[var(--text-muted)] leading-relaxed"
@@ -183,7 +183,7 @@ export function AboutPage() {
                     visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
                   }}
                 >
-                  With a deep commitment to assessment-led care, Farida works closely with patients, caregivers, and hospital teams to design and prescribe orthotic and prosthetic devices that support real-world function, dignity, and long-term independence.
+                  Every device starts with an assessment. Farida works closely with patients, their caregivers and hospital teams to design and prescribe orthotic and prosthetic devices that support how people function day to day, their dignity and their independence in the long run.
                 </motion.p>
                 <Link to="/contact#book">
                   <motion.div
@@ -214,7 +214,7 @@ export function AboutPage() {
                 </div>
                 <div className="flex items-center">
                   <Award className="mr-2 h-5 w-5 text-[var(--accent-purple)]" />
-                  <span>Clinical Excellence</span>
+                  <span>Clinician-Led Care</span>
                 </div>
                 <div className="flex items-center">
                   <Home className="mr-2 h-5 w-5 text-[var(--accent-purple)]" />
@@ -253,7 +253,7 @@ export function AboutPage() {
                 Why Choose Us
               </h2>
               <p className="text-lg text-[var(--text-muted)] max-w-2xl mx-auto">
-                Professional orthotic and prosthetic care grounded in clinical excellence, compassion, and individualised support
+                Professional orthotic and prosthetic care, given with compassion and planned for each patient
               </p>
             </div>
 
@@ -298,7 +298,7 @@ export function AboutPage() {
                 Our Approach
               </h2>
               <p className="text-lg text-[var(--text-muted)]">
-                Comprehensive assessment, thoughtful prescription, and ongoing support
+                A full assessment, a considered prescription, then ongoing support
               </p>
             </div>
 
@@ -312,7 +312,7 @@ export function AboutPage() {
                   Assessment
                 </h3>
                 <p className="text-[var(--text-muted)]">
-                  Comprehensive clinical evaluation of your condition, goals, and daily environment
+                  A full clinical assessment of your condition, your goals and your daily surroundings
                 </p>
               </div>
 
@@ -325,7 +325,7 @@ export function AboutPage() {
                   Prescription
                 </h3>
                 <p className="text-[var(--text-muted)]">
-                  Devices prescribed for optimal fit, function, and long-term independence
+                  The device is prescribed to fit well, work well and support your independence over time
                 </p>
               </div>
 
@@ -338,7 +338,7 @@ export function AboutPage() {
                   Support
                 </h3>
                 <p className="text-[var(--text-muted)]">
-                  Regular reviews and adjustments to ensure continued comfort and effectiveness
+                  Regular reviews and adjustments, so it stays comfortable and keeps doing its job
                 </p>
               </div>
             </div>
@@ -346,13 +346,13 @@ export function AboutPage() {
             {/* Detailed Approach Content */}
             <div className="mt-12 space-y-4 text-lg text-[var(--text-muted)] leading-relaxed bg-[var(--purple-light)] rounded-2xl p-8 md:p-10">
               <p>
-                Every patient journey begins with a comprehensive clinical assessment. We take time to understand your medical history, current condition, functional goals, and the environment in which you live and move.
+                It all starts with a full clinical assessment. We take the time to understand your medical history, your condition as it is now, what you want to be able to do, and the places you live and move in.
               </p>
               <p>
-                We believe the best outcomes come from devices that are prescribed thoughtfully, fitted carefully, and reviewed regularly. Our mobile service model allows us to conduct assessments and fittings in your home or hospital room, ensuring real-world appropriateness and comfort.
+                We believe the best outcomes come from a device that's prescribed with thought, fitted with care and reviewed regularly. Because we can assess and fit you at home or in your hospital room, the device is chosen for the place you'll use it day to day, and for your comfort there.
               </p>
               <p>
-                Whether you need a prosthetic limb, custom orthotic device, compression garment, or mobility aid, we focus on practical support, dignity, and improved daily function.
+                A prosthetic limb, a custom orthotic device, a compression garment or a mobility aid: whichever you need, we focus on practical support, your dignity and helping you manage better day to day.
               </p>
             </div>
           </div>
@@ -370,7 +370,7 @@ export function AboutPage() {
               Let's Work Together
             </h3>
             <p className="text-lg text-[var(--text-muted)] mb-8 max-w-2xl mx-auto">
-              If you'd like to discuss your needs or book an assessment, we're here to help.
+              To talk through what you need, or to book an assessment, get in touch.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact#book">

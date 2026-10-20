@@ -8,8 +8,8 @@ export function MobilityAidsPage() {
       relatedSlugs={["medical-aid-prosthetics-orthotics-cover", "orthotist-home-visits-gauteng", "walking-with-a-prosthetic-leg"]}
       serviceSlug="mobility-aids"
       title="Wheelchairs, Walkers and Mobility Aids"
-      subtitle="Supporting safe movement and independence at home and in the community"
-      whatIsIt="Mobility aids are assistive devices prescribed to support safe movement in the home and community. They are selected based on your physical condition, environment, and functional goals to promote independence and reduce fall risk."
+      subtitle="Helping you move safely and independently, at home and out in the community"
+      whatIsIt="Mobility aids are assistive devices prescribed to help you move safely at home and out in the community. Which one you get depends on your physical condition, your surroundings and what you want to be able to do, and the aim is more independence and a lower risk of falling."
       benefits={[
         "Improving walking safety and stability",
         "Preventing falls and injuries",
@@ -26,7 +26,7 @@ export function MobilityAidsPage() {
         "Stair Navigation Support",
         "Functional Environment Assessments",
       ]}
-      clinicalApproach="Our approach focuses on functional assessment in your home or hospital setting. We evaluate your physical abilities, environment layout, and daily routines to ensure mobility aids are appropriate, safe, and support long-term independence."
+      clinicalApproach="We assess how you manage in your own home or in hospital. We look at what you can physically do, how the space is laid out and what your day involves, so the mobility aid we recommend is appropriate and safe, and supports your independence over the long term."
       seoTitle="Mobility Aids | Wheelchairs, Crutches, Walking Frames | South Africa"
       seoFullTitle="Wheelchairs, Walkers & Mobility Aids | Sandton"
       seoDescription="Wheelchairs, walkers, rollators, crutches and walking aids, fitted after an assessment in Sandton or at your home to support safe, independent movement."
