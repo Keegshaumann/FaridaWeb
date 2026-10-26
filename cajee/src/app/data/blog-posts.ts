@@ -764,7 +764,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "author": "Farida Cajee-Botes",
     "image": "/blog/can-orthotics-fix-flat-feet.jpg",
     "imageAlt": "Adult feet with flattened arches standing on a wooden floor",
-    "metaDescription": "No. Insoles do not reshape an adult arch, but they can ease pain and strain while worn. What orthotics do, why strengthening helps, and when to get assessed.",
+    "metaDescription": "No. Insoles do not reshape an adult arch but can ease pain and strain while worn. What orthotics do, why strengthening helps, and when to get assessed.",
     "excerpt": "Orthotics can ease the pain and strain of flat feet, but they don't reshape an adult arch permanently. Here's what the evidence actually says, and when flat feet need proper treatment.",
     "readMinutes": 6,
     "sections": [
@@ -878,7 +878,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "author": "Farida Cajee-Botes",
     "image": "/blog/does-my-child-need-orthotics.jpg",
     "imageAlt": "Young child's bare feet with flexible flat arches standing on a wooden floor",
-    "metaDescription": "Usually not: painless, flexible flat feet are a normal stage in young children. The red flags that need an assessment, and what to look for in school shoes.",
+    "metaDescription": "Usually not: painless, flexible flat feet are a normal stage in young children. The red flags that need assessing, and what to look for in school shoes.",
     "excerpt": "Most children with flat feet need nothing more than time and sensible shoes. Here's how to tell the difference between a normal stage of development and the red flags that warrant an assessment.",
     "readMinutes": 7,
     "sections": [
