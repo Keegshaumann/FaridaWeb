@@ -42,23 +42,29 @@ export function CookieConsent() {
   if (!showBanner) return null;
 
   return (
-    <div id="cookie-consent" className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6 animate-in slide-in-from-bottom duration-500">
+    // Phones, upright or sideways (below md): a compact bottom sheet (edge to
+    // edge, tighter padding, 13px text, the two buttons side by side, no icon)
+    // so it takes about a quarter of the screen instead of over half and
+    // leaves the hero heading visible. From md up it is the card it always was,
+    // except on short screens (a phone held sideways): see #cookie-consent in
+    // index.css.
+    <div id="cookie-consent" className="fixed bottom-0 left-0 right-0 z-[9999] p-4 md:p-6 max-md:p-0 animate-in slide-in-from-bottom duration-500">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 md:p-8">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+        <div className="cookie-card relative bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 md:p-8 max-md:rounded-b-none max-md:px-4 max-md:pt-2.5 max-md:pb-3">
+          <div className="cookie-row flex flex-col md:flex-row items-start md:items-center gap-4 max-md:gap-2">
             {/* Icon */}
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--accent-purple)] to-[var(--accent-pink)] flex items-center justify-center">
+            <div className="cookie-icon flex-shrink-0 max-md:hidden">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--accent-purple)] to-[var(--purple-medium)] flex items-center justify-center">
                 <Cookie className="h-6 w-6 text-white" />
               </div>
             </div>
 
             {/* Content */}
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-2">
+              <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-2 pr-10 md:pr-0 max-md:text-base max-md:leading-snug max-md:mb-1">
                 We Value Your Privacy
               </h3>
-              <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed max-md:text-[13px] max-md:leading-[1.3] max-md:text-[var(--text-dark)]/80">
                 We use cookies and similar technologies to improve your experience on our website, 
                 analyse site traffic, and personalize content. By clicking "Accept All", you consent 
                 to our use of cookies for analytics and tracking. This helps us understand how 
@@ -67,25 +73,25 @@ export function CookieConsent() {
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <div className="cookie-actions flex flex-row gap-3 w-full md:w-auto">
               <button
                 onClick={declineCookies}
-                className="px-6 py-2.5 rounded-full border-2 border-gray-300 text-[var(--text-dark)] font-semibold hover:bg-gray-50 transition-all whitespace-nowrap"
+                className="px-6 py-2.5 rounded-full border-2 border-gray-300 max-md:flex-1 max-md:px-4 max-md:py-2 text-[var(--text-dark)] font-semibold hover:bg-gray-50 transition-all whitespace-nowrap"
               >
                 Decline
               </button>
               <button
                 onClick={acceptCookies}
-                className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[var(--accent-purple)] to-[var(--accent-pink)] text-white font-semibold hover:shadow-lg transition-all whitespace-nowrap"
+                className="px-6 py-2.5 rounded-full bg-gradient-to-r max-md:flex-1 max-md:px-4 max-md:py-2 from-[var(--accent-purple)] to-[var(--purple-medium)] text-white font-semibold hover:shadow-lg transition-all whitespace-nowrap"
               >
                 Accept All
               </button>
             </div>
 
-            {/* Close button */}
+            {/* Close button: 44px tap area, the icon stays where it was */}
             <button
               onClick={declineCookies}
-              className="absolute top-4 right-4 md:relative md:top-0 md:right-0 text-gray-400 hover:text-gray-600 transition-colors"
+              className="cookie-close absolute top-0.5 right-0.5 md:relative md:top-0 md:right-0 p-3 md:-m-3 text-gray-400 hover:text-gray-600 transition-colors"
               aria-label="Close cookie consent"
             >
               <X className="h-5 w-5" />

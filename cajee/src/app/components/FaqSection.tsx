@@ -66,7 +66,7 @@ export function FaqSection({
     <section className={`relative py-16 md:py-24 ${t.section}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
-          <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${t.eyebrow}`}>
+          <p className={`text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] ${t.eyebrow}`}>
             {eyebrow}
           </p>
           <h2 className={`mt-4 text-3xl font-bold md:text-4xl ${t.heading}`}>{heading}</h2>

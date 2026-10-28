@@ -133,7 +133,7 @@ export function AboutPage() {
                   visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
                 }}
               >
-                <p className="text-xs font-medium tracking-[0.3em] text-[var(--text-muted)] uppercase">
+                <p className="text-[13px] md:text-xs font-medium tracking-[0.3em] text-[var(--text-muted)] uppercase">
                   Orthotist & Prosthetist
                 </p>
               </motion.header>
@@ -207,7 +207,7 @@ export function AboutPage() {
                 visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
               }}
             >
-              <div className="grid grid-cols-1 gap-6 text-xs text-[var(--text-muted)] sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-6 text-[13px] md:text-xs text-[var(--text-muted)] sm:grid-cols-3">
                 <div className="flex items-center">
                   <Heart className="mr-2 h-5 w-5 text-[var(--accent-purple)]" />
                   <span>Compassionate Care</span>

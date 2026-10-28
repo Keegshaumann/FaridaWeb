@@ -93,7 +93,7 @@ export function BlogPostPage() {
               <ArrowLeft className="h-4 w-4" /> All articles
             </Link>
             <span className="mt-4 block">
-              <span className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[11px] font-semibold text-[var(--text-dark)]">
+              <span className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[13px] md:text-[11px] font-semibold text-[var(--text-dark)]">
                 {post.category}
               </span>
             </span>
@@ -166,14 +166,21 @@ export function BlogPostPage() {
                         i += 1;
                       }
                       const [head, ...body] = rows.map((r) => r.split(" | ").map((c) => c.trim()));
+                      // Below sm each row becomes a card: every cell on its own
+                      // line under its column heading (the heading text comes from
+                      // data-label, so nothing is reworded). A five-column table
+                      // needs about 460px and was cut off in a sideways-scrolling
+                      // box on phones. The roles keep it a table for screen readers
+                      // when the display changes.
                       out.push(
-                        <div key={`t-${i}`} className="mb-6 overflow-x-auto">
-                          <table className="w-full border-collapse text-left text-sm">
-                            <thead>
-                              <tr>
+                        <div key={`t-${i}`} className="mb-6 sm:overflow-x-auto">
+                          <table role="table" className="w-full border-collapse text-left text-sm max-sm:block">
+                            <thead role="rowgroup" className="max-sm:sr-only">
+                              <tr role="row">
                                 {head.map((h, hi) => (
                                   <th
                                     key={hi}
+                                    role="columnheader"
                                     scope="col"
                                     className="border-b-2 border-[var(--purple-soft)] px-3 py-2 font-semibold text-[var(--text-dark)]"
                                   >
@@ -182,13 +189,19 @@ export function BlogPostPage() {
                                 ))}
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody role="rowgroup" className="max-sm:block max-sm:space-y-3">
                               {body.map((r, ri) => (
-                                <tr key={ri} className="align-top">
+                                <tr
+                                  key={ri}
+                                  role="row"
+                                  className="align-top max-sm:block max-sm:rounded-xl max-sm:border max-sm:border-[var(--purple-soft)] max-sm:px-4 max-sm:py-3"
+                                >
                                   {r.map((c, ci) => (
                                     <td
                                       key={ci}
-                                      className="border-b border-[var(--purple-soft)]/50 px-3 py-2 text-[var(--text-muted)]"
+                                      role="cell"
+                                      data-label={head[ci]}
+                                      className="border-b border-[var(--purple-soft)]/50 px-3 py-2 text-[var(--text-muted)] max-sm:block max-sm:border-0 max-sm:px-0 max-sm:py-1 max-sm:leading-snug max-sm:before:block max-sm:before:text-[13px] max-sm:before:font-semibold max-sm:before:text-[var(--purple-medium)] max-sm:before:content-[attr(data-label)] max-sm:first:pt-0 max-sm:first:font-semibold max-sm:first:text-[var(--text-dark)]"
                                     >
                                       {c}
                                     </td>
@@ -299,7 +312,7 @@ export function BlogPostPage() {
                     to={`/blog/${r.slug}`}
                     className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-[var(--purple-soft)]/50 transition-all hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    <span className="text-[11px] font-semibold text-[var(--purple-medium)]">{r.category}</span>
+                    <span className="text-[13px] md:text-[11px] font-semibold text-[var(--purple-medium)]">{r.category}</span>
                     <p className="mt-1 text-sm font-semibold leading-snug text-[var(--text-dark)]">{r.title}</p>
                   </Link>
                 ))}

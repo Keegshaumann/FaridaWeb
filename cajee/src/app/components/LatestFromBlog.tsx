@@ -43,7 +43,7 @@ export function LatestFromBlog() {
                   {post.title}
                 </h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-[var(--text-muted)] line-clamp-3">{post.excerpt}</p>
-                <span className="mt-3 inline-flex items-center gap-1 text-xs text-[var(--text-muted)]">
+                <span className="mt-3 inline-flex items-center gap-1 text-[13px] md:text-xs text-[var(--text-muted)]">
                   <Calendar className="h-3.5 w-3.5" />
                   {formatPostDate(post.date)}
                 </span>

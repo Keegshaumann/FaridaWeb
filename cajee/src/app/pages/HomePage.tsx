@@ -349,7 +349,7 @@ export function HomePage() {
               />
             </div>
             <div className="text-center md:text-left">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
+              <p className="text-[13px] md:text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
                 Our compression specialism
               </p>
               <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
@@ -454,7 +454,7 @@ export function HomePage() {
             </div>
             {/* Content */}
             <div className="order-1 text-center md:order-2 md:text-left">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--purple-medium)]">
+              <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.2em] text-[var(--purple-medium)]">
                 Interactive Body Map
               </p>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--text-dark)]">

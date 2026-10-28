@@ -67,7 +67,11 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-      solidHeader
+      // With the phone menu open the panel is opaque: see-through, it let the
+      // homepage hero text and its dark shade show behind the menu links.
+      mobileMenuOpen
+        ? "border-b border-border/40 bg-[#E9F4FB] shadow-sm"
+        : solidHeader
         ? "border-b border-border/40 bg-[#E9F4FB]/95 backdrop-blur supports-[backdrop-filter]:bg-[#E9F4FB]/80 shadow-sm"
         : ""
     }`}

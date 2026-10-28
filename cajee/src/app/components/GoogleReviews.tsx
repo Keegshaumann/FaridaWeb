@@ -81,7 +81,7 @@ export function GoogleReviews() {
                 </span>
                 <span className="flex flex-col">
                   <span className="text-sm font-medium text-[var(--text-dark)]">{review.name}</span>
-                  <span className="text-xs text-[var(--text-muted)]">Google review</span>
+                  <span className="text-[13px] md:text-xs text-[var(--text-muted)]">Google review</span>
                 </span>
               </figcaption>
             </figure>

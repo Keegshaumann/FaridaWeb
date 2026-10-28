@@ -8,7 +8,7 @@ export function ProductCard({ device }: { device: Device }) {
     <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-[var(--purple-soft)]/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Product photo */}
       <div className="relative aspect-square overflow-hidden bg-white">
-        <span className="absolute left-3 top-3 z-10 rounded-full bg-[var(--pink-light)]/90 px-2.5 py-1 text-[11px] font-semibold text-[var(--text-dark)] shadow-sm">
+        <span className="absolute left-3 top-3 z-10 rounded-full bg-[var(--pink-light)]/90 px-2.5 py-1 text-[13px] md:text-[11px] font-semibold text-[var(--text-dark)] shadow-sm">
           {device.bodyPart}
         </span>
         <img
@@ -28,7 +28,7 @@ export function ProductCard({ device }: { device: Device }) {
         {device.features.length > 0 && (
           <ul className="mt-4 space-y-1.5">
             {device.features.map((f) => (
-              <li key={f} className="flex items-start gap-2 text-xs text-[var(--purple-medium)]">
+              <li key={f} className="flex items-start gap-2 text-sm md:text-xs text-[var(--purple-medium)]">
                 <Check className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-[var(--accent-purple)]" />
                 <span>{f}</span>
               </li>

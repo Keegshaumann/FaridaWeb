@@ -54,7 +54,7 @@ export function CompressionLengthSelector() {
               />
             </motion.div>
           </AnimatePresence>
-          <p className="mt-3 text-center text-xs text-[var(--comp-violet)] md:text-left">
+          <p className="mt-3 text-center text-[13px] md:text-xs text-[var(--comp-violet)] md:text-left">
             Compression is always strongest at the ankle
           </p>
         </div>
@@ -68,7 +68,7 @@ export function CompressionLengthSelector() {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
               Length {len.code}
               {len.alias ? ` · known locally as ${len.alias}` : ""}
             </p>
@@ -76,7 +76,7 @@ export function CompressionLengthSelector() {
             <p className="mt-2 text-lg font-medium text-[var(--comp-violet)]">{len.coverage}</p>
             <p className="mt-4 leading-relaxed text-[var(--text-muted)]">{len.detail}</p>
 
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--comp-violet)]">
+            <p className="mt-6 text-[13px] md:text-xs font-semibold uppercase tracking-[0.18em] text-[var(--comp-violet)]">
               Best suited to
             </p>
             <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">

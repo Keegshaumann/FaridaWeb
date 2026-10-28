@@ -8,7 +8,10 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-[var(--purple-soft)] via-[var(--purple-medium)] to-[var(--mauve)] overflow-hidden">
+    // The two light ends of the gradient (#B8DCF2, #A8D4EE) left the white text
+    // at 1.5-2.7:1. They are now a steel blue in the same hue (#2A6AA6), so white
+    // at 90% reads at 5:1 or better across the whole footer (28 Oct 2026).
+    <footer className="relative bg-gradient-to-br from-[#2A6AA6] via-[var(--purple-medium)] to-[#2A6AA6] overflow-hidden">
       {/* Full-width tint so the container doesn't render as a darker centre band */}
       <div aria-hidden="true" className="absolute inset-0 bg-[#bf00ff0f] pointer-events-none" />
 
@@ -21,11 +24,11 @@ export function Footer() {
               <span className="text-xl font-semibold text-white">
                 Farida Cajee-Botes
               </span>
-              <span className="text-sm text-white/70">
+              <span className="text-sm text-white/90">
                 Orthotist & Prosthetist
               </span>
             </div>
-            <p className="text-white/80 text-sm leading-relaxed mb-4">
+            <p className="text-white/90 text-sm leading-relaxed mb-4">
               Providing individualised, assessment-led orthotic, prosthetic and medical compression
               care for people living with injury, illness, or physical impairment.
             </p>
@@ -58,37 +61,37 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/" className="text-white/90 hover:text-white text-sm transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/about" className="text-white/90 hover:text-white text-sm transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services" className="text-white/90 hover:text-white text-sm transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/contact" className="text-white/90 hover:text-white text-sm transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/blog" className="text-white/90 hover:text-white text-sm transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/privacy-policy" className="text-white/90 hover:text-white text-sm transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-and-conditions" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/terms-and-conditions" className="text-white/90 hover:text-white text-sm transition-colors">
                   Terms & Conditions
                 </Link>
               </li>
@@ -100,37 +103,37 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services" className="text-white/90 hover:text-white text-sm transition-colors">
                   All Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/prosthetics" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services/prosthetics" className="text-white/90 hover:text-white text-sm transition-colors">
                   Prosthetics
                 </Link>
               </li>
               <li>
-                <Link to="/services/custom-orthotics" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services/custom-orthotics" className="text-white/90 hover:text-white text-sm transition-colors">
                   Custom Orthotics
                 </Link>
               </li>
               <li>
-                <Link to="/services/off-the-shelf-orthotics" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services/off-the-shelf-orthotics" className="text-white/90 hover:text-white text-sm transition-colors">
                   Braces and Supports
                 </Link>
               </li>
               <li>
-                <Link to="/services/compression" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services/compression" className="text-white/90 hover:text-white text-sm transition-colors">
                   Medical Compression
                 </Link>
               </li>
               <li>
-                <Link to="/services/mobility-aids" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services/mobility-aids" className="text-white/90 hover:text-white text-sm transition-colors">
                   Mobility Aids
                 </Link>
               </li>
               <li>
-                <Link to="/services/breast-prosthetics" className="text-white/80 hover:text-white text-sm transition-colors">
+                <Link to="/services/breast-prosthetics" className="text-white/90 hover:text-white text-sm transition-colors">
                   Breast Prostheses
                 </Link>
               </li>
@@ -150,14 +153,14 @@ export function Footer() {
                   >
                     011 883 9100
                   </a>
-                  <p className="text-white/70 text-xs">Morningside rooms</p>
+                  <p className="text-white/90 text-[13px] md:text-xs">Morningside rooms</p>
                   <a
                     href="tel:+27799982203"
                     className="mt-2 inline-block text-white/90 hover:text-white transition-colors font-bold"
                   >
                     079 998 2203
                   </a>
-                  <p className="text-white/70 text-xs">Home visits</p>
+                  <p className="text-white/90 text-[13px] md:text-xs">Home visits</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -171,7 +174,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
-                <div className="text-white/80 text-sm">
+                <div className="text-white/90 text-sm">
                   <p>Morningside, by appointment</p>
                   <p>Centurion, home and hospital visits</p>
                 </div>
@@ -192,7 +195,7 @@ export function Footer() {
               <Star className="h-4 w-4 fill-current" />
               Leave a Review
             </a>
-            <p className="text-white/70 text-xs mt-3 leading-relaxed">
+            <p className="text-white/90 text-[13px] md:text-xs mt-3 leading-relaxed">
               Share your experience to help others find the care they need.
             </p>
           </div>
@@ -209,18 +212,18 @@ export function Footer() {
                 <p className="text-white text-sm font-semibold mb-1">
                   Consulting rooms in Morningside, Sandton
                 </p>
-                <address className="not-italic text-white/80 text-sm leading-relaxed">
+                <address className="not-italic text-white/90 text-sm leading-relaxed">
                   Orthocast Morningside<br />
                   Block F, Ground Floor, Rochester Place<br />
                   173 Rivonia Road, Morningside, Sandton, 2196
                 </address>
-                <p className="text-white/80 text-sm mt-1.5">
+                <p className="text-white/90 text-sm mt-1.5">
                   <a href="tel:+27118839100" className="font-semibold hover:text-white">
                     011 883 9100
                   </a>
-                  <span className="text-white/60"> · Reception</span>
+                  <span className="text-white/90"> · Reception</span>
                 </p>
-                <p className="text-white/80 text-sm mt-1">
+                <p className="text-white/90 text-sm mt-1">
                   <a
                     href="https://wa.me/27799982203"
                     target="_blank"
@@ -229,9 +232,9 @@ export function Footer() {
                   >
                     079 998 2203
                   </a>
-                  <span className="text-white/60"> · WhatsApp</span>
+                  <span className="text-white/90"> · WhatsApp</span>
                 </p>
-                <p className="text-white/70 text-xs mt-1 italic">
+                <p className="text-white/90 text-[13px] md:text-xs mt-1 italic">
                   Assessments and fittings by appointment.
                 </p>
                 <a
@@ -251,16 +254,16 @@ export function Footer() {
                 <p className="text-white text-sm font-semibold mb-1">
                   Home visits across Centurion and greater Gauteng
                 </p>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-white/90 text-sm leading-relaxed">
                   Mobile assessments and fittings in your own home or at the hospital bedside
                   across Centurion, Pretoria, Midrand, Sandton and Johannesburg.
                 </p>
-                <p className="text-white/80 text-sm mt-1.5">
+                <p className="text-white/90 text-sm mt-1.5">
                   <a href="tel:+27799982203" className="font-semibold hover:text-white">
                     079 998 2203
                   </a>
                 </p>
-                <p className="text-white/70 text-xs mt-1 italic">
+                <p className="text-white/90 text-[13px] md:text-xs mt-1 italic">
                   Home visits by arrangement. There are no consulting rooms in Centurion.
                 </p>
               </div>
@@ -281,15 +284,15 @@ export function Footer() {
           </div>
         </div>
 
-        {/* pb-32 below md: the fixed WhatsApp badge (112px, 24px off the bottom) sat on this line on phones */}
-        <div className="pt-8 pb-32 md:pb-0 border-t border-white/20">
+        {/* pb-24 below md: the fixed WhatsApp badge (60px below lg, 16px off the bottom) would sit on this line on phones */}
+        <div className="pt-8 pb-24 md:pb-0 border-t border-white/20">
           {/* Credit: owner's instruction, 15 October 2026. Below sm it takes its own line and the dot goes, so no separator hangs */}
-          <p className="text-center text-white/70 text-sm">
+          <p className="text-center text-white/90 text-sm">
             © {new Date().getFullYear()} Farida Cajee-Botes Orthotist Prosthetist. All rights reserved.
             <span aria-hidden="true" className="hidden sm:inline">{" · "}</span>
             <span className="block sm:inline whitespace-nowrap mt-1 sm:mt-0">
               Website by{" "}
-              <a href="https://www.positionxero.com/" className="text-white/80 hover:text-white transition-colors">
+              <a href="https://www.positionxero.com/" className="text-white/90 hover:text-white transition-colors">
                 Position Xero
               </a>
             </span>

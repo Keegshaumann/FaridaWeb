@@ -13,7 +13,11 @@ export function MedicalHero() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    // min-h rather than h: on a phone held sideways the text is taller than
+    // the screen, and with a fixed height it ran up under the header. The
+    // content block's pt-24 keeps it clear of the header; when the text fits,
+    // nothing changes.
+    <section className="relative min-h-screen w-full overflow-hidden">
       {/* Warp Shader Background */}
       <div className="absolute inset-0 z-0">
         <SafeWarp
@@ -68,19 +72,25 @@ export function MedicalHero() {
         />
       </div>
 
-      {/* Content - Title Bottom Left, Paragraph & Buttons Right */}
-      <div ref={contentRef} className="relative z-10 h-full flex items-end px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20">
+      {/* Content - Title Bottom Left, Paragraph & Buttons Right.
+          lg:pb-40: on desktop the text block sits above the light fade at the
+          bottom of the hero, and the buttons clear the fixed WhatsApp badge
+          (its top is 136px off the bottom; the buttons now end 160px off it). */}
+      <div ref={contentRef} className="relative z-10 min-h-screen flex items-end px-4 sm:px-6 lg:px-8 pt-24 pb-12 lg:pb-40">
         <div className="container mx-auto max-w-7xl w-full flex flex-col lg:flex-row items-end justify-between gap-8">
-          {/* Title - Bottom Left */}
-          <div className="lg:max-w-2xl">
+          {/* Title - Bottom Left. The scrim is a soft brand-navy shade behind the
+              white text (see .hero-scrim in index.css): over the pale animated
+              background the text measured about 2:1 without it. */}
+          <div className="relative lg:max-w-2xl">
+            <div aria-hidden="true" className="hero-scrim hero-scrim--title" />
             <WordPullUp
               words="Orthotics, Prosthetics and Medical Compression in Sandton"
-              className="text-left text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
-              style={{ mixBlendMode: 'difference', color: 'white' }}
+              className="hero-text text-left text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
+              style={{ color: 'white' }}
             />
             <p
-              className="mt-4 text-base md:text-lg lg:text-xl leading-relaxed"
-              style={{ mixBlendMode: 'difference', color: 'white' }}
+              className="hero-text mt-4 text-base md:text-lg lg:text-xl leading-relaxed"
+              style={{ color: 'white' }}
             >
               Restoring movement through orthotics, prosthetics &amp; compression therapy
             </p>
@@ -88,9 +98,12 @@ export function MedicalHero() {
           
           {/* Paragraph & Buttons - Right Side */}
           <div className="max-w-md text-left lg:text-right">
-            <p className="mb-6 leading-relaxed text-sm lg:text-base" style={{ mixBlendMode: 'difference', color: 'white' }}>
-              Care starts with understanding your condition, your goals and your daily surroundings. It's led by a clinician and planned around you, for people living with an injury, an illness or a physical impairment.
-            </p>
+            <div className="relative mb-6">
+              <div aria-hidden="true" className="hero-scrim hero-scrim--copy" />
+              <p className="hero-text leading-relaxed text-sm lg:text-base" style={{ color: 'white' }}>
+                Care starts with understanding your condition, your goals and your daily surroundings. It's led by a clinician and planned around you, for people living with an injury, an illness or a physical impairment.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-3 justify-start lg:justify-end">
               <Link to="/contact#book">
                 <Button size="lg" className="bg-[#E9F4FB] hover:bg-[#E9F4FB]/90 text-[var(--text-dark)] rounded-full px-6 h-11 shadow-lg border-2 border-[var(--text-dark)]">

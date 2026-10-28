@@ -159,7 +159,7 @@ export function CompressionPage() {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--comp-lilac)]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-1.5 text-[13px] md:text-[11px] font-semibold uppercase tracking-[0.1em] md:tracking-[0.2em] text-[var(--comp-lilac)]">
                 <Sparkles className="h-3.5 w-3.5" />
                 Lower-limb compression clinic
               </span>
@@ -205,7 +205,7 @@ export function CompressionPage() {
             {/* Graduated pressure diagram */}
             <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
               <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm md:p-9">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--comp-lilac)]">
+                <p className="text-[13px] md:text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--comp-lilac)]">
                   Graduated compression profile
                 </p>
                 <motion.div
@@ -242,7 +242,7 @@ export function CompressionPage() {
                   <s.icon className="h-5 w-5 text-[var(--comp-lilac)]" />
                 </span>
                 <span>
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-white/45">
+                  <span className="block text-[13px] md:text-[11px] font-semibold uppercase tracking-[0.16em] text-white/45">
                     {s.label}
                   </span>
                   <span className="mt-0.5 block font-semibold text-white">{s.value}</span>
@@ -257,7 +257,7 @@ export function CompressionPage() {
       <section className="relative bg-[var(--comp-shell)] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
               A compression practice, not a compression shelf
             </p>
             <h2 className="mt-4 text-3xl font-bold text-[var(--comp-plum)] md:text-4xl">
@@ -301,7 +301,7 @@ export function CompressionPage() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
+              <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
                 The principle
               </p>
               <h2 className="mt-4 text-3xl font-bold text-[var(--comp-plum)] md:text-4xl">
@@ -385,7 +385,7 @@ export function CompressionPage() {
         />
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
               Compression classes
             </p>
             <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">
@@ -408,7 +408,7 @@ export function CompressionPage() {
       <section className="relative bg-[var(--comp-shell)] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
               Compression lengths & styles
             </p>
             <h2 className="mt-4 text-3xl font-bold text-[var(--comp-plum)] md:text-4xl">
@@ -430,7 +430,7 @@ export function CompressionPage() {
       <section className="relative bg-[var(--comp-mist)] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
               Compression construction
             </p>
             <h2 className="mt-4 text-3xl font-bold text-[var(--comp-plum)] md:text-4xl">
@@ -493,7 +493,7 @@ export function CompressionPage() {
       <section className="relative bg-[var(--comp-shell)] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-violet)]">
               Compression indications
             </p>
             <h2 className="mt-4 text-3xl font-bold text-[var(--comp-plum)] md:text-4xl">
@@ -536,7 +536,7 @@ export function CompressionPage() {
       <section className="relative overflow-hidden bg-[var(--comp-ink-2)] py-16 md:py-24">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
               What to expect
             </p>
             <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">
@@ -595,7 +595,7 @@ export function CompressionPage() {
 
             {/* Other compression: deliberately a small block */}
             <div className="rounded-3xl border-2 border-dashed border-[var(--comp-lilac)]/50 bg-[var(--comp-mist)]/60 p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--comp-violet)]">
+              <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.2em] text-[var(--comp-violet)]">
                 Beyond the lower limb
               </p>
               <h2 className="mt-3 text-2xl font-bold text-[var(--comp-plum)]">

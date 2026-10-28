@@ -84,7 +84,7 @@ function Figure({
           <Hotspot key={p.id} point={p} active={selected?.id === p.id} onSelect={onSelect} />
         ))}
       </div>
-      <span className="mt-2 text-xs font-medium uppercase tracking-wider text-[var(--text-muted)]">
+      <span className="mt-2 text-[13px] md:text-xs font-medium uppercase tracking-wider text-[var(--text-muted)]">
         {view === "front" ? "Front" : "Back"}
       </span>
     </div>
@@ -103,13 +103,13 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-wider text-[var(--purple-medium)]">
+            <p className="text-[13px] md:text-xs font-semibold uppercase tracking-wider text-[var(--purple-medium)]">
               How we can help
             </p>
             <h3 className="mt-1 text-2xl font-bold text-[var(--text-dark)]">{selected.label}</h3>
 
             <div className="mt-4 rounded-xl bg-[var(--pink-light)] p-4">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+              <p className="text-[13px] md:text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
                 Device we'd typically consider
               </p>
               <p className="mt-1 font-medium leading-snug text-[var(--text-dark)]">{selected.device}</p>
@@ -126,7 +126,7 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
 
             {relatedDevices(selected).length > 0 && (
               <div className="mt-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
+                <p className="text-[13px] md:text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)]">
                   Devices we might consider
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
@@ -135,7 +135,7 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
                     .map((d) => (
                       <span
                         key={d.id}
-                        className="rounded-full bg-[var(--purple-soft)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-dark)]"
+                        className="rounded-full bg-[var(--purple-soft)] px-2.5 py-1 text-[13px] md:text-[11px] font-medium text-[var(--text-dark)]"
                       >
                         {d.name}
                       </span>
@@ -163,7 +163,7 @@ function DetailPanel({ selected }: { selected: PainPoint | null }) {
               </Button>
             </div>
 
-            <p className="mt-5 text-xs leading-relaxed text-[var(--text-muted)]">
+            <p className="mt-5 text-[13px] md:text-xs leading-relaxed text-[var(--text-muted)]">
               This is a guide, not a diagnosis. Guidance is general and informed by clinical and
               manufacturer sources. The right device is always confirmed after an individual assessment.
             </p>

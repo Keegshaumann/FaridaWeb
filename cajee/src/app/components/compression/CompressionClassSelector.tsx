@@ -31,7 +31,7 @@ export function CompressionClassSelector() {
                   : "border-white/10 bg-white/[0.03] hover:border-white/25 hover:bg-white/[0.06]"
               }`}
             >
-              <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--comp-lilac)]">
+              <span className="block text-[13px] md:text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--comp-lilac)]">
                 {c.tier}
               </span>
               <span className="mt-1 block text-lg font-bold text-white">{c.label}</span>
@@ -64,7 +64,7 @@ export function CompressionClassSelector() {
             className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12"
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
+              <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
                 {cls.label} · {cls.strength}
               </p>
               <p className="mt-3 flex items-baseline gap-2">
@@ -76,7 +76,7 @@ export function CompressionClassSelector() {
               <p className="mt-6 leading-relaxed text-white/80">{cls.summary}</p>
 
               <div className="mt-6 rounded-2xl border-l-2 border-[var(--comp-lilac)] bg-white/[0.04] p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--comp-lilac)]">
+                <p className="text-[13px] md:text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--comp-lilac)]">
                   How it feels
                 </p>
                 <p className="mt-2 leading-relaxed text-white/80">{cls.feel}</p>
@@ -84,7 +84,7 @@ export function CompressionClassSelector() {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
+              <p className="text-[13px] md:text-xs font-semibold uppercase tracking-[0.22em] text-[var(--comp-lilac)]">
                 Typically prescribed for
               </p>
               <ul className="mt-4 space-y-3">

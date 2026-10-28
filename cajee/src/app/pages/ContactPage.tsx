@@ -75,14 +75,14 @@ export function ContactPage() {
                     >
                       079 998 2203
                     </a>
-                    <p className="text-xs text-[var(--text-muted)]">Home visits</p>
+                    <p className="text-[13px] md:text-xs text-[var(--text-muted)]">Home visits</p>
                     <a
                       href="tel:+27118839100"
                       className="mt-2 block text-base text-[var(--text-muted)] hover:text-[var(--text-dark)] transition-colors"
                     >
                       011 883 9100
                     </a>
-                    <p className="text-xs text-[var(--text-muted)]">Morningside rooms</p>
+                    <p className="text-[13px] md:text-xs text-[var(--text-muted)]">Morningside rooms</p>
                   </div>
 
                   {/* Email */}

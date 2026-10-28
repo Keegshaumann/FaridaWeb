@@ -59,3 +59,125 @@
 .premium-dots li button:before {
   display: none;
 }
+/* Hero text scrim (28 Oct 2026). The white hero text sat on the pale animated
+   background at about 2:1 contrast. A soft brand-navy shade (#0B3A63 at 62%)
+   behind each text block brings it to 4.5:1 or better while the animation and
+   the two hands stay visible around it, and its edges fade out so it reads as
+   a shadow, not a box. Below lg the two blocks stack, and their shades meet in
+   the gap so they form one even band across the screen; a mask eases that
+   band in and out (--ft, --fb: how far it fades at the top and bottom; --fx
+   at the sides). */
+.hero-scrim {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  background: rgb(11 58 99 / 0.62);
+  --fx: 3rem;
+  --ft: 0px;
+  --fb: 0px;
+  --scrim-x: linear-gradient(to right,
+    transparent, rgb(0 0 0 / 0.15) calc(var(--fx) * 0.3), rgb(0 0 0 / 0.55) calc(var(--fx) * 0.6), #000 var(--fx),
+    #000 calc(100% - var(--fx)), rgb(0 0 0 / 0.55) calc(100% - var(--fx) * 0.6), rgb(0 0 0 / 0.15) calc(100% - var(--fx) * 0.3), transparent);
+  --scrim-y: linear-gradient(to bottom,
+    transparent, rgb(0 0 0 / 0.15) calc(var(--ft) * 0.3), rgb(0 0 0 / 0.55) calc(var(--ft) * 0.6), #000 var(--ft),
+    #000 calc(100% - var(--fb)), rgb(0 0 0 / 0.55) calc(100% - var(--fb) * 0.6), rgb(0 0 0 / 0.15) calc(100% - var(--fb) * 0.3), transparent);
+  -webkit-mask-image: var(--scrim-x), var(--scrim-y);
+  -webkit-mask-composite: source-in;
+  mask-image: var(--scrim-x), var(--scrim-y);
+  mask-composite: intersect;
+}
+
+/* Phones and tablets: one band across the whole width (it runs past both
+   edges; the hero clips it), fading in above the heading and out just below
+   the paragraph, above the buttons. The paragraph sits to the right on
+   tablets, so its shade also reaches back to the left edge. */
+.hero-scrim--title,
+.hero-scrim--copy {
+  --fx: 0px;
+  left: -100vw;
+  right: -100vw;
+}
+
+.hero-scrim--title {
+  top: -4rem;
+  bottom: -1rem;
+  --ft: 4rem;
+}
+
+.hero-scrim--copy {
+  top: -1rem;
+  bottom: -2.5rem;
+  --fb: 2.5rem;
+}
+
+/* Desktop: two soft patches, one behind the heading (over the chrome hand) and
+   one behind the paragraph. Here a blur gives the softest edge; the patch
+   reaches 4rem past the text so the text itself still sits on the full shade. */
+@media (min-width: 64rem) {
+  .hero-scrim--title,
+  .hero-scrim--copy {
+    inset: -4rem;
+    -webkit-mask-image: none;
+    mask-image: none;
+    filter: blur(40px);
+    border-radius: 3rem;
+  }
+}
+
+.hero-text {
+  text-shadow: 0 1px 2px rgb(11 58 99 / 0.5);
+}
+
+/* Cookie banner on a short screen (a phone held sideways, 500px tall or less):
+   one compact row along the bottom edge (text, the two buttons, the close
+   button) instead of a card that covered most of the screen (28 Oct 2026). */
+@media (max-height: 31.25rem) {
+  #cookie-consent {
+    padding: 0;
+  }
+
+  #cookie-consent .cookie-card {
+    padding: 0.625rem 1rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  #cookie-consent .cookie-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #cookie-consent .cookie-icon {
+    display: none;
+  }
+
+  #cookie-consent h3 {
+    font-size: 1rem;
+    line-height: 1.375;
+    margin-bottom: 0.125rem;
+    padding-right: 0;
+  }
+
+  #cookie-consent p {
+    font-size: 13px;
+    line-height: 1.35;
+    color: rgb(11 58 99 / 0.8);
+  }
+
+  #cookie-consent .cookie-actions {
+    width: auto;
+    flex: none;
+  }
+
+  #cookie-consent .cookie-actions button {
+    flex: none;
+    padding: 0.5rem 1.25rem;
+  }
+
+  #cookie-consent .cookie-close {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: -0.75rem;
+  }
+}
