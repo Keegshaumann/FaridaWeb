@@ -59,6 +59,17 @@ export function ServicePageTemplate({
                 {subtitle}
               </p>
             )}
+            {/* The page's booking action on the first screen. Before this, the
+                first "Book Assessment" on a phone was thousands of pixels down,
+                in the CTA at the end. Same link and label as that CTA; h-11 for
+                a 44px tap target. */}
+            <div className="mt-8 flex justify-center">
+              <Link to="/contact#book">
+                <Button size="lg" className="h-11 bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full px-8">
+                  Book Assessment
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
         {/* Blur transition to next section */}
