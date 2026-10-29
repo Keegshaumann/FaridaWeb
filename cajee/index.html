@@ -17,14 +17,15 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="apple-touch-icon" href="/logo.png" />
 
-    <!-- DM Sans, the site font, from Google Fonts. Linked here rather than
-         @import-ed from src/styles/fonts.css: an @import is only found once
-         the site's own stylesheet has downloaded, which made the first paint
-         wait for two stylesheets one after the other. Linked here, both load
-         at the same time. Same font, same weights, same display=swap. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" />
+    <!-- DM Sans, the site font, is served from this site (29 Oct 2026): the
+         @font-face rules are in src/styles/fonts.css, with Google's own files.
+         This preload fetches the latin regular file (the hero text) alongside
+         the stylesheet, and that face waits for it (font-display: block), so
+         the hero is painted once, in DM Sans, not first in a fallback font and
+         again when the app loads; that second paint was the late Largest
+         Contentful Paint. It replaces the Google Fonts stylesheet, which was
+         render-blocking and came from another server. -->
+    <link rel="preload" href="/src/assets/fonts/dm-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Open Graph / social defaults (per-page values are set at runtime) -->
     <meta property="og:type" content="website" />

@@ -173,8 +173,13 @@ on a direct visit or for Google.
 
 STILL EXTERNAL / NOT YET CONFIGURED (optional, for later)
 ---------------------------------------------------------
-- Google Fonts (DM Sans) loads from Google. Normal and fine; can be self-hosted
-  later if you want zero third-party requests.
+- DM Sans is self-hosted since 29 October 2026: Google's own files, in
+  cajee/src/assets/fonts (with OFL.txt), @font-face rules in
+  cajee/src/styles/fonts.css, and the latin regular file preloaded in
+  cajee/index.html, with font-display: block on that one face. Nothing loads
+  from Google Fonts any more. It was moved because the hero was painting in a
+  fallback font first and again in DM Sans once the app loaded, and that
+  second paint was the phone LCP.
 - Google Analytics (gtag) loads from Google. Only matters if GA is set up.
 - There is no backend. The /admin panel and its Supabase placeholder keys were
   removed from the site in September 2026, and the current bundle contains no

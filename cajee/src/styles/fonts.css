@@ -1,5 +1,65 @@
-/* DM Sans itself is loaded by a <link> in index.html, not an @import here,
-   so it downloads alongside the main stylesheet instead of after it. */
+/* DM Sans, served from this site rather than from Google Fonts (29 Oct 2026).
+   These are Google's own DM Sans v17 files, byte for byte, with the same four
+   @font-face rules Google's stylesheet gave a current browser: latin and
+   latin-ext, normal and italic, the full 100-1000 weight axis and the optical
+   size axis. Same font, same look once loaded.
+
+   Why: the phone LCP (3.4 s in Google's field data) is the hero paragraph,
+   and it was painted twice. Phones painted it first in a fallback font,
+   because DM Sans was not there yet; then the React bundle replaced the
+   prerendered page and painted it again in DM Sans, about a pixel wider. A
+   larger repaint counts as a new LCP, so LCP waited for the whole bundle.
+   (A font swap on the same element does not count; only React's new copy
+   does.)
+
+   So the latin regular file, the one the hero and most of the site use, is
+   preloaded in index.html and has font-display: block: text in it waits for
+   the file (which is already downloading) instead of painting in a fallback
+   first. The page is then painted once, in DM Sans, and React's copy is the
+   same size. Browsers cap the wait at about 3 s, then show the fallback and
+   swap as before. The italic and latin-ext files are not preloaded and keep
+   font-display: swap, as Google served them.
+
+   The files are in src/assets/fonts with their licence (OFL.txt). If DM Sans
+   is ever updated, replace all four files together and keep the
+   unicode-range lines as Google publishes them. */
+
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-latin-ext-italic.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-latin-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('../assets/fonts/dm-sans-latin-ext-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: block; /* swap in Google's CSS; see the note at the top */
+  src: url('../assets/fonts/dm-sans-latin-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 body {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
