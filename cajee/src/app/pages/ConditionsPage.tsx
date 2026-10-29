@@ -38,12 +38,13 @@ export function ConditionsPage() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-2.5">
               {/* These look like buttons, so a tap takes you down to the body map
-                  (they were plain spans and a tap did nothing). */}
+                  (they were plain spans and a tap did nothing). min-h-11: now that
+                  they are tap targets, 44px tall rather than 36px. */}
               {COMMON_CONDITIONS.map((c) => (
                 <a
                   key={c}
                   href="#body-map"
-                  className="rounded-full bg-[var(--text-dark)] px-4 py-2 text-sm font-medium text-white/95 shadow-sm"
+                  className="inline-flex min-h-11 items-center rounded-full bg-[var(--text-dark)] px-4 py-2 text-sm font-medium text-white/95 shadow-sm"
                 >
                   {c}
                 </a>
