@@ -56,7 +56,7 @@ function Hotspot({
       />
       {/* label tooltip */}
       <span
-        className={`pointer-events-none absolute left-1/2 top-9 z-20 -translate-x-1/2 whitespace-nowrap rounded-md bg-[var(--text-dark)] px-2 py-1 text-[11px] font-medium text-white shadow-lg transition-all duration-150 ${
+        className={`pointer-events-none absolute left-1/2 top-9 z-20 -translate-x-1/2 whitespace-nowrap rounded-md bg-[var(--text-dark)] px-2 py-1 text-xs font-medium text-white shadow-lg transition-all duration-150 ${
           active ? "opacity-100" : "opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
         }`}
       >
