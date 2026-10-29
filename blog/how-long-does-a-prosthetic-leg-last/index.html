@@ -13,14 +13,15 @@
     <link rel="icon" type="image/png" href="/logo.png">
     <link rel="apple-touch-icon" href="/logo.png">
 
-    <!-- DM Sans, the site font, from Google Fonts. Linked here rather than
-         @import-ed from src/styles/fonts.css: an @import is only found once
-         the site's own stylesheet has downloaded, which made the first paint
-         wait for two stylesheets one after the other. Linked here, both load
-         at the same time. Same font, same weights, same display=swap. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap">
+    <!-- DM Sans, the site font, is served from this site (29 Oct 2026): the
+         @font-face rules are in src/styles/fonts.css, with Google's own files.
+         This preload fetches the latin regular file (the hero text) alongside
+         the stylesheet, and that face waits for it (font-display: block), so
+         the hero is painted once, in DM Sans, not first in a fallback font and
+         again when the app loads; that second paint was the late Largest
+         Contentful Paint. It replaces the Google Fonts stylesheet, which was
+         render-blocking and came from another server. -->
+    <link rel="preload" href="/assets/dm-sans-latin-normal-BNY05QUC.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Open Graph / social defaults (per-page values are set at runtime) -->
     <meta property="og:type" content="article">
@@ -47,8 +48,8 @@
     <script type="application/ld+json" id="organization-schema">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Farida Cajee-Botes Orthotist Prosthetist","image":"https://www.cajeebotes.com/blog/how-long-does-a-prosthetic-leg-last.jpg","description":"Professional orthotics, prosthetics and medical compression services in South Africa, with mobile home and hospital assessments and compression garment fitting.","telephone":"+27118839100","contactPoint":[{"@type":"ContactPoint","telephone":"+27118839100","contactType":"Appointments","areaServed":"ZA","availableLanguage":"en"},{"@type":"ContactPoint","telephone":"+27799982203","contactType":"Home visits","areaServed":"ZA","availableLanguage":"en"}],"email":"care@cajeebotes.com","url":"https://www.cajeebotes.com","address":{"@type":"PostalAddress","streetAddress":"Block F, Ground Floor, Rochester Place, 173 Rivonia Road, Morningside","addressLocality":"Sandton","addressRegion":"Gauteng","postalCode":"2196","addressCountry":"ZA"},"geo":{"@type":"GeoCoordinates","latitude":-26.0964739,"longitude":28.0545417},"hasMap":"https://maps.google.com/?cid=12162722174863443304","founder":{"@type":"Person","name":"Farida Cajee-Botes","jobTitle":"Orthotist & Prosthetist"},"sameAs":["https://www.instagram.com/faridabotes/","https://www.facebook.com/Cajeebotes/","https://maps.google.com/?cid=12162722174863443304"],"knowsAbout":["Orthotics","Prosthetics","Medical Compression","Compression Therapy","Graduated Compression Stockings","Compression Garment Fitting","Lymphoedema Compression","Mobility Aids","Breast Prosthetics"],"areaServed":[{"@type":"City","name":"Sandton"},{"@type":"City","name":"Johannesburg"},{"@type":"City","name":"Centurion"},{"@type":"City","name":"Pretoria"},{"@type":"City","name":"Midrand"},{"@type":"AdministrativeArea","name":"Gauteng"},{"@type":"Country","name":"South Africa"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Orthotic and Prosthetic Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Orthotics","description":"Individually designed orthotic devices"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Prosthetic Management","description":"Prosthetic limb fitting and care"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Medical Compression","description":"Graduated compression stockings, compression pantyhose and made-to-measure compression garments in compression class A to class 3, measured and fitted for lymphoedema, oedema and venous conditions"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Off-the-Shelf Orthotics","description":"Prefabricated orthotic braces and supports"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mobility Aids","description":"Wheelchairs, walkers, crutches and walking aids"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Breast & Silicone Prosthetics","description":"Breast prostheses and silicone restoration"}}]}}</script>
 
     
-    <script type="module" crossorigin="" src="/assets/index-CyUI-3XL.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/index-ro6DSc4a.css">
+    <script type="module" crossorigin="" src="/assets/index-B86sm3pt.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-peZ6Yxa-.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-87YWW84BMB"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
