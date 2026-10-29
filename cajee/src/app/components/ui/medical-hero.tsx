@@ -75,8 +75,10 @@ export function MedicalHero() {
       {/* Content - Title Bottom Left, Paragraph & Buttons Right.
           lg:pb-40: on desktop the text block sits above the light fade at the
           bottom of the hero, and the buttons clear the fixed WhatsApp badge
-          (its top is 136px off the bottom; the buttons now end 160px off it). */}
-      <div ref={contentRef} className="relative z-10 min-h-screen flex items-end px-4 sm:px-6 lg:px-8 pt-24 pb-12 lg:pb-40">
+          (its top is 136px off the bottom; the buttons now end 160px off it).
+          Below lg the block sits at the top (items-start): pinned to the bottom,
+          its buttons were under the cookie sheet on a first phone visit. */}
+      <div ref={contentRef} className="relative z-10 min-h-screen flex items-start lg:items-end px-4 sm:px-6 lg:px-8 pt-24 pb-12 lg:pb-40">
         <div className="container mx-auto max-w-7xl w-full flex flex-col lg:flex-row items-end justify-between gap-8">
           {/* Title - Bottom Left. The scrim is a soft brand-navy shade behind the
               white text (see .hero-scrim in index.css): over the pale animated

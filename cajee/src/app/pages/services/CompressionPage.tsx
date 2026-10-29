@@ -136,7 +136,10 @@ export function CompressionPage() {
       />
 
       {/* ───────────────────────── Hero ───────────────────────── */}
-      <section className="relative overflow-hidden bg-[var(--comp-ink)] pt-28 pb-16 md:pt-36 md:pb-24">
+      {/* Below md the spacing is tighter (pt-20, mt-4, mt-6, leading-normal) so the
+          booking button clears the cookie sheet on a first phone visit; md and up
+          keep the original values. */}
+      <section className="relative overflow-hidden bg-[var(--comp-ink)] pt-20 pb-16 md:pt-36 md:pb-24">
         {/* Pressure-gradient wash */}
         <div
           aria-hidden="true"
@@ -164,18 +167,18 @@ export function CompressionPage() {
                 Lower-limb compression clinic
               </span>
 
-              <h1 className="mt-6 text-4xl font-bold leading-[1.08] text-white md:text-5xl lg:text-6xl">
+              <h1 className="mt-4 md:mt-6 text-4xl font-bold leading-[1.08] text-white md:text-5xl lg:text-6xl">
                 Medical Compression{" "}
                 <span className="block text-[var(--comp-lilac)]">Garments and Stockings</span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">
+              <p className="mt-4 md:mt-6 max-w-2xl text-lg leading-normal md:leading-relaxed text-white/75 md:text-xl">
                 Graduated compression stockings, compression pantyhose and made-to-measure
                 compression garments: measured, prescribed and fitted by a qualified orthotist.
                 Compression class A through class 3, below-knee (BK) through to pantyhose.
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 md:mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link to="/contact#book">
                   <Button
                     size="lg"

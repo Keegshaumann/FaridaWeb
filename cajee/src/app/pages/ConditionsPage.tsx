@@ -37,13 +37,17 @@ export function ConditionsPage() {
               solution for your individual needs.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+              {/* These look like buttons, so a tap takes you down to the body map
+                  (they were plain spans and a tap did nothing). min-h-11: now that
+                  they are tap targets, 44px tall rather than 36px. */}
               {COMMON_CONDITIONS.map((c) => (
-                <span
+                <a
                   key={c}
-                  className="rounded-full bg-[var(--text-dark)] px-4 py-2 text-sm font-medium text-white/95 shadow-sm"
+                  href="#body-map"
+                  className="inline-flex min-h-11 items-center rounded-full bg-[var(--text-dark)] px-4 py-2 text-sm font-medium text-white/95 shadow-sm"
                 >
                   {c}
-                </span>
+                </a>
               ))}
             </div>
           </div>
@@ -53,7 +57,7 @@ export function ConditionsPage() {
       </section>
 
       {/* Interactive body map */}
-      <section className="relative py-16 md:py-24 bg-[#E9F4FB]">
+      <section id="body-map" className="relative scroll-mt-16 py-16 md:py-24 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mx-auto max-w-2xl text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-dark)]">
