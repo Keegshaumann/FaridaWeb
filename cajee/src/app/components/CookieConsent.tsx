@@ -61,9 +61,12 @@ export function CookieConsent() {
 
             {/* Content */}
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-2 pr-10 md:pr-0 max-md:text-base max-md:leading-snug max-md:mb-1">
+              {/* A div, not an h3: the sheet renders before the header, so as a
+                  heading it was the page's first heading, ahead of the h1
+                  (SEOptimer, 29 Oct 2026). Same classes, same look. */}
+              <div className="cookie-title text-lg font-semibold text-[var(--text-dark)] mb-2 pr-10 md:pr-0 max-md:text-base max-md:leading-snug max-md:mb-1">
                 We Value Your Privacy
-              </h3>
+              </div>
               <p className="text-sm text-[var(--text-muted)] leading-relaxed max-md:text-[13px] max-md:leading-[1.3] max-md:text-[var(--text-dark)]/80">
                 We use cookies and similar technologies to improve your experience on our website, 
                 analyse site traffic, and personalize content. By clicking "Accept All", you consent 
