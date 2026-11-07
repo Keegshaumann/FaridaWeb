@@ -90,7 +90,7 @@ export function CompressionPage() {
         name: "Medical Compression Garments & Compression Stockings",
         provider: {
           "@type": "MedicalBusiness",
-          name: "Farida Cajee-Botes Orthotist Prosthetist",
+          name: "Farida Cajee-Botes Orthotist & Prosthetist",
           url: "https://www.cajeebotes.com",
         },
         areaServed: ["Centurion", "Pretoria", "Midrand", "Johannesburg", "Gauteng", "South Africa"],

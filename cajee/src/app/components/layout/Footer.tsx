@@ -214,8 +214,8 @@ export function Footer() {
                 </p>
                 <address className="not-italic text-white/90 text-sm leading-relaxed">
                   Orthocast Morningside<br />
-                  Block F, Ground Floor, Rochester Place<br />
-                  173 Rivonia Road, Morningside, Sandton, 2196
+                  173 Rivonia Road, Rochester Place<br />
+                  Block F, Ground Floor, Sandton, 2196
                 </address>
                 <p className="text-white/90 text-sm mt-1.5">
                   <a href="tel:+27118839100" className="font-semibold hover:text-white">
@@ -288,7 +288,7 @@ export function Footer() {
         <div className="pt-8 pb-24 md:pb-0 border-t border-white/20">
           {/* Credit: owner's instruction, 15 October 2026. Below sm it takes its own line and the dot goes, so no separator hangs */}
           <p className="text-center text-white/90 text-sm">
-            © {new Date().getFullYear()} Farida Cajee-Botes Orthotist Prosthetist. All rights reserved.
+            © {new Date().getFullYear()} Farida Cajee-Botes Orthotist &amp; Prosthetist. All rights reserved.
             <span aria-hidden="true" className="hidden sm:inline">{" · "}</span>
             <span className="block sm:inline whitespace-nowrap mt-1 sm:mt-0">
               Website by{" "}

@@ -44,7 +44,7 @@ export function AboutPage() {
       url: "https://www.cajeebotes.com/about",
       worksFor: {
         "@type": "MedicalBusiness",
-        name: "Farida Cajee-Botes Orthotist Prosthetist",
+        name: "Farida Cajee-Botes Orthotist & Prosthetist",
         url: "https://www.cajeebotes.com",
       },
       workLocation: {
@@ -52,7 +52,7 @@ export function AboutPage() {
         name: "Orthocast Morningside",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Block F, Ground Floor, Rochester Place, 173 Rivonia Road, Morningside",
+          streetAddress: "173 Rivonia Road, Rochester Place, Block F, Ground Floor",
           addressLocality: "Sandton",
           addressRegion: "Gauteng",
           postalCode: "2196",

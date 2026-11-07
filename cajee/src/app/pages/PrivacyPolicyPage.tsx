@@ -40,7 +40,7 @@ export function PrivacyPolicyPage() {
                   1. Introduction
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed mb-4">
-                  Farida Cajee-Botes Orthotist Prosthetist ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                  Farida Cajee-Botes Orthotist &amp; Prosthetist ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                 </p>
                 <p className="text-[var(--text-muted)] leading-relaxed">
                   By using our website and services, you agree to the collection and use of information in accordance with this policy.
@@ -222,7 +222,7 @@ export function PrivacyPolicyPage() {
                 </p>
                 <div className="bg-[#F4FBFF] rounded-xl p-6 mb-4">
                   <p className="text-[var(--text-dark)] mb-2">
-                    <strong>Farida Cajee-Botes Orthotist Prosthetist</strong>
+                    <strong>Farida Cajee-Botes Orthotist &amp; Prosthetist</strong>
                   </p>
                   <p className="text-[var(--text-muted)] mb-1">
                     <strong>Email:</strong> <a href="mailto:care@cajeebotes.com" className="text-[var(--accent-purple)] hover:underline">care@cajeebotes.com</a>

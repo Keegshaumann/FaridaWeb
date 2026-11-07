@@ -57,11 +57,11 @@ export function BlogPostPage() {
       "@type": "Person",
       name: post.author,
       jobTitle: "Orthotist & Prosthetist",
-      worksFor: { "@type": "MedicalBusiness", name: "Farida Cajee-Botes Orthotist Prosthetist" },
+      worksFor: { "@type": "MedicalBusiness", name: "Farida Cajee-Botes Orthotist & Prosthetist" },
     },
     publisher: {
       "@type": "Organization",
-      name: "Farida Cajee-Botes Orthotist Prosthetist",
+      name: "Farida Cajee-Botes Orthotist & Prosthetist",
       url: "https://www.cajeebotes.com",
       logo: { "@type": "ImageObject", url: "https://www.cajeebotes.com/logo.png" },
     },

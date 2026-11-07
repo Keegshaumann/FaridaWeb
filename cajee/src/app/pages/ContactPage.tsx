@@ -107,8 +107,8 @@ export function ContactPage() {
                     <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-1">Consulting Rooms</h3>
                     <address className="not-italic text-base text-[var(--text-muted)] leading-relaxed">
                       Orthocast Morningside<br />
-                      Block F, Ground Floor, Rochester Place<br />
-                      173 Rivonia Road, Morningside<br />
+                      173 Rivonia Road, Rochester Place<br />
+                      Block F, Ground Floor<br />
                       Sandton, 2196
                     </address>
                     <a

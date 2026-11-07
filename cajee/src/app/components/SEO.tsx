@@ -74,7 +74,7 @@ export function SEO({
     // Basic meta tags
     setMetaTag('description', description);
     if (keywords) setMetaTag('keywords', keywords);
-    setMetaTag('author', 'Farida Cajee-Botes Orthotist Prosthetist');
+    setMetaTag('author', 'Farida Cajee-Botes Orthotist & Prosthetist');
     setMetaTag('robots', noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large');
     setMetaTag('googlebot', noindex ? 'noindex, follow' : 'index, follow');
     
@@ -144,7 +144,12 @@ export function SEO({
     const organizationSchema = {
       '@context': 'https://schema.org',
       '@type': 'MedicalBusiness',
-      name: 'Farida Cajee-Botes Orthotist Prosthetist',
+      // Name, address and phone as settled under T-45 (owner, 7 November 2026):
+      // Farida's own practice name, as the logo writes it, with the address and
+      // reception number of Orthocast Morningside, where she sees patients, exactly
+      // as orthocast.co.za/contact publishes them. Keep every copy on the site
+      // (index.html, AboutPage, the footer, the contact page, llms.txt) identical.
+      name: 'Farida Cajee-Botes Orthotist & Prosthetist',
       image: ogImage,
       description: 'Professional orthotics, prosthetics and medical compression services in South Africa, with mobile home and hospital assessments and compression garment fitting.',
       // Primary number must match the Google Business Profile for the Morningside
@@ -170,7 +175,7 @@ export function SEO({
       url: baseUrl,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Block F, Ground Floor, Rochester Place, 173 Rivonia Road, Morningside',
+        streetAddress: '173 Rivonia Road, Rochester Place, Block F, Ground Floor',
         addressLocality: 'Sandton',
         addressRegion: 'Gauteng',
         postalCode: '2196',

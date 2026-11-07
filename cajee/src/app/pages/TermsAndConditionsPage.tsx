@@ -46,7 +46,7 @@ export function TermsAndConditionsPage() {
                   2. About the Practice
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  Farida Cajee-Botes Orthotist Prosthetist is a private orthotic and prosthetic practice consulting from Morningside, Sandton, Gauteng, South Africa, with home and hospital visits across the province, practising in accordance with the requirements of the Health Professions Council of South Africa (HPCSA). We can be contacted on 011 883 9100 or at care@cajeebotes.com.
+                  Farida Cajee-Botes Orthotist &amp; Prosthetist is a private orthotic and prosthetic practice consulting from Morningside, Sandton, Gauteng, South Africa, with home and hospital visits across the province, practising in accordance with the requirements of the Health Professions Council of South Africa (HPCSA). We can be contacted on 011 883 9100 or at care@cajeebotes.com.
                 </p>
               </section>
 
