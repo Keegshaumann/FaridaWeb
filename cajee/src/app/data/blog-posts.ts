@@ -9,7 +9,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "How much does a prosthetic leg cost in South Africa?",
     "metaTitle": "Prosthetic Leg Price in South Africa: Above & Below Knee",
     "category": "Prosthetics",
-    "date": "2026-02-11",
+    "date": "2026-07-15",
     "dateUpdated": "2026-09-16",
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-cost-south-africa.jpg",
@@ -124,7 +124,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Does Medical Aid Cover Prosthetics and Orthotics in South Africa?",
     "metaTitle": "Does Medical Aid Cover Prosthetics and Orthotics in SA?",
     "category": "General",
-    "date": "2026-03-03",
+    "date": "2026-07-15",
     "dateUpdated": "2026-09-17",
     "author": "Farida Cajee-Botes",
     "image": "/blog/medical-aid-prosthetics-orthotics-cover.jpg",
@@ -238,7 +238,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "How long after an amputation can I get a prosthetic leg?",
     "metaTitle": "How Long After Amputation Can You Get a Prosthetic Leg?",
     "category": "Prosthetics",
-    "date": "2026-03-25",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/how-long-after-amputation-prosthetic-leg.jpg",
     "imageAlt": "Clinician fitting a compression liner over a below-knee residual limb during rehabilitation",
@@ -344,7 +344,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "How long does a prosthetic leg last and how often should it be replaced?",
     "metaTitle": "How Long a Prosthetic Leg Lasts | Farida Cajee-Botes",
     "category": "Prosthetics",
-    "date": "2026-04-15",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/how-long-does-a-prosthetic-leg-last.jpg",
     "imageAlt": "Prosthetist servicing a prosthetic leg on a workshop bench",
@@ -450,7 +450,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Can you walk normally with a prosthetic leg, and how long does it take to learn?",
     "metaTitle": "Walking With a Prosthetic Leg: How Long It Takes to Learn",
     "category": "Prosthetics",
-    "date": "2026-05-06",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/walking-with-a-prosthetic-leg.jpg",
     "imageAlt": "Person walking between parallel bars on a below-knee prosthetic leg during physiotherapy",
@@ -552,7 +552,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "How Much Do Custom Orthotics Cost in South Africa?",
     "metaTitle": "Custom Orthotics Cost in South Africa | Farida Cajee-Botes",
     "category": "Orthotics",
-    "date": "2026-05-27",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/custom-orthotics-cost-south-africa.jpg",
     "imageAlt": "Custom-moulded orthotic insoles beside a foam foot impression box in a clinic",
@@ -648,7 +648,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Are Custom Orthotics Worth It?",
     "metaTitle": "Are Custom Orthotics Worth It? | Farida Cajee-Botes",
     "category": "Orthotics",
-    "date": "2026-06-10",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/are-custom-orthotics-worth-it.jpg",
     "imageAlt": "Generic pharmacy insole compared side by side with a contoured custom orthotic insole",
@@ -760,7 +760,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Can Orthotics Fix Flat Feet Permanently?",
     "metaTitle": "Do Orthotics Fix Flat Feet Permanently? | Farida Cajee-Botes",
     "category": "Orthotics",
-    "date": "2026-06-24",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/can-orthotics-fix-flat-feet.jpg",
     "imageAlt": "Adult feet with flattened arches standing on a wooden floor",
@@ -874,7 +874,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Does my child need orthotics for flat feet?",
     "metaTitle": "Flat Feet in Children: Does My Child Need Orthotics?",
     "category": "Orthotics",
-    "date": "2026-07-07",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/does-my-child-need-orthotics.jpg",
     "imageAlt": "Young child's bare feet with flexible flat arches standing on a wooden floor",
@@ -974,7 +974,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Do I Need a Referral to See an Orthotist or Prosthetist in South Africa?",
     "metaTitle": "Do You Need a Referral to See an Orthotist in South Africa?",
     "category": "General",
-    "date": "2026-07-14",
+    "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/referral-orthotist-prosthetist-first-visit.jpg",
     "imageAlt": "Orthotist with a clipboard consulting a patient during a home visit assessment",
@@ -1063,7 +1063,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Do Orthotists Do Home Visits? What Happens at a Home or Bedside Appointment",
     "metaTitle": "Do Orthotists Do Home Visits? | Farida Cajee-Botes",
     "category": "General",
-    "date": "2026-09-01",
+    "date": "2026-09-05",
     "author": "Farida Cajee-Botes",
     "image": "/blog/referral-orthotist-prosthetist-first-visit.jpg",
     "imageAlt": "Orthotist with a clipboard consulting a patient during a home visit assessment",
@@ -1201,7 +1201,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "How to get a prosthetic leg in South Africa without medical aid",
     "metaTitle": "Free Prosthetic Leg in South Africa | Farida Cajee-Botes",
     "category": "Prosthetics",
-    "date": "2026-09-02",
+    "date": "2026-09-05",
     "author": "Farida Cajee-Botes",
     "image": "/blog/medical-aid-prosthetics-orthotics-cover.jpg",
     "imageAlt": "Clinician and patient completing funding paperwork for a prosthetic limb at a consulting room desk",
@@ -1356,7 +1356,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Child Walking on Toes: When Should You Worry?",
     "metaTitle": "Toe Walking in Children: When to Worry and When to Wait",
     "category": "Orthotics",
-    "date": "2026-09-03",
+    "date": "2026-09-05",
     "author": "Farida Cajee-Botes",
     "image": "/blog/does-my-child-need-orthotics.jpg",
     "imageAlt": "Young child's bare feet with flexible flat arches standing on a wooden floor",
@@ -1476,7 +1476,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "title": "Support Stockings vs Compression Stockings: What Is the Difference?",
     "metaTitle": "Support Stockings vs Compression Stockings: Not the Same",
     "category": "General",
-    "date": "2026-09-04",
+    "date": "2026-09-05",
     "author": "Farida Cajee-Botes",
     "image": "/blog/support-stockings-vs-compression-stockings.jpg",
     "imageAlt": "A below-knee graduated compression stocking shown against a plain background",
@@ -1620,7 +1620,12 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((p) => p.slug === slug);
 }
 
-/** Posts newest-first for the listing page. */
+/** Posts newest-first for the listing page. Posts that share a date (the ten
+ *  first published on 15 July 2026, the four on 5 September 2026) keep their
+ *  order in this file, newest-first, so the listing and the related-article
+ *  cards stay as they were before the dates were corrected (T-20). */
 export function sortedPosts(): BlogPost[] {
-  return [...BLOG_POSTS].sort((a, b) => b.date.localeCompare(a.date));
+  return BLOG_POSTS.map((post, index) => ({ post, index }))
+    .sort((a, b) => b.post.date.localeCompare(a.post.date) || b.index - a.index)
+    .map(({ post }) => post);
 }
