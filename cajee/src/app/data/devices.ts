@@ -251,7 +251,7 @@ export const DEVICES: Device[] = [
     service: "custom-orthotics",
     name: "Cranial Remoulding Helmet",
     bodyPart: "Head",
-    useCase: "For infants with asymmetrical or flattened head shape who may benefit from gentle guided reshaping during a period of rapid skull growth.",
+    useCase: "For babies with a flat spot on one side or the back of the head (an asymmetrical or flattened head shape) who may benefit from gentle guided reshaping during a period of rapid skull growth.",
     description: "A cranial remoulding helmet is a lightweight custom helmet, moulded from a 3D scan of the infant's head, that applies gentle, evenly distributed contact to help guide skull growth into a more symmetrical shape over time. It is worn for most of the day during a defined treatment period and adjusted as the head grows.",
     features: ["Custom-moulded from a 3D head scan","Lightweight, ventilated shell with soft inner lining","Applies gentle, passive guidance rather than active pressure","Requires periodic review and adjustment as the head grows"],
   },

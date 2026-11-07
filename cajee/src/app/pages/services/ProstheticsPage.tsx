@@ -7,7 +7,7 @@ export function ProstheticsPage() {
       faqs={prostheticsFaqs}
       relatedSlugs={["prosthetic-leg-no-medical-aid-south-africa", "how-long-after-amputation-prosthetic-leg", "walking-with-a-prosthetic-leg"]}
       serviceSlug="prosthetics"
-      title="Prosthetic Limb Fitting in Sandton"
+      title="Prosthetic Leg and Arm Fitting in Sandton"
       subtitle="Restoring mobility, function, and independence following limb loss"
       whatIsIt="Prosthetics are externally applied medical devices used to replace a missing limb or body part following amputation, trauma, or congenital limb difference. They are carefully designed and fitted to restore mobility, daily function, and independence. Each prosthesis is custom-made for one person: the socket is moulded to your residual limb and the parts are chosen for how you live."
       benefits={[
@@ -26,7 +26,7 @@ export function ProstheticsPage() {
       ]}
       clinicalApproach="Our approach begins with a comprehensive assessment of your physical condition, rehabilitation goals, daily environment, and functional needs. We conduct mobile home or hospital assessments where needed to ensure your prosthetic device supports real-world use and long-term independence."
       seoTitle="Prosthetic Limb Fitting & Management | Upper & Lower Limb Prosthetics"
-      seoFullTitle="Prosthetic Limb Fitting in Sandton | Farida Cajee-Botes"
+      seoFullTitle="Prosthetic Leg & Arm Fitting in Sandton | Farida Cajee-Botes"
       seoDescription="Upper and lower limb prosthetic fitting in Sandton (feet, knees and hands), with children's prosthetic care and home or hospital visits across Gauteng."
       seoKeywords="prosthetic limbs South Africa, prosthetic leg fitting, prosthetic arm, limb prosthesis, amputee rehabilitation, prosthetic care, prosthetic specialist, mobile prosthetic service"
     />

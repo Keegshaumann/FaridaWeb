@@ -41,7 +41,7 @@ export function HomePage() {
       hoverImage: customOrthoticsHoverImg,
       link: "/services/custom-orthotics",
       features: [
-        "Custom-fit upper and lower limb orthoses",
+        "Custom-fit arm and leg braces, including AFO braces",
         "Spinal and neurological support devices",
         "Paediatric orthotic solutions",
         "Precision-crafted insoles and supports"
@@ -488,8 +488,10 @@ export function HomePage() {
       </section>
 
       {/* Farida's own statement of how she practises. Written by her; used as
-          supplied. Multi-paragraph body is left-aligned because centred text at
-          this length is hard to read. */}
+          supplied, except the first sentence ("An orthotist designs..."), which
+          restates her referral article's definition and was added on the owner's
+          yes of 7 November 2026 (T-71). Multi-paragraph body is left-aligned
+          because centred text at this length is hard to read. */}
       <section className="relative py-12 bg-[#E9F4FB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
@@ -498,7 +500,9 @@ export function HomePage() {
             </h2>
             <div className="space-y-4 text-left text-[var(--text-muted)] leading-relaxed">
               <p>
-                I am an HPCSA-registered Orthotist &amp; Prosthetist currently practising in
+                An orthotist designs, fits and reviews braces, splints, insoles and spinal
+                supports; a prosthetist does the same for artificial limbs. I am an
+                HPCSA-registered Orthotist &amp; Prosthetist currently practising in
                 Morningside, Sandton, where I provide comprehensive orthotic, prosthetic and
                 medical compression services.
               </p>

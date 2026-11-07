@@ -20,7 +20,7 @@ export function ServicesPage() {
       image: mobilityAidsImg,
       link: "/services/custom-orthotics",
       features: [
-        "Custom-fit upper and lower limb orthoses",
+        "Custom-fit arm and leg braces, including AFO braces",
         "Spinal and neurological support devices",
         "Paediatric orthotic solutions",
         "Precision-crafted insoles and supports"

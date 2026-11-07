@@ -66,7 +66,7 @@ export const customOrthoticsFaqs: Faq[] = [
     a: "Usually not, and not as the first step. Idiopathic toe walking is seen in around one in twenty toddlers and usually resolves without treatment by the age of five to ten, and the first line of management is a home stretching programme for the calf muscles, with serial casting if the calf is genuinely tight. Get it assessed sooner if the toe walking is on one leg only, if your child cannot get the heels down when asked, if there is pain or frequent falling, or if there was prematurity, speech delay or a family history.",
   },
   {
-    q: "My foot drags since my stroke. Will an ankle brace or AFO help?",
+    q: "My foot drags since my stroke (foot drop). Will an ankle brace or AFO help?",
     a: "An ankle foot orthosis, the moulded brace that holds the foot up so the toes clear the ground as the leg swings through, can help, but only as part of a rehabilitation programme. The UK's NICE guideline on stroke rehabilitation in adults says assessment for and treatment with ankle foot orthoses should be carried out as part of a stroke rehabilitation programme and performed by qualified professionals, that your ability to put the brace on must be assessed, and that its effectiveness is judged on comfort and on the speed and ease of walking. If it does not make walking easier, it is the wrong device.",
   },
   {
@@ -142,7 +142,7 @@ export const mobilityAidsFaqs: Faq[] = [
     a: "If you sit in the chair for most of the day, you need a pressure redistributing cushion. The international pressure injury guideline recommends a seating surface with pressure redistribution properties for anyone sitting who has, or is at risk of, a pressure injury, and warns specifically against ring or doughnut shaped cushions, which concentrate pressure instead of spreading it. The cushion is matched to your dimensions, your posture and whether sensation is intact. No cushion replaces movement: the same guideline asks wheelchair users to shift their weight regularly. If your shape, posture or ability changes, the seating needs looking at again.",
   },
   {
-    q: "Should I get a walking frame or a rollator?",
+    q: "Should I get a walking frame (walker) or a rollator?",
     a: "A walking frame gives more stability, a rollator covers more ground. A standard frame is lifted and placed with each step, which is slow but very stable, and suits short indoor distances and the early weeks after surgery. A rollator rolls on wheels, has hand brakes and usually a seat, and suits walking outdoors, shopping, and anyone who needs somewhere to rest along the way. Choose for where the walking actually happens. One rule covers both: never haul yourself up out of a chair by the frame. Push up off the chair arms first, then take the handles.",
   },
   {

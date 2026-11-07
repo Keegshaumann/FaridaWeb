@@ -29,7 +29,7 @@ export function CustomOrthoticsPage() {
       ]}
       clinicalApproach="Before anything is prescribed, we do a full assessment: what you want to be able to do, your home, and how much moving around your day involves. Then we design a device that supports your independence and fits easily into your daily routine."
       seoTitle="Custom Orthotics | Orthotic Devices & Braces | South Africa"
-      seoFullTitle="Custom Orthotics in Sandton | Farida Cajee-Botes"
+      seoFullTitle="Custom Orthotics, AFOs & Scoliosis Braces | Sandton"
       seoDescription="Custom-made orthotics in Sandton: AFOs, spinal and scoliosis braces and moulded insoles, individually fitted at the rooms, at home or in hospital."
       seoKeywords="custom orthotics South Africa, orthotic devices, foot orthotics, ankle braces, knee braces, spinal orthosis, pediatric orthotics, custom orthotic insoles, orthotic specialist"
     />

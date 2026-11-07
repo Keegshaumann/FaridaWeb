@@ -39,7 +39,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Above-knee (transfemoral) prostheses and microprocessor knees",
         "paragraphs": [
-          "Above-knee prostheses cost more than below-knee ones for a straightforward reason: they need a knee joint as well as a foot, and that joint is one of the most technically complex, and expensive, components in prosthetics. A simple mechanical knee keeps costs closer to the lower end of the above-knee range, while a microprocessor-controlled knee, which uses onboard sensors and a computer to adjust resistance during walking in real time, sits at the top end. Our [prosthetics service](/services/prosthetics) covers assessment, componentry selection and fitting for both below-knee and above-knee limbs, matched to your goals and, importantly, to what your funding route will support."
+          "Above-knee prostheses cost more than below-knee ones for a straightforward reason: they need a knee joint as well as a foot, and that joint is one of the most technically complex, and expensive, components in prosthetics. A simple mechanical knee keeps costs closer to the lower end of the above-knee range, while a microprocessor-controlled knee, which uses onboard sensors and a computer to adjust resistance during walking in real time, sits at the top end. Our [prosthetic leg fitting service](/services/prosthetics) covers assessment, componentry selection and fitting for both below-knee and above-knee limbs, matched to your goals and, importantly, to what your funding route will support."
         ]
       },
       {
