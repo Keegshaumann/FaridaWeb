@@ -288,7 +288,7 @@ export const COMPRESSION_JOURNEY: { step: string; title: string; body: string }[
 ];
 
 export const COMPRESSION_CARE: string[] = [
-  "Put your compression garment on first thing in the morning, before the leg swells",
+  "[Put your compression garment on](/blog/how-to-put-on-compression-stockings) first thing in the morning, before the leg swells",
   "Wash after every one to two wears in warm water; washing restores the elastic fibres",
   "No fabric softener, no bleach and no tumble dryer",
   "Dry flat, away from direct sun and heaters",

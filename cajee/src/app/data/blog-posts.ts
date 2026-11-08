@@ -1613,6 +1613,127 @@ export const BLOG_POSTS: BlogPost[] = [
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7950819/"
       }
     ]
+  },
+  {
+    "slug": "how-to-put-on-compression-stockings",
+    "title": "How to Put On Compression Stockings Without a Struggle",
+    "metaTitle": "How to Put On Compression Stockings Without a Struggle",
+    "category": "General",
+    "date": "2026-11-08",
+    "author": "Farida Cajee-Botes",
+    "image": "/blog/support-stockings-vs-compression-stockings.jpg",
+    "imageAlt": "A below-knee graduated compression stocking shown against a plain background",
+    "metaDescription": "Step-by-step guidance from NHS leaflets on putting on and taking off medical compression stockings, what helps, and signs a garment needs refitting.",
+    "excerpt": "Turn the stocking inside out to the heel, settle your foot first, then work it up a section at a time. The NHS method step by step, what makes it easier, how to take stockings off, and the signs that mean something's wrong.",
+    "readMinutes": 6,
+    "sections": [
+      {
+        "heading": "",
+        "paragraphs": [
+          "Turn the stocking inside out down to the heel, get your foot and heel settled first, then work the rest up your leg a little at a time. Don't force it, and don't let the fabric bunch.",
+          "That's the short answer. The trouble is that medical compression stockings are made to squeeze, so getting one over your heel can feel like a wrestling match. You can learn the technique, though, and the right aid can make a real difference.",
+          "This is general information. If a clinician has prescribed your garment, follow the instructions you were given for your own leg."
+        ]
+      },
+      {
+        "heading": "Why the way you put it on matters",
+        "paragraphs": [
+          "A graduated compression stocking is built to [press hardest at the ankle and less as it goes up the leg](/blog/support-stockings-vs-compression-stockings). Much of the NHS guidance on putting one on is about keeping it smooth: [don't fold or wrinkle the material](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings), and [avoid gathering or bunching it](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/), which makes it harder to get on.",
+          "How easy it is to put on also affects whether a stocking gets worn. In [a 2024 study that interviewed people who wear compression](https://pmc.ncbi.nlm.nih.gov/articles/PMC11670924/), participants said putting it on and taking it off needs dexterity and proper instruction, and some found it hard work. Discomfort, the look of the garment and losing their independence were among the reasons they gave for not wearing it. A participant who was later shown how to use donning aids went from wearing her stockings occasionally to wearing them every day."
+        ]
+      },
+      {
+        "heading": "Put them on first thing",
+        "paragraphs": [
+          "Put your stockings on [as early as you can in the morning](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings), once your skin is thoroughly dry and any lotion has completely soaked in. I take compression measurements in the morning too, before your leg has had the day to swell.",
+          "Moisturising matters, but do it at night. Take your stockings off at night so you can [wash and cream your legs every day](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/). Don't put cream on before your stockings, though, because it can break down the fabric and elastic fibres."
+        ]
+      },
+      {
+        "heading": "The inside-out method, step by step",
+        "paragraphs": [
+          "This is how NHS leaflets from [Kent Community Health](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/) and [Guy's and St Thomas'](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings) teach patients to put on a closed-toe stocking:",
+          "1. Check you've got the right stocking. If you've been given a left and a right, make sure you can tell them apart.",
+          "2. Put your hand inside the stocking, grasp the heel, and pull the stocking inside out down to the heel, leaving the toe section tucked inside. You now have a foot pocket with the leg folded back over it.",
+          "3. Keep it flat. Gathered or bunched fabric makes the next steps harder.",
+          "4. Stretch the edges of the folded section, slide your toes into the front and settle your heel into the heel of the stocking. Get the foot and heel right here and everything after it is easier. If it doesn't look right, it can be easier to start again than to shuffle it into place.",
+          "5. Unfold the stocking over your ankle and draw it up your leg gradually, a section at a time. Graduated stockings need to go on gradually, so don't force them. If the fabric gets overstretched, push it back down to the ankle and pull it up again.",
+          "6. Stop in the right place. A below-knee stocking should finish short of the crease at the back of your knee, never in it. A thigh-length stocking stops short of the base of your buttocks. medi, a compression manufacturer, also [warns against pulling a garment up too high](https://www.medi.de/en/faq/compression-garments/donning/).",
+          "7. Smooth it so the material isn't folded or wrinkled anywhere, then check your toes. If they feel restricted, gently draw the stocking away from them to release the pressure.",
+          "For an open-toe stocking, use the [easy-on slipper](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings) if one came with it. Put your foot in the slipper first: it holds the stocking in place while you slip your foot in. Once the stocking is up, pull the slipper out through the open toe and check that the heel and toes sit properly."
+        ]
+      },
+      {
+        "heading": "What makes it easier",
+        "paragraphs": [
+          "Gloves help, for putting stockings on and for taking them off. NHS guidance suggests [non-latex gloves](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/), which help you grip and stop you scratching your skin, and medi, a compression manufacturer, [suggests rubber ones](https://www.medi.de/en/faq/compression-garments/donning/).",
+          "[Calluses, rough skin and nails can damage stockings](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/), so keep your fingernails smooth and leave rings that stick out until the stockings are on. As you work the stocking up, [spread the fabric evenly across your leg](https://www.medi.de/en/faq/compression-garments/donning/) instead of pulling it up in one go. If your skin is moist, [talcum powder can help the stocking slide on](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings).",
+          "Then there are donning aids, which come in different designs for arm and leg garments. medi, which makes them, says they [help people with limited mobility, or without the strength to pull a stocking over the heel](https://www.medi.de/en/faq/compression-garments/donning-aids/), to put their stockings on themselves. Whether one would help you depends on things like your dexterity, mobility and strength. Dexterity counts when I choose the toe style, because an [open toe suits anyone using a slide-on aid](/services/compression)."
+        ]
+      },
+      {
+        "heading": "Taking them off",
+        "paragraphs": [
+          "Don't roll the stocking down. [Slide it gently down your leg in sections](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/) and take it off carefully, then straighten the fabric and lay it flat. Gloves help here too.",
+          "[Don't wear your stockings to bed](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings) unless your doctor or specialist nurse has told you to."
+        ]
+      },
+      {
+        "heading": "When the struggle means something's wrong",
+        "paragraphs": [
+          "Expect some effort, especially with [a new pair](https://pmc.ncbi.nlm.nih.gov/articles/PMC11670924/). These are the signs to act on.",
+          "Pins and needles or numbness: [take the stockings off immediately](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/) and contact your healthcare professional for advice.",
+          "A top band that rolls down or slides: medi lists [a band too small for your thigh](https://www.medi.de/en/faq/compression-garments/problems-with-topband/) and pulling the stocking up too far among the causes. A wider band, a hip attachment or compression tights can help.",
+          "Red, itchy skin under the band: medi says this is [often sweat and friction rather than an allergy](https://www.medi.de/en/faq/compression-garments/problems-with-topband/), and lifting and moving the band usually sorts it out. See your doctor if you get pressure marks, or if the irritation persists or gets worse.",
+          "A stocking you still can't get on after practice: the class or toe style may not suit how well you can manage the garment, or an aid may help. It's worth a refit before you give up on compression."
+        ]
+      },
+      {
+        "heading": "How I help",
+        "paragraphs": [
+          "When I fit compression, I measure your leg in the morning, and the fitting includes teaching you to put the garment on and take it off. Where donning gloves or an application frame will make the difference, I demonstrate them and supply them. Then I see you again to review the fit. I see patients at Orthocast Morningside in Sandton.",
+          "If a garment is hard to get on, rolls down or hurts, or you've been prescribed compression and aren't sure where to start, have a look at my [medical compression service](/services/compression) and [book an assessment](/contact)."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "Turn the stocking inside out to the heel, settle your foot and heel first, then draw it up a section at a time without forcing it.",
+      "Put stockings on as early as you can in the morning, on dry skin, and moisturise at night instead of before you put them on.",
+      "Gloves and donning aids make it easier, and smooth nails protect the fabric. To take stockings off, slide them down in sections instead of rolling them.",
+      "Pins and needles or numbness mean take the stockings off at once and contact your healthcare professional."
+    ],
+    "references": [
+      {
+        "title": "Applying graduated compression stockings",
+        "publisher": "Kent Community Health NHS Foundation Trust",
+        "url": "https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/"
+      },
+      {
+        "title": "Compression stockings",
+        "publisher": "Guy's and St Thomas' NHS Foundation Trust",
+        "url": "https://www.guysandstthomas.nhs.uk/health-information/compression-stockings"
+      },
+      {
+        "title": "Donning compression stockings: how to do it correctly and easily",
+        "publisher": "medi",
+        "url": "https://www.medi.de/en/faq/compression-garments/donning/"
+      },
+      {
+        "title": "Putting on compression stockings with a donning aid",
+        "publisher": "medi",
+        "url": "https://www.medi.de/en/faq/compression-garments/donning-aids/"
+      },
+      {
+        "title": "The topband rolls up: help with compression stockings that slip",
+        "publisher": "medi",
+        "url": "https://www.medi.de/en/faq/compression-garments/problems-with-topband/"
+      },
+      {
+        "title": "The impact of wearing compression hosiery and the use of assistive products for donning and doffing: a descriptive qualitative study into user experiences",
+        "publisher": "PLoS One, via PMC (National Library of Medicine)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11670924/"
+      }
+    ]
   }
 ];
 

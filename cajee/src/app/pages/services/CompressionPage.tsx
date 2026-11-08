@@ -28,6 +28,7 @@ import {
   OTHER_COMPRESSION,
 } from "../../components/compression/compression-data";
 import { imageSize } from "../../data/image-sizes";
+import { RichText } from "../../components/blog/RichText";
 
 // Compression is a specialism in its own right at this practice, so this page
 // deliberately steps away from the shared ServicePageTemplate: same brand hue,
@@ -590,7 +591,7 @@ export function CompressionPage() {
                 {COMPRESSION_CARE.map((c) => (
                   <li key={c} className="flex items-start gap-2.5">
                     <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--accent-purple)]" />
-                    <span className="text-sm leading-relaxed text-[var(--text-muted)]">{c}</span>
+                    <span className="text-sm leading-relaxed text-[var(--text-muted)]"><RichText text={c} /></span>
                   </li>
                 ))}
               </ul>
