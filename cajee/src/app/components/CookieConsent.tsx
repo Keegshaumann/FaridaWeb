@@ -69,7 +69,7 @@ export function CookieConsent() {
               </div>
               <p className="text-sm text-[var(--text-muted)] leading-relaxed max-md:text-[13px] max-md:leading-[1.3] max-md:text-[var(--text-dark)]/80">
                 We use cookies and similar technologies to improve your experience on our website, 
-                analyse site traffic, and personalize content. By clicking "Accept All", you consent 
+                analyse site traffic, and personalise content. By clicking "Accept All", you consent 
                 to our use of cookies for analytics and tracking. This helps us understand how 
                 visitors use our site and improve our services.
               </p>

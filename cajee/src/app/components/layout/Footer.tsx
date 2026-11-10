@@ -59,39 +59,39 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-white mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-0 md:space-y-2">
               <li>
-                <Link to="/" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/about" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/contact" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/blog" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/privacy-policy" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-and-conditions" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/terms-and-conditions" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Terms & Conditions
                 </Link>
               </li>
@@ -101,39 +101,39 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-semibold text-white mb-4">Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-0 md:space-y-2">
               <li>
-                <Link to="/services" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   All Services
                 </Link>
               </li>
               <li>
-                <Link to="/services/prosthetics" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services/prosthetics" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Prosthetics
                 </Link>
               </li>
               <li>
-                <Link to="/services/custom-orthotics" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services/custom-orthotics" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Custom Orthotics
                 </Link>
               </li>
               <li>
-                <Link to="/services/off-the-shelf-orthotics" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services/off-the-shelf-orthotics" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Braces and Supports
                 </Link>
               </li>
               <li>
-                <Link to="/services/compression" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services/compression" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Medical Compression
                 </Link>
               </li>
               <li>
-                <Link to="/services/mobility-aids" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services/mobility-aids" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Mobility Aids
                 </Link>
               </li>
               <li>
-                <Link to="/services/breast-prosthetics" className="text-white/90 hover:text-white text-sm transition-colors">
+                <Link to="/services/breast-prosthetics" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
                   Breast Prostheses
                 </Link>
               </li>
@@ -145,18 +145,19 @@ export function Footer() {
             <h3 className="font-semibold text-white mb-4">Contact details</h3>
             <ul className="space-y-3 bg-[#00000000]">
               <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                {/* mt-3.5 below md: the number beside it now sits in the middle of a 44px tap area */}
+                <Phone className="h-5 w-5 text-white flex-shrink-0 mt-3.5 md:mt-0.5" />
                 <div className="text-sm">
                   <a
                     href="tel:+27118839100"
-                    className="text-white/90 hover:text-white transition-colors font-bold"
+                    className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white transition-colors font-bold"
                   >
                     011 883 9100
                   </a>
                   <p className="text-white/90 text-[13px] md:text-xs">Morningside rooms</p>
                   <a
                     href="tel:+27799982203"
-                    className="mt-2 inline-block text-white/90 hover:text-white transition-colors font-bold"
+                    className="mt-2 inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white transition-colors font-bold"
                   >
                     079 998 2203
                   </a>
@@ -164,10 +165,10 @@ export function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-white flex-shrink-0 mt-0.5" />
+                <Mail className="h-5 w-5 text-white flex-shrink-0 mt-3.5 md:mt-0.5" />
                 <a
                   href="mailto:care@cajeebotes.com"
-                  className="text-white/90 hover:text-white text-sm transition-colors font-bold"
+                  className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors font-bold"
                 >
                   care@cajeebotes.com
                 </a>
@@ -218,7 +219,7 @@ export function Footer() {
                   Block F, Ground Floor, Sandton, 2196
                 </address>
                 <p className="text-white/90 text-sm mt-1.5">
-                  <a href="tel:+27118839100" className="font-semibold hover:text-white">
+                  <a href="tel:+27118839100" className="inline-flex min-h-[44px] items-center md:min-h-0 font-semibold hover:text-white">
                     011 883 9100
                   </a>
                   <span className="text-white/90"> · Reception</span>
@@ -228,7 +229,7 @@ export function Footer() {
                     href="https://wa.me/27799982203"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold hover:text-white"
+                    className="inline-flex min-h-[44px] items-center md:min-h-0 font-semibold hover:text-white"
                   >
                     079 998 2203
                   </a>
@@ -241,7 +242,7 @@ export function Footer() {
                   href="https://maps.google.com/?cid=12162722174863443304"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block text-white/90 hover:text-white text-sm underline underline-offset-4 mt-2 transition-colors"
+                  className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm underline underline-offset-4 mt-2 transition-colors"
                 >
                   Get directions
                 </a>
@@ -259,7 +260,7 @@ export function Footer() {
                   across Centurion, Pretoria, Midrand, Sandton and Johannesburg.
                 </p>
                 <p className="text-white/90 text-sm mt-1.5">
-                  <a href="tel:+27799982203" className="font-semibold hover:text-white">
+                  <a href="tel:+27799982203" className="inline-flex min-h-[44px] items-center md:min-h-0 font-semibold hover:text-white">
                     079 998 2203
                   </a>
                 </p>

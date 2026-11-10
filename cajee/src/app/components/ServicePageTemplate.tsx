@@ -158,7 +158,7 @@ export function ServicePageTemplate({
                       >
                         {r!.title}
                       </Link>
-                      <p className="mt-1 text-sm text-[var(--text-muted)]">{r!.excerpt}</p>
+                      <p className="mt-1 text-base md:text-sm text-[var(--text-muted)]">{r!.excerpt}</p>
                     </li>
                   ))}
                 </ul>
@@ -175,12 +175,12 @@ export function ServicePageTemplate({
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact#book">
-                  <Button size="lg" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full px-8">
+                  <Button size="lg" className="h-11 md:h-10 bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full px-8">
                     Book Assessment
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="rounded-full border-2 px-8">
+                  <Button size="lg" variant="outline" className="h-11 md:h-10 rounded-full border-2 px-8">
                     Contact Us
                   </Button>
                 </Link>

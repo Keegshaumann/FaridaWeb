@@ -49,7 +49,7 @@ export function ServiceProductsSection({
       type="button"
       onClick={() => setActive(value)}
       aria-pressed={active === value}
-      className={`rounded-full px-4 py-2 text-sm font-medium transition-all active:scale-95 ${
+      className={`min-h-[44px] md:min-h-0 rounded-full px-4 py-2 text-sm font-medium transition-all active:scale-95 ${
         active === value
           ? "bg-[var(--text-dark)] text-white shadow-md"
           : "bg-[var(--purple-soft)] text-[var(--text-dark)] hover:bg-[var(--purple-medium)] hover:text-white"

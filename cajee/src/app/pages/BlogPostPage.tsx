@@ -89,11 +89,11 @@ export function BlogPostPage() {
       <section className="relative bg-[#E9F4FB] pt-[90px] pb-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link to="/blog" className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--purple-medium)] hover:text-[var(--text-dark)]">
+            <Link to="/blog" className="inline-flex min-h-[44px] md:min-h-0 items-center gap-1.5 text-sm font-medium text-[var(--purple-medium)] hover:text-[var(--text-dark)]">
               <ArrowLeft className="h-4 w-4" /> All articles
             </Link>
             <span className="mt-4 block">
-              <span className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[13px] md:text-[11px] font-semibold text-[var(--text-dark)]">
+              <span className="inline-flex rounded-full bg-white/70 px-2.5 py-1 text-[13px] md:text-xs font-semibold text-[var(--text-dark)]">
                 {post.category}
               </span>
             </span>
@@ -103,13 +103,17 @@ export function BlogPostPage() {
             <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-[var(--text-muted)]">
               <span className="inline-flex items-center gap-1.5">
                 <User className="h-4 w-4" />
-                <Link
-                  to="/about"
-                  className="underline underline-offset-2 hover:text-[var(--text-dark)]"
-                >
-                  {post.author}
-                </Link>
-                , Orthotist &amp; Prosthetist
+                {/* One plain span, so the gap-1.5 above does not open a space
+                    between the name and its comma. */}
+                <span>
+                  <Link
+                    to="/about"
+                    className="underline underline-offset-2 hover:text-[var(--text-dark)]"
+                  >
+                    {post.author}
+                  </Link>
+                  , Orthotist &amp; Prosthetist
+                </span>
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Calendar className="h-4 w-4" />
@@ -174,7 +178,7 @@ export function BlogPostPage() {
                       // when the display changes.
                       out.push(
                         <div key={`t-${i}`} className="mb-6 sm:overflow-x-auto">
-                          <table role="table" className="w-full border-collapse text-left text-sm max-sm:block">
+                          <table role="table" className="w-full border-collapse text-left text-base sm:text-sm max-sm:block">
                             <thead role="rowgroup" className="max-sm:sr-only">
                               <tr role="row">
                                 {head.map((h, hi) => (
@@ -232,8 +236,8 @@ export function BlogPostPage() {
               <h2 className="text-lg font-semibold text-[var(--text-dark)] mb-3">Key takeaways</h2>
               <ul className="space-y-2">
                 {post.keyTakeaways.map((t) => (
-                  <li key={t} className="flex items-start gap-2 text-sm leading-relaxed text-[var(--text-dark)]/80">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--purple-medium)]" />
+                  <li key={t} className="flex items-start gap-2 text-base md:text-sm leading-relaxed text-[var(--text-dark)]/80">
+                    <CheckCircle2 className="mt-1 md:mt-0.5 h-4 w-4 flex-shrink-0 text-[var(--purple-medium)]" />
                     <span>{t}</span>
                   </li>
                 ))}
@@ -243,11 +247,11 @@ export function BlogPostPage() {
             {/* CTA */}
             <div className="mt-8 rounded-xl border border-[var(--purple-soft)]/60 p-6 text-center">
               <p className="font-semibold text-[var(--text-dark)]">Have a question about your own situation?</p>
-              <p className="mt-1 text-sm text-[var(--text-muted)]">
+              <p className="mt-1 text-base md:text-sm text-[var(--text-muted)]">
                 Every device we provide starts with an individual assessment: at home, in hospital, or at the practice.
               </p>
               <Link to="/contact" className="mt-4 inline-block">
-                <Button className="rounded-full bg-[var(--text-dark)] px-6 text-white hover:bg-[var(--text-dark)]/90">
+                <Button className="h-11 md:h-9 rounded-full bg-[var(--text-dark)] px-6 text-white hover:bg-[var(--text-dark)]/90">
                   Book an assessment
                 </Button>
               </Link>
@@ -286,13 +290,13 @@ export function BlogPostPage() {
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
                   to="/contact#book"
-                  className="inline-flex items-center rounded-full bg-[var(--accent-purple)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  className="inline-flex min-h-[44px] md:min-h-0 items-center rounded-full bg-[var(--accent-purple)] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                 >
                   Book an assessment
                 </Link>
                 <Link
                   to="/about"
-                  className="inline-flex items-center rounded-full border border-[var(--accent-purple)] px-4 py-2 text-sm font-semibold text-[var(--accent-purple)] transition-colors hover:bg-[var(--purple-soft)]"
+                  className="inline-flex min-h-[44px] md:min-h-0 items-center rounded-full border border-[var(--accent-purple)] px-4 py-2 text-sm font-semibold text-[var(--accent-purple)] transition-colors hover:bg-[var(--purple-soft)]"
                 >
                   More about Farida
                 </Link>
@@ -312,7 +316,7 @@ export function BlogPostPage() {
                     to={`/blog/${r.slug}`}
                     className="rounded-xl bg-white p-4 shadow-sm ring-1 ring-[var(--purple-soft)]/50 transition-all hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    <span className="text-[13px] md:text-[11px] font-semibold text-[var(--purple-medium)]">{r.category}</span>
+                    <span className="text-[13px] md:text-xs font-semibold text-[var(--purple-medium)]">{r.category}</span>
                     <p className="mt-1 text-sm font-semibold leading-snug text-[var(--text-dark)]">{r.title}</p>
                   </Link>
                 ))}

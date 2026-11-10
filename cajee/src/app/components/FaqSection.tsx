@@ -78,7 +78,7 @@ export function FaqSection({
             {faqs.map((f) => (
               <details key={f.q} className={`group border-b ${t.divider} py-4`}>
                 <summary
-                  className={`flex cursor-pointer list-none items-start justify-between gap-4 text-left text-lg font-semibold ${t.question}`}
+                  className={`flex py-2 -my-2 md:py-0 md:my-0 cursor-pointer list-none items-start justify-between gap-4 text-left text-lg font-semibold ${t.question}`}
                 >
                   <h3 className="text-lg font-semibold">{f.q}</h3>
                   <ChevronDown
