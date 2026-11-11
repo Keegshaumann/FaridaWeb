@@ -137,6 +137,11 @@ export function Footer() {
                   Breast Prostheses
                 </Link>
               </li>
+              <li>
+                <Link to="/services/home-visits" className="inline-flex min-h-[44px] items-center md:min-h-0 text-white/90 hover:text-white text-sm transition-colors">
+                  Home and Hospital Visits
+                </Link>
+              </li>
             </ul>
           </div>
 

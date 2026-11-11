@@ -74,6 +74,7 @@ const PAGES = [
   ["/services/compression", "monthly", "1.0", ["src/app/pages/services/CompressionPage.tsx", "src/app/components/compression/compression-data.ts", "src/app/components/compression/LegDiagram.tsx", "src/app/components/compression/CompressionClassSelector.tsx", "src/app/components/compression/CompressionLengthSelector.tsx"]],
   ["/services/mobility-aids", "monthly", "0.9", ["src/app/pages/services/MobilityAidsPage.tsx", ...SERVICE_SOURCES]],
   ["/services/breast-prosthetics", "monthly", "0.9", ["src/app/pages/services/BreastProstheticsPage.tsx", ...SERVICE_SOURCES]],
+  ["/services/home-visits", "monthly", "0.9", ["src/app/pages/services/HomeVisitsPage.tsx", "src/app/components/ServicePageTemplate.tsx"]],
   ["/privacy-policy", "yearly", "0.3", ["src/app/pages/PrivacyPolicyPage.tsx"]],
   ["/terms-and-conditions", "yearly", "0.3", ["src/app/pages/TermsAndConditionsPage.tsx"]],
   ["/blog", "weekly", "0.8", ["src/app/pages/BlogPage.tsx", "src/app/data/blog-posts.ts"]],

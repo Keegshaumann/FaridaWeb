@@ -15,6 +15,7 @@ import { OffTheShelfOrthoticsPage } from "./pages/services/OffTheShelfOrthoticsP
 import { CompressionPage } from "./pages/services/CompressionPage";
 import { MobilityAidsPage } from "./pages/services/MobilityAidsPage";
 import { BreastProstheticsPage } from "./pages/services/BreastProstheticsPage";
+import { HomeVisitsPage } from "./pages/services/HomeVisitsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 export const router = createBrowserRouter([
@@ -35,6 +36,7 @@ export const router = createBrowserRouter([
       { path: "services/compression", Component: CompressionPage },
       { path: "services/mobility-aids", Component: MobilityAidsPage },
       { path: "services/breast-prosthetics", Component: BreastProstheticsPage },
+      { path: "services/home-visits", Component: HomeVisitsPage },
       { path: "privacy-policy", Component: PrivacyPolicyPage },
       { path: "terms-and-conditions", Component: TermsAndConditionsPage },
       { path: "*", Component: NotFoundPage },

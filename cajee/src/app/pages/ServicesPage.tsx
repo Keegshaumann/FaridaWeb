@@ -113,6 +113,16 @@ export function ServicesPage() {
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
               We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each service is delivered with the same commitment to individualised, assessment-led care.
             </p>
+            {/* T-29: the hub's link to the home and hospital visits page. The
+                wording restates what the site already says (assessment and
+                fitting at home or at the hospital bedside). */}
+            <p className="mt-4 text-lg text-[var(--text-muted)] leading-relaxed">
+              Can't easily get to the rooms? Assessment and fitting can also happen at your home or hospital bedside:{" "}
+              <Link to="/services/home-visits" className="text-[var(--accent-purple)] underline underline-offset-4 hover:opacity-80">
+                home and hospital visits
+              </Link>
+              .
+            </p>
           </div>
 
           {/* Premium Cards Grid - Same as HomePage */}

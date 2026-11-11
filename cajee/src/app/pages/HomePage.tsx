@@ -247,7 +247,7 @@ export function HomePage() {
                     Care Where You Need It
                   </h2>
                   <p className="text-[var(--text-muted)] leading-relaxed mb-6">
-                    We run a mobile home and hospital service, so professional orthotic, prosthetic and compression care comes to you. If you're recovering at home, you're in hospital or you can't travel, we do the full assessment where you are, compression measuring and fitting included. Seeing you in your own environment is how we make sure the result is appropriate and works for you.
+                    We run a <Link to="/services/home-visits" className="text-[var(--accent-purple)] underline underline-offset-4 hover:opacity-80">mobile home and hospital service</Link>, so professional orthotic, prosthetic and compression care comes to you. If you're recovering at home, you're in hospital or you can't travel, we do the full assessment where you are, compression measuring and fitting included. Seeing you in your own environment is how we make sure the result is appropriate and works for you.
                   </p>
                   <Link to="/about">
                     <Button variant="default" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full">

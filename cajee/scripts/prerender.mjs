@@ -48,6 +48,7 @@ const ROUTES = [
   "/services/compression",
   "/services/mobility-aids",
   "/services/breast-prosthetics",
+  "/services/home-visits",
   "/privacy-policy",
   "/terms-and-conditions",
   // Written out as dist/404.html, not /404/index.html, because Apache's

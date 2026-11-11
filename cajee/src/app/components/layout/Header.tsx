@@ -63,6 +63,7 @@ export function Header() {
     { name: "Medical Compression", path: "/services/compression" },
     { name: "Mobility Aids", path: "/services/mobility-aids" },
     { name: "Breast and Silicone Prosthetics", path: "/services/breast-prosthetics" },
+    { name: "Home and Hospital Visits", path: "/services/home-visits" },
   ];
 
   return (
