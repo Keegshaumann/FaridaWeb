@@ -120,6 +120,9 @@ RedirectMatch 404 ^/(anatomy|assets|devices|external)/?$
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  # HSTS (12 Nov 2026): browsers keep to https for a year. No includeSubDomains
+  # and no preload, so a subdomain without https is never locked out.
+  Header always set Strict-Transport-Security "max-age=31536000"
 </IfModule>
 
 ErrorDocument 404 /404.html
