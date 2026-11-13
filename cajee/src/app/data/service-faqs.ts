@@ -14,8 +14,8 @@ export const privatePracticeFaq: Faq = {
 
 export const prostheticsFaqs: Faq[] = [
   {
-    q: "How much does a prosthetic leg cost in South Africa?",
-    a: "There is no fixed price for a prosthetic leg, and any website quoting a single figure is guessing. Cost is driven by two things: the socket, which is custom made to your residual limb and carries most of the clinical time, and the componentry bought in from manufacturers, chiefly the foot and, for an above-knee limb, the knee joint. Össur South Africa makes the same point, that there is no standard residual limb and therefore no standard price. An above-knee prosthesis costs more than a below-knee one because a knee is added to the build. We quote in writing, itemised, after assessing you and before anything is ordered.",
+    q: "How much does a prosthetic leg or arm cost in South Africa?",
+    a: "There is no fixed price for a prosthetic leg, and any website quoting a single figure is guessing. Cost is driven by two things: the socket, which is custom made to your residual limb and carries most of the clinical time, and the componentry bought in from manufacturers, chiefly the foot and, for an above-knee limb, the knee joint. Össur South Africa makes the same point, that there is no standard residual limb and therefore no standard price. An above-knee prosthesis costs more than a below-knee one because a knee is added to the build. We quote in writing, itemised, after assessing you and before anything is ordered. A prosthetic arm is priced the same way: it is built around a socket moulded to you, with the hand and other parts chosen for the tasks you need, so it is also quoted in writing after an assessment.",
   },
   {
     q: "Does medical aid cover a prosthetic leg?",

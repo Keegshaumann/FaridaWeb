@@ -9,7 +9,7 @@ export function MobilityAidsPage() {
       serviceSlug="mobility-aids"
       title="Wheelchairs, Walkers and Mobility Aids"
       subtitle="Helping you move safely and independently, at home and out in the community"
-      whatIsIt="Mobility aids are assistive devices prescribed to help you move safely at home and out in the community. Which one you get depends on your physical condition, your surroundings and what you want to be able to do, and the aim is more independence and a lower risk of falling."
+      whatIsIt="Mobility aids, from walking aids such as crutches, walking sticks, walking frames and rollators to wheelchairs, are assistive devices prescribed to help you move safely at home and out in the community. Which one you get depends on your physical condition, your surroundings and what you want to be able to do, and the aim is more independence and a lower risk of falling."
       benefits={[
         "Improving walking safety and stability",
         "Preventing falls and injuries",
