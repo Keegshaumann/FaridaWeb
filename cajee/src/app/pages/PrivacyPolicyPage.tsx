@@ -31,7 +31,7 @@ export function PrivacyPolicyPage() {
             <div className="prose prose-lg max-w-none">
               {/* Last Updated */}
               <p className="text-sm text-[var(--text-muted)] mb-8">
-                <strong>Last Updated:</strong> March 25, 2026
+                <strong>Last updated:</strong> 13 November 2026
               </p>
 
               {/* Introduction */}
@@ -188,7 +188,7 @@ export function PrivacyPolicyPage() {
                   8. Data Retention
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Medical records and patient information are retained in accordance with healthcare regulations and professional standards.
+                  We retain your personal information for as long as necessary to fulfil the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Medical records and patient information are retained in accordance with healthcare regulations and professional standards.
                 </p>
               </section>
 
@@ -208,7 +208,7 @@ export function PrivacyPolicyPage() {
                   10. Changes to This Privacy Policy
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically.
+                  We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically.
                 </p>
               </section>
 
@@ -225,10 +225,10 @@ export function PrivacyPolicyPage() {
                     <strong>Farida Cajee-Botes Orthotist &amp; Prosthetist</strong>
                   </p>
                   <p className="text-[var(--text-muted)] mb-1">
-                    <strong>Email:</strong> <a href="mailto:care@cajeebotes.com" className="text-[var(--accent-purple)] hover:underline">care@cajeebotes.com</a>
+                    <strong>Email:</strong> <a href="mailto:care@cajeebotes.com" className="inline-flex min-h-[44px] items-center text-[var(--accent-purple)] hover:underline">care@cajeebotes.com</a>
                   </p>
                   <p className="text-[var(--text-muted)] mb-1">
-                    <strong>Phone:</strong> <a href="tel:+27118839100" className="text-[var(--accent-purple)] hover:underline">011 883 9100</a>
+                    <strong>Phone:</strong> <a href="tel:+27118839100" className="inline-flex min-h-[44px] items-center text-[var(--accent-purple)] hover:underline">011 883 9100</a>
                   </p>
                   <p className="text-[var(--text-muted)]">
                     <strong>Location:</strong> Morningside, Sandton, Gauteng, South Africa
@@ -242,7 +242,7 @@ export function PrivacyPolicyPage() {
                   12. POPIA Compliance
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  We are committed to complying with South Africa's Protection of Personal Information Act (POPIA). We process personal information lawfully, fairly, and transparently, and only for the specific purposes for which it was collected. For more information about POPIA and your rights, please visit the Information Regulator's website at <a href="https://www.justice.gov.za/inforeg/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-purple)] hover:underline">www.justice.gov.za/inforeg/</a>.
+                  We are committed to complying with South Africa's Protection of Personal Information Act (POPIA). We process personal information lawfully, fairly, and transparently, and only for the specific purposes for which it was collected. For more information about POPIA and your rights, please visit the Information Regulator's website at <a href="https://inforegulator.org.za/" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-purple)] hover:underline">inforegulator.org.za</a>.
                 </p>
               </section>
 

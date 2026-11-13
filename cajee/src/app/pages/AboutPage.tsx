@@ -176,6 +176,17 @@ export function AboutPage() {
                 >
                   Farida Cajee-Botes is a qualified Orthotist and Prosthetist working across Gauteng, South Africa. She supports people living with an injury, an illness or a physical impairment through their rehabilitation, and she leads each patient's care herself and plans it around that patient.
                 </motion.p>
+                <Link to="/contact#book" className="inline-block mb-6">
+                  <motion.div
+                    className="inline-flex min-h-[44px] items-center text-sm font-bold tracking-widest text-[var(--accent-purple)] transition-colors hover:text-[var(--accent-purple)]/80 cursor-pointer"
+                    variants={{
+                      hidden: { y: 20, opacity: 0 },
+                      visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+                    }}
+                  >
+                    BOOK AN ASSESSMENT →
+                  </motion.div>
+                </Link>
                 <motion.p
                   className="mb-8 max-w-lg text-base text-[var(--text-muted)] leading-relaxed"
                   variants={{
@@ -185,17 +196,6 @@ export function AboutPage() {
                 >
                   Every device starts with an assessment. Farida works closely with patients, their caregivers and hospital teams to design and prescribe orthotic and prosthetic devices that support how people function day to day, their dignity and their independence in the long run.
                 </motion.p>
-                <Link to="/contact#book">
-                  <motion.div
-                    className="inline-block text-sm font-bold tracking-widest text-[var(--accent-purple)] transition-colors hover:text-[var(--accent-purple)]/80 cursor-pointer"
-                    variants={{
-                      hidden: { y: 20, opacity: 0 },
-                      visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
-                    }}
-                  >
-                    BOOK AN ASSESSMENT →
-                  </motion.div>
-                </Link>
               </motion.main>
             </div>
 

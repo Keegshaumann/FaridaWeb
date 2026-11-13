@@ -10,7 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Prosthetic Leg Price in South Africa: Above & Below Knee",
     "category": "Prosthetics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-09-16",
+    "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-cost-south-africa.jpg",
     "imageAlt": "Below-knee prosthetic leg with carbon-fibre socket and titanium pylon on a prosthetics workbench",
@@ -33,7 +33,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Below-knee (transtibial) prostheses",
         "paragraphs": [
-          "For a below-knee amputation, the main cost drivers are the socket design and the type of prosthetic foot. A basic mechanical foot for level-ground walking sits at the lower end of the range, while carbon-fibre, energy-storing or hydraulic ankle-foot units used for more active lifestyles push costs toward the upper end. What drives the number is the socket and the foot, not a catalogue price. Liners, which support and protect the residual limb inside the socket, are a recurring cost on top of the initial build and are generally replaced on an annual basis, worth budgeting for alongside our [compression and residual-limb management options](/services/compression)."
+          "For a below-knee amputation, the main cost drivers are the socket design and the type of prosthetic foot. A basic mechanical foot for level-ground walking sits at the lower end of the range, while carbon-fibre, energy-storing or hydraulic ankle-foot units used for more active lifestyles push costs toward the upper end. What drives the number is the socket and the foot, not a catalogue price. Liners, which support and protect the residual limb inside the socket, are a recurring cost on top of the initial build: they wear with daily use and need replacing from time to time, so they are worth budgeting for alongside our [compression and residual-limb management options](/services/compression)."
         ]
       },
       {
@@ -111,11 +111,6 @@ export const BLOG_POSTS: BlogPost[] = [
         "title": "Financial Assistance for Prosthetic Services",
         "publisher": "Amputee Coalition",
         "url": "https://amputee-coalition.org/resources/financial-assistance-for-prosthetic-services/"
-      },
-      {
-        "title": "Reimbursement: medical aid benefits, PMB, ex gratia and RAF",
-        "publisher": "South African Orthotic and Prosthetic Association (SAOPA)",
-        "url": "https://saopa.co.za/reimbursement/"
       }
     ]
   },

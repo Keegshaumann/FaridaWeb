@@ -29,7 +29,7 @@ export function TermsAndConditionsPage() {
           <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-sm text-[var(--text-muted)] mb-8">
-                <strong>Last Updated:</strong> July 14, 2026
+                <strong>Last updated:</strong> 13 November 2026
               </p>
 
               <section className="mb-8">
@@ -127,7 +127,7 @@ export function TermsAndConditionsPage() {
                   11. Professional Conduct and Regulation
                 </h2>
                 <p className="text-[var(--text-muted)] leading-relaxed">
-                  Our practitioners are registered with the HPCSA and practise in accordance with its ethical rules. Nothing on this website is intended as canvassing or a claim of superiority over other practitioners. Complaints about professional conduct may be raised with the practice directly or with the HPCSA.
+                  Farida Cajee-Botes is registered with the HPCSA and practises in accordance with its ethical rules. Nothing on this website is intended as canvassing or a claim of superiority over other practitioners. Complaints about professional conduct may be raised with the practice directly or with the HPCSA.
                 </p>
               </section>
 
