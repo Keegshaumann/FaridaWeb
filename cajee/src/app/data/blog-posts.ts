@@ -12,8 +12,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/prosthetic-leg-cost-south-africa.jpg",
-    "imageAlt": "Below-knee prosthetic leg with carbon-fibre socket and titanium pylon on a prosthetics workbench",
+    "image": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
+    "imageAlt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
+    "shareImage": "/blog/prosthetic-leg-parts-below-and-above-knee.jpg",
     "metaDescription": "Artificial leg prices in South Africa depend on the socket, foot and knee. Above vs below knee, and medical aid benefits of R3,000 to R55,000 (SAOPA).",
     "excerpt": "Prosthetic leg costs in South Africa vary by component level and funding route. Here is what drives the price, why it is quoted per patient, and how medical aid, the RAF and COIDA fit in.",
     "readMinutes": 6,
@@ -49,6 +50,13 @@ export const BLOG_POSTS: BlogPost[] = [
           "Road Accident Fund (RAF): if the amputation followed a motor vehicle or pedestrian accident on a South African road, the RAF may cover future prosthesis costs as part of a Section 17(4)(a) undertaking for future medical expenses, in addition to any general damages claim; the Fund can pay providers directly once an undertaking is in place, though replacement is typically authorised roughly every five years rather than on demand [Road Accident Fund](https://www.raf.co.za/Claims/Pages/FAQ.aspx) [SAOPA](https://saopa.co.za/reimbursement/).",
           "COIDA (workplace injuries): employees injured in a work-related accident are covered through the Compensation Fund, the Federated Employers' Mutual (FEM) for construction, or Rand Mutual Assurance (RMA) for mining and metals, depending on industry [Department of Employment and Labour](https://www.labour.gov.za/DocumentCenter/Publications/Compensation%20for%20Occupational%20Injuries%20and%20Diseases/COIDA_SERVICE_BOOK_VERSION_23.pdf). The COIDA tariff list generally covers only basic prosthetic components, so higher-end components often need to be topped up through medical aid or private funds [SAOPA](https://saopa.co.za/reimbursement/).",
           "[Without a claim or scheme benefit](/blog/prosthetic-leg-no-medical-aid-south-africa): if none of the above apply, options include private savings, family or employer support, and disability insurance payouts, as well as nonprofit and community fundraising routes; the Amputee Coalition, a limb-loss support organisation, maintains a list of US grant and fundraising resources [Amputee Coalition](https://amputee-coalition.org/resources/financial-assistance-for-prosthetic-services/). We are happy to talk through which route applies to your situation and to prepare the supporting documentation and motivation your funder requires."
+        ],
+        "images": [
+          {
+            "src": "/blog/prosthetic-leg-funding-routes-south-africa.webp",
+            "alt": "The main funding routes for a prosthetic leg in South Africa: medical aid through Prescribed Minimum Benefits, the Road Accident Fund, COIDA for work injuries, and, where none apply, savings, family or employer support, disability insurance and fundraising",
+            "afterParagraph": -1
+          }
         ]
       },
       {
@@ -122,8 +130,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-09-17",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/medical-aid-prosthetics-orthotics-cover.jpg",
-    "imageAlt": "Clinician and patient completing medical aid funding paperwork at a consultation desk",
+    "image": "/blog/medical-aid-funding-routes-prosthetics-orthotics.webp",
+    "imageAlt": "Diagram of how a prosthesis or orthosis gets funded: through medical aid, first the yearly appliance benefit of about R3,000 to R55,000 or more, then Prescribed Minimum Benefits, then an ex gratia top-up; outside medical aid, the Road Accident Fund and COIDA",
+    "shareImage": "/blog/medical-aid-funding-routes-prosthetics-orthotics.jpg",
     "metaDescription": "Yes, most South African medical aids do, within an annual appliance benefit. How pre-authorisation, co-payments, PMBs, ex gratia, RAF and COIDA work.",
     "excerpt": "Most South African medical aids do cover prosthetics and orthotics, but the rand amount, the paperwork and the co-payment can catch patients off guard. Here is how the funding actually works.",
     "readMinutes": 7,
@@ -153,6 +162,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Almost every scheme requires pre-authorisation before a prosthesis or orthosis is supplied. In practice this means your treating orthotist or prosthetist submits a detailed clinical motivation (covering diagnosis, functional need, component justification and an itemised quotation) to the scheme, which then confirms available benefit, applicable co-payment, and whether PMB status applies [SAOPA](https://saopa.co.za/reimbursement/). Weak or generic motivations are a common reason for delays or partial approvals, so the motivation needs to clearly link the prescribed device to your specific clinical picture and functional goals, not just the diagnosis code.",
           "We handle this motivation and pre-authorisation process directly with schemes as part of our service, including following up on outstanding queries, so that patients are not left navigating scheme call centres alone while waiting for a mobility device."
+        ],
+        "images": [
+          {
+            "src": "/blog/medical-aid-pre-authorisation-steps.webp",
+            "alt": "Three steps of pre-authorisation: your orthotist or prosthetist sends a clinical motivation and itemised quotation; your scheme confirms the benefit, any co-payment and PMB status; if a PMB-linked claim is declined or under-funded, the scheme's internal disputes process and then the Council for Medical Schemes; for a shortfall, some schemes consider ex gratia"
+          }
         ]
       },
       {
@@ -236,8 +251,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/how-long-after-amputation-prosthetic-leg.jpg",
-    "imageAlt": "Clinician fitting a compression liner over a below-knee residual limb during rehabilitation",
+    "image": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
+    "imageAlt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
+    "shareImage": "/blog/prosthetic-leg-parts-below-and-above-knee.jpg",
     "metaDescription": "Usually two to six months, once the wound heals and swelling settles, and some walk in an interim limb within weeks. The stages, and what to do meanwhile.",
     "excerpt": "Wound healing, shrinkers and an interim prosthesis come first. A definitive prosthetic leg is usually fitted somewhere between two and six months after surgery, often sooner in practice on the private route.",
     "readMinutes": 6,
@@ -246,6 +262,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "The short answer",
         "paragraphs": [
           "Most people are ready for a definitive, long-term prosthetic leg somewhere between two and six months after amputation, once the surgical wound has fully healed, swelling has settled and the residual limb (the \"stump\") has stabilised in shape and volume. Many patients are walking in a temporary or interim prosthesis well before that, sometimes within two to three weeks of surgery, but the exact fitting date always depends on how an individual limb heals rather than on a fixed calendar. In South Africa, the timeline you actually experience also depends heavily on which part of the healthcare system you're in, which we unpack below."
+        ],
+        "images": [
+          {
+            "src": "/blog/amputation-to-prosthetic-leg-timeline.webp",
+            "alt": "Timeline from amputation to a definitive prosthetic leg: exercises and mobility training within days of surgery; a temporary prosthesis from two to three weeks for some patients; the definitive leg cast and fitted at two to six months once the limb has settled; socket adjustments through the first year; a shrinker or compression worn throughout"
+          }
         ]
       },
       {
@@ -343,8 +365,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/how-long-does-a-prosthetic-leg-last.jpg",
-    "imageAlt": "Prosthetist servicing a prosthetic leg on a workshop bench",
+    "image": "/blog/prosthetic-leg-replacement-timeline.webp",
+    "imageAlt": "How often a prosthetic leg is replaced: a full replacement every 3 to 5 years for most adults; the socket often needs attention within 1 to 2 years of amputation; young children every 6 to 18 months, then every 1 to 2 years in the teens",
+    "shareImage": "/blog/prosthetic-leg-replacement-timeline.jpg",
     "metaDescription": "Most prosthetic legs last 3-5 years, sockets sooner and children's limbs more often. Learn the signs and how to plan around SA medical aid cycles.",
     "excerpt": "A prosthetic leg typically lasts three to five years, but the socket often needs attention much sooner. Here's what determines your timeline, and how to plan a replacement around your medical aid's benefit year.",
     "readMinutes": 6,
@@ -368,6 +391,13 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "The socket is usually the first part of a prosthesis to need attention, because your residual limb's volume changes with fluid shifts, muscle changes, weight change, and simply the passage of time after surgery. The NHS limb service notes that the residual limb changes shape and size significantly, especially during the first 12 to 18 months, meaning the socket fit alters as a result ([Blesma / NHS limb service information](https://blesma.org/about-loss-of-limb/nhs-limb-service-and-prosthetic-information/)).",
           "Watch for: persistent pain, redness, blisters or pressure marks that don't fade quickly; a socket that suddenly feels loose (pistoning, or your limb 'rotating' inside the socket) or, conversely, uncomfortably tight; needing far more or far fewer prosthetic socks than usual to get a snug fit; new clicking, rubbing, or a feeling that the leg is unsteady or heavier than before; and any skin breakdown on the residual limb. Any of these warrant a prosthetist review rather than persevering or attempting a home fix - sometimes a reline or sock adjustment is enough, but a limb that has changed substantially, for example after significant weight change or a health event, usually needs a new socket rather than a patch-up ([Amputee Coalition](https://amputee-coalition.org/resources/prosthetic-faqs-for-the-new-amputee/); [Blesma / NHS](https://blesma.org/about-loss-of-limb/nhs-limb-service-and-prosthetic-information/))."
+        ],
+        "images": [
+          {
+            "src": "/blog/prosthetic-socket-fit-warning-signs.webp",
+            "alt": "Checklist of signs a prosthetic socket may no longer fit: pain, redness, blisters or pressure marks; a socket that feels loose or too tight; needing more or fewer socks; clicking, rubbing or feeling unsteady; skin breakdown. Any of these means a prosthetist review",
+            "afterParagraph": -1
+          }
         ]
       },
       {
@@ -449,8 +479,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "category": "Prosthetics",
     "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/walking-with-a-prosthetic-leg.jpg",
-    "imageAlt": "Person walking between parallel bars on a below-knee prosthetic leg during physiotherapy",
+    "image": "/blog/learning-to-walk-prosthetic-leg-timeline.webp",
+    "imageAlt": "Learning to walk on a new prosthetic leg: walking between parallel bars in the first few weeks, walking on your own on flat ground within one to a few months, and stairs, uneven ground and a full day on your feet between three months and a year",
+    "shareImage": "/blog/learning-to-walk-prosthetic-leg-timeline.jpg",
     "metaDescription": "Walking on flat ground often comes within one to a few months; stairs and a full day on your feet can take three months to a year. What rehab involves.",
     "excerpt": "Most people can learn to walk confidently with a prosthetic leg, though \"normal\" looks different for everyone. Here's what shapes the timeline, and what physio and prosthetic rehab actually involve.",
     "readMinutes": 7,
@@ -466,6 +497,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Two things drive expectations more than anything else: where the amputation is, and your functional (K) level. A below-knee (transtibial) amputation preserves your own knee joint, so gait tends to be more energy-efficient and easier to relearn than an above-knee (transfemoral) amputation, where the prosthetic knee must be controlled as well as the foot. Bilateral amputees generally need more time and more upper-body or parallel-bar support early on [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/); [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg).",
           "K-levels (K0 to K4) are the classification system your prosthetist and medical scheme use to match components to your realistic mobility goals. K1 describes limited household walking on flat, predictable surfaces, often with support for sitting and standing. K2 adds limited outdoor and community mobility on flat, predictable surfaces, managing one or two stairs or an ADA-style ramp, plus light activities such as grocery shopping. K3 is the typical \"community ambulator\" who can vary pace, multitask while walking and manage most environmental barriers, including several consecutive stairs and varied terrain. K4 covers high-demand activity such as running or sport [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels). Your K-level isn't fixed forever - it's reassessed as your strength, balance and confidence change, and it directly determines whether a basic foot or a microprocessor knee is appropriate and fundable."
+        ],
+        "images": [
+          {
+            "src": "/blog/prosthetic-k-levels-explained.webp",
+            "alt": "The K-levels K1 to K4: K1 limited walking at home on flat surfaces; K2 limited outdoor walking with one or two stairs or a ramp; K3 community walking at a varied pace with several stairs and varied terrain; K4 high-demand activity such as running or sport"
+          }
         ]
       },
       {
@@ -552,8 +589,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/custom-orthotics-cost-south-africa.jpg",
-    "imageAlt": "Custom-moulded orthotic insoles beside a foam foot impression box in a clinic",
+    "image": "/blog/making-a-custom-ankle-foot-orthosis.webp",
+    "imageAlt": "Hands shaping a heart-patterned ankle-foot orthosis, a brace for the foot and lower leg, in a workshop",
+    "shareImage": "/blog/making-a-custom-ankle-foot-orthosis.jpg",
     "metaDescription": "Custom orthotics in South Africa: what drives the price, real cost factors, and whether medical aid covers orthotic insoles. A Sandton orthotist explains.",
     "excerpt": "There's no single national price list for custom orthotics in South Africa. Pricing is built around your assessment, casting method and materials. Here's what actually drives the cost, and how medical aid funding for orthotic insoles usually works.",
     "readMinutes": 5,
@@ -572,6 +610,12 @@ export const BLOG_POSTS: BlogPost[] = [
           "Next comes capturing the shape of your foot, either with a traditional plaster or foam-box mould or with computerised 3D scanning; both methods are still used in practice today, with digital scanning generally offering more precision [OrthoInfo/AAOS](https://www.orthoinfo.org/en/treatment/orthotics/) [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/orthotics). Casting or scanning time, and the skill required to interpret it correctly, is built into the price.",
           "Materials matter too. Functional orthotics designed to control movement and offload pressure are typically made from semi-rigid materials such as graphite, carbon fibre or moulded plastic, while accommodative orthotics, often used for diabetic foot protection, use softer, cushioning materials that mould to the foot's shape [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/orthotics). Rigid, high-performance materials generally cost more to source and fabricate than soft accommodative foam.",
           "Finally, device complexity changes the price substantially: a simple shoe insert costs far less than a paediatric brace, an ankle-foot orthosis, or a spinal device, each of which needs additional design time, fitting appointments and follow-up adjustments. If you'd like a lower-cost starting point before committing to a fully custom device, it's worth asking your orthotist whether an [off-the-shelf orthotic](/services/off-the-shelf-orthotics) might suit your needs first. Custom fabrication is generally reserved for cases where a prefabricated option won't adequately support your specific foot shape or condition."
+        ],
+        "images": [
+          {
+            "src": "/blog/custom-orthotics-what-drives-the-price.webp",
+            "alt": "What goes into a custom orthotic: a biomechanical and gait assessment, capturing the foot's shape with a mould or 3D scan, the choice of rigid or cushioning materials, and how complex the device is"
+          }
         ]
       },
       {
@@ -649,8 +693,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/are-custom-orthotics-worth-it.jpg",
-    "imageAlt": "Generic pharmacy insole compared side by side with a contoured custom orthotic insole",
+    "image": "/blog/technician-adjusting-blue-ankle-foot-orthosis.webp",
+    "imageAlt": "Hands adjusting a blue ankle-foot orthosis, a brace for the foot and lower leg, on a workbench",
+    "shareImage": "/blog/technician-adjusting-blue-ankle-foot-orthosis.jpg",
     "metaDescription": "Are custom orthotics worth it? An honest look at the evidence for custom vs off-the-shelf insoles, who benefits from each, and how a custom device is made.",
     "excerpt": "The honest, evidence-based answer is: it depends on why your feet hurt. Here's when a pharmacy insole is genuinely enough, and when a clinician-assessed custom orthosis is worth the extra cost.",
     "readMinutes": 6,
@@ -677,6 +722,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Who can reasonably start off the shelf",
         "paragraphs": [
           "If you have a mild, generic ache (first-time heel pain, tired arches after standing all day, or mild flat feet without other complications), a well-fitted prefabricated insole combined with the basics (supportive footwear, calf and plantar fascia stretching, sensible changes to activity) is a reasonable first move, and the evidence above suggests you're unlikely to get a better outcome by paying for a custom device instead. Cleveland Clinic describes exactly this stepped approach: try an over-the-counter device for mild symptoms, and only move to something custom-made if symptoms persist or worsen ([Orthotics: Definition, Risks, Benefits, Types & Tips](https://my.clevelandclinic.org/health/treatments/orthotics), Cleveland Clinic). Our [off-the-shelf orthotics](/services/off-the-shelf-orthotics) service exists for exactly this scenario: properly selected and fitted, not just picked off a shelf at random."
+        ],
+        "images": [
+          {
+            "src": "/blog/custom-vs-off-the-shelf-orthotics-who-benefits.webp",
+            "alt": "Who is likely to do well with a shelf insole (first-time heel pain, tired arches, mild flat feet) and who is more likely to benefit from a custom device (diabetic neuropathy or a healed ulcer, structural deformity, inflammatory arthritis, a foot altered by surgery, trauma or a neurological condition)"
+          }
         ]
       },
       {
@@ -762,8 +813,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/can-orthotics-fix-flat-feet.jpg",
-    "imageAlt": "Adult feet with flattened arches standing on a wooden floor",
+    "image": "/blog/anatomical-foot-model-ankle-ligaments.webp",
+    "imageAlt": "An anatomical model of the foot and ankle showing the bones and ligaments",
+    "shareImage": "/blog/anatomical-foot-model-ankle-ligaments.jpg",
     "metaDescription": "No. Insoles do not reshape an adult arch but can ease pain and strain while worn. What orthotics do, why strengthening helps, and when to get assessed.",
     "excerpt": "Orthotics can ease the pain and strain of flat feet, but they don't reshape an adult arch permanently. Here's what the evidence actually says, and when flat feet need proper treatment.",
     "readMinutes": 6,
@@ -787,6 +839,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "According to OrthoInfo, orthotic devices work by aligning and supporting the foot, correcting or accommodating deformities, and improving overall foot function. For example, a wedge built into the inner side of a shoe can support a flat foot ([OrthoInfo/AAOS](https://www.orthoinfo.org/en/treatment/orthotics/)). Note the wording: correct or accommodate. Orthotics adjust how load moves through the foot; they don't restructure bone and ligament.",
           "For adult acquired flatfoot specifically, research on ankle-foot orthoses shows they can help arrest progression of the deformity and potentially avoid surgery, but this is described as slowing or managing the condition, not reversing it structurally ([PubMed](https://pubmed.ncbi.nlm.nih.gov/31735271/)). Cleveland Clinic also notes that good-quality research specifically proving orthotics correct flat feet is limited, even though the devices are considered low-risk and commonly helpful for symptoms ([Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/orthotics))."
+        ],
+        "images": [
+          {
+            "src": "/blog/what-orthotics-do-and-dont-do-flat-feet.webp",
+            "alt": "What orthotics do for flat feet: support and align the foot, offload it and ease pain while worn. What they don't do: permanently reshape an adult arch, restructure bone and ligament, or change the shape of a child's growing foot"
+          }
         ]
       },
       {
@@ -876,8 +934,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "category": "Orthotics",
     "date": "2026-07-15",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/does-my-child-need-orthotics.jpg",
-    "imageAlt": "Young child's bare feet with flexible flat arches standing on a wooden floor",
+    "image": "/blog/red-childrens-sneakers.webp",
+    "imageAlt": "A pair of small red lace-up baby shoes",
+    "shareImage": "/blog/red-childrens-sneakers.jpg",
     "metaDescription": "Usually not: painless, flexible flat feet are a normal stage in young children. The red flags that need assessing, and what to look for in school shoes.",
     "excerpt": "Most children with flat feet need nothing more than time and sensible shoes. Here's how to tell the difference between a normal stage of development and the red flags that warrant an assessment.",
     "readMinutes": 7,
@@ -886,6 +945,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "The short answer",
         "paragraphs": [
           "In most cases, no. If your child's flat feet are painless and flexible (the arch appears when they sit down or stand on tiptoe, and flattens when they stand on the floor), current paediatric guidance is that this is a normal stage of development, not a condition to correct with orthotics. The Choosing Wisely recommendation from the American Academy of Pediatrics' Section on Orthopaedics and the Pediatric Orthopaedic Society of North America (POSNA) is explicit: clinicians should not order custom orthotics or shoe inserts for a child with minimally symptomatic or asymptomatic flat feet, because there is no good evidence that inserts change how the arch develops [Choosing Wisely: AAP/POSNA recommendation](https://medicalxpress.com/news/2018-02-aap-posna-pediatric-orthopedic.html). Orthotics become worth discussing when there's pain, fatigue, an abnormal gait, or asymmetry between the two feet (the red flags covered below)."
+        ],
+        "images": [
+          {
+            "src": "/blog/flexible-vs-rigid-flat-foot-tiptoe-test.webp",
+            "alt": "The tiptoe test: in a flexible flat foot the foot is flat when standing and the arch appears on tiptoe or sitting, a normal stage of development; in a rigid flat foot there is no arch even on tiptoe, which is worth having assessed"
+          }
         ]
       },
       {
@@ -977,8 +1042,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/referral-orthotist-prosthetist-first-visit.jpg",
-    "imageAlt": "Orthotist with a clipboard consulting a patient during a home visit assessment",
+    "image": "/blog/farida-cajee-botes-orthotics-workshop.webp",
+    "imageAlt": "Farida Cajee-Botes in an orthotics and prosthetics workshop, holding a small, brightly patterned brace",
+    "shareImage": "/blog/farida-cajee-botes-orthotics-workshop.jpg",
     "metaDescription": "No. You can book an orthotist or prosthetist directly, but medical aid usually needs a doctor's prescription to pay. What happens at the first visit.",
     "excerpt": "You can book directly with an HPCSA-registered orthotist or prosthetist in South Africa without a referral. It's medical aid funding, not the consultation, that usually needs a doctor's prescription.",
     "readMinutes": 5,
@@ -1002,6 +1068,12 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "A first visit is an assessment, not a fitting; nothing is manufactured or handed over on day one. Expect your practitioner to take a history (your diagnosis, surgery or injury details, other medical conditions, and your goals such as walking distance, work, sport, or driving); examine the affected limb or area, including skin condition, residual limb shape and length, joint movement, muscle strength, and how you currently move or compensate; discuss options, realistic timeframes, and what device or orthosis category is likely to support/offload/stabilise your particular need; take measurements, casts, or scans if a custom device such as [custom orthotics](/services/custom-orthotics) or a [prosthesis](/services/prosthetics) is indicated, or point you towards suitable [off-the-shelf orthotics](/services/off-the-shelf-orthotics) or [compression garments](/services/compression) where a custom solution isn't necessary; and explain the medical aid process, likely next steps, and roughly how many further visits to expect before delivery.",
           "What to bring: your ID and medical aid card, any existing referral letter or prescription, recent surgical or discharge notes, current medications, scans if available, and (if relevant) your current brace or prosthesis for comparison. Loose, easily removable clothing makes examining the limb quicker."
+        ],
+        "images": [
+          {
+            "src": "/blog/first-orthotist-appointment-what-to-bring.webp",
+            "alt": "Checklist of what to bring to a first orthotist or prosthetist appointment: ID and medical aid card, any referral letter or prescription, recent surgical or discharge notes, current medications, scans, your current brace or prosthesis, and loose clothing"
+          }
         ]
       },
       {
@@ -1009,6 +1081,13 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Because \"foot and lower-limb care\" is split across several professions, it helps to know who does what before you book. An orthotist/prosthetist (HPCSA-registered), the professional this article is about, designs, fits, and reviews orthoses (braces, splints, insoles, spinal supports) and prostheses (artificial limbs) ([Cleveland Clinic](https://my.clevelandclinic.org/health/articles/orthotist-prosthetist)). A podiatrist focuses specifically on the foot and ankle: skin, nails, biomechanics, and non-surgical foot pathology. An orthopaedic surgeon is a medical doctor who diagnoses and surgically treats musculoskeletal conditions across the whole body, and who may prescribe an orthosis or prosthesis as part of your broader treatment plan.",
           "If your main issue is surgical (a fracture needing fixation, a joint replacement, or a decision about amputation), you'll need an orthopaedic surgeon or treating specialist first, and we're glad to work alongside them once a device is indicated. If you already know you need a brace, insole, compression garment, or limb prosthesis fitted, measured, or reviewed, you're in the right place."
+        ],
+        "images": [
+          {
+            "src": "/blog/orthotist-podiatrist-orthopaedic-surgeon-roles.webp",
+            "alt": "Who does what: an orthotist or prosthetist designs, fits and reviews braces, insoles and artificial limbs; a podiatrist looks after the foot and ankle without surgery; an orthopaedic surgeon is a doctor who diagnoses and operates on bones and joints and may prescribe a device",
+            "afterParagraph": 0
+          }
         ]
       },
       {
@@ -1067,8 +1146,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-09-05",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/referral-orthotist-prosthetist-first-visit.jpg",
-    "imageAlt": "Orthotist with a clipboard consulting a patient during a home visit assessment",
+    "image": "/blog/hospital-room-bed-and-sofa.webp",
+    "imageAlt": "A hospital room with an adjustable bed, a chair and a sofa",
+    "shareImage": "/blog/hospital-room-bed-and-sofa.jpg",
     "metaDescription": "Yes. Assessment, measuring, casting and most fittings happen at your home or hospital bedside. What can be done there, what cannot, and what to arrange.",
     "excerpt": "Yes, orthotists do home visits. Assessment, measuring, casting and most fittings can all be done in your own home or at a hospital bedside. Only the making of a custom device needs a workshop.",
     "readMinutes": 7,
@@ -1104,6 +1184,13 @@ export const BLOG_POSTS: BlogPost[] = [
           "Almost all clinical work can be done at home. Almost no fabrication can. Assessment, measuring, plaster casting, scanning, most off-the-shelf fittings, compression fitting, mobility aid set-up, reviews, strap and padding adjustments, skin checks and carer training all travel well. Manufacturing a custom socket or a custom brace does not.",
           "The reason is equipment, not convenience. Conventional socket production runs through hand casting, one or more test sockets and one or more laminated sockets, spread across several appointments ([Canadian Prosthetics and Orthotics Journal, via PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10443499/)). Thermoformed sockets involve heating plastic in an oven (200 degrees Celsius in one published process) and drawing it over a rectified plaster model under negative pressure ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11492467/)). Ovens, vacuum equipment, grinding and plaster dust are workshop work, and improvising them in a bedroom produces a worse device. So a custom device becomes two home visits instead of two trips out: assessment and casting, fabrication off site, then fitting. The same applies to [custom orthotics](/services/custom-orthotics).",
           "A home visit is also not a video call. In a study of orthotists and prosthetists using telehealth, practitioners reported that triage, education and routine follow-up checks work at a distance, while fitting and complicated re-assessments kept needing in-person contact; one described a device recommended remotely that had to be changed once the patient was seen face to face ([Prosthetics and Orthotics International, via PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11500877/)). A phone call between appointments is useful. It is not a substitute for hands on the limb."
+        ],
+        "images": [
+          {
+            "src": "/blog/home-visit-custom-device-two-visits.webp",
+            "alt": "A custom device at home takes two visits: assessment, measuring and casting or scanning at the first, the device made in the workshop, then fitting at the second. Almost all clinical work travels; making a custom socket or brace stays in the workshop",
+            "afterParagraph": 1
+          }
         ]
       },
       {
@@ -1206,8 +1293,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-09-05",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/medical-aid-prosthetics-orthotics-cover.jpg",
-    "imageAlt": "Clinician and patient completing funding paperwork for a prosthetic limb at a consulting room desk",
+    "image": "/blog/prosthetic-leg-without-medical-aid-funding-routes.webp",
+    "imageAlt": "Which route pays for a prosthetic leg: a leg lost at work, COIDA through the Compensation Fund; a leg lost in a road accident, the Road Accident Fund; a medical scheme member, PMBs, the appliance benefit and ex gratia; none of these, the state hospital route, free for H0 patients",
+    "shareImage": "/blog/prosthetic-leg-without-medical-aid-funding-routes.jpg",
     "metaDescription": "No medical aid? South African state hospitals fit prostheses free for fully subsidised patients. How referral, PMBs, COIDA and RAF funding actually work.",
     "excerpt": "If you cannot pay privately, the public health system is your route, and for fully subsidised patients a prosthesis costs nothing. Here is how referral, PMBs, COIDA, the RAF and the few verifiable donor programmes actually work.",
     "readMinutes": 8,
@@ -1241,6 +1329,13 @@ export const BLOG_POSTS: BlogPost[] = [
           "Long, and it would be dishonest to soften that. Research published in the African Journal of Disability in 2025, focused on the Eastern Cape, records users waiting from 10 months to six years for a device, and some waiting three to four years simply to be measured. That province's prosthetic backlog grew from more than 600 devices in 2018 to 1,276 by 2024 ([Visagie et al., African Journal of Disability](https://www.scielo.org.za/scielo.php?pid=S2226-72202025000100096&script=sci_arttext)).",
           "The reasons are structural rather than personal. In the same province fewer than half of the established orthotic and prosthetic posts were filled, with two of six chief positions and nine of 38 assistant posts occupied, and delayed payments to suppliers stopped production for months at a time. The paper also cites an earlier estimate that only around 8% of South African amputees are ever fitted with a prosthesis. Those figures describe one province, but understaffing and procurement delay are reported widely.",
           "The options available in the government sector are fewer than in the private sector ([Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations)), so expect a functional, basic limb rather than a carbon-fibre or microprocessor-controlled build. That is a real limitation, and it is also a working leg that costs you nothing. Practically: get onto the list now rather than when you feel ready, keep a copy of every referral letter, write down the name of the person you speak to at each visit, and phone to confirm your place rather than waiting for a letter to arrive."
+        ],
+        "images": [
+          {
+            "src": "/blog/empty-waiting-room-blue-chairs.webp",
+            "alt": "A row of worn blue plastic chairs in an empty waiting area",
+            "afterParagraph": 0
+          }
         ]
       },
       {
@@ -1361,8 +1456,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "category": "Orthotics",
     "date": "2026-09-05",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/does-my-child-need-orthotics.jpg",
-    "imageAlt": "Young child's bare feet with flexible flat arches standing on a wooden floor",
+    "image": "/blog/toddler-shoes-and-toy-trucks.webp",
+    "imageAlt": "A pair of worn toddler shoes on a tiled floor next to toy trucks",
+    "shareImage": "/blog/toddler-shoes-and-toy-trucks.jpg",
     "metaDescription": "Most children stop walking on their toes after age 2. The five signs that need an assessment, and what is normal for bow legs, knock knees and flat feet.",
     "excerpt": "Toe walking, bow legs, knock knees and flat feet each have a normal age window, and most children grow out of them with no device at all. This covers what's normal at each age, which signs need an assessment, and what treatment involves when a child does need it.",
     "readMinutes": 7,
@@ -1387,6 +1483,12 @@ export const BLOG_POSTS: BlogPost[] = [
           "Each one has its own normal window. [Bowed legs are a normal variation](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) in most children under 2 years old, begin improving at about 18 months, and have usually corrected by ages 3 to 4. Knock knees then take over: they [peak from two to four years](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html), are common in children aged 3 to 6, and [usually correct themselves by the age of 7](https://www.nhs.uk/conditions/knock-knees/).",
           "[Flat feet](/blog/does-my-child-need-orthotics) follow the same pattern. [The arch mostly develops before four years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html), and the NHS notes that [flat feet usually correct themselves by the age of 6](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/), with no treatment needed if an arch appears when your child stands on tiptoes. In-toeing, the pigeon-toed walk that worries so many parents, [usually corrects itself around the age of 8](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/) and doesn't normally need treatment. Where it's caused by an inward twist of the shin bone, called internal tibial torsion, it resolves on its own in 90 percent of cases by the time the child reaches eight years of age.",
           "The same clinical review is blunt about devices for that last one: for internal tibial torsion, treatment with night splints, shoe wedges and orthotics is [unnecessary and ineffective](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html). We say the same thing in the consulting room. If a child's legs are following the ordinary developmental script, buying [off-the-shelf insoles](/services/off-the-shelf-orthotics) won't speed anything up, and you should expect us to say so rather than sell you something."
+        ],
+        "images": [
+          {
+            "src": "/blog/child-leg-and-foot-development-age-ranges.webp",
+            "alt": "Chart of the ages by which common childhood patterns usually settle: most toe walking stops after 2; bow legs are usually corrected by 3 to 4; knock knees peak at 2 to 4 and usually correct by 7; flat feet usually correct by 6; in-toeing usually corrects around 8; idiopathic toe walking usually resolves between 5 and 10"
+          }
         ]
       },
       {
@@ -1482,8 +1584,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-09-05",
     "dateUpdated": "2026-11-13",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/support-stockings-vs-compression-stockings.jpg",
-    "imageAlt": "A below-knee graduated compression stocking shown against a plain background",
+    "image": "/blog/graduated-compression-pressure-diagram.webp",
+    "imageAlt": "Diagram of graduated compression on the lower leg: pressure is strongest at the ankle and falls continuously up the leg. A support stocking has no defined pressure or gradient; a medical compression garment has a certified pressure, classified at the ankle",
+    "shareImage": "/blog/graduated-compression-pressure-diagram.jpg",
     "metaDescription": "Support stockings have no set pressure; medical compression is graded from the ankle up and sized to your leg. The mmHg classes, and when each is right.",
     "excerpt": "A support stocking has no defined pressure and no defined gradient; a medical compression garment has both, certified at the ankle and sized from measurements of your leg. For tired legs and long flights the pharmacy pair is genuinely the right buy, and here is exactly where that stops being true.",
     "readMinutes": 8,
@@ -1516,6 +1619,12 @@ export const BLOG_POSTS: BlogPost[] = [
           "Class 3 | European RAL | 34 to 46 mmHg | The heaviest class in routine use, commonly flat knit | Measured, usually made-to-measure",
           "Class 1, 2 and 3 | British Standard | 14 to 17, 18 to 24 and 25 to 35 mmHg | The same class names as the European scale, at lower pressures | Measured",
           "Read the last two rows together, because this catches people out constantly. A British Standard class 2 delivers 18 to 24 mmHg at the ankle; a European class 2 delivers 23 to 32 mmHg. The literature notes that British and European standard stockings differ in the degree of compression exerted on the limb, and that the difference is a source of concern requiring awareness among clinicians [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC7950819/). So if a doctor writes \"class 2\" and you order online from another market, you may not get the pressure intended. A RAL class 4 above 49 mmHg exists but is not in routine use [medi](https://www.medi.de/en/faq/compression-garments/compression-classes/)."
+        ],
+        "images": [
+          {
+            "src": "/blog/compression-classes-ral-vs-british-standard.webp",
+            "alt": "Chart comparing compression classes at the ankle: European RAL class 1 is 18 to 21 mmHg, class 2 23 to 32 and class 3 34 to 46; British Standard class 1 is 14 to 17, class 2 18 to 24 and class 3 25 to 35"
+          }
         ]
       },
       {
@@ -1625,8 +1734,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "category": "General",
     "date": "2026-11-08",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/support-stockings-vs-compression-stockings.jpg",
-    "imageAlt": "A below-knee graduated compression stocking shown against a plain background",
+    "image": "/blog/how-to-put-on-compression-stocking-steps.webp",
+    "imageAlt": "The main moves for putting on a closed-toe compression stocking: turn it inside out down to the heel, put your toes in and settle the heel, unfold it and draw it up a section at a time, and stop short of the crease behind the knee",
+    "shareImage": "/blog/how-to-put-on-compression-stocking-steps.jpg",
     "metaDescription": "Step-by-step guidance from NHS leaflets on putting on and taking off medical compression stockings, what helps, and signs a garment needs refitting.",
     "excerpt": "Turn the stocking inside out to the heel, settle your foot first, then work it up a section at a time. The NHS method step by step, what makes it easier, how to take stockings off, and the signs that mean something's wrong.",
     "readMinutes": 6,

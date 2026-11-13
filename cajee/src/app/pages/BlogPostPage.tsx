@@ -66,7 +66,7 @@ export function BlogPostPage() {
       logo: { "@type": "ImageObject", url: "https://www.cajeebotes.com/logo.png" },
     },
     mainEntityOfPage: `https://www.cajeebotes.com/blog/${post.slug}`,
-    image: `https://www.cajeebotes.com${post.image}`,
+    image: `https://www.cajeebotes.com${post.shareImage ?? post.image}`,
   };
 
   return (
@@ -78,7 +78,7 @@ export function BlogPostPage() {
         fullTitle={post.metaTitle ?? `${post.title} | Farida Cajee-Botes`}
         title={post.title}
         description={post.metaDescription}
-        ogImage={`https://www.cajeebotes.com${post.image}`}
+        ogImage={`https://www.cajeebotes.com${post.shareImage ?? post.image}`}
         schema={articleSchema}
         ogType="article"
         articlePublished={post.date}
@@ -161,8 +161,35 @@ export function BlogPostPage() {
                 {(() => {
                   const isRow = (t: string) => t.split(" | ").length >= 3;
                   const out: ReactNode[] = [];
+                  // Pictures sit after the paragraph they belong to, below the
+                  // fold, so they wait for a scroll and never push text about
+                  // (width and height reserve their space).
+                  const images = section.images ?? [];
+                  const figure = (img: (typeof images)[number]) => (
+                    <figure key={`f-${img.src}`} className="my-6">
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        {...imageSize(img.src)}
+                        loading="lazy"
+                        decoding="async"
+                        className="mx-auto h-auto w-full max-w-[480px] rounded-xl"
+                      />
+                    </figure>
+                  );
+                  const placeAfter = (from: number, to: number) => {
+                    for (const img of images) {
+                      const at = img.afterParagraph;
+                      if (at !== undefined && at >= from && at <= to) out.push(figure(img));
+                    }
+                  };
+                  // -1 puts a picture straight under the section heading.
+                  for (const img of images) {
+                    if (img.afterParagraph !== undefined && img.afterParagraph < 0) out.push(figure(img));
+                  }
                   let i = 0;
                   while (i < section.paragraphs.length) {
+                    const start = i;
                     if (isRow(section.paragraphs[i])) {
                       const rows: string[] = [];
                       while (i < section.paragraphs.length && isRow(section.paragraphs[i])) {
@@ -224,6 +251,12 @@ export function BlogPostPage() {
                         </p>
                       );
                       i += 1;
+                    }
+                    placeAfter(start, i - 1);
+                  }
+                  for (const img of images) {
+                    if (img.afterParagraph === undefined || img.afterParagraph >= section.paragraphs.length) {
+                      out.push(figure(img));
                     }
                   }
                   return out;

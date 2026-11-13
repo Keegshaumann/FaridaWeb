@@ -2,9 +2,29 @@
 // content strings support one inline syntax: [link text](url). Internal urls
 // start with "/", everything else renders as an external reference link.
 
+/**
+ * A picture inside an article: a photo or one of our own diagrams. Its
+ * licence line lives in the SEO programme's plans/faridaweb/images/SOURCES.md.
+ * Adding one never changes the article's words, so it does not move
+ * dateUpdated.
+ */
+export interface BlogInlineImage {
+  /** Path under public/, e.g. "/blog/some-diagram.webp". */
+  src: string;
+  /** Says what is in the picture, plainly. For a diagram, what it shows. */
+  alt: string;
+  /**
+   * Index of the paragraph the picture follows (0 = after the first,
+   * -1 = straight under the heading). Left out, it goes at the end of the
+   * section.
+   */
+  afterParagraph?: number;
+}
+
 export interface BlogSection {
   heading: string;
   paragraphs: string[];
+  images?: BlogInlineImage[];
 }
 
 export interface BlogReference {
@@ -41,6 +61,12 @@ export interface BlogPost {
   image: string;
   /** Descriptive alt text for the header image. */
   imageAlt: string;
+  /**
+   * JPEG copy of the header image for og:image and the BlogPosting image.
+   * Link previews in some apps (WhatsApp among them) do not show WebP, so the
+   * page shows the WebP and shares the JPEG of the same picture.
+   */
+  shareImage?: string;
   metaDescription: string;
   excerpt: string;
   readMinutes: number;
