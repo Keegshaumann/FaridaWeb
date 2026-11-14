@@ -10,7 +10,7 @@ export const DEVICES: Device[] = [
     bodyPart: "Lower Limb",
     useCase: "For individuals with an above-knee, below-knee or partial foot amputation who want to stand, walk and return to daily activity.",
     description: "A complete lower limb prosthesis custom-built around an individually moulded socket, restoring weight-bearing, balance and a natural walking pattern. Every component is selected and aligned by the prosthetist based on your assessment, mobility goals and lifestyle. You don't need to choose parts yourself.",
-    features: ["Above-knee (AK), below-knee (BK) and partial foot solutions","Individually cast, custom-moulded socket for comfort and control","Componentry selected by the prosthetist to match your mobility goals","Ongoing alignment, adjustment and review included"],
+    features: ["Above-knee (AK), below-knee (BK) and partial foot prostheses","Individually cast, custom-moulded socket for comfort and control","Parts selected by the prosthetist to match your mobility goals","Ongoing alignment, adjustment and review included"],
   },
   {
     id: "upper-limb-prosthetics",
@@ -19,7 +19,7 @@ export const DEVICES: Device[] = [
     bodyPart: "Upper Limb",
     useCase: "For individuals with an amputation above the elbow (transhumeral) or below the elbow (transradial) seeking restored function and appearance.",
     description: "A complete arm prosthesis custom-built around an individually moulded socket, restoring balance, function and confidence after upper limb loss. Functional and cosmetic options are recommended by the prosthetist according to your assessment, daily tasks and personal goals.",
-    features: ["Above-elbow (transhumeral) and below-elbow (transradial) solutions","Individually moulded socket for a secure, comfortable fit","Functional and cosmetic options guided by assessment","Fitting, training and ongoing review included"],
+    features: ["Above-elbow (transhumeral) and below-elbow (transradial) prostheses","Individually moulded socket for a secure, comfortable fit","Functional and cosmetic options guided by assessment","Fitting, training and ongoing review included"],
   },
   {
     id: "paediatric-prosthetics",
@@ -28,7 +28,7 @@ export const DEVICES: Device[] = [
     bodyPart: "Full Body",
     useCase: "For children with limb loss or limb difference who need a prosthesis built for growth, play and development.",
     description: "Complete upper and lower limb prostheses designed around a child's growing body and changing activity levels. Sockets and components are selected for lightweight durability and adjusted or replaced as the child grows, with regular reviews supporting every developmental stage.",
-    features: ["Upper and lower limb solutions for children","Lightweight, growth-accommodating designs","Planned adjustment and replacement as the child grows","Family-centred fitting and follow-up"],
+    features: ["Arm and leg prostheses for children","Lightweight, growth-accommodating designs","Planned adjustment and replacement as the child grows","Family-centred fitting and follow-up"],
   },
   {
     id: "oa-offloading-knee-brace",

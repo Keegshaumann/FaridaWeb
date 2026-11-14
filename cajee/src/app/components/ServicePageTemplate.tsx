@@ -28,6 +28,28 @@ interface ServicePageTemplateProps {
   relatedSlugs?: string[];
 }
 
+// The service this page describes, provided by the practice, plus its FAQ.
+// Every field repeats what the page shows: the H1, the "What is it?" text and
+// the areas the home and hospital visits cover (the same list as the site-wide
+// MedicalBusiness block in SEO.tsx). Provider is named exactly as there.
+function serviceSchema(title: string, whatIsIt: string, faqs?: Faq[]) {
+  const graph: object[] = [
+    {
+      "@type": "Service",
+      name: title,
+      description: whatIsIt,
+      provider: {
+        "@type": "MedicalBusiness",
+        name: "Farida Cajee-Botes Orthotist & Prosthetist",
+        url: "https://www.cajeebotes.com",
+      },
+      areaServed: ["Sandton", "Johannesburg", "Midrand", "Centurion", "Pretoria", "Gauteng"],
+    },
+  ];
+  if (faqs && faqs.length > 0) graph.push(faqPageSchema(faqs));
+  return { "@context": "https://schema.org", "@graph": graph };
+}
+
 export function ServicePageTemplate({
   title,
   subtitle,
@@ -205,7 +227,7 @@ export function ServicePageTemplate({
           fullTitle={seoFullTitle}
           description={seoDescription}
           keywords={seoKeywords}
-          schema={faqs && faqs.length > 0 ? faqPageSchema(faqs) : undefined}
+          schema={serviceSchema(title, whatIsIt, faqs)}
         />
       )}
     </>

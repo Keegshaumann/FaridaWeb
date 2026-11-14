@@ -14,6 +14,10 @@ export const privatePracticeFaq: Faq = {
 
 export const prostheticsFaqs: Faq[] = [
   {
+    q: "Where can I see a prosthetist in Johannesburg?",
+    a: "At the consulting rooms at Orthocast Morningside, 173 Rivonia Road, Sandton, by appointment: phone 011 883 9100. If getting there is the hard part, Farida Cajee-Botes also sees patients at home or in hospital across Johannesburg, Sandton, Midrand, Centurion and Pretoria: call or WhatsApp 079 998 2203 to arrange a visit.",
+  },
+  {
     q: "How much does a prosthetic leg or arm cost in South Africa?",
     a: "There is no fixed price for a prosthetic leg, and any website quoting a single figure is guessing. Cost is driven by two things: the socket, which is custom made to your residual limb and carries most of the clinical time, and the componentry bought in from manufacturers, chiefly the foot and, for an above-knee limb, the knee joint. Össur South Africa makes the same point, that there is no standard residual limb and therefore no standard price. An above-knee prosthesis costs more than a below-knee one because a knee is added to the build. We quote in writing, itemised, after assessing you and before anything is ordered. A prosthetic arm is priced the same way: it is built around a socket moulded to you, with the hand and other parts chosen for the tasks you need, so it is also quoted in writing after an assessment.",
   },
@@ -21,6 +25,7 @@ export const prostheticsFaqs: Faq[] = [
     q: "Does medical aid cover a prosthetic leg?",
     a: "Most South African medical schemes contribute towards a prosthetic limb, but few cover the full cost of an advanced build. Cover usually comes from an annual external appliance or external prosthesis benefit with its own rand limit. The South African Orthotic and Prosthetic Association reports those limits ranging from roughly R3,000 to R55,000 depending on scheme and plan, excluding ex gratia and Prescribed Minimum Benefit funding, and notes that amputation sits on the PMB list, which can unlock funding outside the annual limit. Schemes must respond to a PMB application within 60 days, but they apply the rules inconsistently, so we prepare the clinical motivation, coding and itemised quotation before anything is ordered.",
   },
+  privatePracticeFaq,
   {
     q: "How do I get a prosthetic leg for free in South Africa?",
     a: "Through the state system, by referral rather than by walking in. In the Western Cape, for example, the published route starts with a physiotherapy assessment at your local community health centre, then an amputee clinic at a referral hospital, then measuring at the provincial orthotic and prosthetic centre. Other provinces run their own version through the treating hospital. Be realistic about the wait. A 2025 African Journal of Disability study of state prosthetic services recorded users waiting three to four years to be measured, with fewer than half the clinical posts filled at the centres studied. If your limb loss followed a road accident or a workplace injury, the Road Accident Fund and COIDA are separate routes worth checking first.",
@@ -45,7 +50,6 @@ export const prostheticsFaqs: Faq[] = [
     q: "How often does a prosthetic leg need to be replaced?",
     a: "Plan on roughly five years for the mechanical components, sooner for the socket, and far sooner for a growing child. Össur South Africa states that you can expect to replace the mechanical components approximately every five years, and the Road Accident Fund generally funds a new prosthesis on about the same five-year cycle. The Amputee Coalition is more cautious, putting the working life of a prosthesis at anywhere from several months to several years depending on age, activity level and growth. Sockets are replaced more often than components, particularly in the first year and in children, which is why young patients are reviewed on a much shorter cycle.",
   },
-  privatePracticeFaq,
 ];
 
 export const customOrthoticsFaqs: Faq[] = [

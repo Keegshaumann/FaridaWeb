@@ -94,7 +94,7 @@ export function CompressionPage() {
           name: "Farida Cajee-Botes Orthotist & Prosthetist",
           url: "https://www.cajeebotes.com",
         },
-        areaServed: ["Centurion", "Pretoria", "Midrand", "Johannesburg", "Gauteng", "South Africa"],
+        areaServed: ["Sandton", "Johannesburg", "Midrand", "Centurion", "Pretoria", "Gauteng", "South Africa"],
         // Each item below is typed as a Service, not a Product. The practice
         // does not sell garments off a shelf: every one is measured on the leg,
         // prescribed and fitted, and no price is attached to any of them. A
@@ -201,8 +201,8 @@ export function CompressionPage() {
               </div>
 
               <p className="mt-7 text-sm text-white/45">
-                Compression assessments at the Morningside rooms, at home, or at the hospital
-                bedside across Gauteng.
+                Compression assessments at the Morningside rooms in Sandton, at home, or at the
+                hospital bedside across Johannesburg and Gauteng.
               </p>
             </div>
 
@@ -619,7 +619,7 @@ export function CompressionPage() {
                     <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-[var(--comp-lilac)]/25">
                       <img
                         src={o.image}
-                        alt={o.name}
+                        alt=""
                         {...imageSize(o.image)}
                         loading="lazy"
                         className="h-full w-full object-contain p-1.5"

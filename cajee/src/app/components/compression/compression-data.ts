@@ -298,11 +298,12 @@ export const COMPRESSION_CARE: string[] = [
   "Replace roughly every six months, or sooner if it becomes easy to pull on",
 ];
 
+// Small original diagrams of where each garment is worn (see product-images.ts).
 export const OTHER_COMPRESSION: { name: string; image: string }[] = [
-  { name: "Compression arm sleeves", image: "/devices/compression-arm-sleeve.webp" },
-  { name: "Compression gloves & gauntlets", image: "/devices/compression-glove.webp" },
-  { name: "Compression vests & chest garments", image: "/devices/mastectomy-vest.webp" },
-  { name: "Scar & burn compression garments", image: "/devices/compression-bandaging.webp" },
+  { name: "Compression arm sleeves", image: "/devices/diagrams/diagram-arm-sleeve.webp" },
+  { name: "Compression gloves & gauntlets", image: "/devices/diagrams/diagram-glove.webp" },
+  { name: "Compression vests & chest garments", image: "/devices/diagrams/diagram-chest-garment.webp" },
+  { name: "Scar & burn compression garments", image: "/devices/diagrams/diagram-scar-garment.webp" },
 ];
 
 export const COMPRESSION_FAQS: { q: string; a: string }[] = [

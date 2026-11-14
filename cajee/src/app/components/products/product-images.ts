@@ -1,97 +1,86 @@
 import type { Device } from "../../data/device-types";
 
-// Real, unbranded product photos live in /public/devices/{key}.png, and each one
-// is served as the WebP copy beside it, /public/devices/{key}.webp (same pixel
-// size, about a tenth of the weight). A new photo needs both files: make the
-// .webp with `cwebp -q 90 -m 6 -sharp_yuv -metadata none {key}.png -o {key}.webp`,
-// then run `node scripts/image-sizes.mjs`.
-// imageKeyFor picks the most representative product image for each device; a few
-// image types are shared by closely-related devices (e.g. all prosthetic feet).
-// This is the single place visuals are chosen, so swapping a device's photo is
-// a one-line change.
+// Each device card shows an original diagram, drawn for this site in the flat
+// style and colours of the blog's prosthetic-leg parts diagram: a simple figure
+// with the place the device is worn marked in blue, or, for mobility aids, a
+// plain drawing of the aid. They replaced rendered "product photos" on
+// 13 November 2026: those looked AI-made, and this is a health practice, so the
+// rule is no AI images (BLOG-IMAGES.md). A diagram shows where a device goes;
+// it never pretends to be a photo of Farida's own stock or a patient.
+//
+// Files: /public/devices/diagrams/diagram-{key}.webp, 640x640, lossless WebP.
+// The drawings are generated from SVG (recorded in the SEO programme's
+// plans/faridaweb/images/SOURCES.md). A new device needs a row here; a device
+// with no row falls back to a plain body outline rather than a wrong picture.
 
-function imageKeyFor(d: Pick<Device, "service" | "bodyPart" | "name">): string {
-  const n = d.name.toLowerCase();
-  const bp = d.bodyPart;
+type Diagram = { key: string; alt: string };
 
-  switch (d.service) {
-    case "prosthetics":
-      if (/paediatric/.test(n)) return "paediatric-prosthesis";
-      if (/upper limb|transhumeral|transradial/.test(n)) return "prosthetic-arm";
-      return "prosthetic-leg";
+const DIAGRAMS: Record<string, Diagram> = {
+  "lower-limb-prosthetics": { key: "prosthesis-leg", alt: "Diagram of a below-knee prosthetic leg on one leg: socket, pylon and foot" },
+  "upper-limb-prosthetics": { key: "prosthesis-arm", alt: "Diagram of a below-elbow prosthetic arm: socket and hand" },
+  "paediatric-prosthetics": { key: "prosthesis-child", alt: "Diagram of a child with a prosthetic leg and a prosthetic arm" },
+  "oa-offloading-knee-brace": { key: "knee-brace-offloading", alt: "Diagram of an offloading knee brace on one knee, hinged on one side" },
+  "hinged-ligament-knee-brace": { key: "knee-brace-hinged", alt: "Diagram of a hinged knee brace around one knee" },
+  "post-op-rom-knee-brace": { key: "knee-brace-rom", alt: "Diagram of a long hinged knee brace from the thigh to the shin" },
+  "patellar-stabilising-knee-brace": { key: "knee-brace-patellar", alt: "Diagram of a knee brace with an opening around the kneecap" },
+  "elastic-knee-sleeve": { key: "knee-sleeve", alt: "Diagram of an elastic sleeve over one knee" },
+  "ankle-stirrup-brace": { key: "ankle-stirrup", alt: "Diagram of a stirrup brace on both sides of one ankle" },
+  "walker-fracture-boot": { key: "walker-boot", alt: "Diagram of a walker boot over one foot and lower leg" },
+  "off-the-shelf-afo-drop-foot": { key: "afo", alt: "Diagram of an ankle-foot orthosis on one lower leg and foot" },
+  "night-splint-plantar-achilles": { key: "night-splint", alt: "Diagram of a night splint on one lower leg and foot" },
+  "cervical-collar-rigid-adjustable": { key: "cervical-collar", alt: "Diagram of a collar around the neck" },
+  "hernia-support-belt": { key: "hernia-belt", alt: "Diagram of a support belt around the lower abdomen with pads over the groin" },
+  "maternity-support-belt": { key: "maternity-belt", alt: "Diagram of a support belt under the belly" },
+  "abdominal-binder-post-op": { key: "abdominal-binder", alt: "Diagram of a wide binder around the abdomen" },
+  "rigid-lumbosacral-orthosis": { key: "lso", alt: "Diagram of a brace around the lower back and waist" },
+  "wrist-splint-day-night": { key: "wrist-splint", alt: "Diagram of a splint on one wrist and forearm" },
+  "thumb-spica-splint": { key: "thumb-spica", alt: "Diagram of a wrist splint that also holds the thumb" },
+  "elbow-support-epicondylitis-strap": { key: "elbow-strap", alt: "Diagram of a strap around the forearm just below the elbow" },
+  "shoulder-immobiliser-sling": { key: "shoulder-sling", alt: "Diagram of one arm held across the body in a sling" },
+  "custom-ankle-foot-orthosis": { key: "afo", alt: "Diagram of an ankle-foot orthosis on one lower leg and foot" },
+  "custom-knee-ankle-foot-orthosis": { key: "kafo", alt: "Diagram of a knee-ankle-foot orthosis from the thigh to the foot" },
+  "custom-hip-knee-ankle-foot-orthosis": { key: "hkafo", alt: "Diagram of a hip-knee-ankle-foot orthosis from the hips down both legs" },
+  "custom-foot-orthosis": { key: "insoles", alt: "Diagram of a pair of insoles seen from above" },
+  "custom-scoliosis-brace": { key: "scoliosis-brace", alt: "Diagram of a brace around the trunk, from under the arms to the hips" },
+  "custom-moulded-bennett-brace": { key: "bennett-brace", alt: "Diagram of a brace around the mid and lower back with a fabric front panel" },
+  "cranial-remoulding-helmet": { key: "cranial-helmet", alt: "Diagram of a baby's head in a remoulding helmet, with the face open" },
+  "custom-resting-hand-wrist-orthosis": { key: "resting-hand", alt: "Diagram of a splint holding one hand and wrist" },
+  "elbow-rom-brace": { key: "elbow-rom", alt: "Diagram of a hinged brace around one elbow" },
+  "active-rigid-manual-wheelchair": { key: "wheelchair-active", alt: "Drawing of a rigid-frame manual wheelchair with a low backrest" },
+  "standard-attendant-wheelchair": { key: "wheelchair-standard", alt: "Drawing of a standard wheelchair with push handles and armrests" },
+  "power-wheelchair": { key: "wheelchair-power", alt: "Drawing of a power wheelchair with a joystick" },
+  "paediatric-wheelchair-buggy": { key: "wheelchair-child", alt: "Drawing of a child's rehab buggy" },
+  "wheelchair-seating-positioning-system": { key: "seating-system", alt: "Drawing of a contoured seat, backrest and head support" },
+  "rollator": { key: "rollator", alt: "Drawing of a rollator with wheels, a seat and a basket" },
+  "standard-walking-frame": { key: "walking-frame", alt: "Drawing of a walking frame" },
+  "forearm-crutches": { key: "crutches", alt: "Drawing of a pair of forearm crutches" },
+  "walking-stick-cane": { key: "cane", alt: "Drawing of a walking stick" },
+  "knee-scooter": { key: "knee-scooter", alt: "Drawing of a knee scooter with a knee pad and handlebar" },
+  "standing-frame": { key: "standing-frame", alt: "Drawing of a standing frame with knee and chest supports" },
+  "transfer-board": { key: "transfer-board", alt: "Drawing of a transfer board bridging two seats" },
+  "below-knee-compression-stocking": { key: "stocking-bk", alt: "Diagram of below-knee compression stockings, from the foot to just below the knee" },
+  "thigh-high-compression-stocking": { key: "stocking-thigh", alt: "Diagram of thigh-high compression stockings, from the foot to the upper thigh" },
+  "compression-tights": { key: "tights", alt: "Diagram of compression tights, from the feet to the waist" },
+  "compression-arm-sleeve": { key: "arm-sleeve", alt: "Diagram of a compression sleeve from the upper arm to the wrist" },
+  "compression-glove-gauntlet": { key: "glove", alt: "Diagram of a compression glove over one hand and wrist" },
+  "post-mastectomy-compression-garment": { key: "chest-garment", alt: "Diagram of a compression vest over the chest" },
+  "scar-burn-compression-garment": { key: "scar-garment", alt: "Diagram of a compression garment over the trunk and both arms" },
+  "multi-layer-compression-bandaging": { key: "bandaging", alt: "Diagram of layered bandaging from the foot to below the knee" },
+  "breast-forms": { key: "breast-form", alt: "Diagram of a breast form on one side of the chest" },
+  "post-mastectomy-bra-camisole": { key: "mastectomy-bra", alt: "Diagram of a mastectomy bra with a breast form in one cup" },
+  "nipple-prosthesis": { key: "nipple-prosthesis", alt: "Diagram of a nipple prosthesis on one side of the chest" },
+  "silicone-cosmetic-restoration-face-digits": { key: "silicone-restoration", alt: "Diagram marking the face, a finger and a toe" },
+  "posture-support-brace-thoracic": { key: "posture-brace", alt: "Diagram of straps around both shoulders and across the upper back" },
+};
 
-    case "off-the-shelf-orthotics":
-    case "custom-orthotics":
-      if (/cervical|collar/.test(n) || bp === "Neck") return "cervical-collar";
-      if (/bennett/.test(n)) return "bennett-brace";
-      if (/scoliosis|tlso|thoracolumbosacral/.test(n)) return "tlso-scoliosis";
-      if (/posture/.test(n)) return "posture-brace";
-      if (/hernia/.test(n)) return "hernia-belt";
-      if (/maternity/.test(n)) return "maternity-belt";
-      if (/abdominal/.test(n)) return "abdominal-binder";
-      if (/hkafo|hip-knee/.test(n)) return "hkafo";
-      if (/kafo|knee-ankle/.test(n)) return "kafo";
-      if (/lumbar|lumbosacral|\blso\b|back support/.test(n)) return "lumbar-brace";
-      if (/thumb/.test(n)) return "thumb-spica";
-      if (/resting/.test(n)) return "resting-hand-splint";
-      if (/carpal|wrist/.test(n)) return "wrist-splint";
-      if (/\brom\b/.test(n)) return bp === "Elbow" ? "dynamic-arm-orthosis" : "rom-knee-brace";
-      if (/epicondyl|elbow/.test(n)) return "elbow-brace";
-      if (/shoulder|sling|subluxation/.test(n)) return "shoulder-sling";
-      if (/hip/.test(n)) return "hip-brace";
-      if (/night splint/.test(n)) return "night-splint";
-      if (/boot|fracture/.test(n)) return "walker-boot";
-      if (/afo|drop.?foot|ankle-foot/.test(n)) return "afo";
-      if (/insole|foot orthosis|foot orthotic|shoe/.test(n)) return /custom/.test(n) ? "custom-foot-orthosis" : "insole";
-      if (/ankle/.test(n)) return "ankle-brace";
-      if (/cranial|helmet/.test(n)) return "cranial-helmet";
-      if (/osteoarthritis|offloading|unloader/.test(n)) return "unloader-knee";
-      if (/knee/.test(n)) return /elastic|sleeve/.test(n) ? "knee-brace-elastic" : "knee-brace";
-      // fallbacks by body part
-      if (bp === "Knee") return "knee-brace";
-      if (bp === "Ankle & Foot") return "afo";
-      if (bp === "Spine & Back") return "lumbar-brace";
-      if (bp === "Wrist & Hand") return "wrist-splint";
-      if (bp === "Elbow") return "elbow-brace";
-      if (bp === "Shoulder") return "shoulder-sling";
-      if (bp === "Hip") return "hip-brace";
-      return "knee-brace";
+const FALLBACK: Diagram = { key: "body", alt: "" };
 
-    case "compression":
-      if (/tights|pantyhose/.test(n)) return "compression-tights";
-      if (/thigh/.test(n)) return "compression-stocking-thigh";
-      if (/glove|gauntlet/.test(n)) return "compression-glove";
-      if (/bandag/.test(n)) return "compression-bandaging";
-      if (/mastectomy|scar|burn/.test(n) || bp === "Chest" || bp === "Full Body") return "mastectomy-vest";
-      if (/arm|sleeve/.test(n) || bp === "Upper Limb" || bp === "Wrist & Hand") return "compression-arm-sleeve";
-      return "compression-stocking";
+export const diagramPath = (key: string) => `/devices/diagrams/diagram-${key}.webp`;
 
-    case "mobility-aids":
-      if (/power|electric/.test(n)) return "power-wheelchair";
-      if (/paediatric|buggy/.test(n) && /wheelchair|buggy|rehab/.test(n)) return "paediatric-wheelchair";
-      if (/seating|positioning|cushion/.test(n)) return "wheelchair-cushion";
-      if (/wheelchair/.test(n)) return "manual-wheelchair";
-      if (/rollator/.test(n)) return "rollator";
-      if (/crutch/.test(n)) return "crutches";
-      if (/stick|cane/.test(n)) return "walking-cane";
-      if (/scooter/.test(n)) return "knee-scooter";
-      if (/standing/.test(n)) return "standing-frame";
-      if (/gait/.test(n)) return "gait-trainer";
-      if (/transfer/.test(n)) return "transfer-board";
-      return "walking-frame";
-
-    case "breast-prosthetics":
-      if (/nipple/.test(n)) return "nipple-prosthesis";
-      if (/bra|camisole/.test(n)) return "mastectomy-bra";
-      if (/facial|face|finger|toe|digit|restoration/.test(n)) return "silicone-restoration";
-      if (/partial|shell/.test(n)) return "breast-form-partial";
-      return "breast-form";
-
-    default:
-      return "knee-brace";
-  }
+export function deviceImage(device: Pick<Device, "id">): string {
+  return diagramPath((DIAGRAMS[device.id] ?? FALLBACK).key);
 }
 
-export function deviceImage(device: Pick<Device, "service" | "bodyPart" | "name">): string {
-  return `/devices/${imageKeyFor(device)}.webp`;
+export function deviceImageAlt(device: Pick<Device, "id" | "name">): string {
+  return DIAGRAMS[device.id]?.alt ?? "";
 }
