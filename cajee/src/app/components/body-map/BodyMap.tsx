@@ -14,6 +14,9 @@ import {
 } from "./anatomy-data";
 import { DEVICES } from "../../data/devices";
 
+const serviceLinkClass =
+  "font-medium text-[var(--purple-medium)] underline decoration-[var(--accent-purple)]/50 underline-offset-2 hover:text-[var(--text-dark)]";
+
 /** Devices in the catalogue matching a body-map point's service + body region. */
 function relatedDevices(point: PainPoint) {
   const bodyPart = POINT_TO_BODYPART[point.id];
@@ -242,6 +245,29 @@ export function BodyMap() {
             </button>
           ))}
         </div>
+        {/* W39 (15 Nov 2026): the panel's "Explore ..." links only exist after a tap, so
+            the static page linked none of the services the map points to. This line
+            restates PAIN_POINTS' serviceSlug mapping as plain, crawlable links. */}
+        <p className="mx-auto mt-8 max-w-2xl text-center text-base leading-relaxed text-[var(--text-muted)]">
+          Braces and supports for the neck, shoulder, elbow, wrist, back, knee and ankle, and
+          hernia support belts, are fitted through our{" "}
+          <Link to="/services/off-the-shelf-orthotics" className={serviceLinkClass}>
+            knee, back and ankle braces
+          </Link>{" "}
+          service. Foot and heel pain is covered by{" "}
+          <Link to="/services/custom-orthotics#heel-pain" className={serviceLinkClass}>
+            custom orthotics
+          </Link>
+          , limb loss by{" "}
+          <Link to="/services/prosthetics" className={serviceLinkClass}>
+            prosthetics
+          </Link>{" "}
+          and limb swelling by{" "}
+          <Link to="/services/compression" className={serviceLinkClass}>
+            medical compression
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );

@@ -18,6 +18,9 @@ interface ServicePageTemplateProps {
   /** When set, renders the filterable device catalogue for this service. */
   serviceSlug?: ServiceSlug;
   additionalSections?: ReactNode;
+  /** A problem-first section shown straight after "What is it?" / "How can it help?",
+   *  before the device catalogue (e.g. heel pain on the custom orthotics page). */
+  problemSection?: ReactNode;
   seoTitle?: string;
   seoFullTitle?: string;
   seoDescription?: string;
@@ -61,6 +64,7 @@ export function ServicePageTemplate({
   clinicalApproach,
   serviceSlug,
   additionalSections,
+  problemSection,
   seoTitle,
   seoFullTitle,
   seoDescription,
@@ -132,6 +136,8 @@ export function ServicePageTemplate({
                 </ul>
               </section>
             </div>
+
+            {problemSection}
 
             {/* Devices catalogue (filterable) or fallback Available Services list */}
             {serviceSlug ? (

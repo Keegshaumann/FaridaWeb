@@ -10,7 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Prosthetic Leg Price in South Africa: Above & Below Knee",
     "category": "Prosthetics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-14",
+    "dateUpdated": "2026-11-15",
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
     "imageAlt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
@@ -28,7 +28,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "What actually drives the price",
         "paragraphs": [
-          "A prosthetic leg is not one product but a system of parts, and the price reflects that. Össur South Africa breaks the cost down into three broad categories: the custom-made socket (the part in contact with your residual limb, which takes clinical time and skill to fit properly), the mechanical or electronic components bought in from manufacturers such as the foot and, for above-knee limbs, the knee joint, and the recurring costs of adjusting the prosthesis periodically as the residual limb changes shape over time and of [replacing the mechanical components roughly every five years](/blog/how-long-does-a-prosthetic-leg-last) as they wear out [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). A South African peer-reviewed study on lower-limb prosthetic care notes that prosthetists in the private sector typically use activity-level assessment tools, such as the Amputee Mobility Predictor, to match a patient to an appropriate componentry tier [PMC/Canadian Prosthetics & Orthotics Journal](https://pmc.ncbi.nlm.nih.gov/articles/PMC11844759/)."
+          "A prosthetic leg is not one product but a system of parts, and the price reflects that. Össur South Africa breaks the cost down into three broad categories: the custom-made socket (the part in contact with your residual limb, which takes clinical time and skill to fit properly), the mechanical components bought in from manufacturers, such as the prosthetic foot, and the recurring costs of adjusting the prosthesis periodically as the residual limb changes shape over time and of [replacing the mechanical components roughly every five years](/blog/how-long-does-a-prosthetic-leg-last) as they wear out [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). A South African peer-reviewed study on lower-limb prosthetic care notes that prosthetists in the private sector typically use activity-level assessment tools, such as the Amputee Mobility Predictor, to match a patient to an appropriate componentry tier [PMC/Canadian Prosthetics & Orthotics Journal](https://pmc.ncbi.nlm.nih.gov/articles/PMC11844759/)."
         ]
       },
       {

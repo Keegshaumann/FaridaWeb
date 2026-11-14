@@ -13,7 +13,7 @@ import type { Faq } from "../../components/FaqSection";
 const homeVisitsFaqs: Faq[] = [
   {
     q: "Do you do home visits for orthotics and prosthetics?",
-    a: "Yes. Farida Cajee-Botes travels for home and hospital visits across Johannesburg, Sandton, Midrand, Centurion and Pretoria. Assessment, measuring, casting or scanning, most off-the-shelf fittings, compression fitting, mobility aid set-up and reviews can all be done where you are. Visits are by prior arrangement: call or WhatsApp 079 998 2203 to arrange one.",
+    a: "Yes. Farida Cajee-Botes travels for home and hospital visits across Johannesburg, Sandton, Midrand, Centurion and Pretoria. Assessment, measuring, casting or scanning, most [off-the-shelf fittings](/services/off-the-shelf-orthotics), compression fitting, mobility aid set-up and reviews can all be done where you are. Visits are by prior arrangement: call or WhatsApp 079 998 2203 to arrange one.",
   },
   {
     q: "Can you see a patient in hospital before discharge?",
@@ -21,7 +21,7 @@ const homeVisitsFaqs: Faq[] = [
   },
   {
     q: "What can't be done at home?",
-    a: "Making a custom device. Custom sockets and braces need workshop ovens, vacuum equipment and grinding, so a custom device usually means two visits: assessment and casting first, then fitting once it has been made off site. Prosthetic alignment work is also faster at the rooms, where the bench and tools already are.",
+    a: "Making a custom device. Custom sockets and braces need workshop ovens, vacuum equipment and grinding, so a custom device means at least two visits: assessment and casting first, then fitting once it has been made off site, with test fittings in between for a prosthetic socket. Prosthetic alignment work is also faster at the rooms, where the bench and tools already are.",
   },
   {
     q: "Do you have consulting rooms in Centurion or Pretoria?",
@@ -114,7 +114,7 @@ export function HomeVisitsPage() {
       relatedSlugs={["orthotist-home-visits-gauteng", "how-long-after-amputation-prosthetic-leg", "referral-orthotist-prosthetist-first-visit"]}
       title="Orthotist Home and Hospital Visits in Gauteng"
       subtitle="When getting to the rooms is the hard part: orthotic, prosthetic and compression assessment and fitting at your home or hospital bedside"
-      whatIsIt="A home or hospital visit is the same assessment you would have at the rooms, carried out where you already are: your home, a hospital ward or a care facility. The history, examination, measuring, casting or scanning, and most fittings can all be done there. Making a custom device cannot, so a custom device usually means two visits, with the making done off site in between."
+      whatIsIt="A home or hospital visit is the same assessment you would have at the rooms, carried out where you already are: your home, a hospital ward or a care facility. The history, examination, measuring, casting or scanning, and most fittings can all be done there. Making a custom device cannot, so a custom device means at least two visits, with the making done off site in between."
       benefits={[
         "No trip to the rooms when travel is the obstacle: after an operation or an amputation, after a stroke, or when you are bed-bound or chair-bound",
         "Your device is chosen against your real doorways, bed height, bathroom and stairs",
