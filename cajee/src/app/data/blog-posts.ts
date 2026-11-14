@@ -10,7 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Prosthetic Leg Price in South Africa: Above & Below Knee",
     "category": "Prosthetics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-13",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
     "imageAlt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
@@ -28,7 +28,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "What actually drives the price",
         "paragraphs": [
-          "A prosthetic leg is not one product but a system of parts, and the price reflects that. Ossur South Africa breaks the cost down into three broad categories: the custom-made socket (the part in contact with your residual limb, which takes clinical time and skill to fit properly), the mechanical or electronic components bought in from manufacturers such as the foot and, for above-knee limbs, the knee joint, and the recurring costs of adjustments and [replacement roughly every five years](/blog/how-long-does-a-prosthetic-leg-last) as sockets wear and residual limbs change shape over time [Ossur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). A South African peer-reviewed study on lower-limb prosthetic care notes that prosthetists in the private sector typically use activity-level assessment tools, such as the Amputee Mobility Predictor, to match a patient to an appropriate componentry tier [PMC/Canadian Prosthetics & Orthotics Journal](https://pmc.ncbi.nlm.nih.gov/articles/PMC11844759/)."
+          "A prosthetic leg is not one product but a system of parts, and the price reflects that. Össur South Africa breaks the cost down into three broad categories: the custom-made socket (the part in contact with your residual limb, which takes clinical time and skill to fit properly), the mechanical or electronic components bought in from manufacturers such as the foot and, for above-knee limbs, the knee joint, and the recurring costs of adjusting the prosthesis periodically as the residual limb changes shape over time and of [replacing the mechanical components roughly every five years](/blog/how-long-does-a-prosthetic-leg-last) as they wear out [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). A South African peer-reviewed study on lower-limb prosthetic care notes that prosthetists in the private sector typically use activity-level assessment tools, such as the Amputee Mobility Predictor, to match a patient to an appropriate componentry tier [PMC/Canadian Prosthetics & Orthotics Journal](https://pmc.ncbi.nlm.nih.gov/articles/PMC11844759/)."
         ]
       },
       {
@@ -81,8 +81,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "references": [
       {
-        "title": "Financial Considerations | Information for Amputees | Ossur South Africa",
-        "publisher": "Ossur",
+        "title": "Financial Considerations | Information for Amputees | Össur South Africa",
+        "publisher": "Össur",
         "url": "https://www.ossur.com/en-za/prosthetics/information/financial-considerations"
       },
       {
@@ -251,9 +251,9 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
-    "imageAlt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
-    "shareImage": "/blog/prosthetic-leg-parts-below-and-above-knee.jpg",
+    "image": "/blog/amputation-to-prosthetic-leg-timeline-wide.webp",
+    "imageAlt": "Timeline from amputation to a definitive prosthetic leg in four stages: exercises and mobility training within days of surgery; a temporary prosthesis within two to three weeks for some patients; the definitive leg cast, built and fitted at two to six months; follow-up visits for socket adjustments in the first year; and a shrinker or compression worn all the way through",
+    "shareImage": "/blog/amputation-to-prosthetic-leg-timeline-wide.jpg",
     "metaDescription": "Usually two to six months, once the wound heals and swelling settles, and some walk in an interim limb within weeks. The stages, and what to do meanwhile.",
     "excerpt": "Wound healing, shrinkers and an interim prosthesis come first. A definitive prosthetic leg is usually fitted somewhere between two and six months after surgery.",
     "readMinutes": 6,
@@ -265,8 +265,8 @@ export const BLOG_POSTS: BlogPost[] = [
         ],
         "images": [
           {
-            "src": "/blog/amputation-to-prosthetic-leg-timeline.webp",
-            "alt": "Timeline from amputation to a definitive prosthetic leg: exercises and mobility training within days of surgery; a temporary prosthesis from two to three weeks for some patients; the definitive leg cast and fitted at two to six months once the limb has settled; socket adjustments through the first year; a shrinker or compression worn throughout"
+            "src": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
+            "alt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon"
           }
         ]
       },
@@ -296,7 +296,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "This is where the South African context matters a great deal. Public-sector prosthetic services face well-documented capacity constraints: a 2025 African Journal of Disability study on health system barriers to prosthetic service delivery cites [figures as low as 8% for the proportion of South African amputees who are ever fitted with a prosthesis](https://ajod.org/index.php/ajod/article/view/1837/3980), and describes waiting times reported by users as running to months and, in some cases, years for a first fitting appointment. The same research links this to under-filled clinical posts, supply chain and procurement delays, and rural transport and distance barriers that keep people from reaching the few dedicated centres that exist.",
           "By contrast, a peer-reviewed study on South Africa's private prosthetic sector describes a funding landscape built around the Council for Medical Schemes' [Prescribed Minimum Benefits (PMB)](https://jps.library.utoronto.ca/index.php/cpoj/article/view/44450), the Road Accident Fund, and workplace compensation (COIDA/WCA). Each of these routes has its own paperwork and authorisation steps, which is why understanding your funding option early is worth doing at the same time as your first prosthetist consultation.",
-          "If you have medical scheme cover, a prosthetic limb often falls under PMB or a scheme-specific prosthetic benefit; [Össur South Africa's guidance on financial considerations](https://www.ossur.com/en-za/prosthetics/information/financial-considerations) notes that PMB-related funding decisions commonly take around 60 days to be confirmed, while COIDA/WCA claims can take several months to be answered. Road Accident Fund claims follow their own separate legal and administrative process, so it's worth asking your prosthetist or case manager which funding route applies to you as early as possible. Because component choice, socket complexity and any additional orthotic needs all affect the final cost, it's best to ask your prosthetist for a written, itemised quotation early, so you and your medical scheme (or other funder) know exactly what's being requested and why."
+          "If you have medical scheme cover, a prosthetic limb often falls under PMB or a scheme-specific prosthetic benefit; [Össur South Africa's guidance on financial considerations](https://www.ossur.com/en-za/prosthetics/information/financial-considerations) notes that feedback on a PMB application is usually given within 60 days, while COIDA/WCA claims can take several months to be answered. Road Accident Fund claims follow their own separate legal and administrative process, so it's worth asking your prosthetist or case manager which funding route applies to you as early as possible. Because component choice, socket complexity and any additional orthotic needs all affect the final cost, it's best to ask your prosthetist for a written, itemised quotation early, so you and your medical scheme (or other funder) know exactly what's being requested and why."
         ]
       },
       {
@@ -480,24 +480,24 @@ export const BLOG_POSTS: BlogPost[] = [
     "date": "2026-07-15",
     "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
-    "image": "/blog/learning-to-walk-prosthetic-leg-timeline.webp",
-    "imageAlt": "Learning to walk on a new prosthetic leg: walking between parallel bars in the first few weeks, walking on your own on flat ground within one to a few months, and stairs, uneven ground and a full day on your feet between three months and a year",
-    "shareImage": "/blog/learning-to-walk-prosthetic-leg-timeline.jpg",
-    "metaDescription": "Walking on flat ground often comes within one to a few months; stairs and a full day on your feet can take three months to a year. What rehab involves.",
+    "image": "/blog/learning-to-walk-prosthetic-leg-stages.webp",
+    "imageAlt": "Learning to walk on a new prosthetic leg in three stages: walking between parallel bars once your prosthesis is fitted; walking on your own on flat ground as your strength and balance build; and stairs, uneven ground and a full day on your feet, which can take up to about a year",
+    "shareImage": "/blog/learning-to-walk-prosthetic-leg-stages.jpg",
+    "metaDescription": "Learning to walk on a prosthetic leg comes in stages and can take up to a year. What shapes your timeline, and what physio and prosthetic rehab involve.",
     "excerpt": "Most people can learn to walk confidently with a prosthetic leg, though \"normal\" looks different for everyone. Here's what shapes the timeline, and what physio and prosthetic rehab actually involve.",
     "readMinutes": 7,
     "sections": [
       {
         "heading": "The short answer",
         "paragraphs": [
-          "Yes - most people who lose a leg can learn to walk again, and many develop a gait that looks smooth and natural to a casual observer. But \"normal\" is relative: your walking pattern, speed, endurance and need for a stick or rest breaks depend on your amputation level, general health, residual limb condition, and how consistently you do the rehab work. Cleveland Clinic notes that with the right prosthesis and training, people go on to walk, run marathons, ski or take part in the Paralympics - but it also stresses that the full process, including physical and psychological adjustment, \"can take up to a year\" [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg). Hanger Clinic describes a similarly gradual process: expect consistent, steady practice over a period of months to regain the strength and confidence to use your prosthesis comfortably in daily life, and the process generally takes longer if you have an above-knee or bilateral amputation [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/)."
+          "Yes - most people who lose a leg can learn to walk again, and many develop a gait that looks smooth and natural to a casual observer. But \"normal\" is relative: your walking pattern, speed, endurance and need for a stick or rest breaks depend on your amputation level, general health, residual limb condition, and how consistently you do the rehab work. Cleveland Clinic notes that with the right prosthesis and training, people go on to walk, run marathons, ski or take part in the Paralympics - but it also stresses that the full process, including physical and psychological adjustment, \"can take up to a year\" [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg). Hanger Clinic describes a similarly gradual process: expect consistent, steady practice to regain the strength and confidence to use your prosthesis comfortably in daily life, and the process generally takes longer if you have an above-knee or bilateral amputation [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/)."
         ]
       },
       {
         "heading": "What shapes your walking pattern: amputation level and K-level",
         "paragraphs": [
           "Two things drive expectations more than anything else: where the amputation is, and your functional (K) level. A below-knee (transtibial) amputation preserves your own knee joint, so gait tends to be more energy-efficient and easier to relearn than an above-knee (transfemoral) amputation, where the prosthetic knee must be controlled as well as the foot. Bilateral amputees generally need more time and more upper-body or parallel-bar support early on [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/); [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg).",
-          "K-levels (K0 to K4) are the classification system your prosthetist and medical scheme use to match components to your realistic mobility goals. K1 describes limited household walking on flat, predictable surfaces, often with support for sitting and standing. K2 adds limited outdoor and community mobility on flat, predictable surfaces, managing one or two stairs or an ADA-style ramp, plus light activities such as grocery shopping. K3 is the typical \"community ambulator\" who can vary pace, multitask while walking and manage most environmental barriers, including several consecutive stairs and varied terrain. K4 covers high-demand activity such as running or sport [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels). Your K-level isn't fixed forever - it's reassessed as your strength, balance and confidence change, and it directly determines whether a basic foot or a microprocessor knee is appropriate and fundable."
+          "K-levels (K0 to K4) are the classification system prosthetists use to match components to your realistic mobility goals. K1 describes limited household walking on flat, predictable surfaces, often with support for sitting and standing. K2 adds limited outdoor and community mobility on flat, predictable surfaces, managing one or two stairs or a ramp, plus light activities such as grocery shopping. K3 is the typical \"community ambulator\" who can vary pace, multitask while walking and manage most environmental barriers, including several consecutive stairs and varied terrain. K4 covers high-demand activity such as running or sport [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels). Your K-level isn't fixed forever - it's reassessed as your strength, balance and confidence change, and it directly determines whether a basic foot or a microprocessor knee is appropriate."
         ],
         "images": [
           {
@@ -509,14 +509,14 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "What the rehab and physio process actually involves",
         "paragraphs": [
-          "Training typically begins well before your first prosthesis is even fitted. Cleveland Clinic describes an average gap of three to six months between amputation and the start of formal prosthetic training, used for wound healing, limb shaping and building general strength [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg). Once fitted, Hanger Clinic outlines a fairly consistent progression: learning to don and doff the socket safely; standing and shifting weight onto the prosthetic side; walking in parallel bars with both hands supported, then one hand, then no hands; and finally practising real-world tasks such as stairs, curbs, uneven ground and getting in and out of a car [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/).",
+          "Training typically begins well before your first prosthesis is even fitted. Cleveland Clinic describes an average gap of three to six months between amputation and the start of formal prosthetic training, used for wound healing, limb shaping and building general strength [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg). Once fitted, Hanger Clinic outlines a fairly consistent progression: getting the socket fitting comfortably; learning to shift weight onto the prosthetic side; walking in parallel bars with both hands supported, then one hand, then no hands; and finally practising real-world tasks such as stairs, kerbs, uneven ground and getting in and out of a car [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/).",
           "This is where a physiotherapist and prosthetist working as a team matters most - the prosthetist fits and adjusts the socket and alignment, while the physiotherapist builds the strength, balance and gait mechanics that make the device usable. Locally, we work alongside physiotherapy practices and rehabilitation units across Gauteng, coordinating socket adjustments with your therapy sessions so you're not troubleshooting fit issues and relearning gait patterns in isolation from one another. If you're newly referred, ask your surgeon or GP for a physio contact early - starting joint mobility and core work before your first fitting shortens the road afterwards. You can read more about our [prosthetics](/services/prosthetics) service and related [conditions](/conditions) we support."
         ]
       },
       {
         "heading": "Realistic timeframes",
         "paragraphs": [
-          "Putting the above together: expect basic parallel-bar walking within the first few weeks of your first prosthesis, independent walking on flat ground within one to a few months, and confident handling of stairs, uneven terrain and a full day on your feet somewhere between three months and a year, depending on amputation level, age, other health conditions and how much practice you put in outside of appointments [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg); [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/). These are general patterns, not promises - your prosthetist and physiotherapist will set goals based on your own assessment."
+          "Putting the above together: expect to start with parallel-bar walking once your first prosthesis is fitted, move on to walking on your own on flat ground as your strength and balance build, and allow up to about a year for confident handling of stairs, uneven terrain and a full day on your feet, depending on amputation level, age, other health conditions and how much practice you put in outside of appointments [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg); [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/). These are general patterns, not promises - your prosthetist and physiotherapist will set goals based on your own assessment."
         ]
       },
       {
@@ -524,7 +524,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Standing all day: it's achievable for many K2-K3+ users once fitted and conditioned, but your residual limb still swells and shrinks throughout the day. Expect to adjust sock ply or liner thickness, take short seated breaks if swelling occurs, and keep the skin clean and dry to avoid pressure sores - your prosthetist can also advise on liners or suspension changes for long standing shifts.",
           "Stairs: this is trained explicitly during rehab. Ottobock's K-level framework notes that community-level (K3) users are generally able to climb three to seven consecutive stairs and manage varied terrain, while K2 users may be able to manage only one or two stairs (or use a ramp instead), and K1 users typically rely on support for sitting, standing and transfers rather than free stair climbing [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels).",
-          "Driving: many amputees return to driving, often within a few months, sometimes with an automatic transmission or pedal modifications depending on which side is affected - a peer-reviewed study in Archives of Physical Medicine and Rehabilitation found that over 80% of participants returned to driving at an average of under four months after amputation, with right-sided amputees significantly more likely to need vehicle modifications or a switch to left-foot pedal use [Archives of Physical Medicine and Rehabilitation, via PubMed](https://pubmed.ncbi.nlm.nih.gov/16935052/). In South Africa, check your licence obligations with the licensing authority if a medical condition affects your driving; your doctor or prosthetist can advise on any restriction or modification needed."
+          "Driving: many amputees return to driving, often within a few months, sometimes with an automatic transmission or pedal modifications depending on which side is affected - a peer-reviewed study in Archives of Physical Medicine and Rehabilitation found that over 80% of participants returned to driving at an average of under four months after amputation, and right-sided amputees often needed vehicle modifications or a switch to left-foot pedals [Archives of Physical Medicine and Rehabilitation, via PubMed](https://pubmed.ncbi.nlm.nih.gov/16935052/). In South Africa, check your licence obligations with the licensing authority if a medical condition affects your driving; your doctor or prosthetist can advise on any restriction or modification needed."
         ]
       },
       {
@@ -544,8 +544,8 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "keyTakeaways": [
       "Many amputees achieve a smooth, natural-looking gait, but the timeline and end result depend heavily on amputation level, general health and how consistently rehab is done.",
-      "Below-knee (transtibial) amputees typically progress faster than above-knee (transfemoral) or bilateral amputees, who rely on more hip and core strength.",
-      "Formal gait training runs for weeks, but building the strength, stamina and confidence for full daily life can take several months to about a year.",
+      "Below-knee (transtibial) amputees typically progress faster than above-knee (transfemoral) or bilateral amputees.",
+      "Training comes in stages, and building the strength, stamina and confidence for full daily life can take up to about a year.",
       "K-levels (K0-K4) describe expected walking ability and guide which prosthetic components - foot, knee, suspension - are appropriate for you.",
       "In South Africa, funding runs through medical scheme benefits, Prescribed Minimum Benefits, the Road Accident Fund or COIDA, alongside a physiotherapist-prosthetist rehab partnership."
     ],
@@ -600,7 +600,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "The short answer",
         "paragraphs": [
-          "Custom orthotics in South Africa aren't sold off a fixed national price list, so there is no single ZAR figure that applies to every patient. Where pricing has actually been published, it varies widely: one Gauteng-based provider listed on the international clinic directory WhatClinic quotes custom orthotics from around R1,300 to R1,500 per pair [WhatClinic](https://www.whatclinic.com/physiotherapy/south-africa/orthotics), but that reflects a single practice's entry-level insole, not the cost of a fully bespoke functional device, a paediatric brace, or a spinal orthosis, all of which involve considerably more clinical time and material. Because the honest range depends so heavily on your foot, your diagnosis and the device design your orthotist prescribes, the most reliable way to know your actual cost is to book an assessment and request a written, itemised quotation before any work begins.",
+          "Custom orthotics in South Africa aren't sold off a fixed national price list, so there is no single ZAR figure that applies to every patient. Where pricing has actually been published, it varies widely: one Gauteng-based provider listed on the international clinic directory WhatClinic quotes custom orthotics from around R1,300 to R1,500 per pair [WhatClinic](https://www.whatclinic.com/physiotherapy/south-africa/orthotics), but that is one practice's listed price for custom foot orthotics, with its biomechanical assessment priced separately, not the cost of an ankle-foot orthosis, a paediatric brace or a spinal orthosis, which involve considerably more clinical time and material. Because the honest range depends so heavily on your foot, your diagnosis and the device design your orthotist prescribes, the most reliable way to know your actual cost is to book an assessment and request a written, itemised quotation before any work begins.",
           "That said, it helps to understand what makes up the bill, and how South African medical schemes typically treat orthotic insoles when you submit a claim, both of which are covered below."
         ]
       },
@@ -637,7 +637,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     "keyTakeaways": [
-      "There is no fixed national ZAR price list for custom orthotics in South Africa; one aggregator-listed provider quotes from roughly R1,300–R1,500 for a basic pair, but complex or paediatric devices cost more. Always request a written quotation after assessment.",
+      "There is no fixed national ZAR price list for custom orthotics in South Africa; one aggregator-listed provider quotes roughly R1,300–R1,500 for a pair of custom foot orthotics, with the assessment charged separately, but complex devices cost more. Always request a written quotation after assessment.",
       "Price is driven by the clinical assessment, the casting or 3D-scanning method used, the materials (rigid functional vs soft accommodative), and the complexity of the device prescribed.",
       "Medical schemes generally fund orthotics through an external medical items, appliances or assistive-devices benefit paid from savings/above-threshold limits, not as an automatic guaranteed benefit. Limits vary widely by scheme and plan, and you should confirm your specific device qualifies before treatment.",
       "Orthotic insoles are not a stand-alone Prescribed Minimum Benefit, so cover typically depends on your specific plan unless the device is needed to manage a PMB-qualifying condition.",
@@ -704,7 +704,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "So, are they worth it?",
         "paragraphs": [
-          "The short answer: sometimes, and it depends far more on what's actually wrong with your feet than on how much a device costs. For the most heavily researched everyday complaint, plantar fasciitis and general plantar heel pain, good-quality evidence shows a well-chosen off-the-shelf insole often performs just as well as a custom-made one. For structural deformities, diabetic foot complications, inflammatory arthritis, or feet that have been changed by surgery or injury, a device that's individually assessed, cast or scanned and manufactured for you genuinely does more than a generic shelf product can. The rest of this article unpacks that split so you can work out which side of it you're likely on."
+          "The short answer: sometimes, and it depends far more on what's actually wrong with your feet than on how much a device costs. For plantar fasciitis and general plantar heel pain, the trial evidence suggests a well-chosen off-the-shelf insole often performs just as well as a custom-made one. For structural deformities, diabetic foot complications, inflammatory arthritis, or feet that have been changed by surgery or injury, a device that's individually assessed, cast or scanned and manufactured for you genuinely does more than a generic shelf product can. The rest of this article unpacks that split so you can work out which side of it you're likely on."
         ]
       },
       {

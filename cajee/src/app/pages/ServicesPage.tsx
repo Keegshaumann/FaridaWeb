@@ -17,7 +17,7 @@ export function ServicesPage() {
     {
       title: "Custom Orthotics",
       description: "Orthotic devices designed for you alone, to support the way your body moves and what you're working towards in rehab.",
-      image: mobilityAidsImg,
+      image: offTheShelfImg,
       link: "/services/custom-orthotics",
       features: [
         "Custom-fit arm and leg braces, including AFO braces",
@@ -29,7 +29,7 @@ export function ServicesPage() {
     {
       title: "Off-the-Shelf Orthotics",
       description: "High-quality prefabricated orthotic devices for immediate support during recovery, injury management, or post-operative care.",
-      image: offTheShelfImg,
+      image: mobilityAidsImg,
       link: "/services/off-the-shelf-orthotics",
       features: [
         "Joint braces and post-operative supports",

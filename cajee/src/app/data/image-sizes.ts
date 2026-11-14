@@ -4,7 +4,7 @@
 // The real pixel size of every image in public/ and src/assets/, keyed by file
 // name, so an <img> can carry width and height attributes and the browser can
 // keep a space the right shape for it before the file arrives. Last generated
-// from 179 image files.
+// from 181 image files.
 
 export const IMAGE_SIZES: Record<string, [number, number]> = {
   "0c656bc256881f7d19efdc0720e6c85ef11b2335.webp": [1072, 1920],
@@ -40,6 +40,8 @@ export const IMAGE_SIZES: Record<string, [number, number]> = {
   "9c4e446ca8913326ca2915d99d461c49f5418570.webp": [1072, 1920],
   "a83f936979af43b1f3576745d4abf5e601cb3f01.webp": [1440, 1920],
   "ab54e9bc406f99d945a9fc82535f9ab964c208be.webp": [1072, 1920],
+  "amputation-to-prosthetic-leg-timeline-wide.jpg": [1200, 675],
+  "amputation-to-prosthetic-leg-timeline-wide.webp": [1600, 900],
   "amputation-to-prosthetic-leg-timeline.webp": [900, 1735],
   "anatomical-foot-model-ankle-ligaments.jpg": [1200, 675],
   "anatomical-foot-model-ankle-ligaments.webp": [1600, 900],
@@ -139,8 +141,8 @@ export const IMAGE_SIZES: Record<string, [number, number]> = {
   "how-long-does-a-prosthetic-leg-last.jpg": [1200, 675],
   "how-to-put-on-compression-stocking-steps.jpg": [1200, 675],
   "how-to-put-on-compression-stocking-steps.webp": [1600, 900],
-  "learning-to-walk-prosthetic-leg-timeline.jpg": [1200, 675],
-  "learning-to-walk-prosthetic-leg-timeline.webp": [1600, 900],
+  "learning-to-walk-prosthetic-leg-stages.jpg": [1200, 675],
+  "learning-to-walk-prosthetic-leg-stages.webp": [1600, 900],
   "logo.png": [512, 512],
   "making-a-custom-ankle-foot-orthosis.jpg": [1200, 675],
   "making-a-custom-ankle-foot-orthosis.webp": [1600, 900],
