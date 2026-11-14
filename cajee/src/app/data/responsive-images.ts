@@ -10,15 +10,17 @@
 // with cwebp (1.x):
 //   cwebp -m 6 -sharp_yuv -metadata none -q 82 -resize <width> 0 <original> -o <name>-<width>w.webp
 // (-q 80 for the graduation photo; -q 92 -alpha_q 100 for the logo). Re-make
-// them if an original is replaced.
+// them if an original is replaced. Pass the height too (-resize <w> <h>), the
+// original's exact shape: cwebp rounds a free height up, and a copy even 1px
+// taller draws the w-auto logo narrower than the original.
 //
 // ?no-inline keeps the small logo copy a real file: Vite would otherwise inline
 // anything under 4 KB into the script as a data: URL.
 
 import logo from "@/assets/cajee-logo-lockup.webp";
-import logo200 from "@/assets/responsive/cajee-logo-lockup-200w.webp?no-inline";
-import logo400 from "@/assets/responsive/cajee-logo-lockup-400w.webp?no-inline";
-import logo504 from "@/assets/responsive/cajee-logo-lockup-504w.webp?no-inline";
+import logo195 from "@/assets/responsive/cajee-logo-lockup-195w.webp?no-inline";
+import logo390 from "@/assets/responsive/cajee-logo-lockup-390w.webp?no-inline";
+import logo505 from "@/assets/responsive/cajee-logo-lockup-505w.webp?no-inline";
 
 import graduation from "@/assets/farida-graduation.webp";
 import graduation500 from "@/assets/responsive/farida-graduation-500w.webp?no-inline";
@@ -59,7 +61,7 @@ const set = (pairs: [string, number][]) => pairs.map(([url, w]) => `${url} ${w}w
 
 /** srcset strings keyed by the original's (hashed) URL, as the components receive it. */
 const SRCSETS: Record<string, string> = {
-  [logo]: set([[logo200, 200], [logo400, 400], [logo504, 504], [logo, 585]]),
+  [logo]: set([[logo195, 195], [logo390, 390], [logo505, 505], [logo, 585]]),
   [graduation]: set([[graduation500, 500], [graduation750, 750], [graduation1000, 1000], [graduation, 1280]]),
   [p424428]: set([[p424428_480, 480], [p424428_840, 840], [p424428_1200, 1200], [p424428, 1920]]),
   [p93d930]: set([[p93d930_480, 480], [p93d930_840, 840], [p93d930_1200, 1200], [p93d930, 1920]]),

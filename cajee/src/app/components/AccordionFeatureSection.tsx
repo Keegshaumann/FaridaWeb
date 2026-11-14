@@ -1,5 +1,15 @@
 import { ChevronDown } from "lucide-react";
 import { imageSize } from "../data/image-sizes";
+import { responsiveImage } from "../data/responsive-images";
+
+// The CSS width of the picture at every screen width, measured: one of two
+// grid columns from 1024px (384px, 480px from 1280px, 604px from 1536px);
+// below 1024px the full column less the container and grid padding (326px on
+// a 390px phone). Both copies of the picture (phone and desktop) carry the same
+// sizes on purpose: the hidden copy is still fetched, and with identical
+// srcset + sizes it picks the same file, so the photo downloads once.
+const PICTURE_SIZES =
+  "(min-width: 1536px) 604px, (min-width: 1280px) 480px, (min-width: 1024px) 384px, (min-width: 768px) 624px, (min-width: 640px) 528px, calc(100vw - 64px)";
 
 interface FeatureItem {
   id: number;
@@ -68,6 +78,7 @@ export function AccordionFeatureSection({
                 src={image}
                 alt={imageAlt ?? mainHeading}
                 {...imageSize(image)}
+                {...responsiveImage(image, PICTURE_SIZES)}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-auto rounded-lg object-cover"
@@ -110,6 +121,7 @@ export function AccordionFeatureSection({
               src={image}
               alt={imageAlt ?? mainHeading}
               {...imageSize(image)}
+              {...responsiveImage(image, PICTURE_SIZES)}
               loading="lazy"
               decoding="async"
               className="w-full h-auto rounded-lg object-cover shadow-lg"

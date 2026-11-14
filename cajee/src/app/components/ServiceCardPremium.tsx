@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { imageSize } from "../data/image-sizes";
+import { responsiveImage } from "../data/responsive-images";
 
 interface ServiceCardPremiumProps {
   /** The services hub renders these directly under its h1, so they must be h2
@@ -55,6 +56,9 @@ export function ServiceCardPremium({
               src={image}
               alt={title}
               {...imageSize(image)}
+              // The picture box is w-[400px] max-w-[100vw]: 400px, or the
+              // full width on phones narrower than that.
+              {...responsiveImage(image, "(min-width: 400px) 400px, 100vw")}
               {...(lazy ? { loading: "lazy" as const, decoding: "async" as const } : {})}
               className="relative z-10 w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
             />
