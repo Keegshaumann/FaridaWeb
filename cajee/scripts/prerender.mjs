@@ -165,7 +165,9 @@ for (const route of ROUTES) {
     // components unmount closed panels, so a page can lose every FAQ answer and
     // still render an h1. Google also treats marking up invisible content as a
     // structured-data violation, so schema and visible text must agree.
-    const visible = visibleHtml;
+    // Tags are stripped so an answer that carries a [source](url) link (rendered
+    // as <a>) still matches its plain-text schema copy (T-17, 14 Nov 2026).
+    const visible = visibleHtml.replace(/<[^>]+>/g, "");
     const answers = [];
     for (const m of html.matchAll(
       /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g

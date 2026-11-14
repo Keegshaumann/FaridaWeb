@@ -26,7 +26,7 @@
 
 The practice runs a dedicated lower-limb compression clinic. Page: https://www.cajeebotes.com/services/compression
 
-- Compression classes fitted (European RAL standard, pressure measured at the ankle):
+- Compression classes fitted (classes 1 to 4 follow the German RAL standard, RAL-GZ 387; the class is set by the pressure at the ankle):
   - Class A: light support, under 18 mmHg. Tired, heavy legs; travel; mild end-of-day swelling; prevention.
   - Class 1: light compression, 18–21 mmHg. Early varicose veins, mild swelling, pregnancy-related oedema.
   - Class 2: moderate compression, 23–32 mmHg. Pronounced varicose veins, chronic venous insufficiency, after DVT or vein surgery, lymphoedema maintenance. The most commonly prescribed class.
@@ -34,7 +34,7 @@ The practice runs a dedicated lower-limb compression clinic. Page: https://www.c
   - Class 4 (over 49 mmHg) and clinician-applied multi-layer compression bandaging available on request.
 - Compression lengths fitted: AD below-knee (BK), AF above-knee, AG thigh-high (AK) with grip top, AG/H single-leg with waist attachment, AT compression pantyhose and tights, AT/U maternity compression tights. Open-toe and closed-toe options throughout.
 - Compression constructions: circular-knit (seamless, finer, for venous conditions and mild-to-moderate swelling) and flat-knit (seamed, higher stiffness, made-to-measure, for lymphoedema, lipoedema and distorted limb shapes).
-- Compression is measured on the leg in the morning, screened for contraindications such as arterial disease, fitted with application training, reviewed at four to six weeks and replaced approximately every six months.
+- Compression is measured on the leg in the morning, screened for contraindications such as arterial disease, fitted with application training, reviewed four to six weeks after the first fitting and replaced about every six months.
 - Upper-limb and body compression (arm sleeves, gauntlets and gloves, compression vests, scar and burn garments) available on request; the practice's focus is lower-limb compression.
 - Compression assessment, measuring and fitting available at the Morningside consulting rooms, at home, or at the hospital bedside across Gauteng.
 

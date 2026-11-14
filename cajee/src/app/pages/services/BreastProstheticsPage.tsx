@@ -5,6 +5,7 @@ export function BreastProstheticsPage() {
   return (
     <ServicePageTemplate
       faqs={breastProsthesesFaqs}
+      faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["medical-aid-prosthetics-orthotics-cover", "referral-orthotist-prosthetist-first-visit", "orthotist-home-visits-gauteng"]}
       serviceSlug="breast-prosthetics"
       title="Breast Prostheses and Silicone Restoration"

@@ -5,6 +5,7 @@ export function OffTheShelfOrthoticsPage() {
   return (
     <ServicePageTemplate
       faqs={offTheShelfFaqs}
+      faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["are-custom-orthotics-worth-it", "can-orthotics-fix-flat-feet", "referral-orthotist-prosthetist-first-visit"]}
       serviceSlug="off-the-shelf-orthotics"
       title="Braces and Supports, Fitted After Assessment"

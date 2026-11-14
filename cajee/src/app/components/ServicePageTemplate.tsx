@@ -24,6 +24,8 @@ interface ServicePageTemplateProps {
   seoKeywords?: string;
   /** Rendered as a crawlable <details> list and mirrored into FAQPage schema. */
   faqs?: Faq[];
+  /** One line under the FAQ heading, e.g. when the answers' sources were last checked. */
+  faqIntro?: string;
   /** Blog slugs to link down to. Service pages previously linked to no articles at all. */
   relatedSlugs?: string[];
 }
@@ -64,6 +66,7 @@ export function ServicePageTemplate({
   seoDescription,
   seoKeywords,
   faqs,
+  faqIntro,
   relatedSlugs,
 }: ServicePageTemplateProps) {
   const related = (relatedSlugs ?? []).map(getPostBySlug).filter(Boolean);
@@ -217,6 +220,7 @@ export function ServicePageTemplate({
           faqs={faqs}
           eyebrow="Common questions"
           heading={`${title}: your questions answered`}
+          intro={faqIntro}
         />
       )}
 

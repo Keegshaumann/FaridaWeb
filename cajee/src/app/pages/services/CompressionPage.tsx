@@ -61,7 +61,7 @@ const WHY_SPECIALIST = [
   {
     icon: HeartPulse,
     title: "Reviewed, remeasured, replaced",
-    body: "Legs change as swelling settles and fabric loses pressure at around six months. Compression is managed as ongoing care, not a once-off purchase.",
+    body: "Legs change as swelling settles, and garments keep their effect for [about six months](https://www.medi.de/en/faq/compression-garments/wearing-duration/) of daily wear before the pressure slowly falls. Compression is managed as ongoing care, not a once-off purchase.",
   },
 ];
 
@@ -223,7 +223,7 @@ export function CompressionPage() {
                     showScale
                     onDark
                     className="mx-auto h-auto w-full max-w-[320px]"
-                    label="Diagram of a leg in a compression stocking, showing pressure highest at the ankle and falling up the leg, to 50 to 80 per cent at the calf and 20 to 60 per cent at the thigh"
+                    label="Diagram of a leg in a compression stocking, showing pressure highest at the ankle and falling up the leg, to 50 to 80 per cent at the calf and lower still at the thigh"
                   />
                 </motion.div>
                 <p className="mt-4 text-center text-sm leading-relaxed text-white/60">
@@ -284,7 +284,7 @@ export function CompressionPage() {
                   <w.icon className="h-6 w-6 text-[var(--comp-violet)]" />
                 </span>
                 <h3 className="mt-5 text-xl font-semibold text-[var(--comp-plum)]">{w.title}</h3>
-                <p className="mt-3 leading-relaxed text-[var(--text-muted)]">{w.body}</p>
+                <p className="mt-3 leading-relaxed text-[var(--text-muted)]"><RichText text={w.body} /></p>
               </div>
             ))}
           </div>
@@ -300,7 +300,7 @@ export function CompressionPage() {
                 coverTop={1}
                 showScale
                 className="h-auto w-full"
-                label="Graduated compression profile: pressure is highest at the ankle and falls up the leg, to 50 to 80 per cent at the calf and 20 to 60 per cent at the thigh"
+                label="Graduated compression profile: pressure is highest at the ankle and falls up the leg, to 50 to 80 per cent at the calf and lower still at the thigh"
               />
             </div>
 
@@ -338,8 +338,11 @@ export function CompressionPage() {
                 <table className="w-full border-collapse text-left text-sm">
                   <caption className="mb-3 text-left text-sm text-[var(--comp-violet)]">
                     Pressure remaining up the leg, as a percentage of the pressure at the
-                    ankle. Ranges are those permitted by the RAL-GZ 387 standard, Table 8;
-                    the exact figure depends on the compression class.
+                    ankle, for stockings tested to the RAL-GZ 387 standard (
+                    <a href="https://www.nature.com/articles/s41598-023-43268-7" target="_blank" rel="noopener" className="underline underline-offset-2">Scientific Reports</a>
+                    ). The pressure keeps falling towards the thigh (
+                    <a href="https://www.medi.de/en/faq/compression-garments/compression-classes/" target="_blank" rel="noopener" className="underline underline-offset-2">medi</a>
+                    ).
                   </caption>
                   <thead>
                     <tr>
@@ -355,7 +358,7 @@ export function CompressionPage() {
                     {[
                       { point: "Ankle (point B)", pct: "100% (the reference)" },
                       { point: "Calf (point C)", pct: "50 to 80%" },
-                      { point: "Thigh (points F and G)", pct: "20 to 60%" },
+                      { point: "Thigh (points F and G)", pct: "Lower than at the calf" },
                     ].map((r) => (
                       <tr key={r.point}>
                         <th scope="row" className="border-b border-[var(--comp-lilac)]/25 px-3 py-2 font-medium text-[var(--comp-plum)]">
@@ -563,7 +566,7 @@ export function CompressionPage() {
                 </span>
                 <div className="pt-2">
                   <h3 className="text-xl font-semibold text-white">{j.title}</h3>
-                  <p className="mt-2.5 leading-relaxed text-white/70">{j.body}</p>
+                  <p className="mt-2.5 leading-relaxed text-white/70"><RichText text={j.body} linkClassName="font-medium text-white underline decoration-white/50 underline-offset-2 hover:text-white/80" /></p>
                 </div>
               </li>
             ))}
@@ -645,6 +648,7 @@ export function CompressionPage() {
         faqs={COMPRESSION_FAQS}
         eyebrow="Compression questions"
         heading="Compression, answered"
+        intro="Sources are linked beside the figures on this page and were last checked on 14 November 2026."
         theme={{
           section: "bg-[var(--comp-mist)]",
           eyebrow: "text-[var(--comp-violet)]",

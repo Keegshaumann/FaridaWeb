@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Check } from "lucide-react";
 import { COMPRESSION_LENGTHS } from "./compression-data";
 import { LegDiagram } from "./LegDiagram";
+import { RichText } from "../blog/RichText";
 
 // Lets a patient see exactly where each compression length stops on the leg,
 // the question that decides between a BK (AD) and an AK (AG) stocking.
@@ -74,7 +75,7 @@ export function CompressionLengthSelector() {
             </p>
             <h3 className="mt-2 text-2xl font-bold text-[var(--comp-plum)] md:text-3xl">{len.name}</h3>
             <p className="mt-2 text-lg font-medium text-[var(--comp-violet)]">{len.coverage}</p>
-            <p className="mt-4 leading-relaxed text-[var(--text-muted)]">{len.detail}</p>
+            <p className="mt-4 leading-relaxed text-[var(--text-muted)]"><RichText text={len.detail} /></p>
 
             <p className="mt-6 text-[13px] md:text-xs font-semibold uppercase tracking-[0.18em] text-[var(--comp-violet)]">
               Best suited to

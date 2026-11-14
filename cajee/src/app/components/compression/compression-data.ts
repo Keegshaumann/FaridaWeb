@@ -1,6 +1,6 @@
 // Clinical content for the medical compression specialism pages.
 //
-// Compression classes follow the European RAL-GZ 387 standard (the standard the
+// Compression classes follow the German RAL-GZ 387 standard (the standard the
 // mediven / SIGVARIS garments fitted in South Africa are certified against),
 // where the stated pressure is always measured at the ankle. Class A sits below
 // medical compression class 1 and is a light-support class rather than a RAL
@@ -34,7 +34,7 @@ export const COMPRESSION_CLASSES: CompressionClass[] = [
     colour: "var(--comp-class-a)",
     feel: "Gentle and barely noticeable, a light hug around the ankle that you forget you are wearing.",
     summary:
-      "A light-support class that sits below medical compression class 1. Often called support hosiery, travel socks or flight socks, it is used for comfort and prevention rather than to treat diagnosed venous disease.",
+      "A light-support class that sits below medical compression class 1. Often called support hosiery, it is used for comfort and prevention rather than to treat diagnosed venous disease.",
     indications: [
       "Tired, aching or heavy legs at the end of the day",
       "Long-haul flights and long-distance travel",
@@ -126,7 +126,7 @@ export const COMPRESSION_LENGTHS: CompressionLength[] = [
     alias: "BK",
     coverage: "Foot to just below the knee",
     detail:
-      "The most commonly fitted compression length and the easiest to apply independently. It sits two finger-widths below the knee crease so it cannot roll or cut in behind the knee when you sit.",
+      "The most commonly fitted compression length and the easiest to apply independently. It sits [two finger-widths below the bend of the knee](https://www.sigvaris.com/en-ch/expertise/how-to/measure) so it cannot roll or cut in behind the knee when you sit.",
     bestFor: [
       "Swelling and venous symptoms confined below the knee",
       "Patients who apply their own garments",
@@ -268,7 +268,7 @@ export const COMPRESSION_JOURNEY: { step: string; title: string; body: string }[
   {
     step: "02",
     title: "Measurement",
-    body: "The leg is measured at every landmark the garment is knitted to: ankle, calf, below the knee, thigh and the relevant lengths. Measurements are taken first thing in the morning, before the leg has had a chance to swell.",
+    body: "The leg is measured at every landmark the garment is knitted to: ankle, calf, below the knee, thigh and the relevant lengths. Measurements are taken [first thing in the morning, before the leg has had a chance to swell](https://www.medi.de/en/faq/compression-garments/measuring-charts-round-knit/).",
   },
   {
     step: "03",
@@ -283,19 +283,19 @@ export const COMPRESSION_JOURNEY: { step: string; title: string; body: string }[
   {
     step: "05",
     title: "Review and replacement",
-    body: "We review at four to six weeks, remeasure as the swelling settles, and plan replacements. Compression fabric loses its therapeutic pressure over roughly six months, so garments are replaced on a schedule rather than when they look worn.",
+    body: "We review [four to six weeks after the first fitting](https://woundsinternational.com/wp-content/uploads/2023/02/e5256ffaa12919d5bdf0204e7fddeaaa.pdf), remeasure as the swelling settles, and plan replacements. Worn and washed daily, compression garments keep their effect for [about six months](https://www.medi.de/en/faq/compression-garments/wearing-duration/), after which the pressure slowly falls, so garments are replaced on a schedule rather than when they look worn.",
   },
 ];
 
 export const COMPRESSION_CARE: string[] = [
   "[Put your compression garment on](/blog/how-to-put-on-compression-stockings) first thing in the morning, before the leg swells",
-  "Wash after every one to two wears in warm water; washing restores the elastic fibres",
-  "No fabric softener, no bleach and no tumble dryer",
-  "Dry flat, away from direct sun and heaters",
+  "[Wash after every one to two wears](https://woundsinternational.com/wp-content/uploads/2023/02/e5256ffaa12919d5bdf0204e7fddeaaa.pdf) in lukewarm water; [washing helps the fabric regain its elasticity](https://www.medi.de/en/faq/compression-garments/caring/)",
+  "[No fabric softener, no bleach and no tumble dryer](https://www.kentcht.nhs.uk/leaflet/applying-graduated-compression-stockings/)",
+  "[Dry flat, away from direct heat](https://dchft.nhs.uk/leaflets/advice-for-applying-and-wearing-compression-garments/) such as the sun or a heater",
   "Use donning gloves; they protect both your skin and the garment",
   "Check your skin daily, especially over the shin, heel and any bony point",
   "Wear two garments in rotation so one is always clean and ready",
-  "Replace roughly every six months, or sooner if it becomes easy to pull on",
+  "Replace [about every six months](https://www.medi.de/en/faq/compression-garments/wearing-duration/), or sooner if it becomes loose",
 ];
 
 // Small original diagrams of where each garment is worn (see product-images.ts).
@@ -309,7 +309,7 @@ export const OTHER_COMPRESSION: { name: string; image: string }[] = [
 export const COMPRESSION_FAQS: { q: string; a: string }[] = [
   {
     q: "Which compression class do I need?",
-    a: "Compression class is a clinical decision, not a preference. It depends on your diagnosis, how much swelling is present, the condition of your skin, your arterial circulation and how well you can manage the garment. Class 1 (18–21 mmHg) suits early symptoms, Class 2 (23–32 mmHg) is the most commonly prescribed class for venous and lymphatic conditions, and Class 3 (34–46 mmHg) is used for advanced disease. Class A is a light-support class for tired legs and travel. We confirm the class at your compression assessment, alongside your referring doctor where one is involved.",
+    a: "Compression class is a clinical decision, not a preference. It depends on your diagnosis, how much swelling is present, the condition of your skin, your arterial circulation and how well you can manage the garment. Class 1 (18–21 mmHg) suits mild symptoms such as heavy, tired legs, Class 2 (23–32 mmHg) is the class doctors prescribe most often, and Class 3 (34–46 mmHg) is used for problems such as moderate swelling, lymphoedema and lipoedema ([Sigvaris](https://www.sigvaris.com/en-au/expertise/basics/compression-levels)). Class A is light support below the medical classes: support stockings have no defined pressure profile ([medi](https://www.medi.de/en/faq/compression-garments/support-stockings/)). We confirm the class at your compression assessment, alongside your referring doctor where one is involved.",
   },
   {
     q: "What is the difference between BK and AK compression stockings?",
@@ -317,7 +317,7 @@ export const COMPRESSION_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How long do compression stockings last?",
-    a: "Roughly six months of daily wear. The knitted elastane loses pressure long before the garment looks worn out, which is why compression garments are replaced on a schedule rather than on appearance. If a stocking that used to take effort suddenly slides on easily, it has stopped delivering its prescribed compression. Most patients are fitted with two garments so one can be worn while the other is washed and dried.",
+    a: "About six months of daily wear and washing, after which the compression slowly falls ([medi](https://www.medi.de/en/faq/compression-garments/wearing-duration/)), which is why compression garments are replaced on a schedule rather than on appearance. If a stocking that used to take effort now slides on easily or feels loose, it may have lost some of its stretch, so bring it in to be checked: a garment that is too loose will not control swelling ([Macmillan Cancer Support](https://www.macmillan.org.uk/cancer-information-and-support/impacts-of-cancer/lymphoedema/compression-to-treat-lymphoedema)). Most patients are fitted with two garments so one can be worn while the other is washed and dried.",
   },
   {
     q: "Are compression stockings supposed to be uncomfortable?",
@@ -325,11 +325,11 @@ export const COMPRESSION_FAQS: { q: string; a: string }[] = [
   },
   {
     q: "Can I sleep in my compression stockings?",
-    a: "Day compression garments are removed at night. Lying flat already takes gravity out of the equation, and wearing daytime compression in bed adds risk without adding benefit. Where swelling needs controlling overnight, a purpose-made night garment or an adjustable compression wrap is prescribed instead. These use a different, low-stiffness construction designed for lying down.",
+    a: "Day compression garments come off at bedtime unless your doctor or nurse has told you otherwise ([Guy's and St Thomas'](https://www.guysandstthomas.nhs.uk/health-information/compression-stockings)). Lying down, your veins no longer work against gravity ([medi](https://www.medi.de/en/faq/compression-garments/wearing-duration/)). Where swelling needs controlling overnight, a purpose-made night garment or an adjustable compression wrap can be prescribed instead.",
   },
   {
     q: "When should compression not be worn?",
-    a: "Compression is not safe for everyone. Significant arterial disease, an untreated deep vein thrombosis, uncontrolled heart failure, active infection such as cellulitis, and severe peripheral neuropathy all need medical clearance before any compression garment is fitted. This is precisely why compression is assessed and dispensed by a clinician rather than bought off a shelf. Screening for these is part of the fitting.",
+    a: "Compression is not safe for everyone. Significant arterial disease, uncontrolled heart failure, active infection in the leg such as cellulitis, and severe neuropathy with loss of feeling all need medical clearance before any compression garment is fitted ([international consensus statement](https://pmc.ncbi.nlm.nih.gov/articles/PMC7383414/); [Sigvaris](https://www.sigvaris.com/en-au/expertise/basics/compression-levels)). This is precisely why compression is assessed and dispensed by a clinician rather than bought off a shelf. Screening for these is part of the fitting.",
   },
   {
     q: "What is the difference between flat-knit and circular-knit compression?",

@@ -106,9 +106,14 @@ export function CompressionClassSelector() {
       </div>
 
       <p className="mt-5 text-sm leading-relaxed text-white/45">
-        Classes follow the European RAL standard used by the compression garments dispensed in South
-        Africa, and the pressure quoted is always the pressure at the ankle. Class 4 compression (over
-        49&nbsp;mmHg) and clinician-applied multi-layer compression bandaging are available on request.
+        Classes 1 to 4 follow the German RAL standard (RAL-GZ 387), and the class is set by the pressure
+        at the ankle (
+        <a href="https://www.medi.de/en/faq/compression-garments/compression-classes/" target="_blank" rel="noopener" className="underline underline-offset-2 text-white/70 hover:text-white">medi</a>
+        ). Class A is not a medical compression class: support stockings have no defined pressure
+        profile (
+        <a href="https://www.medi.de/en/faq/compression-garments/support-stockings/" target="_blank" rel="noopener" className="underline underline-offset-2 text-white/70 hover:text-white">medi</a>
+        ). Class 4 compression (over 49&nbsp;mmHg) and clinician-applied multi-layer compression
+        bandaging are available on request.
         Your compression class is confirmed at assessment, never chosen from a shelf.
       </p>
     </div>

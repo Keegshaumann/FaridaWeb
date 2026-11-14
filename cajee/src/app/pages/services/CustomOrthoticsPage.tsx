@@ -5,6 +5,7 @@ export function CustomOrthoticsPage() {
   return (
     <ServicePageTemplate
       faqs={customOrthoticsFaqs}
+      faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["are-custom-orthotics-worth-it", "custom-orthotics-cost-south-africa", "child-walking-on-toes-when-to-worry"]}
       serviceSlug="custom-orthotics"
       title="Custom Orthotics in Sandton"

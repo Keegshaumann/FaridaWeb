@@ -52,6 +52,7 @@ export function ProstheticsPage() {
   return (
     <ServicePageTemplate
       faqs={prostheticsFaqs}
+      faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["prosthetic-leg-cost-south-africa", "how-long-after-amputation-prosthetic-leg", "prosthetic-leg-no-medical-aid-south-africa", "walking-with-a-prosthetic-leg"]}
       serviceSlug="prosthetics"
       title="Prosthetic Leg and Arm Fitting in Sandton"

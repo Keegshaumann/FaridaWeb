@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import { RichText, stripLinks } from "./blog/RichText";
 
 export type Faq = { q: string; a: string };
 
@@ -14,7 +15,8 @@ export function faqPageSchema(faqs: Faq[]) {
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      // Answers may carry [source](url) links for the page; the schema gets plain text.
+      acceptedAnswer: { "@type": "Answer", text: stripLinks(f.a) },
     })),
   };
 }
@@ -86,7 +88,9 @@ export function FaqSection({
                     className="mt-1 h-5 w-5 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
                   />
                 </summary>
-                <div className={`pt-3 text-base leading-relaxed ${t.answer}`}>{f.a}</div>
+                <div className={`pt-3 text-base leading-relaxed ${t.answer}`}>
+                  <RichText text={f.a} />
+                </div>
               </details>
             ))}
           </div>
