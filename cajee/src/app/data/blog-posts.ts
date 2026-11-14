@@ -249,13 +249,13 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "How Long After Amputation Can You Get a Prosthetic Leg?",
     "category": "Prosthetics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-13",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
     "imageAlt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
     "shareImage": "/blog/prosthetic-leg-parts-below-and-above-knee.jpg",
     "metaDescription": "Usually two to six months, once the wound heals and swelling settles, and some walk in an interim limb within weeks. The stages, and what to do meanwhile.",
-    "excerpt": "Wound healing, shrinkers and an interim prosthesis come first. A definitive prosthetic leg is usually fitted somewhere between two and six months after surgery, often sooner in practice on the private route.",
+    "excerpt": "Wound healing, shrinkers and an interim prosthesis come first. A definitive prosthetic leg is usually fitted somewhere between two and six months after surgery.",
     "readMinutes": 6,
     "sections": [
       {
@@ -295,7 +295,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "South Africa: public sector reality vs the private route",
         "paragraphs": [
           "This is where the South African context matters a great deal. Public-sector prosthetic services face well-documented capacity constraints: a 2025 African Journal of Disability study on health system barriers to prosthetic service delivery cites [figures as low as 8% for the proportion of South African amputees who are ever fitted with a prosthesis](https://ajod.org/index.php/ajod/article/view/1837/3980), and describes waiting times reported by users as running to months and, in some cases, years for a first fitting appointment. The same research links this to under-filled clinical posts, supply chain and procurement delays, and rural transport and distance barriers that keep people from reaching the few dedicated centres that exist.",
-          "By contrast, a peer-reviewed study on South Africa's private prosthetic sector describes a funding landscape built around the Council for Medical Schemes' [Prescribed Minimum Benefits (PMB)](https://jps.library.utoronto.ca/index.php/cpoj/article/view/44450), the Road Accident Fund, and workplace compensation (COIDA/WCA). Each of these routes has its own paperwork and authorisation steps, but, as the funding timelines below show, they generally involve turnaround measured in weeks to months rather than the multi-year public-sector waits described above. Practically, this means the private route is usually the more predictable pathway for people who need an approximate fitting date, which is why understanding your funding option early is worth doing at the same time as your first prosthetist consultation.",
+          "By contrast, a peer-reviewed study on South Africa's private prosthetic sector describes a funding landscape built around the Council for Medical Schemes' [Prescribed Minimum Benefits (PMB)](https://jps.library.utoronto.ca/index.php/cpoj/article/view/44450), the Road Accident Fund, and workplace compensation (COIDA/WCA). Each of these routes has its own paperwork and authorisation steps, which is why understanding your funding option early is worth doing at the same time as your first prosthetist consultation.",
           "If you have medical scheme cover, a prosthetic limb often falls under PMB or a scheme-specific prosthetic benefit; [Össur South Africa's guidance on financial considerations](https://www.ossur.com/en-za/prosthetics/information/financial-considerations) notes that PMB-related funding decisions commonly take around 60 days to be confirmed, while COIDA/WCA claims can take several months to be answered. Road Accident Fund claims follow their own separate legal and administrative process, so it's worth asking your prosthetist or case manager which funding route applies to you as early as possible. Because component choice, socket complexity and any additional orthotic needs all affect the final cost, it's best to ask your prosthetist for a written, itemised quotation early, so you and your medical scheme (or other funder) know exactly what's being requested and why."
         ]
       },
@@ -317,7 +317,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "An interim (preparatory) prosthesis, sometimes fitted within 2–3 weeks of surgery, lets you start standing and walking earlier while the limb continues to shrink.",
       "Consistent shrinker/compression wear and early physiotherapy are the main things a patient can actively do to keep the timeline on track.",
       "South Africa's public prosthetic services face major capacity constraints. One 2025 study cites figures as low as 8% of amputees ever being fitted, with waiting times reported from months to several years.",
-      "The private route, funded via medical scheme PMBs, the Road Accident Fund or COIDA, is generally the more predictable timeline for most patients. Get a written quotation and confirm funding early."
+      "On the private route, funded via medical scheme PMBs, the Road Accident Fund or COIDA, get a written quotation and confirm funding early."
     ],
     "references": [
       {
@@ -478,6 +478,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Walking With a Prosthetic Leg: How Long It Takes to Learn",
     "category": "Prosthetics",
     "date": "2026-07-15",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/learning-to-walk-prosthetic-leg-timeline.webp",
     "imageAlt": "Learning to walk on a new prosthetic leg: walking between parallel bars in the first few weeks, walking on your own on flat ground within one to a few months, and stairs, uneven ground and a full day on your feet between three months and a year",
@@ -523,7 +524,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Standing all day: it's achievable for many K2-K3+ users once fitted and conditioned, but your residual limb still swells and shrinks throughout the day. Expect to adjust sock ply or liner thickness, take short seated breaks if swelling occurs, and keep the skin clean and dry to avoid pressure sores - your prosthetist can also advise on liners or suspension changes for long standing shifts.",
           "Stairs: this is trained explicitly during rehab. Ottobock's K-level framework notes that community-level (K3) users are generally able to climb three to seven consecutive stairs and manage varied terrain, while K2 users may be able to manage only one or two stairs (or use a ramp instead), and K1 users typically rely on support for sitting, standing and transfers rather than free stair climbing [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels).",
-          "Driving: many amputees return to driving, often within a few months, sometimes with an automatic transmission or pedal modifications depending on which side is affected - a peer-reviewed study in Archives of Physical Medicine and Rehabilitation found that over 80% of participants returned to driving at an average of under four months after amputation, with right-sided amputees significantly more likely to need vehicle modifications or a switch to left-foot pedal use [Archives of Physical Medicine and Rehabilitation, via PubMed](https://pubmed.ncbi.nlm.nih.gov/16935052/). In South Africa you're legally required to declare any medical condition affecting driving to the licensing authority, and your doctor or prosthetist can advise on any restriction or modification needed."
+          "Driving: many amputees return to driving, often within a few months, sometimes with an automatic transmission or pedal modifications depending on which side is affected - a peer-reviewed study in Archives of Physical Medicine and Rehabilitation found that over 80% of participants returned to driving at an average of under four months after amputation, with right-sided amputees significantly more likely to need vehicle modifications or a switch to left-foot pedal use [Archives of Physical Medicine and Rehabilitation, via PubMed](https://pubmed.ncbi.nlm.nih.gov/16935052/). In South Africa, check your licence obligations with the licensing authority if a medical condition affects your driving; your doctor or prosthetist can advise on any restriction or modification needed."
         ]
       },
       {
@@ -537,7 +538,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "When to see an orthotist or prosthetist",
         "paragraphs": [
           "If you're newly referred for amputation, already using a prosthesis but struggling with fit, pain, stairs or standing tolerance, or simply want an honest opinion on what a realistic walking goal looks like for you, an in-person assessment is the best next step. Farida Cajee-Botes offers home and hospital visits across Centurion and the greater Gauteng area alongside clinic appointments, so early rehab conversations can happen wherever is easiest for you.",
-          "This article is general information for a South African audience and is not a substitute for individual clinical assessment - your own prognosis depends on factors specific to you. To discuss your situation with a HPCSA-registered prosthetist, [book an assessment](/contact)."
+          "This article is general information for a South African audience and is not a substitute for individual clinical assessment - your own prognosis depends on factors specific to you. To discuss your situation with an HPCSA-registered prosthetist, [book an assessment](/contact)."
         ]
       }
     ],
@@ -587,7 +588,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Custom Orthotics Cost in South Africa | Farida Cajee-Botes",
     "category": "Orthotics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-13",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/making-a-custom-ankle-foot-orthosis.webp",
     "imageAlt": "Hands shaping a heart-patterned ankle-foot orthosis, a brace for the foot and lower leg, in a workshop",
@@ -606,7 +607,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "What actually drives the price",
         "paragraphs": [
-          "A custom orthotic is not a single product but a small clinical process, and each step adds cost. It starts with a biomechanical and gait assessment carried out by a HPCSA-registered orthotist, whose scope covers assessment, prescription, design and fitting of the device [SAOPA](https://saopa.co.za/). This isn't a formality. It determines exactly what your foot needs, which in turn determines everything that follows.",
+          "A custom orthotic is not a single product but a small clinical process, and each step adds cost. It starts with a biomechanical and gait assessment carried out by an HPCSA-registered orthotist, whose scope covers assessment, prescription, design and fitting of the device [SAOPA](https://saopa.co.za/). This isn't a formality. It determines exactly what your foot needs, which in turn determines everything that follows.",
           "Next comes capturing the shape of your foot, either with a traditional plaster or foam-box mould or with computerised 3D scanning; both methods are still used in practice today, with digital scanning generally offering more precision [OrthoInfo/AAOS](https://www.orthoinfo.org/en/treatment/orthotics/) [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/orthotics). Casting or scanning time, and the skill required to interpret it correctly, is built into the price.",
           "Materials matter too. Functional orthotics designed to control movement and offload pressure are typically made from semi-rigid materials such as graphite, carbon fibre or moulded plastic, while accommodative orthotics, often used for diabetic foot protection, use softer, cushioning materials that mould to the foot's shape [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/orthotics). Rigid, high-performance materials generally cost more to source and fabricate than soft accommodative foam.",
           "Finally, device complexity changes the price substantially: a simple shoe insert costs far less than a paediatric brace, an ankle-foot orthosis, or a spinal device, each of which needs additional design time, fitting appointments and follow-up adjustments. If you'd like a lower-cost starting point before committing to a fully custom device, it's worth asking your orthotist whether an [off-the-shelf orthotic](/services/off-the-shelf-orthotics) might suit your needs first. Custom fabrication is generally reserved for cases where a prefabricated option won't adequately support your specific foot shape or condition."
@@ -691,7 +692,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Are Custom Orthotics Worth It? | Farida Cajee-Botes",
     "category": "Orthotics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-13",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/technician-adjusting-blue-ankle-foot-orthosis.webp",
     "imageAlt": "Hands adjusting a blue ankle-foot orthosis, a brace for the foot and lower leg, on a workbench",
@@ -703,7 +704,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "So, are they worth it?",
         "paragraphs": [
-          "The short answer: sometimes, and it depends far more on what's actually wrong with your feet than on how much a device costs. For the most heavily researched everyday complaint, plantar fasciitis and general plantar heel pain, good-quality evidence shows a well-chosen off-the-shelf insole often performs just as well as a custom-made one, and this is a reasonable guide for other mild, non-specific arch or heel aches too. For structural deformities, diabetic foot complications, inflammatory arthritis, or feet that have been changed by surgery or injury, a device that's individually assessed, cast or scanned and manufactured for you genuinely does more than a generic shelf product can. The rest of this article unpacks that split so you can work out which side of it you're likely on."
+          "The short answer: sometimes, and it depends far more on what's actually wrong with your feet than on how much a device costs. For the most heavily researched everyday complaint, plantar fasciitis and general plantar heel pain, good-quality evidence shows a well-chosen off-the-shelf insole often performs just as well as a custom-made one. For structural deformities, diabetic foot complications, inflammatory arthritis, or feet that have been changed by surgery or injury, a device that's individually assessed, cast or scanned and manufactured for you genuinely does more than a generic shelf product can. The rest of this article unpacks that split so you can work out which side of it you're likely on."
         ]
       },
       {
@@ -721,7 +722,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Who can reasonably start off the shelf",
         "paragraphs": [
-          "If you have a mild, generic ache (first-time heel pain, tired arches after standing all day, or mild flat feet without other complications), a well-fitted prefabricated insole combined with the basics (supportive footwear, calf and plantar fascia stretching, sensible changes to activity) is a reasonable first move, and the evidence above suggests you're unlikely to get a better outcome by paying for a custom device instead. Cleveland Clinic describes exactly this stepped approach: try an over-the-counter device for mild symptoms, and only move to something custom-made if symptoms persist or worsen ([Orthotics: Definition, Risks, Benefits, Types & Tips](https://my.clevelandclinic.org/health/treatments/orthotics), Cleveland Clinic). Our [off-the-shelf orthotics](/services/off-the-shelf-orthotics) service exists for exactly this scenario: properly selected and fitted, not just picked off a shelf at random."
+          "If you have a mild, generic ache (first-time heel pain, tired arches after standing all day, or mild flat feet without other complications), a well-fitted prefabricated insole combined with the basics (supportive footwear, calf and plantar fascia stretching, sensible changes to activity) is a reasonable first move, and for heel pain the evidence above suggests you're unlikely to get a better outcome by paying for a custom device instead. Cleveland Clinic describes exactly this stepped approach: try an over-the-counter device for mild symptoms, and only move to something custom-made if symptoms persist or worsen ([Orthotics: Definition, Risks, Benefits, Types & Tips](https://my.clevelandclinic.org/health/treatments/orthotics), Cleveland Clinic). Our [off-the-shelf orthotics](/services/off-the-shelf-orthotics) service exists for exactly this scenario: properly selected and fitted, not just picked off a shelf at random."
         ],
         "images": [
           {

@@ -74,7 +74,7 @@ export function ServiceCardPremium({
           </Heading>
 
           {/* Description */}
-          <p className="text-[#F4FBFF]/80 leading-relaxed mb-6 text-sm">
+          <p className="text-[#F4FBFF]/80 leading-relaxed mb-6 text-base md:text-sm">
             {description}
           </p>
 
@@ -85,7 +85,7 @@ export function ServiceCardPremium({
                 <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[var(--accent-purple)]/20 flex items-center justify-center mt-0.5">
                   <Check className="w-3 h-3 text-[var(--accent-purple)]" />
                 </div>
-                <span className="text-[#F4FBFF]/70 text-sm leading-snug">
+                <span className="text-[#F4FBFF]/70 text-base md:text-sm leading-snug">
                   {feature}
                 </span>
               </li>

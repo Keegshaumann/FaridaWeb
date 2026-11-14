@@ -113,6 +113,15 @@ export function ServicesPage() {
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
               We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each one starts with an assessment and is planned around you.
             </p>
+            {/* Final check 12 Nov 2026: the first Book link on a phone sat at
+                y 4,285. This puts it on the first phone screen. */}
+            <div className="mt-6 flex justify-center">
+              <Link to="/contact#book">
+                <Button size="lg" className="h-11 bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full px-8">
+                  Book Assessment
+                </Button>
+              </Link>
+            </div>
             {/* T-29: the hub's link to the home and hospital visits page. The
                 wording restates what the site already says (assessment and
                 fitting at home or at the hospital bedside). */}
@@ -153,12 +162,12 @@ export function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact#book">
-                <Button size="lg" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full px-8">
+                <Button size="lg" className="h-11 bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full px-8">
                   Book Assessment
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="rounded-full border-2 px-8">
+                <Button size="lg" variant="outline" className="h-11 rounded-full border-2 px-8">
                   Contact Us
                 </Button>
               </Link>
