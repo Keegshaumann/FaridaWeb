@@ -9,7 +9,7 @@ export function CustomOrthoticsPage() {
       relatedSlugs={["are-custom-orthotics-worth-it", "custom-orthotics-cost-south-africa", "child-walking-on-toes-when-to-worry"]}
       serviceSlug="custom-orthotics"
       title="Custom Orthotics in Sandton"
-      subtitle="Orthoses, such as braces, splints and insoles, made for your body, designed to support and align it, with lasting independence as the aim"
+      subtitle="For a foot that drags, a spine curving during growth, painful feet or a weak, unstable joint: braces, splints and insoles made for your body, designed to support and align it"
       whatIsIt="Orthotics are medical devices worn on the outside of the body. They're designed to support or align joints, muscles and limbs, or to improve how they work, when an injury, a neurological condition, developmental delay or a musculoskeletal disorder has affected them."
       benefits={[
         "Support for walking pattern and posture",

@@ -55,11 +55,9 @@ export const COMPRESSION_CLASSES: CompressionClass[] = [
     summary:
       "The entry point of true medical compression. Class 1 is prescribed where symptoms are present but the leg is still healthy enough not to need stronger pressure.",
     indications: [
-      "Early or mild varicose veins",
-      "Heavy, aching legs with visible veins",
-      "Mild swelling of the ankle and lower leg",
-      "Pregnancy-related oedema",
-      "Prevention of swelling in people with limited mobility",
+      "Mildly painful, heavy or tired legs",
+      "Long periods of standing or sitting",
+      "Pregnancy, where it may help prevent varicose veins",
     ],
   },
   {
@@ -72,13 +70,13 @@ export const COMPRESSION_CLASSES: CompressionClass[] = [
     colour: "var(--comp-class-2)",
     feel: "Firm and unmistakably supportive. Most people manage it comfortably once they are shown the correct application technique.",
     summary:
-      "The most frequently prescribed class for lower-limb venous and lymphatic conditions, and the usual starting point after vein surgery or a confirmed diagnosis.",
+      "The class doctors prescribe most often.",
     indications: [
-      "Pronounced varicose veins",
-      "Moderate oedema and chronic venous insufficiency",
-      "After deep vein thrombosis or superficial thrombophlebitis",
-      "After sclerotherapy or varicose vein surgery",
-      "Mild to moderate lymphoedema and lipoedema maintenance",
+      "Varicose veins with a mild tendency to swell",
+      "Varicose veins in pregnancy",
+      "After varicose vein surgery or sclerotherapy",
+      "Deep vein thrombosis and post-thrombotic syndrome",
+      "Healed leg ulcers",
     ],
   },
   {
@@ -89,15 +87,14 @@ export const COMPRESSION_CLASSES: CompressionClass[] = [
     strength: "Strong compression",
     intensity: 1,
     colour: "var(--comp-class-3)",
-    feel: "Strong and rigid to handle. Almost always fitted alongside a donning aid, and often after a period in bandaging.",
+    feel: "Strong and rigid to handle; a donning aid makes it easier to put on.",
     summary:
-      "Reserved for advanced venous and lymphatic disease, where a lighter class will not control the swelling. Fit, skin condition and arterial supply are checked carefully before Class 3 is dispensed.",
+      "Used for moderate venous swelling, lymphoedema and lipoedema. Fit, skin condition and arterial supply are checked carefully before Class 3 is dispensed.",
     indications: [
-      "Severe chronic venous insufficiency",
-      "Post-thrombotic syndrome",
-      "Healed venous leg ulcers and ulcer prevention",
-      "Marked or long-standing lymphoedema and lipoedema",
-      "Pronounced, persistent fluid retention in the leg",
+      "Moderate venous oedema and lymphoedema",
+      "Lipoedema",
+      "After fractures and orthopaedic operations",
+      "Skin changes with healed ulcers",
     ],
   },
 ];
@@ -206,7 +203,6 @@ export const COMPRESSION_LENGTHS: CompressionLength[] = [
     bestFor: [
       "Pregnancy-related leg swelling",
       "Varicose veins developing during pregnancy",
-      "Prevention of clots during and after pregnancy",
     ],
     coverTop: 1,
     waistband: true,

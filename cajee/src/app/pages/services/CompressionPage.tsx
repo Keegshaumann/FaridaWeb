@@ -174,9 +174,10 @@ export function CompressionPage() {
               </h1>
 
               <p className="mt-4 md:mt-6 max-w-2xl text-lg leading-normal md:leading-relaxed text-white/75 md:text-xl">
-                Graduated compression stockings, compression pantyhose and made-to-measure
-                compression garments: measured, prescribed and fitted by a qualified orthotist.
-                Compression class A through class 3, below-knee (BK) through to pantyhose.
+                For swollen or aching legs, varicose veins and lymphoedema: graduated compression
+                stockings, compression pantyhose and made-to-measure compression garments, measured,
+                prescribed and fitted by a qualified orthotist. Compression class A through class 3,
+                below-knee (BK) through to pantyhose.
               </p>
 
               <div className="mt-6 md:mt-9 flex flex-col gap-3 sm:flex-row">

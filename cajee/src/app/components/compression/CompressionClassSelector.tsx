@@ -114,6 +114,8 @@ export function CompressionClassSelector() {
         <a href="https://www.medi.de/en/faq/compression-garments/support-stockings/" target="_blank" rel="noopener" className="underline underline-offset-2 text-white/70 hover:text-white">medi</a>
         ). Class 4 compression (over 49&nbsp;mmHg) and clinician-applied multi-layer compression
         bandaging are available on request.
+        Typical uses per class follow{" "}
+        <a href="https://www.sigvaris.com/en-au/expertise/basics/compression-levels" target="_blank" rel="noopener" className="underline underline-offset-2 text-white/70 hover:text-white">Sigvaris</a>.
         Your compression class is confirmed at assessment, never chosen from a shelf.
       </p>
     </div>

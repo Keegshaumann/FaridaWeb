@@ -935,6 +935,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Flat Feet in Children: Does My Child Need Orthotics?",
     "category": "Orthotics",
     "date": "2026-07-15",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/red-childrens-sneakers.webp",
     "imageAlt": "A pair of small red lace-up baby shoes",
@@ -946,7 +947,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "The short answer",
         "paragraphs": [
-          "In most cases, no. If your child's flat feet are painless and flexible (the arch appears when they sit down or stand on tiptoe, and flattens when they stand on the floor), current paediatric guidance is that this is a normal stage of development, not a condition to correct with orthotics. The Choosing Wisely recommendation from the American Academy of Pediatrics' Section on Orthopaedics and the Pediatric Orthopaedic Society of North America (POSNA) is explicit: clinicians should not order custom orthotics or shoe inserts for a child with minimally symptomatic or asymptomatic flat feet, because there is no good evidence that inserts change how the arch develops [Choosing Wisely: AAP/POSNA recommendation](https://medicalxpress.com/news/2018-02-aap-posna-pediatric-orthopedic.html). Orthotics become worth discussing when there's pain, fatigue, an abnormal gait, or asymmetry between the two feet (the red flags covered below)."
+          "In most cases, no. If your child's flat feet are painless and flexible (the arch appears when they sit down or stand on tiptoe, and flattens when they stand on the floor), current paediatric guidance is that this is a normal stage of development, not a condition to correct with orthotics. The Choosing Wisely recommendation from the American Academy of Pediatrics' Section on Orthopaedics and the Pediatric Orthopaedic Society of North America (POSNA) is explicit: clinicians should not order custom orthotics or shoe inserts for a child with minimally symptomatic or asymptomatic flat feet, because custom orthotic support does not aid the development of the arch [Choosing Wisely: AAP/POSNA recommendation](https://downloads.aap.org/AAP/PDF/Choosing%20Wisely/CWOrthopaedics.pdf). Orthotics become worth discussing when there's pain, fatigue, an abnormal gait, or asymmetry between the two feet (the red flags covered below)."
         ],
         "images": [
           {
@@ -966,13 +967,13 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "The red flags that do warrant an assessment",
         "paragraphs": [
           "Evidence-based reassurance doesn't mean flat feet are never worth a closer look. It's reasonable to book an assessment with an orthotist, podiatrist, or your GP/paediatrician if you notice any of the following:",
-          "Pain or fatigue: foot, arch, ankle, or calf pain during or after activity, or a child who tires or asks to be carried much sooner than peers [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/).",
+          "Pain or fatigue: foot, arch, ankle, or calf pain during or after activity, or a child who tires much sooner than peers [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/).",
           "A rigid foot: no arch appears even on tiptoe or when the foot is unweighted (as opposed to a flexible flatfoot, where the arch reappears off-weight).",
           "Asymmetry: one foot noticeably flatter or more rolled-in than the other.",
           "Abnormal gait: persistent in-toeing, out-toeing, toe-walking, or a limp that seems linked to how the foot is loading.",
-          "Uneven or rapid shoe wear: clinical literature notes that flexible flat feet can cause rapid, uneven wear on the inner heel and sole of school shoes, which is a useful clue for parents as well as clinicians [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/).",
+          "Uneven or rapid shoe wear: clinical literature notes that flexible flat feet can cause rapid, uneven wear of their shoes, which is a useful clue for parents as well as clinicians [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/).",
           "Stiffness, swelling, or a foot shape that looks unusual, or flat feet that persist with symptoms well past the age when arches normally settle.",
-          "None of these findings automatically means your child needs a custom device, but they do mean a proper biomechanical assessment is worthwhile rather than assuming it will simply resolve. Chronic Disease List conditions such as juvenile idiopathic arthritis are a specific exception where orthoses have shown a modest, evidence-backed functional benefit [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html)."
+          "None of these findings automatically means your child needs a custom device, but they do mean a proper biomechanical assessment is worthwhile rather than assuming it will simply resolve. Juvenile idiopathic arthritis is one exception: in children with it, custom orthoses gave a small improvement in function and quality of life compared with shoes alone, though the trials were of low quality [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html)."
         ]
       },
       {
@@ -985,7 +986,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Medical aid and cost: what to expect in South Africa",
         "paragraphs": [
-          "Because asymptomatic flat feet aren't a Chronic Disease List condition, and the Council for Medical Schemes' Prescribed Minimum Benefits framework doesn't set out specific cover for orthotic devices [Council for Medical Schemes: PMB](https://www.medicalschemes.co.za/resources/pmb/), whether your scheme contributes toward a child's orthotics depends entirely on your specific plan, its day-to-day or savings benefits, and sometimes pre-authorisation from a treating doctor. PMBs are assessed on diagnosis rather than the device itself, so a device linked to a listed PMB condition (for example, a genuine structural or neuromuscular diagnosis) is handled very differently to an insert for an otherwise well child. Because cover varies so much between schemes and plan options, the practical approach is to ask your scheme directly what your plan covers before committing, and to request a written, itemised quotation from your orthotist so you can check it against your benefits and, where relevant, submit it for authorisation."
+          "Because asymptomatic flat feet aren't a Chronic Disease List condition, and the Council for Medical Schemes' Prescribed Minimum Benefits framework doesn't set out specific cover for orthotic devices [Council for Medical Schemes: PMB](https://www.medicalschemes.co.za/resources/pmb/), whether your scheme contributes towards a child's orthotics depends entirely on your specific plan, its day-to-day or savings benefits, and sometimes pre-authorisation from a treating doctor. PMBs are assessed on diagnosis rather than the device itself, so a device linked to a listed PMB condition (for example, a genuine structural or neuromuscular diagnosis) is handled very differently to an insert for an otherwise well child. Because cover varies so much between schemes and plan options, the practical approach is to ask your scheme directly what your plan covers before committing, and to request a written, itemised quotation from your orthotist so you can check it against your benefits and, where relevant, submit it for authorisation."
         ]
       },
       {
@@ -1005,9 +1006,9 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "references": [
       {
-        "title": "AAP, POSNA Release 5 Pediatric Orthopedic Recommendations (Choosing Wisely): Don't order custom orthotics or shoe inserts for a child with minimally symptomatic or asymptomatic flat feet",
-        "publisher": "Medical Xpress, reporting American Academy of Pediatrics – Section on Orthopaedics / Pediatric Orthopaedic Society of North America (POSNA)",
-        "url": "https://medicalxpress.com/news/2018-02-aap-posna-pediatric-orthopedic.html"
+        "title": "Five Things Physicians and Patients Should Question (Choosing Wisely)",
+        "publisher": "American Academy of Pediatrics Section on Orthopaedics and the Pediatric Orthopaedic Society of North America",
+        "url": "https://downloads.aap.org/AAP/PDF/Choosing%20Wisely/CWOrthopaedics.pdf"
       },
       {
         "title": "Foot Orthoses for Treating Flat Feet in Children (Cochrane review summary)",
@@ -1484,7 +1485,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Bow legs, knock knees and flat feet: mostly normal too",
         "paragraphs": [
           "Each one has its own normal window. [Bowed legs are a normal variation](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) in most children under 2 years old, begin improving at about 18 months, and have usually corrected by ages 3 to 4. Knock knees then take over: they [peak from two to four years](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html) and [usually correct themselves by the age of 7](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/).",
-          "[Flat feet](/blog/does-my-child-need-orthotics) follow the same pattern. [The arch mostly develops before four years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html), and the NHS notes that [flat feet usually correct themselves by the age of 6](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/), with no treatment needed if an arch appears when your child stands on tiptoes. In-toeing, the pigeon-toed walk that worries so many parents, [usually corrects itself around the age of 8](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/) and doesn't normally need treatment. Where it's caused by an inward twist of the shin bone, called internal tibial torsion, it resolves on its own in 90 percent of cases by the time the child reaches eight years of age.",
+          "[Flat feet](/blog/does-my-child-need-orthotics) follow the same pattern. [The arch mostly develops before four years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html), and the NHS notes that [flat feet usually correct themselves by the age of 6](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/), with no treatment needed if an arch appears when your child stands on tiptoes. In-toeing, the pigeon-toed walk that worries so many parents, [usually corrects itself around the age of 8](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/) and doesn't normally need treatment. Where it's caused by an inward twist of the shin bone, called internal tibial torsion, it [resolves on its own in 90 per cent of cases by the time the child reaches eight years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html).",
           "The same clinical review is blunt about devices for that last one: for internal tibial torsion, treatment with night splints, shoe wedges and orthotics is [unnecessary and ineffective](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html). We say the same thing in the consulting room. If a child's legs are following the ordinary developmental script, buying [off-the-shelf insoles](/services/off-the-shelf-orthotics) won't speed anything up, and you should expect us to say so rather than sell you something."
         ],
         "images": [
