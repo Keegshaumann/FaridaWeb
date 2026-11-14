@@ -8,9 +8,9 @@ export function OffTheShelfOrthoticsPage() {
       faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["are-custom-orthotics-worth-it", "can-orthotics-fix-flat-feet", "referral-orthotist-prosthetist-first-visit"]}
       serviceSlug="off-the-shelf-orthotics"
-      title="Braces and Supports, Fitted After Assessment"
-      subtitle="Conservative orthotic support for pain management and injury recovery"
-      whatIsIt="Conservative orthotic support means support without surgery. It includes clinically prescribed braces, supports, taping techniques and soft orthotic devices, used to support joints, help manage pain and protect an injury while it recovers."
+      title="Knee, Back and Ankle Braces in Sandton"
+      subtitle="For a sprained ankle, an unstable knee, a hand that goes numb at night, or support after an operation: ready-made braces and supports, fitted after an assessment at the Sandton rooms or at your home"
+      whatIsIt="Conservative orthotic support means support without surgery. It includes clinically prescribed braces, supports, taping techniques and soft orthotic devices, used to support joints, help manage pain and protect an injury while it recovers. Farida Cajee-Botes fits and adjusts each brace and support after an assessment, at the Orthocast Morningside rooms in Sandton or at your home or hospital bed across Johannesburg and Gauteng."
       benefits={[
         "Managing musculoskeletal pain",
         "Supporting injured joints during healing",

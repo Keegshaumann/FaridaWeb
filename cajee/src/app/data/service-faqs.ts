@@ -90,6 +90,10 @@ export const customOrthoticsFaqs: Faq[] = [
 
 export const offTheShelfFaqs: Faq[] = [
   {
+    q: "Where can I get a knee, ankle or back brace fitted in Johannesburg?",
+    a: "At the consulting rooms at Orthocast Morningside, 173 Rivonia Road, Sandton, by appointment: phone 011 883 9100. If getting there is the hard part, Farida Cajee-Botes also fits braces at home or in hospital across Johannesburg, Sandton, Midrand, Centurion and Pretoria: call or WhatsApp 079 998 2203 to arrange a visit.",
+  },
+  {
     q: "Can I just buy a knee or ankle brace myself at Dis-Chem or Clicks?",
     a: "Often yes, and we will say so plainly when that is the right call. A simple elastic knee sleeve, a wrist support for a mild strain or a compression ankle sleeve for end-of-day puffiness are sold over the counter at Dis-Chem, Clicks and Takealot, and buying one yourself is sensible. Come to us when the problem is bigger than the product: the joint gives way, there is nerve pain or numbness, the limb is a shape the shelf sizes will not fit, you are recovering from surgery, or you already have a drawer of supports that did nothing. We fit at the Morningside rooms by appointment, and at home or at the hospital bedside where travelling is the obstacle.",
   },
@@ -125,6 +129,10 @@ export const offTheShelfFaqs: Faq[] = [
 ];
 
 export const mobilityAidsFaqs: Faq[] = [
+  {
+    q: "Where can I be assessed for a wheelchair or walking aid in Johannesburg?",
+    a: "At home or in hospital, because the right aid depends on your home as much as on you. Visits cover Johannesburg, Sandton, Midrand, Centurion and Pretoria: call or WhatsApp 079 998 2203 to arrange one. You can also come to the consulting rooms at Orthocast Morningside, 173 Rivonia Road, Sandton, by appointment: phone 011 883 9100.",
+  },
   {
     q: "Can I just buy a wheelchair or crutches myself?",
     a: "For short-term use, buy them yourself and do not pay anyone to assess you. A pair of crutches after an ankle fracture, a basic walking frame for the first weeks after a hip replacement, or a folding wheelchair for the occasional outing are all sold over the counter without a prescription. [Dis-Chem](https://www.dischem.co.za/shop-by-department/health-and-wellness/homecare/mobility) lists crutches, walking sticks, walking frames, rollators and wheelchairs online. Ask the physiotherapist already treating you to set the height. Fitting starts to matter when the chair becomes the seat you live in, when sensation is reduced, when the condition is progressive, or when the user is a growing child.",

@@ -6,7 +6,7 @@ export function CustomOrthoticsPage() {
     <ServicePageTemplate
       faqs={customOrthoticsFaqs}
       faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
-      relatedSlugs={["are-custom-orthotics-worth-it", "custom-orthotics-cost-south-africa", "child-walking-on-toes-when-to-worry"]}
+      relatedSlugs={["are-custom-orthotics-worth-it", "diabetic-shoes-and-insoles", "custom-orthotics-cost-south-africa", "child-walking-on-toes-when-to-worry"]}
       serviceSlug="custom-orthotics"
       title="Custom Orthotics in Sandton"
       subtitle="For a foot that drags, a spine curving during growth, painful feet or a weak, unstable joint: braces, splints and insoles made for your body, designed to support and align it"

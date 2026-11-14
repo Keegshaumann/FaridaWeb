@@ -8,8 +8,8 @@ export function MobilityAidsPage() {
       faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["medical-aid-prosthetics-orthotics-cover", "orthotist-home-visits-gauteng", "walking-with-a-prosthetic-leg"]}
       serviceSlug="mobility-aids"
-      title="Wheelchairs, Walkers and Mobility Aids"
-      subtitle="For anyone unsteady on their feet, at risk of a fall or coming home from hospital: walking aids and wheelchairs chosen for how you move at home and out in the community"
+      title="Wheelchairs, Walkers and Mobility Aids in Sandton"
+      subtitle="For anyone unsteady on their feet, at risk of a fall or coming home from hospital: walking aids and wheelchairs chosen for how you move at home and out in the community, assessed at home, in hospital or at the Sandton rooms"
       whatIsIt="Mobility aids, from walking aids such as crutches, walking sticks, walking frames and rollators to wheelchairs, are assistive devices prescribed to help you move safely at home and out in the community. Which one you get depends on your physical condition, your surroundings and what you want to be able to do, and the aim is more independence and a lower risk of falling."
       benefits={[
         "Support and stability when walking",

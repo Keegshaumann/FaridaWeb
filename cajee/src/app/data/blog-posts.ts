@@ -281,7 +281,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Interim (preparatory) prosthesis vs the definitive limb",
         "paragraphs": [
-          "Many prosthetists fit an interim, or \"preparatory\", prosthesis before the definitive one. This is a fully functional device, often built with a simpler or adjustable socket, that lets you start standing, weight-bearing and gait training while the limb is still shrinking. The [Amputee Coalition](https://amputee-coalition.org/resources/prosthetic-faqs-for-the-new-amputee/) notes that some patients receive a temporary prosthesis within two to three weeks of surgery. Earlier weight-bearing like this can also help the limb settle into a more even shape sooner, though every patient's timeline still depends on their own healing.",
+          "Many prosthetists fit an interim, or \"preparatory\", prosthesis before the definitive one. This is a fully functional device, often built with a simpler or adjustable socket, that lets you start standing, weight-bearing and [gait training](/blog/walking-with-a-prosthetic-leg) while the limb is still shrinking. The [Amputee Coalition](https://amputee-coalition.org/resources/prosthetic-faqs-for-the-new-amputee/) notes that some patients receive a temporary prosthesis within two to three weeks of surgery. Earlier weight-bearing like this can also help the limb settle into a more even shape sooner, though every patient's timeline still depends on their own healing.",
           "The definitive (permanent) prosthesis is only cast, built and fitted once volume and shape have stabilised, commonly in the two-to-six-month window after surgery, though this varies with wound healing, amputation level, vascular status, and general health. Even after the definitive limb is delivered, expect several follow-up visits in the first year for socket adjustments as the limb continues to mature. Our [prosthetics](/services/prosthetics) service includes this full pathway, from early interim fitting through to definitive socket refinement, with home or hospital visits available where travel is difficult."
         ],
         "images": [
@@ -296,7 +296,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "South Africa: public sector reality vs the private route",
         "paragraphs": [
           "This is where the South African context matters a great deal. Public-sector prosthetic services face well-documented capacity constraints: a 2025 African Journal of Disability study on health system barriers to prosthetic service delivery cites [figures as low as 8% for the proportion of South African amputees who are ever fitted with a prosthesis](https://ajod.org/index.php/ajod/article/view/1837/3980), and describes waiting times reported by users as running to months and, in some cases, years for a first fitting appointment. The same research links this to under-filled clinical posts, supply chain and procurement delays, and rural transport and distance barriers that keep people from reaching the few dedicated centres that exist.",
-          "By contrast, a peer-reviewed study on South Africa's private prosthetic sector describes a funding landscape built around the Council for Medical Schemes' [Prescribed Minimum Benefits (PMB)](https://jps.library.utoronto.ca/index.php/cpoj/article/view/44450), the Road Accident Fund, and workplace compensation (COIDA/WCA). Each of these routes has its own paperwork and authorisation steps, which is why understanding your funding option early is worth doing at the same time as your first prosthetist consultation.",
+          "By contrast, a peer-reviewed study on South Africa's private prosthetic sector describes a funding landscape built around the Council for Medical Schemes' [Prescribed Minimum Benefits (PMB)](https://jps.library.utoronto.ca/index.php/cpoj/article/view/44450), the Road Accident Fund, and workplace compensation (COIDA/WCA). Each of these routes has its own paperwork and authorisation steps, which is why [understanding your funding option early](/blog/medical-aid-prosthetics-orthotics-cover) is worth doing at the same time as your first prosthetist consultation.",
           "If you have medical scheme cover, a prosthetic limb often falls under PMB or a scheme-specific prosthetic benefit; [Össur South Africa's guidance on financial considerations](https://www.ossur.com/en-za/prosthetics/information/financial-considerations) notes that feedback on a PMB application is usually given within 60 days, while COIDA/WCA claims can take several months to be answered. Road Accident Fund claims follow their own separate legal and administrative process, so it's worth asking your prosthetist or case manager which funding route applies to you as early as possible. Because component choice, socket complexity and any additional orthotic needs all affect the final cost, it's best to ask your prosthetist for a written, itemised quotation early, so you and your medical scheme (or other funder) know exactly what's being requested and why."
         ]
       },
@@ -485,7 +485,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "imageAlt": "Learning to walk on a new prosthetic leg in three stages: walking between parallel bars once your prosthesis is fitted; walking on your own on flat ground as your strength and balance build; and stairs, uneven ground and a full day on your feet, which can take up to about a year",
     "shareImage": "/blog/learning-to-walk-prosthetic-leg-stages.jpg",
     "metaDescription": "Learning to walk on a prosthetic leg comes in stages and can take up to a year. What shapes your timeline, and what physio and prosthetic rehab involve.",
-    "excerpt": "Most people can learn to walk confidently with a prosthetic leg, though \"normal\" looks different for everyone. Here's what shapes the timeline, and what physio and prosthetic rehab actually involve.",
+    "excerpt": "Many people learn to walk again with a prosthetic leg, though \"normal\" looks different for everyone. Here's what shapes the timeline, and what physio and prosthetic rehab actually involve.",
     "readMinutes": 7,
     "sections": [
       {
@@ -517,7 +517,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Realistic timeframes",
         "paragraphs": [
-          "Putting the above together: expect to start with parallel-bar walking once your first prosthesis is fitted, move on to walking on your own on flat ground as your strength and balance build, and allow up to about a year for confident handling of stairs, uneven terrain and a full day on your feet, depending on amputation level, age, other health conditions and how much practice you put in outside of appointments [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg); [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/). These are general patterns, not promises - your prosthetist and physiotherapist will set goals based on your own assessment."
+          "Putting the above together: expect to start with parallel-bar walking once [your first prosthesis](/blog/how-long-after-amputation-prosthetic-leg) is fitted, move on to walking on your own on flat ground as your strength and balance build, and allow up to about a year for confident handling of stairs, uneven terrain and a full day on your feet, depending on amputation level, age, other health conditions and how much practice you put in outside of appointments [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg); [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/). These are general patterns, not promises - your prosthetist and physiotherapist will set goals based on your own assessment."
         ]
       },
       {
@@ -531,8 +531,8 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "South African funding and rehab pathways",
         "paragraphs": [
-          "Cost is rarely a single number - it depends on socket design and labour, the components prescribed (a basic foot versus a microprocessor knee, for example), and recurring costs such as component wear and periodic socket adjustments as your limb changes shape over time [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). Rather than quote a fixed price, we recommend requesting a written, itemised quotation once your assessment and prescription are complete.",
-          "SAOPA lists the main funding routes in South Africa as your own funds; your medical scheme's external medical device benefit; the Road Accident Fund if the amputation followed a road accident; the Compensation for Occupational Injuries and Diseases Act (COIDA) fund for workplace injuries; a personal injury claim; or a combination of these [SAOPA](https://saopa.co.za/reimbursement/). If your scheme's standard benefit is insufficient, ask about Prescribed Minimum Benefits (PMB) - amputation is one of the roughly 270 conditions covered under PMB regulations, so related prosthetic provision may be fundable under PMB depending on your scheme's rules, though the process varies by scheme and typically needs supporting motivation from your treating team [SAOPA](https://saopa.co.za/reimbursement/); [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). We can help prepare quotations and clinical motivations for scheme, PMB, RAF or COIDA submissions as part of your assessment."
+          "[Cost is rarely a single number](/blog/prosthetic-leg-cost-south-africa) - it depends on socket design and labour, the components prescribed (a basic foot versus a microprocessor knee, for example), and recurring costs such as component wear and periodic socket adjustments as your limb changes shape over time [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). Rather than quote a fixed price, we recommend requesting a written, itemised quotation once your assessment and prescription are complete.",
+          "SAOPA lists the main funding routes in South Africa as your own funds; [your medical scheme's external medical device benefit](/blog/medical-aid-prosthetics-orthotics-cover); the Road Accident Fund if the amputation followed a road accident; the Compensation for Occupational Injuries and Diseases Act (COIDA) fund for workplace injuries; a personal injury claim; or a combination of these [SAOPA](https://saopa.co.za/reimbursement/). If your scheme's standard benefit is insufficient, ask about Prescribed Minimum Benefits (PMB) - amputation is one of the roughly 270 conditions covered under PMB regulations, so related prosthetic provision may be fundable under PMB depending on your scheme's rules, though the process varies by scheme and typically needs supporting motivation from your treating team [SAOPA](https://saopa.co.za/reimbursement/); [Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations). We can help prepare quotations and clinical motivations for scheme, PMB, RAF or COIDA submissions as part of your assessment."
         ]
       },
       {
@@ -753,7 +753,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "When to see an orthotist",
         "paragraphs": [
-          "If a pharmacy insole hasn't settled a mild ache after a few weeks, or if you have a structural foot problem, diabetes, arthritis, or any condition where skin protection and precise correction matter, it's worth having a proper assessment rather than trying another retail product on guesswork. We see patients at the Morningside consulting rooms in Sandton and also offer home and hospital visits across Gauteng for people who find travelling difficult. This article is general information and isn't a substitute for individual clinical advice. Every foot and every condition is different, so [book an assessment](/contact) and we'll tell you honestly whether a custom device, an off-the-shelf one, or something else entirely is the right next step for you."
+          "If a pharmacy insole hasn't settled a mild ache after a few weeks, or if you have a structural foot problem, [diabetes](/blog/diabetic-shoes-and-insoles), arthritis, or any condition where skin protection and precise correction matter, it's worth having a proper assessment rather than trying another retail product on guesswork. We see patients at the Morningside consulting rooms in Sandton and also offer home and hospital visits across Gauteng for people who find travelling difficult. This article is general information and isn't a substitute for individual clinical advice. Every foot and every condition is different, so [book an assessment](/contact) and we'll tell you honestly whether a custom device, an off-the-shelf one, or something else entirely is the right next step for you."
         ]
       }
     ],
@@ -970,7 +970,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Pain or fatigue: foot, arch, ankle, or calf pain during or after activity, or a child who tires much sooner than peers [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/).",
           "A rigid foot: no arch appears even on tiptoe or when the foot is unweighted (as opposed to a flexible flatfoot, where the arch reappears off-weight).",
           "Asymmetry: one foot noticeably flatter or more rolled-in than the other.",
-          "Abnormal gait: persistent in-toeing, out-toeing, toe-walking, or a limp that seems linked to how the foot is loading.",
+          "Abnormal gait: persistent in-toeing, out-toeing, [toe-walking](/blog/child-walking-on-toes-when-to-worry), or a limp that seems linked to how the foot is loading.",
           "Uneven or rapid shoe wear: clinical literature notes that flexible flat feet can cause rapid, uneven wear of their shoes, which is a useful clue for parents as well as clinicians [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/).",
           "Stiffness, swelling, or a foot shape that looks unusual, or flat feet that persist with symptoms well past the age when arches normally settle.",
           "None of these findings automatically means your child needs a custom device, but they do mean a proper biomechanical assessment is worthwhile rather than assuming it will simply resolve. Juvenile idiopathic arthritis is one exception: in children with it, custom orthoses gave a small improvement in function and quality of life compared with shoes alone, though the trials were of low quality [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html)."
@@ -1062,7 +1062,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Where a referral genuinely helps",
         "paragraphs": [
-          "Even though it is not compulsory to walk through our door, a referral from your GP, orthopaedic surgeon, oncologist, vascular surgeon, or other treating doctor is still valuable in several situations. Medical aid funding: most schemes have a defined prosthetic or external medical device benefit, and some claims may qualify as Prescribed Minimum Benefits (PMB) if the underlying condition is on the PMB list. A prescription and supporting medical letter make it far easier for your prosthetist to motivate the claim on your behalf ([Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations)). Complex or post-surgical cases: if you are newly amputated, recovering from a fracture, or managing a condition with active medical involvement (diabetes, vascular disease, a tumour), your prosthetist or orthotist will want to coordinate with your treating doctor regardless of paperwork, simply for safe, joined-up care. Road Accident Fund (RAF) and workplace injury (COIDA) claims, and ex gratia requests to a medical scheme, generally require formal medical documentation and motivation as part of the claims process ([Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations)).",
+          "Even though it is not compulsory to walk through our door, a referral from your GP, orthopaedic surgeon, oncologist, vascular surgeon, or other treating doctor is still valuable in several situations. Medical aid funding: most schemes have [a defined prosthetic or external medical device benefit](/blog/medical-aid-prosthetics-orthotics-cover), and some claims may qualify as Prescribed Minimum Benefits (PMB) if the underlying condition is on the PMB list. A prescription and supporting medical letter make it far easier for your prosthetist to motivate the claim on your behalf ([Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations)). Complex or post-surgical cases: if you are newly amputated, recovering from a fracture, or managing a condition with active medical involvement (diabetes, vascular disease, a tumour), your prosthetist or orthotist will want to coordinate with your treating doctor regardless of paperwork, simply for safe, joined-up care. Road Accident Fund (RAF) and workplace injury (COIDA) claims, and ex gratia requests to a medical scheme, generally require formal medical documentation and motivation as part of the claims process ([Össur South Africa](https://www.ossur.com/en-za/prosthetics/information/financial-considerations)).",
           "Research into South Africa's private lower-limb prosthetic sector has found the funding pathway itself is often inconsistent, with patients relying heavily on their prosthetist to navigate scheme requirements ([PMC: lower limb prosthetic guidelines in SA private healthcare](https://pmc.ncbi.nlm.nih.gov/articles/PMC11844759/)). In practice, the earlier your prosthetist or orthotist can see you and start the authorisation conversation with your scheme, the less likely you are to face unnecessary delays, another reason to book the initial assessment without waiting on paperwork."
         ]
       },
@@ -1646,7 +1646,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Why can you not buy compression by shoe size?",
         "paragraphs": [
           "Because the class is defined at the ankle and the gradient depends on the circumferences of your particular leg, so the garment is knitted to those circumferences, not to your foot. Two people with the same shoe size can have very different ankle and calf measurements, and a garment delivering the right pressure on one will deliver the wrong pressure on the other. That is the split medi describes: support stockings come \"only as round knit series products, i.e. in a few predefined sizes\", while medical compression is \"available in predefined series sizes or as individual made-to-measure products\" [medi](https://www.medi.de/en/faq/compression-garments/support-stockings/).",
-          "We measure at each landmark the garment is knitted to, in the morning, before the leg has had the day to swell. That matches how it is meant to be worn: medi advises wearing medical compression from morning to evening and removing it at night, the exception being thrombosis prophylaxis in hospital, where stockings are worn continuously during bed rest [medi](https://www.medi.de/en/faq/compression-garments/wearing-duration/).",
+          "We measure at each landmark the garment is knitted to, in the morning, before the leg has had the day to swell. That matches [how it is meant to be worn](/blog/how-to-put-on-compression-stockings): medi advises wearing medical compression from morning to evening and removing it at night, the exception being thrombosis prophylaxis in hospital, where stockings are worn continuously during bed rest [medi](https://www.medi.de/en/faq/compression-garments/wearing-duration/).",
           "Compression is also not a once-off purchase. Stockings worn and washed daily \"maintain their effect for about six months\", after which the compression effect of the material slowly falls [medi](https://www.medi.de/en/faq/compression-garments/wearing-duration/). A garment worn daily for two years is well past that point."
         ]
       },
@@ -1845,6 +1845,139 @@ export const BLOG_POSTS: BlogPost[] = [
         "title": "The impact of wearing compression hosiery and the use of assistive products for donning and doffing: a descriptive qualitative study into user experiences",
         "publisher": "PLoS One, via PMC (National Library of Medicine)",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11670924/"
+      }
+    ]
+  },
+  {
+    "slug": "diabetic-shoes-and-insoles",
+    "title": "Do I Need Diabetic Shoes or Insoles?",
+    "metaTitle": "Diabetic Shoes and Insoles: Who Needs Them, and When",
+    "category": "Orthotics",
+    "date": "2026-11-15",
+    "author": "Farida Cajee-Botes",
+    "image": "/blog/diabetic-shoes-and-insoles-guideline.webp",
+    "imageAlt": "Diagram: who needs diabetic shoes. No deformity and no ulcer history: shoes that fit and suit your foot. Moderate or high risk, with a deformity that significantly raises pressure or a pre-ulcer mark: consider custom insoles or shoes. A healed ulcer on the sole: footwear shown to relieve pressure. From the IWGDF guideline (2023). Your clinician decides",
+    "shareImage": "/blog/diabetic-shoes-and-insoles-guideline.jpg",
+    "metaDescription": "Not everyone with diabetes needs special shoes. Lost feeling or poor circulation can change that, more so with a deformity or a past ulcer.",
+    "excerpt": "Not everyone with diabetes needs special shoes. Lost feeling or poor circulation can change that, more so with a change in foot shape or a past ulcer. What the guideline says about shoes and insoles, and the signs that need a doctor today.",
+    "readMinutes": 6,
+    "sections": [
+      {
+        "heading": "",
+        "paragraphs": [
+          "Probably not, if you still have normal feeling in your feet, the circulation to them is good and you've never had a foot ulcer. If that's you, the advice is [shoes that fit well](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet), [a look at your feet every day](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet) and [regular foot checks](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet) with your doctor, nurse or podiatrist.",
+          "That can change if you've lost feeling in your feet or your circulation is poor, and more so if the shape of your foot has changed or you've had an ulcer before. Then your shoes and insoles become part of protecting your feet, and some people need them made for their feet.",
+          "This is general information, not a diagnosis. If you have a new wound, or a foot that's red, hot or swollen, don't read on: [contact your doctor straight away](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/serious-foot-problem)."
+        ]
+      },
+      {
+        "heading": "Why diabetes changes what you put on your feet",
+        "paragraphs": [
+          "High blood sugar can [damage the small blood vessels that supply the nerves in your feet](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet). When those nerves are damaged you can lose feeling, so you may not notice a stone in your shoe or a blister starting. Damaged blood vessels also [reduce the blood supply to your feet](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet), which can slow the healing of cuts and sores.",
+          "So a shoe that rubs matters more than it used to. Someone with normal feeling takes off a shoe that hurts. Someone who has lost feeling can walk on a blister all day. The International Working Group on the Diabetic Foot (IWGDF), in its 2023 guideline on preventing foot ulcers, says people who've lost feeling [may not be able to judge whether a shoe fits](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), and that shoes that are [too short or too narrow increase the risk of an ulcer](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf)."
+        ]
+      },
+      {
+        "heading": "Your risk group decides the advice",
+        "paragraphs": [
+          "The IWGDF guideline [sorts people with diabetes by their risk of a foot ulcer](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf). It starts from whether you've lost protective feeling in your feet and whether you have peripheral artery disease, which means poor circulation to the legs.",
+          "Very low risk: normal feeling and normal circulation.",
+          "Low risk: lost feeling or poor circulation.",
+          "Moderate risk: lost feeling and poor circulation together, or either of them with a foot deformity, a hammertoe for example.",
+          "High risk: lost feeling or poor circulation, plus a past foot ulcer, a lower-limb amputation or end-stage kidney disease.",
+          "The higher the group, [the more often your feet should be examined](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf). Your doctor, diabetes nurse or podiatrist can tell you which group you're in."
+        ],
+        "images": [
+          {
+            "src": "/blog/diabetic-foot-risk-groups.webp",
+            "alt": "Diagram of the IWGDF foot risk groups for people with diabetes: very low risk, normal feeling and circulation; low risk, lost feeling or poor circulation; moderate risk, both, or either with a foot deformity; high risk, lost feeling or poor circulation plus a past foot ulcer, a lower-limb amputation or end-stage kidney disease",
+            "afterParagraph": 4
+          }
+        ]
+      },
+      {
+        "heading": "What the guideline says about shoes and insoles",
+        "paragraphs": [
+          "If you're at risk but your foot has little or no deformity, no pre-ulcer marks and no history of an ulcer on the sole, the advice is [footwear that fits properly and suits the shape of your feet](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf).",
+          "If you're at moderate or high risk and a deformity significantly raises the pressure under part of your foot or you have a pre-ulcer mark such as a blister or a crack in the skin, the guideline says to [consider extra-depth shoes, custom-made shoes, custom-made insoles or toe orthoses](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf). A new blister is also among the signs that need help today, further down.",
+          "If you're at risk and you've had an ulcer on the sole of your foot that has healed, it recommends [footwear shown to relieve the pressure under your foot while you walk](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), worn all the time, indoors and outdoors, to help stop the ulcer coming back.",
+          "How much difference does it make? The guideline is honest about its evidence: it [rates the certainty as low for most of this advice and moderate for the healed-ulcer advice](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf). It also says that therapeutic shoes and insoles [can lower the pressure under the foot while you walk](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), and that high pressure under the foot is a risk factor for ulcers in its own right."
+        ]
+      },
+      {
+        "heading": "What about the diabetic insoles at the pharmacy?",
+        "paragraphs": [
+          "Pharmacies sell insoles labelled for diabetics. If you're at risk but your feet keep their shape, the guideline's advice is about the shoe rather than the insole: a shoe that fits. If you're at moderate or high risk with a deformity that significantly raises pressure or a pre-ulcer mark, the insoles it names are [custom-made ones, shaped to your foot so they can take pressure off the area at risk](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf).",
+          "Whatever you use has to fit the shoe as well as the foot. The guideline asks for shoes with [enough length, width and depth](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), and an insole takes up room inside the shoe. [Old insoles and old shoe linings can cause problems](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet) too. For a wider look at shop insoles versus custom ones, see [whether custom orthotics are worth it](/blog/are-custom-orthotics-worth-it)."
+        ]
+      },
+      {
+        "heading": "Choosing shoes when you have diabetes",
+        "paragraphs": [
+          "Look for shoes that are [wide-fitting, with a deep, rounded toe area, flat or low-heeled, and fastened with a lace or buckle](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet) so your foot doesn't slide around. [Wear new shoes around the house for a short time first](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet), to check they don't rub.",
+          "Have them fitted [standing up, preferably at the end of the day](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf). [Check inside your shoes every time before you put them on](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), for a stone or [anything sharp that's come through the sole](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet).",
+          "If you're at low, moderate or high risk, [don't walk barefoot, in socks without shoes or in thin-soled slippers](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), indoors or outdoors. For socks, the guideline suggests [natural fibres, without seams, preferably light-coloured](https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf), so a mark from a sore shows up."
+        ]
+      },
+      {
+        "heading": "Look at your feet every day",
+        "paragraphs": [
+          "[Look at your feet before you put your socks on in the morning and before you go to bed](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet). If you can't lift your feet to see the soles, use a mirror while you're sitting or lying down, or ask someone to look for you.",
+          "You're looking for [anything new](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/serious-foot-problem): a change in colour or shape, an area that's red, hot or swollen, a blister, cut or wound, especially if you can see it but don't feel it, and new pain."
+        ],
+        "images": [
+          {
+            "src": "/blog/diabetic-daily-foot-check.webp",
+            "alt": "Checklist for a daily foot check with diabetes: look in the morning and at bedtime, with a mirror or someone's help, for a change in colour or shape, a red, hot or swollen area, a new blister, cut or wound, a wound that smells or leaks, and new pain; if you find any, take the weight off and contact your doctor straight away"
+          }
+        ]
+      },
+      {
+        "heading": "Signs that need help today",
+        "paragraphs": [
+          "Diabetes UK says to [get help urgently](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/serious-foot-problem) if you notice any of these:",
+          "A change in the colour or shape of all or part of your foot, especially a red, hot, swollen toe, ankle or foot.",
+          "Part or all of your foot feeling much colder or hotter than usual.",
+          "A new blister, cut or wound, especially if you can see it but can't feel it.",
+          "A cut or wound that smells bad or is leaking fluid or pus.",
+          "New or unexplained pain in your foot.",
+          "Sit or lie down and take the weight off your foot, then contact your doctor or the clinic that manages your diabetes straight away. If they aren't available, go to an after-hours clinic or emergency unit. A blister [can quickly become infected](https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/serious-foot-problem) when you have diabetes, so don't wait to see if it settles."
+        ]
+      },
+      {
+        "heading": "How I help",
+        "paragraphs": [
+          "I'm an orthotist, so my part is insoles and how they work with your shoes. Every insole I provide is custom-made after an assessment, moulded from a cast, a foam impression or a scan of your foot to help spread the pressure under it. I don't stock shop insoles. The assessment looks at your feet, how you walk and the shoes the insoles will go into.",
+          "A wound, hard skin and nails are for your doctor or a podiatrist, and a wound needs their care first. If you've been told your feet are at moderate or high risk, or your doctor has suggested custom insoles, see my [custom orthotics service](/services/custom-orthotics) and [book an assessment](/contact). I see patients at the Orthocast Morningside rooms in Sandton, and [at home or in hospital](/services/home-visits) if getting out is hard."
+        ]
+      }
+    ],
+    "keyTakeaways": [
+      "If you have normal feeling in your feet, good circulation and no history of an ulcer, you probably don't need special shoes: shoes that fit, a daily look at your feet and regular foot checks.",
+      "Lost feeling, poor circulation, a change in foot shape or a past ulcer raise your risk. At moderate or high risk, with a deformity that significantly raises pressure or a pre-ulcer mark, the guideline says to consider extra-depth or custom-made shoes and custom insoles.",
+      "After an ulcer on the sole has healed, the guideline advises footwear shown to relieve pressure, worn indoors and outdoors.",
+      "A red, hot or swollen foot, a new wound or a change in shape needs help urgently: contact your doctor straight away."
+    ],
+    "references": [
+      {
+        "title": "IWGDF Prevention Guideline (2023 update)",
+        "publisher": "International Working Group on the Diabetic Foot",
+        "url": "https://iwgdfguidelines.org/wp-content/uploads/2023/07/IWGDF-2023-02-Prevention-Guideline.pdf"
+      },
+      {
+        "title": "Diabetes and foot problems",
+        "publisher": "Diabetes UK",
+        "url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet"
+      },
+      {
+        "title": "How to look after your feet",
+        "publisher": "Diabetes UK",
+        "url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/taking-care-of-your-feet"
+      },
+      {
+        "title": "Signs of serious foot problems and foot infections",
+        "publisher": "Diabetes UK",
+        "url": "https://www.diabetes.org.uk/about-diabetes/looking-after-diabetes/complications/feet/serious-foot-problem"
       }
     ]
   }

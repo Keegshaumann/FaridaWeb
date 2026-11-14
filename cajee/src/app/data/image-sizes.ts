@@ -4,7 +4,7 @@
 // The real pixel size of every image in public/ and src/assets/, keyed by file
 // name, so an <img> can carry width and height attributes and the browser can
 // keep a space the right shape for it before the file arrives. Last generated
-// from 181 image files.
+// from 185 image files.
 
 export const IMAGE_SIZES: Record<string, [number, number]> = {
   "0c656bc256881f7d19efdc0720e6c85ef11b2335.webp": [1072, 1920],
@@ -61,6 +61,10 @@ export const IMAGE_SIZES: Record<string, [number, number]> = {
   "custom-orthotics-what-drives-the-price.webp": [900, 1423],
   "custom-vs-off-the-shelf-orthotics-who-benefits.webp": [900, 1443],
   "da03a7c08a7f70f2988d76e292e2365329d7da4b.webp": [1072, 1920],
+  "diabetic-daily-foot-check.webp": [900, 978],
+  "diabetic-foot-risk-groups.webp": [900, 1066],
+  "diabetic-shoes-and-insoles-guideline.jpg": [1200, 675],
+  "diabetic-shoes-and-insoles-guideline.webp": [1600, 900],
   "diagram-abdominal-binder.webp": [640, 640],
   "diagram-afo.webp": [640, 640],
   "diagram-ankle-stirrup.webp": [640, 640],

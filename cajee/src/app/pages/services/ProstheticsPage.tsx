@@ -55,7 +55,7 @@ export function ProstheticsPage() {
       faqIntro="Sources are linked in the answers and were last checked on 14 November 2026."
       relatedSlugs={["prosthetic-leg-cost-south-africa", "how-long-after-amputation-prosthetic-leg", "prosthetic-leg-no-medical-aid-south-africa", "walking-with-a-prosthetic-leg"]}
       serviceSlug="prosthetics"
-      title="Prosthetic Leg and Arm Fitting in Sandton"
+      title="Prosthetic Leg and Arm Fitting in Sandton, Johannesburg"
       subtitle="After an amputation or a limb difference: legs and arms made for you, fitted at the Sandton rooms or at your home or hospital bed"
       whatIsIt="A prosthetic leg or arm replaces a limb lost to amputation or trauma, or missing from birth. Each prosthesis is custom-made for one person: the socket is moulded to your residual limb and the parts are chosen for how you live. Farida Cajee-Botes is the prosthetist who assesses you, casts the socket, fits the limb and reviews it, at the Orthocast Morningside rooms in Sandton or at your home or hospital bed across Johannesburg and Gauteng."
       benefits={[
@@ -74,7 +74,7 @@ export function ProstheticsPage() {
       additionalSections={<ProstheticLegParts />}
       clinicalApproach="It starts with a full assessment: your physical condition, your rehab goals, your home and daily surroundings, and what you need to be able to do. Where needed, we do that assessment at home or in hospital, so the prosthesis is planned around real-world use and your long-term goals."
       seoTitle="Prosthetic Limb Fitting & Management | Upper & Lower Limb Prosthetics"
-      seoFullTitle="Prosthetic Leg & Arm Fitting in Sandton | Farida Cajee-Botes"
+      seoFullTitle="Prosthetic Legs & Arms in Sandton, Johannesburg | Cajee-Botes"
       seoDescription="Prosthetic legs and arms, custom-made and fitted by a prosthetist in Sandton, Johannesburg, with home and hospital visits across Gauteng."
       seoKeywords="prosthetic limbs South Africa, prosthetic leg fitting, prosthetic arm, limb prosthesis, amputee rehabilitation, prosthetic care, prosthetic specialist, mobile prosthetic service"
     />
