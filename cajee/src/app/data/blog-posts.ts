@@ -545,7 +545,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "keyTakeaways": [
       "Many amputees learn to walk again with a prosthesis, but the timeline and end result depend heavily on amputation level, general health and how consistently rehab is done.",
-      "Below-knee (transtibial) amputees typically progress faster than above-knee (transfemoral) or bilateral amputees.",
+      "Below-knee (transtibial) amputees often progress faster than above-knee (transfemoral) or bilateral amputees.",
       "Training comes in stages, and building the strength, stamina and confidence for full daily life can take up to about a year.",
       "K-levels (K1-K4) describe expected walking ability and guide which prosthetic components - foot, knee, suspension - are appropriate for you.",
       "In South Africa, funding can come from your own funds, medical scheme benefits (including Prescribed Minimum Benefits), the Road Accident Fund, COIDA or a personal injury claim, alongside a physiotherapist-prosthetist rehab partnership."
