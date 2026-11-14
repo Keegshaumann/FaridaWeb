@@ -127,7 +127,7 @@ export const offTheShelfFaqs: Faq[] = [
 export const mobilityAidsFaqs: Faq[] = [
   {
     q: "Can I just buy a wheelchair or crutches myself?",
-    a: "For short-term use, buy them yourself and do not pay anyone to assess you. A pair of crutches after an ankle fracture, a basic walking frame for the first weeks after a hip replacement, or a folding wheelchair for the occasional outing are all sold over the counter without a prescription. [Dis-Chem](https://www.dischem.co.za/shop-by-department/health-and-wellness/homecare/mobility) lists crutches, walking sticks, walking frames, rollators and folding wheelchairs online. Ask the physiotherapist already treating you to set the height. Fitting starts to matter when the chair becomes the seat you live in, when sensation is reduced, when the condition is progressive, or when the user is a growing child.",
+    a: "For short-term use, buy them yourself and do not pay anyone to assess you. A pair of crutches after an ankle fracture, a basic walking frame for the first weeks after a hip replacement, or a folding wheelchair for the occasional outing are all sold over the counter without a prescription. [Dis-Chem](https://www.dischem.co.za/shop-by-department/health-and-wellness/homecare/mobility) lists crutches, walking sticks, walking frames, rollators and wheelchairs online. Ask the physiotherapist already treating you to set the height. Fitting starts to matter when the chair becomes the seat you live in, when sensation is reduced, when the condition is progressive, or when the user is a growing child.",
   },
   {
     q: "Can I get a free wheelchair in South Africa?",
@@ -151,7 +151,7 @@ export const mobilityAidsFaqs: Faq[] = [
   },
   {
     q: "How do I know if my crutches or walking stick are the right height?",
-    a: "The handle should sit level with the crease of your wrist when you stand upright with your arm hanging at your side, so your elbow is slightly bent at the grip ([OrthoInfo, American Academy of Orthopaedic Surgeons](https://www.orthoinfo.org/treatment/nonsurgical-treatments/how-to-use-crutches-canes-and-walkers/)). On underarm crutches, the top pad sits about 2.5 to 5 centimetres below the armpit, and your hands, not your armpits, carry your weight, because leaning on the pads can injure the radial nerve in the armpit ([Merck Manual](https://www.merckmanuals.com/professional/injuries-poisoning/how-to-do-casting-procedures/how-to-fit-and-walk-with-underarm-crutches)). A walking stick goes in the hand opposite the sore leg, not the same side.",
+    a: "On a walking stick, the handle should reach the crease of your wrist when you stand upright, and on crutches the handgrips sit level with the top of your hip line; either way your elbow is slightly bent at the grip ([OrthoInfo, American Academy of Orthopaedic Surgeons](https://www.orthoinfo.org/treatment/nonsurgical-treatments/how-to-use-crutches-canes-and-walkers/)). On underarm crutches, the top pad sits about 2.5 to 5 centimetres below the armpit, and your hands, not your armpits, carry your weight, because leaning on the pads can injure the radial nerve in the armpit ([Merck Manual](https://www.merckmanuals.com/professional/injuries-poisoning/how-to-do-casting-procedures/how-to-fit-and-walk-with-underarm-crutches)). A walking stick goes in the hand opposite the sore leg, not the same side.",
   },
   {
     q: "Do you come to the house, or do we have to bring my father in?",

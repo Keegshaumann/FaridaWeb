@@ -134,7 +134,7 @@ export const IMAGE_SIZES: Record<string, [number, number]> = {
   "graduated-compression-pressure-diagram.webp": [1600, 900],
   "hero-muscle.png": [720, 720],
   "hero-muscle.webp": [720, 720],
-  "home-visit-custom-device-two-visits.webp": [900, 1573],
+  "home-visit-custom-device-at-least-two-visits.webp": [900, 1686],
   "hospital-room-bed-and-sofa.jpg": [1200, 675],
   "hospital-room-bed-and-sofa.webp": [1600, 900],
   "how-long-after-amputation-prosthetic-leg.jpg": [1200, 675],

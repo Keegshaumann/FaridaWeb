@@ -1146,7 +1146,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Do Orthotists Do Home Visits? | Farida Cajee-Botes",
     "category": "General",
     "date": "2026-09-05",
-    "dateUpdated": "2026-11-13",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/hospital-room-bed-and-sofa.webp",
     "imageAlt": "A hospital room with an adjustable bed, a chair and a sofa",
@@ -1184,13 +1184,13 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "What can be done at home, and what genuinely cannot?",
         "paragraphs": [
           "Almost all clinical work can be done at home. Almost no fabrication can. Assessment, measuring, plaster casting, scanning, most off-the-shelf fittings, compression fitting, mobility aid set-up, reviews, strap and padding adjustments, skin checks and carer training all travel well. Manufacturing a custom socket or a custom brace does not.",
-          "The reason is equipment, not convenience. Conventional socket production runs through hand casting, one or more test sockets and one or more laminated sockets, spread across several appointments ([Canadian Prosthetics and Orthotics Journal, via PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10443499/)). Thermoformed sockets involve heating plastic in an oven (200 degrees Celsius in one published process) and drawing it over a rectified plaster model under negative pressure ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11492467/)). Ovens, vacuum equipment, grinding and plaster dust are workshop work, and improvising them in a bedroom produces a worse device. So a custom device becomes two home visits instead of two trips out: assessment and casting, fabrication off site, then fitting. The same applies to [custom orthotics](/services/custom-orthotics).",
+          "The reason is equipment, not convenience. Conventional socket production runs through hand casting, one or more test sockets and one or more laminated sockets, spread across several appointments ([Canadian Prosthetics and Orthotics Journal, via PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10443499/)). Thermoformed sockets involve heating plastic in an oven (200 degrees Celsius in one published process) and drawing it over a rectified plaster model under negative pressure ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11492467/)). Ovens, vacuum equipment, grinding and plaster dust are workshop work, and improvising them in a bedroom produces a worse device. So a custom device means at least two home visits instead of trips out: assessment and casting, fabrication off site, then fitting, with test fittings in between for a prosthetic socket. The same applies to [custom orthotics](/services/custom-orthotics).",
           "A home visit is also not a video call. In a study of orthotists and prosthetists using telehealth, practitioners reported that triage, education and routine follow-up checks work at a distance, while fitting and complicated re-assessments kept needing in-person contact; one described a device recommended remotely that had to be changed once the patient was seen face to face ([Prosthetics and Orthotics International, via PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC11500877/)). A phone call between appointments is useful. It is not a substitute for hands on the limb."
         ],
         "images": [
           {
-            "src": "/blog/home-visit-custom-device-two-visits.webp",
-            "alt": "A custom device at home takes two visits: assessment, measuring and casting or scanning at the first, the device made in the workshop, then fitting at the second. Almost all clinical work travels; making a custom socket or brace stays in the workshop",
+            "src": "/blog/home-visit-custom-device-at-least-two-visits.webp",
+            "alt": "A custom device at home takes at least two visits: assessment, measuring and casting or scanning first, the device made in the workshop, then fitting; a prosthetic socket usually needs test fittings in between. Almost all clinical work travels; making a custom socket or brace stays in the workshop",
             "afterParagraph": 1
           }
         ]
@@ -1224,7 +1224,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "keyTakeaways": [
       "Yes, orthotists and prosthetists do home and hospital visits. Assessment, measuring, plaster casting, most off-the-shelf fittings, reviews and small adjustments can all be done where you are.",
-      "What cannot be done at home is fabrication. Custom sockets and braces need workshop ovens, vacuum equipment and grinding, so a custom device usually means two home visits with the making done off site in between.",
+      "What cannot be done at home is fabrication. Custom sockets and braces need workshop ovens, vacuum equipment and grinding, so a custom device means at least two home visits, with the making done off site in between.",
       "Home and hospital visits suit people recovering from surgery or amputation, people after a stroke, frail older adults, bed-bound or chair-bound patients, and anyone approaching a hospital discharge date.",
       "Families need to arrange almost nothing: a firm chair or bed, a clear stretch of floor, good light, and whoever helps day to day present so they can be taught with their hands on the device.",
       "If travel is comfortable, a consulting room appointment is usually better, because more stock and equipment are on hand. A home visit is for when travel, or the home itself, is the real issue."
@@ -1457,6 +1457,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Toe Walking in Children: When to Worry and When to Wait",
     "category": "Orthotics",
     "date": "2026-09-05",
+    "dateUpdated": "2026-11-14",
     "author": "Farida Cajee-Botes",
     "image": "/blog/toddler-shoes-and-toy-trucks.webp",
     "imageAlt": "A pair of worn toddler shoes on a tiled floor next to toy trucks",
@@ -1482,7 +1483,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Bow legs, knock knees and flat feet: mostly normal too",
         "paragraphs": [
-          "Each one has its own normal window. [Bowed legs are a normal variation](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) in most children under 2 years old, begin improving at about 18 months, and have usually corrected by ages 3 to 4. Knock knees then take over: they [peak from two to four years](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html), are common in children aged 3 to 6, and [usually correct themselves by the age of 7](https://www.nhs.uk/conditions/knock-knees/).",
+          "Each one has its own normal window. [Bowed legs are a normal variation](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) in most children under 2 years old, begin improving at about 18 months, and have usually corrected by ages 3 to 4. Knock knees then take over: they [peak from two to four years](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html) and [usually correct themselves by the age of 7](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/).",
           "[Flat feet](/blog/does-my-child-need-orthotics) follow the same pattern. [The arch mostly develops before four years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html), and the NHS notes that [flat feet usually correct themselves by the age of 6](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/), with no treatment needed if an arch appears when your child stands on tiptoes. In-toeing, the pigeon-toed walk that worries so many parents, [usually corrects itself around the age of 8](https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/) and doesn't normally need treatment. Where it's caused by an inward twist of the shin bone, called internal tibial torsion, it resolves on its own in 90 percent of cases by the time the child reaches eight years of age.",
           "The same clinical review is blunt about devices for that last one: for internal tibial torsion, treatment with night splints, shoe wedges and orthotics is [unnecessary and ineffective](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html). We say the same thing in the consulting room. If a child's legs are following the ordinary developmental script, buying [off-the-shelf insoles](/services/off-the-shelf-orthotics) won't speed anything up, and you should expect us to say so rather than sell you something."
         ],
@@ -1497,7 +1498,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "The signs that need an assessment",
         "paragraphs": [
           "Asymmetry, pain, a limp, lost skills, and anything getting worse rather than better. Those five things move a child from watch and review into get this looked at. With children's leg alignment, three findings [should raise the possibility of a real problem rather than a normal variation](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html): a deformity on one side only (unilateral), a deformity that's getting worse (progressive), or one that doesn't resolve on its own.",
-          "On knees specifically, the NHS gives parents [a clear list of reasons to see a doctor about knock knees](https://www.nhs.uk/conditions/knock-knees/): the child is under the age of 2 or over the age of 5; the gap between the ankles is more than 8cm when the knees are together; there's pain, swelling, stiffness or warmth in one or both knees; only one leg is affected, or the legs are different lengths; it's getting worse; the child is very short or underweight for their age; or there's a limp or difficulty walking. For bowed legs the marker is age: if bowing [hasn't gone away by the age of 3 years](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) there may be an underlying cause, and bowing or knock knees still present [beyond seven to eight years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html) is a reason for orthopaedic referral.",
+          "For bowed legs the marker is age: if bowing [hasn't gone away by the age of 3 years](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) there may be an underlying cause, and bowing or knock knees still present [beyond seven to eight years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html) is a reason for orthopaedic referral.",
           "Take a limp seriously. The Royal Children's Hospital Melbourne lists these as [red flags](https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/): a limp lasting more than 7 days, severe localised joint pain, pain waking a child from sleep, inability to walk or weight bear, fever, night sweats or rash, and unexplained weight loss or lethargy. It also says septic arthritis should be suspected in any child presenting with limp, swelling and reduced range of motion, especially with fever. Those children need a doctor urgently, not an orthotist.",
           "The same urgency applies to going backwards. The [US Centers for Disease Control and Prevention](https://www.cdc.gov/act-early/milestones/2-years.html) is plain with parents: don't wait if a child is not meeting one or more milestones, has lost skills he or she once had, or if there are other concerns. A child who used to walk flat and now can't, or who was steady and is now falling, is showing you a change, and changes get assessed. One last check on feet: a flat foot that stays flat when your child goes up on tiptoes, or one that's stiff and painful, is a different problem from an ordinary flexible flat foot, and stiff or painful flat feet are [a recognised reason for orthopaedic referral](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html)."
         ]
@@ -1514,7 +1515,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "What does treatment look like when a child really needs it?",
         "paragraphs": [
           "It starts with the least invasive option that has a reasonable chance of working, and escalates only if that fails. For persistent toe walking in children who are 2 to 5 years old and can walk flat-footed, the American Academy of Orthopaedic Surgeons says [treatment always begins without surgery](https://www.orthoinfo.org/en/diseases--conditions/toe-walking/), using serial casting, bracing and botulinum toxin therapy. In children over age 5 who toe walk, it says, the calf muscles and Achilles tendons become very tight, and surgical lengthening, followed by casts usually worn for 4 to 6 weeks, enters the conversation.",
-          "Physiotherapy sits underneath all of that. For idiopathic toe walking, [NHS paediatric physiotherapy advice](https://www.hacw.nhs.uk/leaflets-paeds-idiopathic-toe-walking/) centres on a home exercise programme built around heels-down stepping, heels-down standing, squatting, bear crawling, and standing and floor stretches to maintain flexibility while the child grows. A few minutes a day of the right exercises does more for most of these children than anything bought off a shelf.",
+          "Physiotherapy sits underneath all of that. For idiopathic toe walking, [NHS paediatric physiotherapy advice](https://www.hacw.nhs.uk/leaflets-paeds-idiopathic-toe-walking/) centres on a home exercise programme built around heels-down stepping, heels-down standing, squatting, bear crawling, and standing and floor stretches to maintain flexibility while the child grows.",
           "Where a brace is indicated, an ankle-foot orthosis is the usual device: a moulded support worn inside the shoe that holds the foot and ankle in a corrected position while the calf lengthens. Two practical things are worth knowing before you start. Bracing here is measured in months rather than days, so fit and comfort matter enormously for whether a child will wear it. And children grow out of them, so a paediatric [custom orthosis](/services/custom-orthotics) is a series of reviews and refits rather than a once-off purchase."
         ]
       },
@@ -1550,11 +1551,6 @@ export const BLOG_POSTS: BlogPost[] = [
         "title": "Leg and foot problems in children",
         "publisher": "NHS",
         "url": "https://www.nhs.uk/baby/health/leg-and-foot-problems-in-children/"
-      },
-      {
-        "title": "Knock knees",
-        "publisher": "NHS",
-        "url": "https://www.nhs.uk/conditions/knock-knees/"
       },
       {
         "title": "Lower Extremity Abnormalities in Children",

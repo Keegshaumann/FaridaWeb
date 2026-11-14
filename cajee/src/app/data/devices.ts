@@ -172,7 +172,7 @@ export const DEVICES: Device[] = [
     bodyPart: "Wrist & Hand",
     useCase: "Patients with thumb ligament sprains, joint irritation, or post-injury protection needs at the base of the thumb.",
     description: "A prefabricated splint that stabilises the thumb and its base joint while leaving the rest of the hand free to move. Fitted off the shelf in standard sizes, it is designed to rest and protect the joint after a ligament sprain or with tendon irritation.",
-    features: ["Rigid or semi-rigid thumb stay","Adjustable strapping for individual fit","Leaves fingers and wrist free to move","Low-profile, comfortable for daily wear"],
+    features: ["Rigid or semi-rigid thumb stay","Adjustable strapping for individual fit","Leaves the fingers free to move","Low-profile, comfortable for daily wear"],
   },
   {
     id: "elbow-support-epicondylitis-strap",
@@ -341,7 +341,7 @@ export const DEVICES: Device[] = [
     service: "mobility-aids",
     name: "Forearm Crutches",
     bodyPart: "Full Body",
-    useCase: "For patients needing longer-term or more mobile support than a walking frame, while keeping their hands free for other tasks.",
+    useCase: "For patients needing longer-term or more mobile support than a walking frame.",
     description: "A pair of crutches with a forearm cuff and handgrip that transfer weight from the leg to the arms during walking. Shaft height is adjusted to the individual user.",
     features: ["Forearm cuff plus handgrip for weight transfer","Height-adjustable shaft","More mobile than a walking frame","Lightweight and manoeuvrable on stairs"],
   },
