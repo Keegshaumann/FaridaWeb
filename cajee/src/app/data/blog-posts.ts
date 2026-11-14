@@ -262,12 +262,6 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "The short answer",
         "paragraphs": [
           "Most people are ready for a definitive, long-term prosthetic leg somewhere between two and six months after amputation, once the surgical wound has fully healed, swelling has settled and the residual limb (the \"stump\") has stabilised in shape and volume. Many patients are walking in a temporary or interim prosthesis well before that, sometimes within two to three weeks of surgery, but the exact fitting date always depends on how an individual limb heals rather than on a fixed calendar. In South Africa, the timeline you actually experience also depends heavily on which part of the healthcare system you're in, which we unpack below."
-        ],
-        "images": [
-          {
-            "src": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
-            "alt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon"
-          }
         ]
       },
       {
@@ -289,6 +283,13 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Many prosthetists fit an interim, or \"preparatory\", prosthesis before the definitive one. This is a fully functional device, often built with a simpler or adjustable socket, that lets you start standing, weight-bearing and gait training while the limb is still shrinking. The [Amputee Coalition](https://amputee-coalition.org/resources/prosthetic-faqs-for-the-new-amputee/) notes that some patients receive a temporary prosthesis within two to three weeks of surgery. Earlier weight-bearing like this can also help the limb settle into a more even shape sooner, though every patient's timeline still depends on their own healing.",
           "The definitive (permanent) prosthesis is only cast, built and fitted once volume and shape have stabilised, commonly in the two-to-six-month window after surgery, though this varies with wound healing, amputation level, vascular status, and general health. Even after the definitive limb is delivered, expect several follow-up visits in the first year for socket adjustments as the limb continues to mature. Our [prosthetics](/services/prosthetics) service includes this full pathway, from early interim fitting through to definitive socket refinement, with home or hospital visits available where travel is difficult."
+        ],
+        "images": [
+          {
+            "src": "/blog/prosthetic-leg-parts-below-and-above-knee.webp",
+            "alt": "Diagram of the parts of a prosthetic leg: a below-knee leg has a socket with a liner, a pylon and a foot; an above-knee leg adds a knee joint between the socket and the pylon",
+            "afterParagraph": 0
+          }
         ]
       },
       {
@@ -600,7 +601,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "The short answer",
         "paragraphs": [
-          "Custom orthotics in South Africa aren't sold off a fixed national price list, so there is no single ZAR figure that applies to every patient. Where pricing has actually been published, it varies widely: one Gauteng-based provider listed on the international clinic directory WhatClinic quotes custom orthotics from around R1,300 to R1,500 per pair [WhatClinic](https://www.whatclinic.com/physiotherapy/south-africa/orthotics), but that is one practice's listed price for custom foot orthotics, with its biomechanical assessment priced separately, not the cost of an ankle-foot orthosis, a paediatric brace or a spinal orthosis, which involve considerably more clinical time and material. Because the honest range depends so heavily on your foot, your diagnosis and the device design your orthotist prescribes, the most reliable way to know your actual cost is to book an assessment and request a written, itemised quotation before any work begins.",
+          "Custom orthotics in South Africa aren't sold off a fixed national price list, so there is no single ZAR figure that applies to every patient. Where pricing has actually been published, it varies widely: one Gauteng-based provider listed on the international clinic directory WhatClinic lists custom orthotics at R1,300 to R1,500 [WhatClinic](https://www.whatclinic.com/physiotherapy/south-africa/orthotics), but that is one practice's listed price for custom foot orthotics, with its biomechanical assessment priced separately, not the cost of an ankle-foot orthosis, a paediatric brace or a spinal orthosis, which involve considerably more clinical time and material. Because the honest range depends so heavily on your foot, your diagnosis and the device design your orthotist prescribes, the most reliable way to know your actual cost is to book an assessment and request a written, itemised quotation before any work begins.",
           "That said, it helps to understand what makes up the bill, and how South African medical schemes typically treat orthotic insoles when you submit a claim, both of which are covered below."
         ]
       },
@@ -637,7 +638,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     "keyTakeaways": [
-      "There is no fixed national ZAR price list for custom orthotics in South Africa; one aggregator-listed provider quotes roughly R1,300–R1,500 for a pair of custom foot orthotics, with the assessment charged separately, but complex devices cost more. Always request a written quotation after assessment.",
+      "There is no fixed national ZAR price list for custom orthotics in South Africa; one aggregator-listed provider lists custom foot orthotics at roughly R1,300–R1,500, with the assessment charged separately, but complex devices cost more. Always request a written quotation after assessment.",
       "Price is driven by the clinical assessment, the casting or 3D-scanning method used, the materials (rigid functional vs soft accommodative), and the complexity of the device prescribed.",
       "Medical schemes generally fund orthotics through an external medical items, appliances or assistive-devices benefit paid from savings/above-threshold limits, not as an automatic guaranteed benefit. Limits vary widely by scheme and plan, and you should confirm your specific device qualifies before treatment.",
       "Orthotic insoles are not a stand-alone Prescribed Minimum Benefit, so cover typically depends on your specific plan unless the device is needed to manage a PMB-qualifying condition.",
