@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { imageSize } from "../../data/image-sizes";
+import { responsiveImage } from "../../data/responsive-images";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,6 +87,8 @@ export function Header() {
               alt="Farida Cajee-Botes Orthotist & Prosthetist"
               className="h-12 w-auto object-contain sm:h-14"
               {...imageSize(practiceLogo)}
+              // Shown 167px wide on phones (h-12) and 195px from 640px (sm:h-14).
+              {...responsiveImage(practiceLogo, "(min-width: 640px) 195px, 167px")}
             />
           </Link>
 

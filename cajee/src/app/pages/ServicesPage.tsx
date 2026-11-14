@@ -111,7 +111,7 @@ export function ServicesPage() {
               Orthotic and Prosthetic Services in Sandton
             </h1>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-              We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each one starts with an assessment and is planned around you.
+              For an injury, an illness, limb loss or swollen legs, we offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each one starts with an assessment and is planned around you.
             </p>
             {/* Final check 12 Nov 2026: the first Book link on a phone sat at
                 y 4,285. This puts it on the first phone screen. */}
