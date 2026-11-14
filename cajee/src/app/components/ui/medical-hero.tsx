@@ -86,7 +86,7 @@ export function MedicalHero() {
           <div className="relative lg:max-w-2xl">
             <div aria-hidden="true" className="hero-scrim hero-scrim--title" />
             <WordPullUp
-              words="Orthotics, Prosthetics and Medical Compression in Sandton"
+              words="Orthotist and Prosthetist in Sandton, Johannesburg"
               className="hero-text text-left text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
               style={{ color: 'white' }}
             />
@@ -94,7 +94,7 @@ export function MedicalHero() {
               className="hero-text mt-4 text-base md:text-lg lg:text-xl leading-relaxed"
               style={{ color: 'white' }}
             >
-              Restoring movement through orthotics, prosthetics &amp; compression therapy
+              Orthotics, prosthetics and medical compression at the Orthocast Morningside rooms, or at your home or hospital bed
             </p>
           </div>
           

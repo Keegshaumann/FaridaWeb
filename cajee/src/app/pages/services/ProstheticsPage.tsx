@@ -58,13 +58,12 @@ export function ProstheticsPage() {
       subtitle="After an amputation or a limb difference: legs and arms made for you, fitted at the Sandton rooms or at your home or hospital bed"
       whatIsIt="A prosthetic leg or arm replaces a limb lost to amputation or trauma, or missing from birth. Each prosthesis is custom-made for one person: the socket is moulded to your residual limb and the parts are chosen for how you live. Farida Cajee-Botes is the prosthetist who assesses you, casts the socket, fits the limb and reviews it, at the Orthocast Morningside rooms in Sandton or at your home or hospital bed across Johannesburg and Gauteng."
       benefits={[
-        "Walking and standing safely",
-        "Performing self-care tasks independently",
-        "Improving balance and stability",
-        "Returning to work or school",
-        "Participating in sport or recreation",
-        "Enhancing body symmetry and posture",
-        "Improving confidence and independence",
+        "Standing and walking",
+        "Everyday self-care tasks",
+        "Support for balance and stability",
+        "Going to work or school",
+        "Sport or recreation",
+        "Body symmetry and posture",
       ]}
       availableServices={[
         "Lower Limb Prosthetics",
@@ -72,7 +71,7 @@ export function ProstheticsPage() {
         "Paediatric Prosthetic Care",
       ]}
       additionalSections={<ProstheticLegParts />}
-      clinicalApproach="It starts with a full assessment: your physical condition, your rehab goals, your home and daily surroundings, and what you need to be able to do. Where needed, we do that assessment at home or in hospital, to ensure your prosthetic device supports real-world use and long-term independence."
+      clinicalApproach="It starts with a full assessment: your physical condition, your rehab goals, your home and daily surroundings, and what you need to be able to do. Where needed, we do that assessment at home or in hospital, so the prosthesis is planned around real-world use and your long-term goals."
       seoTitle="Prosthetic Limb Fitting & Management | Upper & Lower Limb Prosthetics"
       seoFullTitle="Prosthetic Leg & Arm Fitting in Sandton | Farida Cajee-Botes"
       seoDescription="Prosthetic legs and arms, custom-made and fitted by a prosthetist in Sandton, Johannesburg, with home and hospital visits across Gauteng."

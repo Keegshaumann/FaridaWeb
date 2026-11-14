@@ -16,7 +16,7 @@ export function ServicesPage() {
   const productCategories = [
     {
       title: "Custom Orthotics",
-      description: "Individually designed orthotic devices crafted to support your unique biomechanical needs and rehabilitation goals.",
+      description: "Orthotic devices designed for you alone, to support the way your body moves and what you're working towards in rehab.",
       image: mobilityAidsImg,
       link: "/services/custom-orthotics",
       features: [
@@ -64,7 +64,7 @@ export function ServicesPage() {
     },
     {
       title: "Breast & Silicone Prosthetics",
-      description: "Compassionate, dignified care for breast, facial, and digit prosthetic needs with a focus on comfort and natural appearance.",
+      description: "Breast, facial, finger and toe prostheses, with compassionate, dignified care and a focus on comfort and a natural look.",
       image: breastProstheticsImg,
       link: "/services/breast-prosthetics",
       features: [
@@ -76,7 +76,7 @@ export function ServicesPage() {
     },
     {
       title: "Upper & Lower Limb Prosthetics",
-      description: "Advanced prosthetic solutions designed to restore function, mobility, and confidence for individuals with limb loss.",
+      description: "Prosthetic legs and arms for people with limb loss, each made for one person and fitted for the way they live.",
       image: limbProstheticsImg,
       link: "/services/prosthetics",
       features: [
@@ -111,7 +111,7 @@ export function ServicesPage() {
               Orthotic and Prosthetic Services in Sandton
             </h1>
             <p className="text-lg text-[var(--text-muted)] leading-relaxed">
-              We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each service is delivered with the same commitment to individualised, assessment-led care.
+              We offer a full range of orthotic, prosthetic and medical compression services, from custom-made devices and made-to-measure compression garments to off-the-shelf solutions. Each one starts with an assessment and is planned around you.
             </p>
             {/* T-29: the hub's link to the home and hospital visits page. The
                 wording restates what the site already says (assessment and

@@ -128,8 +128,8 @@ export const PAIN_POINTS: PainPoint[] = [
     y: 75,
     device: "Custom-fitted prosthetic limb (below-knee, above-knee or upper-limb prosthesis)",
     howItHelps:
-      "A prosthetic limb replaces the missing segment to restore weight-bearing, balance and a more natural gait or hand function, with an individually cast socket and liner distributing load and protecting the residual limb. Early on, a residual-limb shrinker can help control swelling and shape the limb for socket fitting.",
-    blurb: "After limb loss, a custom-fitted prosthesis helps you get moving again and regain independence.",
+      "A prosthetic limb replaces the missing segment, built for standing and walking or for hand use, with an individually cast socket and liner distributing load and protecting the residual limb. Early on, a residual-limb shrinker can help control swelling and shape the limb for socket fitting.",
+    blurb: "After limb loss, a prosthesis is custom-made and fitted for the way you live.",
     serviceName: "Prosthetics",
     serviceSlug: "/services/prosthetics",
   },

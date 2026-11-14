@@ -9,14 +9,14 @@ export function OffTheShelfOrthoticsPage() {
       serviceSlug="off-the-shelf-orthotics"
       title="Braces and Supports, Fitted After Assessment"
       subtitle="Conservative orthotic support for pain management and injury recovery"
-      whatIsIt="Conservative orthotic support includes clinically prescribed braces, supports, taping techniques, and soft orthotic devices to manage pain, improve joint stability, and support recovery without surgery."
+      whatIsIt="Conservative orthotic support means support without surgery. It includes clinically prescribed braces, supports, taping techniques and soft orthotic devices, used to support joints, help manage pain and protect an injury while it recovers."
       benefits={[
         "Managing musculoskeletal pain",
         "Supporting injured joints during healing",
-        "Improving functional stability",
-        "Reducing strain during movement",
+        "Stability for joints during daily activity",
+        "Offloading strained joints and tendons during movement",
         "Supporting recovery after injury or surgery",
-        "Improving tolerance to activity",
+        "Support during a gradual return to activity",
       ]}
       availableServices={[
         "Functional Joint Supports",

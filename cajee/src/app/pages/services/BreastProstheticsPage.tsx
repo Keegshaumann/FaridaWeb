@@ -8,14 +8,13 @@ export function BreastProstheticsPage() {
       relatedSlugs={["medical-aid-prosthetics-orthotics-cover", "referral-orthotist-prosthetist-first-visit", "orthotist-home-visits-gauteng"]}
       serviceSlug="breast-prosthetics"
       title="Breast Prostheses and Silicone Restoration"
-      subtitle="Restoring symmetry and confidence with compassionate, dignified care"
-      whatIsIt="Breast prostheses and custom silicone prosthetics restore symmetry and body image following mastectomy, lumpectomy, trauma, or congenital absence. They may include facial or partial limb restorations, designed with realistic aesthetics and functional outcomes in mind."
+      subtitle="Breast forms and silicone prostheses after mastectomy or lumpectomy, fitted with privacy and dignity"
+      whatIsIt="Breast prostheses and custom silicone prosthetics replace the shape of a breast lost to mastectomy, lumpectomy or trauma, or absent from birth. They can also replace a facial feature, finger or toe lost to trauma or absent from birth. They are made to look as natural as possible and to be comfortable to wear."
       benefits={[
-        "Restoring natural body contour and symmetry",
-        "Improving clothing fit and comfort",
-        "Reducing postural imbalance",
-        "Supporting emotional wellbeing",
-        "Enhancing confidence and self-image",
+        "Shape and symmetry under clothing",
+        "Fit of clothes, bras and swimwear",
+        "Weight balance across the chest",
+        "Private fittings at the rooms, at home or in hospital",
       ]}
       availableServices={[
         "Post-Surgical Fitting Guidance",
@@ -24,7 +23,7 @@ export function BreastProstheticsPage() {
         "Ongoing Review and Adjustments",
         "Discreet Consultations (Practice, Home, or Hospital)",
       ]}
-      clinicalApproach="Our approach prioritises dignity, privacy, and compassion. We conduct discreet consultations and fittings in your preferred setting, ensuring realistic aesthetics, functional outcomes, and emotional support throughout your journey."
+      clinicalApproach="Our approach puts dignity, privacy and compassion first. Consultations and fittings are discreet and happen where you prefer, with attention to a natural look, comfort and fit, and support at every step."
       seoTitle="Breast Prosthetics & Silicone Prostheses | Post-Mastectomy Care"
       seoFullTitle="Breast Prosthesis Fitting After Mastectomy | Sandton"
       seoDescription="Breast prosthesis fitting after mastectomy or lumpectomy in Sandton: full, partial, lightweight and custom forms, plus facial and digit restoration."

@@ -8,15 +8,15 @@ export function MobilityAidsPage() {
       relatedSlugs={["medical-aid-prosthetics-orthotics-cover", "orthotist-home-visits-gauteng", "walking-with-a-prosthetic-leg"]}
       serviceSlug="mobility-aids"
       title="Wheelchairs, Walkers and Mobility Aids"
-      subtitle="Helping you move safely and independently, at home and out in the community"
+      subtitle="Walking aids and wheelchairs chosen for how you move at home and out in the community"
       whatIsIt="Mobility aids, from walking aids such as crutches, walking sticks, walking frames and rollators to wheelchairs, are assistive devices prescribed to help you move safely at home and out in the community. Which one you get depends on your physical condition, your surroundings and what you want to be able to do, and the aim is more independence and a lower risk of falling."
       benefits={[
-        "Improving walking safety and stability",
-        "Preventing falls and injuries",
+        "Support and stability when walking",
+        "Aimed at a lower risk of falls",
         "Supporting transfers from bed, chair, or toilet",
-        "Improving independence at home",
-        "Reducing fatigue during movement",
-        "Supporting early discharge from hospital",
+        "Moving around your home",
+        "Conserving energy for daily activities",
+        "Equipment in place for discharge from hospital",
       ]}
       availableServices={[
         "Walking Aids Prescription",
@@ -26,7 +26,7 @@ export function MobilityAidsPage() {
         "Stair Navigation Support",
         "Functional Environment Assessments",
       ]}
-      clinicalApproach="We assess how you manage in your own home or in hospital. We look at what you can physically do, how the space is laid out and what your day involves, so the mobility aid we recommend is appropriate and safe, and supports your independence over the long term."
+      clinicalApproach="We assess how you manage in your own home or in hospital. We look at what you can physically do, how the space is laid out and what your day involves, so the mobility aid we recommend fits all three."
       seoTitle="Mobility Aids | Wheelchairs, Crutches, Walking Frames | South Africa"
       seoFullTitle="Wheelchairs, Walkers & Mobility Aids | Sandton"
       seoDescription="Wheelchairs, walkers, rollators, crutches and walking aids, fitted after an assessment in Sandton or at your home to support safe, independent movement."

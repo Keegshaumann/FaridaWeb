@@ -101,7 +101,7 @@ export function HomePage() {
     },
     {
       title: "Upper & Lower Limb Prosthetics",
-      description: "Upper and lower limb prostheses (artificial arms and legs) for people with limb loss, designed to restore function, mobility and confidence.",
+      description: "Artificial legs and arms for people with limb loss, each made for one person and fitted for the way they live.",
       image: limbProstheticsImg,
       hoverImage: limbProstheticsHoverImg,
       link: "/services/prosthetics",
@@ -173,9 +173,9 @@ export function HomePage() {
   return (
     <>
       <SEO
-        fullTitle="Orthotist & Prosthetist in Sandton | Farida Cajee-Botes"
+        fullTitle="Orthotist & Prosthetist in Sandton, Johannesburg | Cajee-Botes"
         title="Orthotics, Prosthetics & Medical Compression"
-        description="Orthotist and prosthetist in Morningside, Sandton: custom braces and insoles, prosthetic limbs and medical compression, with home visits across Gauteng."
+        description="Orthotist and prosthetist in Morningside, Sandton, Johannesburg: custom braces and insoles, prosthetic limbs and medical compression, and home visits."
         keywords="orthotist prosthetist South Africa, medical compression, compression specialist, compression stockings South Africa, compression garments, compression therapy, custom orthotics, prosthetic limbs, mobility aids, breast prosthesis, home visit orthotist, hospital prosthetic service, lymphoedema compression, orthotic devices"
       />
       
@@ -190,7 +190,7 @@ export function HomePage() {
       <section className="relative bg-[#E9F4FB]">
         <div className="relative z-10">
           <AccordionFeatureSection
-            mainHeading="Restoring Movement and Supporting Independence"
+            mainHeading="Supporting Movement and Independence"
             subHeading="Personalised Orthotic & Prosthetic Care"
             mainDescription="Farida is a qualified Orthotist & Prosthetist. Her work covers orthotic and prosthetic care, medical compression and breast care, and it's centred on understanding the person behind the prescription. What she recommends is a clinical decision made for that patient, to support their comfort, function and independence."
             features={[
@@ -247,7 +247,7 @@ export function HomePage() {
                     Care Where You Need It
                   </h2>
                   <p className="text-[var(--text-muted)] leading-relaxed mb-6">
-                    We run a <Link to="/services/home-visits" className="text-[var(--accent-purple)] underline underline-offset-4 hover:opacity-80">mobile home and hospital service</Link>, so professional orthotic, prosthetic and compression care comes to you. If you're recovering at home, you're in hospital or you can't travel, we do the full assessment where you are, compression measuring and fitting included. Seeing you in your own environment is how we make sure the result is appropriate and works for you.
+                    We run a <Link to="/services/home-visits" className="text-[var(--accent-purple)] underline underline-offset-4 hover:opacity-80">mobile home and hospital service</Link>, so professional orthotic, prosthetic and compression care comes to you. If you're recovering at home, you're in hospital or you can't travel, we do the full assessment where you are, compression measuring and fitting included. Seeing you in your own environment shows us what a device has to cope with day to day.
                   </p>
                   <Link to="/about">
                     <Button variant="default" className="bg-[var(--text-dark)] hover:bg-[var(--text-dark)]/90 text-white rounded-full">
@@ -501,7 +501,7 @@ export function HomePage() {
             <div className="space-y-4 text-left text-[var(--text-muted)] leading-relaxed">
               <p>
                 An orthotist designs, fits and reviews braces, splints, insoles and spinal
-                supports; a prosthetist does the same for artificial limbs. I am an
+                supports; a prosthetist does the same for artificial limbs. I'm Farida Cajee-Botes, an
                 HPCSA-registered Orthotist &amp; Prosthetist currently practising in
                 Morningside, Sandton, where I provide comprehensive orthotic, prosthetic and
                 medical compression services.
