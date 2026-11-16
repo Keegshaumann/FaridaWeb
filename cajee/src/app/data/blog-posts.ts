@@ -479,7 +479,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Walking With a Prosthetic Leg: How Long It Takes to Learn",
     "category": "Prosthetics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-14",
+    "dateUpdated": "2026-11-16",
     "author": "Farida Cajee-Botes",
     "image": "/blog/learning-to-walk-prosthetic-leg-stages.webp",
     "imageAlt": "Learning to walk on a new prosthetic leg in three stages: walking between parallel bars once your prosthesis is fitted; walking on your own on flat ground as your strength and balance build; and stairs, uneven ground and a full day on your feet, which can take up to about a year",
@@ -497,13 +497,13 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "What shapes your walking pattern: amputation level and K-level",
         "paragraphs": [
-          "Two things drive expectations more than anything else: where the amputation is, and your functional (K) level. A below-knee (transtibial) amputation preserves your own knee joint, so walking tends to be easier to relearn than an above-knee (transfemoral) amputation, where the prosthetic knee must be controlled as well as the foot. Bilateral amputees often take longer to learn [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/); [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg).",
+          "Two things shape what to expect: where the amputation is, and your functional (K) level. A below-knee (transtibial) amputation preserves your own knee joint, so walking tends to be easier to relearn than an above-knee (transfemoral) amputation, where the prosthetic knee must be controlled as well as the foot. Bilateral amputees often take longer to learn [Hanger Clinic](https://hangerclinic.com/blog/lifestyle/learning-to-walk-with-a-prosthetic-leg/); [Cleveland Clinic](https://my.clevelandclinic.org/health/treatments/prosthetic-leg).",
           "K-levels (K1 to K4) are the classification system prosthetists use to match components to your realistic mobility goals. K1 describes limited household walking on flat, predictable surfaces, often with support for sitting and standing. K2 adds limited outdoor and community mobility on flat, predictable surfaces, managing one or two stairs or a ramp, plus light activities such as grocery shopping. K3 is community walking: varied terrain such as grass or gravel, three to seven consecutive stairs, and carrying something or holding a conversation while walking. K4 covers high-demand activity such as running or sport [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels). Your prosthetist assesses your K-level, and it plays a critical role in whether a basic foot or a microprocessor knee is appropriate."
         ],
         "images": [
           {
             "src": "/blog/prosthetic-k-levels-explained.webp",
-            "alt": "The K-levels K1 to K4: K1 limited walking at home on flat surfaces; K2 limited outdoor walking with one or two stairs or a ramp; K3 community walking at a varied pace with several stairs and varied terrain; K4 high-demand activity such as running or sport"
+            "alt": "The K-levels K1 to K4: K1 limited walking at home on flat surfaces; K2 limited outdoor walking with one or two stairs or a ramp; K3 community walking on varied terrain, with three to seven stairs and carrying something or talking while walking; K4 high-demand activity such as running or sport"
           }
         ]
       },
@@ -523,7 +523,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "Standing all day, stairs, and driving",
         "paragraphs": [
-          "Standing all day: it's achievable for many K2-K3+ users once fitted and conditioned, but your residual limb still swells and shrinks throughout the day. Expect to adjust sock ply or liner thickness, take short seated breaks if swelling occurs, and keep the skin clean and dry to avoid pressure sores - your prosthetist can also advise on liners or suspension changes for long standing shifts.",
+          "Standing all day: even once you are fitted and conditioned, your residual limb swells and shrinks through the day. Expect to adjust sock ply or liner thickness, take short seated breaks if swelling occurs, and keep the skin clean and dry to avoid pressure sores - your prosthetist can also advise on liners or suspension changes for long standing shifts.",
           "Stairs: this is trained explicitly during rehab. Ottobock's K-level framework notes that community-level (K3) users are generally able to climb three to seven consecutive stairs and manage varied terrain, while K2 users may be able to manage only one or two stairs (or use a ramp instead), and K1 users typically rely on support for sitting, standing and transfers rather than free stair climbing [Ottobock](https://www.ottobockcare.us/en-us/blog/amputee-mobility-levels).",
           "Driving: many amputees return to driving, often within a few months - a peer-reviewed study in Archives of Physical Medicine and Rehabilitation found that over 80% of participants returned to driving at an average of under four months after amputation, and right-sided amputees often needed vehicle modifications or a switch to left-foot pedals [Archives of Physical Medicine and Rehabilitation, via PubMed](https://pubmed.ncbi.nlm.nih.gov/16935052/). In South Africa, check your licence obligations with the licensing authority if a medical condition affects your driving; your doctor or prosthetist can advise on any restriction or modification needed."
         ]
@@ -935,7 +935,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Flat Feet in Children: Does My Child Need Orthotics?",
     "category": "Orthotics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-14",
+    "dateUpdated": "2026-11-16",
     "author": "Farida Cajee-Botes",
     "image": "/blog/red-childrens-sneakers.webp",
     "imageAlt": "A pair of small red lace-up baby shoes",
@@ -977,16 +977,16 @@ export const BLOG_POSTS: BlogPost[] = [
         ]
       },
       {
-        "heading": "School shoes: the first and simplest intervention",
+        "heading": "School shoes: what to look for",
         "paragraphs": [
-          "Before any discussion of custom devices, footwear does most of the day-to-day work. For South African families this usually means the school shoe: a firm, structurally supportive shoe (rather than a soft slip-on, sandal, or flip-flop without arch support) is generally the more useful everyday choice for a developing foot [CHOP: Flat Feet in Children](https://www.chop.edu/conditions-diseases/flat-feet-in-children). If your child is hard on shoes, showing uneven wear patterns, or outgrowing school shoes every term, that's worth mentioning at an assessment; it's often more informative than it seems.",
+          "Before any discussion of custom devices, look at footwear, which for South African families usually means the school shoe. For a child whose flat feet hurt, the Children's Hospital of Philadelphia suggests structurally supportive shoes instead of sandals, flip-flops and shoes without arch support [CHOP: Flat Feet in Children](https://www.chop.edu/conditions-diseases/flat-feet-in-children). If your child is hard on shoes, showing uneven wear patterns, or outgrowing school shoes every term, that's worth mentioning at an assessment; it's often more informative than it seems.",
           "Where a child does need extra support, this can range from an [off-the-shelf orthotic](/services/off-the-shelf-orthotics) insert to a [custom orthotic](/services/custom-orthotics) moulded to their foot shape, depending on what the assessment finds. The right starting point is rarely the most expensive one."
         ]
       },
       {
         "heading": "Medical aid and cost: what to expect in South Africa",
         "paragraphs": [
-          "Because asymptomatic flat feet aren't a Chronic Disease List condition, and the Council for Medical Schemes' Prescribed Minimum Benefits framework doesn't set out specific cover for orthotic devices [Council for Medical Schemes: PMB](https://www.medicalschemes.co.za/resources/pmb/), whether your scheme contributes towards a child's orthotics depends entirely on your specific plan, its day-to-day or savings benefits, and sometimes pre-authorisation from a treating doctor. PMBs are assessed on diagnosis rather than the device itself, so a device linked to a listed PMB condition (for example, a genuine structural or neuromuscular diagnosis) is handled very differently to an insert for an otherwise well child. Because cover varies so much between schemes and plan options, the practical approach is to ask your scheme directly what your plan covers before committing, and to request a written, itemised quotation from your orthotist so you can check it against your benefits and, where relevant, submit it for authorisation."
+          "Because asymptomatic flat feet aren't a Chronic Disease List condition, and the Council for Medical Schemes' Prescribed Minimum Benefits framework doesn't set out specific cover for orthotic devices [Council for Medical Schemes: PMB](https://www.medicalschemes.co.za/resources/pmb/), whether your scheme contributes towards a child's orthotics depends entirely on your specific plan, its day-to-day or savings benefits, and sometimes pre-authorisation from a treating doctor. PMBs are assessed on diagnosis rather than the device itself, so a device linked to a condition on the PMB list is handled very differently to an insert for an otherwise well child. Because cover varies so much between schemes and plan options, the practical approach is to ask your scheme directly what your plan covers before committing, and to request a written, itemised quotation from your orthotist so you can check it against your benefits and, where relevant, submit it for authorisation."
         ]
       },
       {
@@ -1001,7 +1001,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Flexible flat feet (arch visible when sitting or on tiptoe, flattens on standing) are normal in young children, with a visible arch usually developing by around age 8-10.",
       "Both the AAFP and AAP, backed by a 2023 Cochrane review, advise against routine orthotics for painless, flexible flat feet; they don't speed up arch development and give little benefit over supportive shoes.",
       "Book an assessment if you notice pain or fatigue, in-toeing/out-toeing or an unusual gait, one foot flatter than the other, a rigid (non-flexible) foot, or shoes wearing unevenly.",
-      "A firm, structurally supportive school shoe is usually the most useful everyday intervention before any orthotic is considered.",
+      "For a child whose flat feet hurt, CHOP suggests structurally supportive shoes rather than sandals, flip-flops or shoes without arch support.",
       "SA medical aid cover for children's orthotics varies by scheme and isn't guaranteed under Prescribed Minimum Benefits. Check with your scheme and get a written quotation before committing."
     ],
     "references": [
@@ -1458,7 +1458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Toe Walking in Children: When to Worry and When to Wait",
     "category": "Orthotics",
     "date": "2026-09-05",
-    "dateUpdated": "2026-11-14",
+    "dateUpdated": "2026-11-16",
     "author": "Farida Cajee-Botes",
     "image": "/blog/toddler-shoes-and-toy-trucks.webp",
     "imageAlt": "A pair of worn toddler shoes on a tiled floor next to toy trucks",
@@ -1515,9 +1515,9 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "What does treatment look like when a child really needs it?",
         "paragraphs": [
-          "It starts with the least invasive option that has a reasonable chance of working, and escalates only if that fails. For persistent toe walking in children who are 2 to 5 years old and can walk flat-footed, the American Academy of Orthopaedic Surgeons says [treatment always begins without surgery](https://www.orthoinfo.org/en/diseases--conditions/toe-walking/), using serial casting, bracing and botulinum toxin therapy. In children over age 5 who toe walk, it says, the calf muscles and Achilles tendons become very tight, and surgical lengthening, followed by casts usually worn for 4 to 6 weeks, enters the conversation.",
+          "It starts with the least invasive option that has a reasonable chance of working, and escalates only if that fails. For persistent toe walking in children who are 2 to 5 years old and can walk flat-footed, the American Academy of Orthopaedic Surgeons says [treatment always begins without surgery](https://www.orthoinfo.org/en/diseases--conditions/toe-walking/) and may include serial casting or bracing. It adds that botulinum toxin injections may be used for children whose toe walking comes with a neurological condition that increases muscle tone: they relax the calf muscles for a short time, which makes the muscles easier to stretch during casting or bracing. In children over age 5 who toe walk, it says, the calf muscles and Achilles tendons become very tight, and surgical lengthening, followed by casts usually worn for 4 to 6 weeks, enters the conversation.",
           "Physiotherapy sits underneath all of that. For idiopathic toe walking, [NHS paediatric physiotherapy advice](https://www.hacw.nhs.uk/leaflets-paeds-idiopathic-toe-walking/) centres on a home exercise programme built around heels-down stepping, heels-down standing, squatting, bear crawling, and standing and floor stretches to maintain flexibility while the child grows.",
-          "Where a brace is indicated, an ankle-foot orthosis is the usual device: a moulded support worn inside the shoe that holds the foot and ankle in a corrected position while the calf lengthens. Two practical things are worth knowing before you start. Bracing here is measured in months rather than days, so fit and comfort matter enormously for whether a child will wear it. And children grow out of them, so a paediatric [custom orthosis](/services/custom-orthotics) is a series of reviews and refits rather than a once-off purchase."
+          "Where a brace is indicated, an ankle-foot orthosis is the usual device: a moulded support worn inside the shoe that holds the foot and ankle in a corrected position while the calf lengthens. Two practical things are worth knowing before you start. A brace [is often worn for months rather than weeks](https://www.orthoinfo.org/en/diseases--conditions/toe-walking/), so fit and comfort matter enormously for whether a child will wear it. And children grow out of them, so a paediatric [custom orthosis](/services/custom-orthotics) is a series of reviews and refits rather than a once-off purchase."
         ]
       },
       {
@@ -1535,7 +1535,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The signs that need an assessment are asymmetry (one leg only), pain, a limp, loss of skills a child once had, a heel that cannot be brought to the floor, and any pattern worsening rather than settling.",
       "A limp lasting more than 7 days, inability to bear weight, fever, night pain or unexplained weight loss needs a doctor rather than an orthotist. Septic arthritis is an orthopaedic emergency.",
       "For ordinary in-toeing caused by internal tibial torsion, night splints, shoe wedges and orthotics are described in the clinical literature as unnecessary and ineffective. Most of these children need watching, not devices.",
-      "When treatment is needed it escalates gently: home stretching and physiotherapy first, then serial casting, bracing and botulinum toxin for children aged 2 to 5, with Achilles lengthening surgery generally reserved for older children."
+      "When treatment is needed it escalates gently: home stretching and physiotherapy first, then serial casting or bracing for children aged 2 to 5 (botulinum toxin may be added where a neurological condition increases muscle tone), with Achilles lengthening surgery generally reserved for older children."
     ],
     "references": [
       {

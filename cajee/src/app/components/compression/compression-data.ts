@@ -244,7 +244,7 @@ export const COMPRESSION_CONDITIONS: { name: string; note: string }[] = [
   { name: "Varicose veins", note: "Aching, visible and bulging leg veins" },
   { name: "Chronic venous insufficiency", note: "Valves no longer returning blood efficiently" },
   { name: "Venous leg ulcers", note: "Compression during healing and to prevent recurrence" },
-  { name: "Deep vein thrombosis", note: "Post-thrombotic swelling and clot prevention" },
+  { name: "Deep vein thrombosis", note: "After a clot, and for post-thrombotic syndrome" },
   { name: "Lymphoedema", note: "Primary and secondary lymphatic swelling" },
   { name: "Lipoedema", note: "Painful, symmetrical fat and fluid in the legs" },
   { name: "Pregnancy oedema", note: "Leg swelling and veins during pregnancy" },
