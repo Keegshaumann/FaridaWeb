@@ -935,7 +935,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Flat Feet in Children: Does My Child Need Orthotics?",
     "category": "Orthotics",
     "date": "2026-07-15",
-    "dateUpdated": "2026-11-16",
+    "dateUpdated": "2026-11-17",
     "author": "Farida Cajee-Botes",
     "image": "/blog/red-childrens-sneakers.webp",
     "imageAlt": "A pair of small red lace-up baby shoes",
@@ -960,7 +960,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "heading": "Why flat feet in young children are usually normal",
         "paragraphs": [
           "Every baby is born with flat feet. The medial arch forms gradually as a fat pad under the sole reabsorbs and the foot's ligaments and small muscles mature, typically over the first decade of life, with a visible arch usually established by around age 8 to 10 [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/). Estimates of how common flat feet are vary widely by age: it's present in over a third of children aged 2-6, dropping off substantially by the early school years as arches mature [PMC: Pediatric Flexible Flatfoot](https://pmc.ncbi.nlm.nih.gov/articles/PMC3684468/). Cleveland Clinic notes that many children develop a visible arch by around age 10, and having flat feet as a toddler or young child is developmentally typical rather than a problem [Cleveland Clinic: Flat Feet](https://my.clevelandclinic.org/health/diseases/flat-feet-pes-planus).",
-          "This is why both the American Academy of Family Physicians and the American Academy of Pediatrics describe painless, flexible flat feet as a normal physiological variant that should be monitored rather than treated [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html). A 2023 Cochrane review looking at 16 trials and over 1,000 children found that custom and prefabricated foot orthoses did not produce meaningful improvements in pain, function, or quality of life for children with flexible flat feet, and the certainty of that evidence was low to very low [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html). In practical terms: for a happy, active child with no complaints, an orthotic is unlikely to speed up arch development or change the long-term outcome."
+          "This is why both the American Academy of Family Physicians and the American Academy of Pediatrics describe painless, flexible flat feet as a normal physiological variant that should be monitored rather than treated [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html). A 2022 Cochrane review looking at 16 trials and over 1,000 children found that custom and prefabricated foot orthoses did not produce meaningful improvements in pain, function, or quality of life for children with flexible flat feet, and the certainty of that evidence was low to very low [AAFP: Cochrane review summary](https://www.aafp.org/pubs/afp/issues/2023/0300/cochrane-foot-orthoses-flat-feet-children.html). In practical terms: for a happy, active child with no complaints, an orthotic is unlikely to speed up arch development or change the long-term outcome."
         ]
       },
       {
@@ -999,7 +999,7 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     "keyTakeaways": [
       "Flexible flat feet (arch visible when sitting or on tiptoe, flattens on standing) are normal in young children, with a visible arch usually developing by around age 8-10.",
-      "Both the AAFP and AAP, backed by a 2023 Cochrane review, advise against routine orthotics for painless, flexible flat feet; they don't speed up arch development and give little benefit over supportive shoes.",
+      "Both the AAFP and AAP, backed by a 2022 Cochrane review, advise against routine orthotics for painless, flexible flat feet; they don't speed up arch development and give little benefit over shoes alone.",
       "Book an assessment if you notice pain or fatigue, in-toeing/out-toeing or an unusual gait, one foot flatter than the other, a rigid (non-flexible) foot, or shoes wearing unevenly.",
       "For a child whose flat feet hurt, CHOP suggests structurally supportive shoes rather than sandals, flip-flops or shoes without arch support.",
       "SA medical aid cover for children's orthotics varies by scheme and isn't guaranteed under Prescribed Minimum Benefits. Check with your scheme and get a written quotation before committing."
@@ -1458,7 +1458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Toe Walking in Children: When to Worry and When to Wait",
     "category": "Orthotics",
     "date": "2026-09-05",
-    "dateUpdated": "2026-11-16",
+    "dateUpdated": "2026-11-17",
     "author": "Farida Cajee-Botes",
     "image": "/blog/toddler-shoes-and-toy-trucks.webp",
     "imageAlt": "A pair of worn toddler shoes on a tiled floor next to toy trucks",
@@ -1477,7 +1477,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         "heading": "How do I tell harmless toe walking from the kind that needs checking?",
         "paragraphs": [
-          "Ask your child to stand and walk with their heels flat on the floor. If they can do it easily, if they toe walk on both feet rather than one, and if the rest of their development is on track, the picture is reassuring. Many older children who keep toe walking [can't walk with their heels down](https://www.orthoinfo.org/en/diseases--conditions/toe-walking/), which makes that the single most useful thing you can check at home.",
+          "Ask your child to stand and walk with their heels flat on the floor. If they can do it easily, if they toe walk on both feet rather than one, and if the rest of their development is on track, the picture is reassuring. Many older children who keep toe walking [can't walk with their heels down](https://www.orthoinfo.org/en/diseases--conditions/toe-walking/), which makes it a useful thing to check at home.",
           "[NHS paediatric physiotherapy advice](https://www.hacw.nhs.uk/leaflets-paeds-idiopathic-toe-walking/) lists what should prompt a conversation with your doctor: toe walking linked with pain, falling over, or difficulty with physical activities that used to be fine; toe walking on one leg only; a child who can't get their heels down when asked; and a child for whom getting the heels down makes standing or walking look awkward. Being born prematurely, a delay in speech, or a family history of toe walking also lower the threshold for arranging a proper look. None of these mean something is wrong. They mean that waiting another year to see what happens isn't the best plan."
         ]
       },
@@ -1501,7 +1501,7 @@ export const BLOG_POSTS: BlogPost[] = [
           "Asymmetry, pain, a limp, lost skills, and anything getting worse rather than better. Those five things move a child from watch and review into get this looked at. With children's leg alignment, three findings [should raise the possibility of a real problem rather than a normal variation](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html): a deformity on one side only (unilateral), a deformity that's getting worse (progressive), or one that doesn't resolve on its own.",
           "For bowed legs the marker is age: if bowing [hasn't gone away by the age of 3 years](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) there may be an underlying cause, and bowing or knock knees still present [beyond seven to eight years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html) is a reason for orthopaedic referral.",
           "Take a limp seriously. The Royal Children's Hospital Melbourne lists these as [red flags](https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/): a limp lasting more than 7 days, severe localised joint pain, pain waking a child from sleep, inability to walk or weight bear, fever, night sweats or rash, and unexplained weight loss or lethargy. It also says septic arthritis should be suspected in any child presenting with limp, swelling and reduced range of motion, especially with fever. Those children need a doctor urgently, not an orthotist.",
-          "The same urgency applies to going backwards. The [US Centers for Disease Control and Prevention](https://www.cdc.gov/act-early/milestones/2-years.html) is plain with parents: don't wait if a child is not meeting one or more milestones, has lost skills he or she once had, or if there are other concerns. A child who used to walk flat and now can't, or who was steady and is now falling, is showing you a change, and changes get assessed. One last check on feet: a flat foot that stays flat when your child goes up on tiptoes, or one that's stiff and painful, is a different problem from an ordinary flexible flat foot, and stiff or painful flat feet are [a recognised reason for orthopaedic referral](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html)."
+          "The same urgency applies to going backwards. The [US Centers for Disease Control and Prevention](https://www.cdc.gov/act-early/milestones/2-years.html) is plain with parents: don't wait if a child is not meeting one or more milestones, has lost skills he or she once had, or if there are other concerns. A child who used to walk flat and now can't, or who was steady and is now falling, is showing you a change, and changes get assessed. One last check on feet: a flat foot that stays flat when your child goes up on tiptoes, or one that's stiff and painful, is a different problem from an ordinary flexible flat foot, and a stiff, painful flat foot is [a recognised reason for orthopaedic referral](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html)."
         ]
       },
       {
