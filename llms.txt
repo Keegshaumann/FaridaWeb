@@ -28,9 +28,9 @@ The practice runs a dedicated lower-limb compression clinic. Page: https://www.c
 
 - Compression classes fitted (classes 1 to 4 follow the German RAL standard, RAL-GZ 387; the class is set by the pressure at the ankle):
   - Class A: light support, under 18 mmHg. Tired, heavy legs; travel; mild end-of-day swelling; prevention.
-  - Class 1: light compression, 18–21 mmHg. Early varicose veins, mild swelling, pregnancy-related oedema.
-  - Class 2: moderate compression, 23–32 mmHg. Pronounced varicose veins, chronic venous insufficiency, after DVT or vein surgery, lymphoedema maintenance. The most commonly prescribed class.
-  - Class 3: strong compression, 34–46 mmHg. Severe chronic venous insufficiency, post-thrombotic syndrome, healed venous leg ulcers, marked lymphoedema and lipoedema.
+  - Class 1: light compression, 18–21 mmHg. Mildly painful, heavy or tired legs; long periods of standing or sitting; pregnancy, where it may help prevent varicose veins.
+  - Class 2: moderate compression, 23–32 mmHg. Varicose veins with a mild tendency to swell, varicose veins in pregnancy, after varicose vein surgery or sclerotherapy, deep vein thrombosis and post-thrombotic syndrome, healed leg ulcers. The class doctors prescribe most often.
+  - Class 3: strong compression, 34–46 mmHg. Moderate venous oedema and lymphoedema, lipoedema, after fractures and orthopaedic operations, skin changes with healed ulcers.
   - Class 4 (over 49 mmHg) and clinician-applied multi-layer compression bandaging available on request.
 - Compression lengths fitted: AD below-knee (BK), AF above-knee, AG thigh-high (AK) with grip top, AG/H single-leg with waist attachment, AT compression pantyhose and tights, AT/U maternity compression tights. Open-toe and closed-toe options throughout.
 - Compression constructions: circular-knit (seamless, finer, for venous conditions and mild-to-moderate swelling) and flat-knit (seamed, higher stiffness, made-to-measure, for lymphoedema, lipoedema and distorted limb shapes).

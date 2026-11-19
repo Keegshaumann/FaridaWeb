@@ -1458,7 +1458,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "metaTitle": "Toe Walking in Children: When to Worry and When to Wait",
     "category": "Orthotics",
     "date": "2026-09-05",
-    "dateUpdated": "2026-11-17",
+    "dateUpdated": "2026-11-19",
     "author": "Farida Cajee-Botes",
     "image": "/blog/toddler-shoes-and-toy-trucks.webp",
     "imageAlt": "A pair of worn toddler shoes on a tiled floor next to toy trucks",
@@ -1500,7 +1500,7 @@ export const BLOG_POSTS: BlogPost[] = [
         "paragraphs": [
           "Asymmetry, pain, a limp, lost skills, and anything getting worse rather than better. Those five things move a child from watch and review into get this looked at. With children's leg alignment, three findings [should raise the possibility of a real problem rather than a normal variation](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html): a deformity on one side only (unilateral), a deformity that's getting worse (progressive), or one that doesn't resolve on its own.",
           "For bowed legs the marker is age: if bowing [hasn't gone away by the age of 3 years](https://www.orthoinfo.org/en/diseases--conditions/bowed-legs-blounts-disease/) there may be an underlying cause, and bowing or knock knees still present [beyond seven to eight years of age](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html) is a reason for orthopaedic referral.",
-          "Take a limp seriously. The Royal Children's Hospital Melbourne lists these as [red flags](https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/): a limp lasting more than 7 days, severe localised joint pain, pain waking a child from sleep, inability to walk or weight bear, fever, night sweats or rash, and unexplained weight loss or lethargy. It also says septic arthritis should be suspected in any child presenting with limp, swelling and reduced range of motion, especially with fever. Those children need a doctor urgently, not an orthotist.",
+          "Take a limp seriously. The Royal Children's Hospital Melbourne's [guideline on the limping child](https://www.rch.org.au/clinicalguide/guideline_index/Child_with_limp/) calls a sudden inability to walk or weight bear a red flag, and the history it asks doctors to take covers a limp lasting more than 7 days, severe localised joint pain, pain waking a child from sleep, fever, night sweats or rash, and unexplained weight loss or lethargy. It also says septic arthritis should be suspected in any child presenting with limp, swelling and reduced range of motion, especially with fever. Those children need a doctor urgently, not an orthotist.",
           "The same urgency applies to going backwards. The [US Centers for Disease Control and Prevention](https://www.cdc.gov/act-early/milestones/2-years.html) is plain with parents: don't wait if a child is not meeting one or more milestones, has lost skills he or she once had, or if there are other concerns. A child who used to walk flat and now can't, or who was steady and is now falling, is showing you a change, and changes get assessed. One last check on feet: a flat foot that stays flat when your child goes up on tiptoes, or one that's stiff and painful, is a different problem from an ordinary flexible flat foot, and a stiff, painful flat foot is [a recognised reason for orthopaedic referral](https://www.aafp.org/pubs/afp/issues/2003/0801/p461.html)."
         ]
       },
